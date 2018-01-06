@@ -1,0 +1,15 @@
+<div *ngIf="repoIssueCollection.length > 0">
+	<div *ngFor="let repoIssue of repoIssueCollection" class="card-wrapper">
+		<mat-card class="card">
+			<mat-card-header>
+				<mat-card-title><strong>{{ repoIssue.title }}</strong></mat-card-title>
+				<mat-card-subtitle>opened by {{ repoIssue.user?.login }} at {{repoIssue.created_at | date: 'MM/dd/yyyy'}}</mat-card-subtitle>
+        <mat-card-subtitle>assigneed to {{ repoIssue.assignee?.login ? repoIssue.assignee?.login : 'nobody yet' }}</mat-card-subtitle>
+			</mat-card-header>
+			<mat-card-content>
+				<p class="card-body">{{ repoIssue.body }}</p>
+			</mat-card-content>
+      <mat-card-footer>updated at {{repoIssue.updated_at | date: 'MM/dd/yyyy'}}</mat-card-footer>
+		</mat-card>
+	</div>
+</div>

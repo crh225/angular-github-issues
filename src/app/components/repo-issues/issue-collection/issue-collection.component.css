@@ -1,0 +1,12 @@
+.card-wrapper{
+  margin:30px;
+}
+.card-body{
+  margin:0px 8px 0px 8px;
+}
+.mat-card-footer {
+    display: block;
+    margin: 0 -8px 0px 0px;
+    font-size: 10px;
+    float: right;
+}

@@ -8,9 +8,9 @@ To see the stackblitz interactive code: https://stackblitz.com/edit/angular-tg2n
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Installation of npm packages
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+Run `npm install`.
 
 ## Build
 

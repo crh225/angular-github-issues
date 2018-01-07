@@ -31,7 +31,11 @@ import { AppComponent } from './app.component';
 import { RepoIssuesComponent, IssueCollectionComponent } from './components/repo-issues';
 import { GithubService } from './services';
 
-
+import { StoreModule } from '@ngrx/store';
+import * as forApplication from './components/store/reducers'
+import { EffectsModule, Actions } from '@ngrx/effects';
+import { IssueEffects } from './components/store/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   imports: [AppRoutes,
@@ -59,10 +63,18 @@ import { GithubService } from './services';
     MatSelectModule,
     MatSidenavModule,
     MatTableModule,
-    MatToolbarModule
+    MatToolbarModule,
+    StoreModule.forRoot(forApplication.reducers),
+    EffectsModule.forRoot([IssueEffects]),
+    StoreDevtoolsModule.instrument({
+         maxAge: 25 //  Retains last 25 states
+    })
   ],
   declarations: [AppComponent, RepoIssuesComponent, IssueCollectionComponent],
   bootstrap: [AppComponent],
-  providers: [GithubService]
+  providers: [
+      GithubService,
+      Actions,
+      IssueEffects]
 })
 export class AppModule { }

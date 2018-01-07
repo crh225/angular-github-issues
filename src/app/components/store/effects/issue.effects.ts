@@ -12,12 +12,9 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/switchMap';
 
-
-
 @Injectable()
 export class IssueEffects {
     
-
     @Effect()
     load$: Observable<Action> = this.actions$
         .ofType(issueActions.LOAD_ALL_ISSUES)

@@ -18,7 +18,6 @@ export class RepoIssuesComponent implements OnInit, OnDestroy {
     public repoIssueCollection: Issue[] = [];
 
     private _subscription: any;
-    private _storeSubject: ActionsSubject;
     private _owner: string;
     private _repo: string;
 
@@ -34,6 +33,7 @@ export class RepoIssuesComponent implements OnInit, OnDestroy {
             .subscribe((data: any) => {
                 switch (data.type) {
                     case '[Issue] LOAD ALL SUCCESS':
+                        //in a real app, you can throw a toaster or call some type of function when actions are successful
                         this.repoIssueCollection = data.payload;
                         break;
                     default: console.log(data);

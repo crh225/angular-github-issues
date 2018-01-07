@@ -4,7 +4,7 @@ import * as issueActions from '../actions';
 import { Issue } from '../../../models';
 
 
-// This adapter will allow is to manipulate contacts (mostly CRUD operations)
+// This adapter will allow us to manipulate issues (mostly CRUD operations)
 export const issueAdapter = createEntityAdapter<Issue>({
     selectId: (issue: Issue) => issue.id,
     sortComparer: false

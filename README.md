@@ -1,5 +1,13 @@
 # angular-github-issues
 
+This repository displays Angular's github issues for the past seven days.
+
+# ngrx/redux version
+To see a live version: https://angular-duas8p.stackblitz.io/repo/issues
+
+To see the stackblitz interactive code: https://stackblitz.com/edit/angular-duas8p
+
+# version without redux
 To see a live version: https://angular-tg2nma.stackblitz.io/repo/issues
 
 To see the stackblitz interactive code: https://stackblitz.com/edit/angular-tg2nma

@@ -1,22 +1,22 @@
 import { RouterModule, Routes } from '@angular/router';
-
-import { RepoIssuesComponent } from './components/repo-issues/repo-issues.component';
+import { NgModule } from '@angular/core';
+import { RepoIssuesComponent } from './components';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/repo/issues',
+    redirectTo: 'lazy',
     pathMatch: 'full',
   },
-  {
-    path: 'repo/issues',
-    component: RepoIssuesComponent,
+    {
+    path: 'lazy',
+    loadChildren: './components/+lazy.module#LazyModule'
   },
-  {
-    path: 'repo/issues/:owner/:repo',
-    component: RepoIssuesComponent,
-  },
-  { path: '**', redirectTo: 'repo/issues', pathMatch: 'full' },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
-export const AppRoutes = RouterModule.forRoot(routes);
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutes {};

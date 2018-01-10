@@ -2,10 +2,10 @@ import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/
 import { HttpErrorResponse } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { ActionsSubject, Store } from '@ngrx/store';
-import * as issueActions from '../store/actions';
-import * as fromRoot from '../store/reducers';
-import { GithubService } from '../../services';
-import { Issue } from '../../models';
+import * as issueActions from '../../store/actions';
+import * as fromRoot from '../../store/reducers';
+import { GithubService } from '../../shared/services';
+import { Issue } from '../../shared/models';
 import 'rxjs/add/operator/filter';
 
 @Component({
@@ -13,17 +13,16 @@ import 'rxjs/add/operator/filter';
     templateUrl: './repo-issues.component.html',
     styleUrls: ['./repo-issues.component.css']
 })
-export class RepoIssuesComponent implements OnInit, OnDestroy {
+export class RepoIssuesComponent implements OnInit {
 
     public repoIssueCollection: Issue[] = [];
 
-    private _subscription: any;
+    private _storeSubject: ActionsSubject;
     private _owner: string;
     private _repo: string;
 
     constructor(
         private _githubService: GithubService,
-        private _route: ActivatedRoute,
         private store: Store<fromRoot.AppState>,
         private actionsSubject: ActionsSubject) {
 
@@ -33,7 +32,6 @@ export class RepoIssuesComponent implements OnInit, OnDestroy {
             .subscribe((data: any) => {
                 switch (data.type) {
                     case '[Issue] LOAD ALL SUCCESS':
-                        //in a real app, you can throw a toaster or call some type of function when actions are successful
                         this.repoIssueCollection = data.payload;
                         break;
                     default: console.log(data);
@@ -42,22 +40,14 @@ export class RepoIssuesComponent implements OnInit, OnDestroy {
 
     }
 
-    ngOnInit() {
-        this._subscription = this._route.params.subscribe(params => {
-            //you can pass in other repo's and owners to this component via url
-            this._owner = params.owner;
-            this._repo = params.repo;
-            this._search();
-        });
-    }
-
-    ngOnDestroy() {
-        this._subscription.unsubscribe();
+    ngOnInit(){
+      this._search();
     }
 
     private _search(): void {
         if (!this._owner || !this._repo) {
             //default to angular/angular
+            //still a wip. eventually these will be inputs from a different component
             this._owner = 'angular';
             this._repo = 'angular';
         }

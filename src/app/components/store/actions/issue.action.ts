@@ -1,5 +1,5 @@
 import { ActionReducer, Action, ActionReducerMap, MetaReducer } from '@ngrx/store';
-import { Issue } from '../../../models';
+import { Issue } from '../../shared/models';
 
 export const ISSUE_FAILURE = '[Issue] FAILURE';
 export const LOAD_ALL_ISSUES = '[Issue] LOAD ALL';
@@ -7,7 +7,7 @@ export const LOAD_ALL_ISSUES_SUCCESS = '[Issue] LOAD ALL SUCCESS';
 
 export class LoadAllIssues implements Action {
     readonly type = LOAD_ALL_ISSUES;
-    constructor(public payload: { owner, repo } ) { }
+    constructor(public payload: { owner, repo} ) { }
 }
 
 export class LoadAllIssuesSuccess implements Action {
@@ -18,7 +18,7 @@ export class LoadAllIssuesSuccess implements Action {
 
 export class IssueFailure implements Action {
     readonly type = ISSUE_FAILURE;
-    constructor(public payload: any) { }
+    constructor(public payload: { concern: 'CREATE' | 'PATCH', error: any }) { }
 }
 
 export type IssueActions =

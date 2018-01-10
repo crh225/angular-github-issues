@@ -5,7 +5,12 @@
     "baseUrl": "./",
     "target": "es5",
     "module": "es2015",
-    "types": []
+    "types": [],
+    "paths": {
+      "@app/*": [
+        "app/*"
+      ]
+    }
   },
   "exclude": [
     "test.ts",

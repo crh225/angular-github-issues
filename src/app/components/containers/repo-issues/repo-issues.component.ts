@@ -2,10 +2,10 @@ import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/
 import { HttpErrorResponse } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { ActionsSubject, Store } from '@ngrx/store';
-import * as issueActions from '../../store/actions';
-import * as fromRoot from '../../store/reducers';
-import { GithubService } from '../../shared/services';
-import { Issue } from '../../shared/models';
+import * as issueActions from '@app/components/store/actions';
+import * as fromRoot from '@app/components/store/reducers';
+import { GithubService } from '@app/components/shared/services';
+import { Issue } from '@app/components/shared/models';
 import 'rxjs/add/operator/filter';
 
 @Component({

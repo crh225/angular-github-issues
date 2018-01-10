@@ -1,7 +1,7 @@
 import { ActionReducer, Action, ActionReducerMap, MetaReducer, createFeatureSelector, createSelector } from '@ngrx/store';
 import { EntityState, createEntityAdapter, EntityAdapter } from '@ngrx/entity';
-import * as issueActions from '../actions';
-import { Issue } from '../../shared/models';
+import * as issueActions from '@app/components/store/actions';
+import { Issue } from '@app/components/shared/models';
 
 
 // This adapter will allow is to manipulate contacts (mostly CRUD operations)

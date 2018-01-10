@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { Action } from '@ngrx/store';
 import { Actions, Effect } from '@ngrx/effects';
 import * as issueActions from '../actions';
-import { Issue } from '../../../models';
+import { Issue } from '../../shared/models';
 import { GithubService } from '../../shared/services';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/empty';

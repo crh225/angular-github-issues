@@ -1,5 +1,5 @@
 import { ActionReducer, Action, ActionReducerMap, MetaReducer } from '@ngrx/store';
-import { Issue } from '../../../models';
+import { Issue } from '../../shared/models';
 
 export const ISSUE_FAILURE = '[Issue] FAILURE';
 export const LOAD_ALL_ISSUES = '[Issue] LOAD ALL';

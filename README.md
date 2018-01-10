@@ -2,6 +2,12 @@
 
 This repository displays Angular's github issues for the past seven days.
 
+# ngrx/redux version with lazy loading and shared modules
+To see a live version: 
+https://angular-tfkaqt.stackblitz.io
+
+To see the stackblitz interactive code: https://stackblitz.com/edit/angular-tfkaqt
+
 # ngrx/redux version
 To see a live version: https://angular-duas8p.stackblitz.io/repo/issues
 

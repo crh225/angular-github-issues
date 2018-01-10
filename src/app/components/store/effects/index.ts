@@ -1,1 +1,1 @@
-export * from './issue.effects';
+export * from './issue.effect';

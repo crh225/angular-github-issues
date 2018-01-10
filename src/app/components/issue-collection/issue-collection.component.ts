@@ -1,6 +1,6 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
-import { Issue } from '../../../models/issue';
+import { Issue } from '../shared/models';
 
 @Component({
   selector: 'app-issue-collection',

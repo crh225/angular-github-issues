@@ -1,3 +1,4 @@
+<a href="https://codeclimate.com/github/crh225/angular-github-issues/maintainability"><img src="https://api.codeclimate.com/v1/badges/e17d5ad267ef6f6503c1/maintainability" /></a>
 # angular-github-issues
 
 This repository displays Angular's github issues for the past seven days.

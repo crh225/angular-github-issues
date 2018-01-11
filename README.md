@@ -1,5 +1,5 @@
-<a href="https://codeclimate.com/github/crh225/angular-github-issues/maintainability"><img src="https://api.codeclimate.com/v1/badges/e17d5ad267ef6f6503c1/maintainability" /></a>
-[![CircleCI](https://circleci.com/gh/crh225/angular-github-issues/tree/master.svg?style=svg)](https://circleci.com/gh/crh225/angular-github-issues/tree/master)
+<a href="https://codeclimate.com/github/crh225/angular-github-issues/maintainability"><img src="https://api.codeclimate.com/v1/badges/e17d5ad267ef6f6503c1/maintainability" /></a><br/>
+CI Tests [![CircleCI](https://circleci.com/gh/crh225/angular-github-issues/tree/master.svg?style=svg)](https://circleci.com/gh/crh225/angular-github-issues/tree/master)
 # angular-github-issues
 
 This repository displays Angular's github issues for the past seven days.

@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Action } from '@ngrx/store';
 import { Actions, Effect } from '@ngrx/effects';
-import * as issueActions from '@app/components/store/actions';
-import { Issue } from '@app/components/shared/models';
+import * as repoActions from '@app/components/store/actions';
+import { Repo } from '@app/components/shared/models';
 import { GithubService } from '@app/components/shared/services';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/empty';
@@ -15,18 +15,18 @@ import 'rxjs/add/operator/switchMap';
 
 
 @Injectable()
-export class IssueEffects {
+export class RepoEffects {
     
 
     @Effect()
     load$: Observable<Action> = this.actions$
-        .ofType(issueActions.LOAD_ALL_ISSUES)
-        .map((action: issueActions.LoadAllIssues) => action.payload)
+        .ofType(repoActions.LOAD_ALL_REPOS)
+        .map((action: repoActions.LoadAllRepos) => action.payload)
         .switchMap((data) =>
-            this._githubService.getRepoIssues(data.owner, data.repo, this.subtractDays(7))
-                .mergeMap((issues: Issue[]) => {
+        this._githubService.searchRepoByName(data.searchName)
+                .mergeMap((repos: any) => {
                     return [
-                        new issueActions.LoadAllIssuesSuccess(issues)
+                        new repoActions.LoadAllReposSuccess( repos.items )
                     ]
                 })
         );
@@ -34,10 +34,4 @@ export class IssueEffects {
     constructor(
         private actions$: Actions, private _githubService: GithubService
     ) { }
-
-  subtractDays(totalDays: number): string {
-    let days = new Date();
-    days.setDate(days.getDate() - totalDays);
-    return days.toISOString();
-  }
 }

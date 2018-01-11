@@ -4,7 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 import { ActionsSubject, Store } from '@ngrx/store';
 import * as issueActions from '@app/components/store/actions';
 import * as fromRoot from '@app/components/store/reducers';
-import { GithubService } from '@app/components/shared/services';
 import { Issue } from '@app/components/shared/models';
 import 'rxjs/add/operator/filter';
 
@@ -22,7 +21,6 @@ export class RepoIssuesComponent implements OnInit {
     private _repo: string;
 
     constructor(
-        private _githubService: GithubService,
         private store: Store<fromRoot.AppState>,
         private actionsSubject: ActionsSubject) {
 

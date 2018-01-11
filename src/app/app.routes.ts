@@ -1,6 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { RepoIssuesComponent } from './components';
+import { RepoIssuesComponent, RepoSearchComponent } from './components';
 
 const routes: Routes = [
   {
@@ -8,7 +8,11 @@ const routes: Routes = [
     redirectTo: 'lazy',
     pathMatch: 'full',
   },
-    {
+  {
+    path: 'repo/search',
+    component: RepoSearchComponent
+  },
+  {
     path: 'lazy',
     loadChildren: './components/+lazy.module#LazyModule'
   },

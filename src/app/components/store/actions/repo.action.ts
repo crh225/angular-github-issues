@@ -30,4 +30,5 @@ export class SetCurrentRepoId implements Action {
 export type RepoActions =
     LoadAllRepos
     | LoadAllReposSuccess
-    | RepoFailure;
+    | RepoFailure
+    | SetCurrentRepoId;

@@ -40,6 +40,11 @@ export class RepoIssuesComponent implements OnInit {
 
     ngOnInit(){
       this._search();
+      //this.store.select(fromRoot.getSelectedRepo).subscribe(data => {
+      //      if (data) {
+      //         console.log(data);
+      //      }
+      //});
     }
 
     private _search(): void {

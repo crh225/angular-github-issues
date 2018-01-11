@@ -12,7 +12,7 @@
 			</mat-card-content>
       <mat-card-footer>
         <strong>Open issues:</strong> {{ repo.open_issues_count }}
-        <small *ngIf="repo.open_issues_count > 0">( <a routerLink="/repo/issues/{{ repo.full_name }}">View All</a>.)</small>
+				<small *ngIf="repo.open_issues_count > 0" (click)="setRepoInStore()">( <a routerLink="/repo/issues/{{ repo.full_name }}">View All</a>.)</small>
       </mat-card-footer>
 		</mat-card>
 	</div>

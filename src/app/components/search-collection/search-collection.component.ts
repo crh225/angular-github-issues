@@ -8,4 +8,8 @@ import { Repo } from '@app/components/shared/models';
 })
 export class SearchCollectionComponent {
   @Input() repoCollection: Repo[];
+
+  setRepoInStore(){
+    //this.store.dispatch(new repoActions.SetCurrentRepoId(undefined));
+  }
 }

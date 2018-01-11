@@ -33,5 +33,6 @@ export const getIssueEntities = createSelector(getIssueState, fromIssue.getEntit
 export const getIssueIds = createSelector(getIssueState, fromIssue.getIds);
 export const getRepoEntities = createSelector(getRepoState, fromRepo.getEntities);
 export const getRepoIds = createSelector(getRepoState, fromRepo.getIds);
-
+export const getSelectedRepoId = createSelector(getRepoState, fromRepo.getCurrentRepoId);
+export const getSelectedRepo = createSelector(getRepoState, fromRepo.getSelected);
 

@@ -38,6 +38,10 @@ export function repoReducer(state: State = initialState, action: repoActions.Rep
 
     switch (action.type) {
 
+        case repoActions.SET_CURRENT_REPO_ID: {
+            return { ...state, id: action.payload };
+        }
+
         case repoActions.LOAD_ALL_REPOS_SUCCESS: {
             return {...state, ...repoAdapter.addAll(action.payload as Repo[], state) }
         }
@@ -57,4 +61,10 @@ export function repoReducer(state: State = initialState, action: repoActions.Rep
 export const getEntities = (state: State) => state.entities;
 
 export const getIds = (state: State) => state.ids;
+
+export const getCurrentRepoId = (state: State) => state.id;
+
+export const getSelected = createSelector(getEntities, getCurrentRepoId, (entities, selectedId) => {
+    return entities[selectedId];
+});
 

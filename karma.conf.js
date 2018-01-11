@@ -24,7 +24,6 @@ module.exports = function (config) {
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
-    autoWatch: true,
     browsers: ['Chrome'],
     singleRun: true
   });

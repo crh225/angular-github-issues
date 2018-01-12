@@ -1,3 +1,5 @@
+<a href="https://codeclimate.com/github/crh225/angular-github-issues/maintainability"><img src="https://api.codeclimate.com/v1/badges/e17d5ad267ef6f6503c1/maintainability" /></a><br/>
+CI Tests [![CircleCI](https://circleci.com/gh/crh225/angular-github-issues/tree/master.svg?style=svg)](https://circleci.com/gh/crh225/angular-github-issues/tree/master)
 # angular-github-issues
 
 This repository displays Angular's github issues for the past seven days.
@@ -27,6 +29,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run `npm install`.
 
 ## Build
+
+Run `ng build --aot` to build the project in AoT mode instead of JiT. This will allow for faster rendering of your application, Fewer asynchronous requests, Smaller Angular framework download size and to Detect template errors earlier.
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 

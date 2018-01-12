@@ -1,8 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
 import {APP_BASE_HREF} from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { RepoSearchComponent } from './search.component';
 import { SharedModule } from '@app/components/shared';
@@ -13,16 +10,14 @@ import * as forApplication from '@app/components/store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
 import { IssueEffects, RepoEffects } from '@app/components/store/effects';
 import { StoreModule } from '@ngrx/store';
-import {RouterTestingModule} from '@angular/router/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { SharedTestingModule } from '@app/components/shared';
 
 describe('RepoSearchComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
     imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
+    SharedTestingModule.forRoot(),
     SharedModule.forRoot(),
     RouterTestingModule,
     ChartsModule,

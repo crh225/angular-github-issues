@@ -1,4 +1,4 @@
-import { NgModule,ModuleWithProviders  } from '@angular/core';
+import { NgModule, ModuleWithProviders  } from '@angular/core';
 import { GithubService } from './services';
 
 import {
@@ -78,6 +78,6 @@ export class SharedModule {
     return {
       ngModule: SharedModule,
       providers: [ GithubService ]
-    }
+    };
   }
 }

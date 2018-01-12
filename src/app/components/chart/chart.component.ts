@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Repo } from '@app/components/shared/models';
 
 @Component({
-  selector: 'chart-bar',
+  selector: 'app-chart-bar',
   templateUrl: './chart.component.html'
 })
 export class ChartComponent implements OnInit {
@@ -11,7 +11,7 @@ export class ChartComponent implements OnInit {
 
   public barChartLabels: string[] = ['Stargazers', 'Forks', 'Watchers', 'Open issues'];
   public barChartLegend = false;
-  public barChartColors =[
+  public barChartColors = [
     {
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
@@ -26,7 +26,7 @@ export class ChartComponent implements OnInit {
   public barChartOptions: any = {
     responsive: true,
     scaleShowVerticalLines: false,
-   
+
   };
   public barChartType = 'bar';
   public barChartData: any[] = [];

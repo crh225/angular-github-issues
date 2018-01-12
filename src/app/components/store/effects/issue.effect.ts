@@ -16,7 +16,6 @@ import 'rxjs/add/operator/switchMap';
 
 @Injectable()
 export class IssueEffects {
-    
 
     @Effect()
     load$: Observable<Action> = this.actions$
@@ -27,7 +26,7 @@ export class IssueEffects {
                 .mergeMap((issues: Issue[]) => {
                     return [
                         new issueActions.LoadAllIssuesSuccess(issues)
-                    ]
+                    ];
                 })
         );
 
@@ -36,7 +35,7 @@ export class IssueEffects {
     ) { }
 
   subtractDays(totalDays: number): string {
-    let days = new Date();
+    const days = new Date();
     days.setDate(days.getDate() - totalDays);
     return days.toISOString();
   }

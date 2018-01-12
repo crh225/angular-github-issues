@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './components';
 
 import { StoreModule } from '@ngrx/store';
-import * as forApplication from './components/store/reducers'
+import * as forApplication from './components/store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
 import { IssueEffects, RepoEffects } from './components/store/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';

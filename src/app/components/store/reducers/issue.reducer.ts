@@ -39,7 +39,7 @@ export function issueReducer(state: State = initialState, action: issueActions.I
     switch (action.type) {
 
         case issueActions.LOAD_ALL_ISSUES_SUCCESS: {
-            return {...state, ...issueAdapter.addAll(action.payload as Issue[], state) }
+            return {...state, ...issueAdapter.addAll(action.payload as Issue[], state) };
         }
         default: {
             return state;
@@ -57,4 +57,3 @@ export function issueReducer(state: State = initialState, action: issueActions.I
 export const getEntities = (state: State) => state.entities;
 
 export const getIds = (state: State) => state.ids;
-

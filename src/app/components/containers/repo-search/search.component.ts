@@ -9,7 +9,7 @@ import * as fromRoot from '@app/components/store/reducers';
 import { RepoSearchResult, Repo } from '@app/components/shared/models';
 
 @Component({
-  selector: 'repo-search',
+  selector: 'app-repo-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })

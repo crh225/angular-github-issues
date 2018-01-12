@@ -11,7 +11,7 @@ const routes: Routes = [
       { path: '', pathMatch: 'full', redirectTo: 'search' },
       { path: 'search', component: RepoSearchComponent },
       { path: 'issues', component: RepoIssuesComponent }
-    ] 
+    ]
   }
 ];
 

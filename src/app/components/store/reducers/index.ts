@@ -35,4 +35,3 @@ export const getRepoEntities = createSelector(getRepoState, fromRepo.getEntities
 export const getRepoIds = createSelector(getRepoState, fromRepo.getIds);
 export const getSelectedRepoId = createSelector(getRepoState, fromRepo.getCurrentRepoId);
 export const getSelectedRepo = createSelector(getRepoState, fromRepo.getSelected);
-

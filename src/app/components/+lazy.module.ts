@@ -37,14 +37,14 @@ import {
     CommonModule,
     LazyRoutingModule,
     MatCardModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     ChartsModule
   ],
-  declarations: [LazyComponent, 
-    RepoIssuesComponent, 
-    RepoSearchComponent, 
-    SearchCollectionComponent, 
+  declarations: [LazyComponent,
+    RepoIssuesComponent,
+    RepoSearchComponent,
+    SearchCollectionComponent,
     ChartComponent,
     IssueCollectionComponent]
 })

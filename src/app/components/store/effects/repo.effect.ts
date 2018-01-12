@@ -13,10 +13,8 @@ import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/switchMap';
 
 
-
 @Injectable()
 export class RepoEffects {
-    
 
     @Effect()
     load$: Observable<Action> = this.actions$
@@ -27,7 +25,7 @@ export class RepoEffects {
                 .mergeMap((repos: any) => {
                     return [
                         new repoActions.LoadAllReposSuccess( repos.items )
-                    ]
+                    ];
                 })
         );
 

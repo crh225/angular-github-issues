@@ -6,7 +6,7 @@
 				<mat-card-subtitle> {{ repo.description }} </mat-card-subtitle>
 			</mat-card-header>
 			<mat-card-content>
-                    <chart-bar [repo]="repo"></chart-bar>
+                    <app-chart-bar [repo]="repo"></app-chart-bar>
 			</mat-card-content>
       <mat-card-footer>
         <strong>Open issues:</strong> {{ repo.open_issues_count }}

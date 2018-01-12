@@ -32,7 +32,32 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run: yarn test --code-coverage
-    test:
-      post:
-        - bash <(curl -s https://codecov.io/bash)
+      - run: yarn test 
+  frontend-tests:
+    <<: *defaults
+    steps:
+      - checkout 
+      - attach_workspace:
+          at: ~/repo/tmp
+      - run: npm install
+      - run: 
+          name: Run frontend tests
+          command: |
+            npm test --code-coverage
+            ./tmp/cc-test-reporter format-coverage -t lcov -o tmp/codeclimate.frontend.json coverage/lcov.info
+      - persist_to_workspace:
+          root: tmp
+          paths: 
+            - codeclimate.frontend.json
+  upload-coverage:
+    <<: *defaults
+    environment: 
+      - CC_TEST_REPORTER_ID: 907125ec647f80b5548d90e8f2cef6b51f63cd18200ff7b9cd35fbed7010a1f6
+    steps:
+      - attach_workspace:
+          at: ~/repo/tmp
+      - run:
+          name: Upload coverage results to Code Climate
+          command: |
+            ./tmp/cc-test-reporter sum-coverage tmp/codeclimate.*.json -p 2 -o tmp/codeclimate.total.json
+            ./tmp/cc-test-reporter upload-coverage -i tmp/codeclimate.total.json

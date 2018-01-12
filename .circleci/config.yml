@@ -36,15 +36,13 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
-      # run tests!
-      - run: yarn test
+     
+      # - run: yarn lint
       - run: 
           name: Run frontend tests
           command: |
             npm test --code-coverage         
             ./tmp/cc-test-reporter format-coverage -t lcov -o tmp/codeclimate.frontend.json coverage/lcov.info
-      - run: ls *
       - run:
           name: Upload coverage results to Code Climate
           command: |

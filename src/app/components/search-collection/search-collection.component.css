@@ -1,7 +1,5 @@
 .card-wrapper{
-    margin: 5px;
-    width: 24%;
-    display: inline-block;
+   padding: 5px;
   }
   .card-body{
     margin:0px 8px 0px 8px;

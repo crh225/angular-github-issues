@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LazyRoutingModule } from './+lazy.routes';
 import { LazyComponent } from './+lazy.component';
-import { RepoIssuesComponent } from './containers';
+import { RepoIssuesComponent, RepoSearchComponent } from './containers';
 import { IssueCollectionComponent } from './issue-collection';
+import { SearchCollectionComponent } from './search-collection';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -33,8 +34,10 @@ import {
   imports: [
     CommonModule,
     LazyRoutingModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule, 
+    ReactiveFormsModule
   ],
-  declarations: [LazyComponent, RepoIssuesComponent, IssueCollectionComponent]
+  declarations: [LazyComponent, RepoIssuesComponent, RepoSearchComponent, SearchCollectionComponent, IssueCollectionComponent]
 })
 export class LazyModule { }

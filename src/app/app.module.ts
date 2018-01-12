@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutes } from './app.routes';
 import { AppComponent } from './app.component';
-import { SharedModule, RepoSearchComponent, SearchCollectionComponent } from './components';
+import { SharedModule } from './components';
 
 import { StoreModule } from '@ngrx/store';
 import * as forApplication from './components/store/reducers'
@@ -26,7 +26,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
          maxAge: 25 //  Retains last 25 states
     })
   ],
-  declarations: [AppComponent, RepoSearchComponent, SearchCollectionComponent],
+  declarations: [AppComponent],
   bootstrap: [AppComponent],
   providers: [
       Actions,

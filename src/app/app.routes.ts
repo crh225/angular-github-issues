@@ -9,10 +9,6 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'repo/search',
-    component: RepoSearchComponent
-  },
-  {
     path: 'lazy',
     loadChildren: './components/+lazy.module#LazyModule'
   },

@@ -39,23 +39,10 @@ export class RepoIssuesComponent implements OnInit {
     }
 
     ngOnInit(){
-      this._search();
-      //this.store.select(fromRoot.getSelectedRepo).subscribe(data => {
-      //      if (data) {
-      //         console.log(data);
-      //      }
-      //});
+      this.store.select(fromRoot.getSelectedRepo).subscribe(data => {
+            if (data) {
+               this.store.dispatch(new issueActions.LoadAllIssues({ owner: data.owner.login, repo: data.name }));
+            }
+      });
     }
-
-    private _search(): void {
-        if (!this._owner || !this._repo) {
-            //default to angular/angular
-            //still a wip. eventually these will be inputs from a different component
-            this._owner = 'angular';
-            this._repo = 'angular';
-        }
-
-        this.store.dispatch(new issueActions.LoadAllIssues({ owner: this._owner, repo: this._repo }));
-    }
-
 }

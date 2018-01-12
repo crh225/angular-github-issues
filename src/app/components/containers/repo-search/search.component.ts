@@ -38,6 +38,7 @@ export class RepoSearchComponent implements OnInit, OnDestroy {
 }
 
   ngOnInit() {
+    this.store.dispatch(new repoActions.SetCurrentRepoId(undefined));
   }
 
   ngOnDestroy() {

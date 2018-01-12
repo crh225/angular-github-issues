@@ -6,9 +6,7 @@
 				<mat-card-subtitle> {{ repo.description }} </mat-card-subtitle>
 			</mat-card-header>
 			<mat-card-content>
-                <p class="card-body"><strong>Forks count:</strong> {{ repo.forks_count }}</p>
-                <p class="card-body"><strong>Stargazers count:</strong> {{ repo.stargazers_count }}</p>
-                <p class="card-body"><strong>Watchers count:</strong> {{ repo.watchers_count }}</p>
+                    <chart-bar [repo]="repo"></chart-bar>
 			</mat-card-content>
       <mat-card-footer>
         <strong>Open issues:</strong> {{ repo.open_issues_count }}

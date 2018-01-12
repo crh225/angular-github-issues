@@ -6,12 +6,22 @@ import { Observable } from 'rxjs/Observable';
 export class GithubService {
   constructor(private _http: HttpClient) { }
   
-  public getRepositoryIssues(owner: string, repo: string, days: string): Observable<Object> {
-    const url: string = this._generateRepositoryIssuesUrl(owner, repo, days);
+  public getRepoIssues(owner: string, repo: string, days: string): Observable<Object> {
+    const url: string = this._generateRepoIssuesUrl(owner, repo, days);
     return this._http.get(url);
   }
-  private _generateRepositoryIssuesUrl(owner: string, repo: string, days: string): string {
+
+  public searchRepoByName(name: string): Observable<Object> {
+    const url = this._generateSearchInRepoUrl(name);
+    return this._http.get(url);
+  }
+
+  private _generateRepoIssuesUrl(owner: string, repo: string, days: string): string {
     return `https://api.github.com/repos/${owner}/${repo}/issues?&since=${days}`;
   }
+  private _generateSearchInRepoUrl(name: string): string {
+    return `https://api.github.com/search/repositories?q=${name}&per_page=100`;
+  }
+  
 
 }

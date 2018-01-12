@@ -8,7 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutes } from './app.routes';
-import { SharedModule } from './components';
+import { SharedModule, RepoSearchComponent, SearchCollectionComponent } from './components';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -21,7 +21,7 @@ describe('AppComponent', () => {
     AppRoutes,
     SharedModule.forRoot()
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, RepoSearchComponent, SearchCollectionComponent],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }]
     }).compileComponents();
   }));

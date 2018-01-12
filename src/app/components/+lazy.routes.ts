@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LazyComponent } from './+lazy.component';
-import { RepoIssuesComponent } from './containers';
+import { RepoSearchComponent, RepoIssuesComponent } from './containers';
 
 const routes: Routes = [
   {
     path: '',
-    component: RepoIssuesComponent
+    component: LazyComponent,
+    children: [
+      { path: '', pathMatch: 'full', redirectTo: 'search' },
+      { path: 'search', component: RepoSearchComponent },
+      { path: 'issues', component: RepoIssuesComponent }
+    ] 
   }
 ];
 

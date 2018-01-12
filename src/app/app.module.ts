@@ -10,7 +10,7 @@ import { SharedModule } from './components';
 import { StoreModule } from '@ngrx/store';
 import * as forApplication from './components/store/reducers'
 import { EffectsModule, Actions } from '@ngrx/effects';
-import { IssueEffects } from './components/store/effects';
+import { IssueEffects, RepoEffects } from './components/store/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
@@ -21,7 +21,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     HttpClientModule,
     SharedModule.forRoot(),
     StoreModule.forRoot(forApplication.reducers),
-    EffectsModule.forRoot([IssueEffects]),
+    EffectsModule.forRoot([IssueEffects, RepoEffects]),
     StoreDevtoolsModule.instrument({
          maxAge: 25 //  Retains last 25 states
     })

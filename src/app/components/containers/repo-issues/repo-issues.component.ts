@@ -4,7 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 import { ActionsSubject, Store } from '@ngrx/store';
 import * as issueActions from '@app/components/store/actions';
 import * as fromRoot from '@app/components/store/reducers';
-import { GithubService } from '@app/components/shared/services';
 import { Issue } from '@app/components/shared/models';
 import 'rxjs/add/operator/filter';
 
@@ -22,7 +21,6 @@ export class RepoIssuesComponent implements OnInit {
     private _repo: string;
 
     constructor(
-        private _githubService: GithubService,
         private store: Store<fromRoot.AppState>,
         private actionsSubject: ActionsSubject) {
 
@@ -41,18 +39,10 @@ export class RepoIssuesComponent implements OnInit {
     }
 
     ngOnInit(){
-      this._search();
+      this.store.select(fromRoot.getSelectedRepo).subscribe(data => {
+            if (data) {
+               this.store.dispatch(new issueActions.LoadAllIssues({ owner: data.owner.login, repo: data.name }));
+            }
+      });
     }
-
-    private _search(): void {
-        if (!this._owner || !this._repo) {
-            //default to angular/angular
-            //still a wip. eventually these will be inputs from a different component
-            this._owner = 'angular';
-            this._repo = 'angular';
-        }
-
-        this.store.dispatch(new issueActions.LoadAllIssues({ owner: this._owner, repo: this._repo }));
-    }
-
 }

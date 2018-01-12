@@ -34,7 +34,8 @@
     "build": "ng build",
     "test": "ng test --code-coverage",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "precommit": "npm run lint"
   },
   "private": true,
   "devDependencies": {

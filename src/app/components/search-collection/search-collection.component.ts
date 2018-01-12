@@ -6,17 +6,17 @@ import * as fromRoot from '@app/components/store/reducers';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'repo-search-collection',
+  selector: 'app-search-collection',
   templateUrl: './search-collection.component.html',
   styleUrls: ['./search-collection.component.css'],
-   changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchCollectionComponent {
   @Input() repoCollection: Repo[];
-  
+
   constructor(private store: Store<fromRoot.AppState>, private router: Router) {}
 
-  setRepoInStore(repo: Repo){
+  setRepoInStore(repo: Repo) {
     this.store.dispatch(new repoActions.SetCurrentRepoId(repo.id));
     this.router.navigate(['/lazy/issues']);
   }

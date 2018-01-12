@@ -12,11 +12,11 @@ const routes: Routes = [
     path: 'lazy',
     loadChildren: './components/+lazy.module#LazyModule'
   },
-  { path: '**', redirectTo: '', pathMatch: 'full' },
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutes {};
+export class AppRoutes {}

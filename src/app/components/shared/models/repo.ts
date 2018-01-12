@@ -70,10 +70,9 @@ export interface Repo {
     watchers: number;
     default_branch: string;
     score: number;
-  }
-  
-  export interface RepoSearchResult {
+}
+export interface RepoSearchResult {
     total_count: number;
     incomplete_status: boolean;
     items: Repo[];
-  }
+}

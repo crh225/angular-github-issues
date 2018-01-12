@@ -38,8 +38,8 @@ export class RepoIssuesComponent implements OnInit {
 
     }
 
-    ngOnInit(){
-      this.store.select(fromRoot.getSelectedRepo).subscribe(data => {
+    ngOnInit() {
+      this.store.select(fromRoot.getSelectedRepo).subscribe( data => {
             if (data) {
                this.store.dispatch(new issueActions.LoadAllIssues({ owner: data.owner.login, repo: data.name }));
             }

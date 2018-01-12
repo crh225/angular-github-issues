@@ -12,8 +12,6 @@ Chat: https://gitter.im/angular-github-issues/Lobby
 
 This repository searches's github for repositories. You can then drill down into each repository and see a list of issues for the past seven days.
 
-[![forthebadge](http://forthebadge.com/images/badges/powered-by-comcast.svg)](http://forthebadge.com)
-[![forthebadge](http://forthebadge.com/images/badges/compatibility-ie-6.svg)](http://forthebadge.com)
 
 # Current: ngrx/redux version with multiple entities
 New features in this version include Search and Dashboard!

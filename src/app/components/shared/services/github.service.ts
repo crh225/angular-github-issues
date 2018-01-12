@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class GithubService {
   constructor(private _http: HttpClient) { }
-  
+
   public getRepoIssues(owner: string, repo: string, days: string): Observable<Object> {
     const url: string = this._generateRepoIssuesUrl(owner, repo, days);
     return this._http.get(url);
@@ -22,6 +22,5 @@ export class GithubService {
   private _generateSearchInRepoUrl(name: string): string {
     return `https://api.github.com/search/repositories?q=${name}&per_page=100`;
   }
-  
 
 }

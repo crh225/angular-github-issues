@@ -3,22 +3,15 @@ import {APP_BASE_HREF} from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '@app/components/shared';
 import { IssueCollectionComponent } from '@app/components/issue-collection';
-import * as forApplication from '@app/components/store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
 import { IssueEffects, RepoEffects } from '@app/components/store/effects';
-import { StoreModule } from '@ngrx/store';
-import {RouterTestingModule} from '@angular/router/testing';
-import { SharedTestingModule } from '@app/components/shared';
+import { SharedTestingModuleWithProviders } from '@app/components/shared';
 
 describe('IssueCollectionComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
     imports: [
-    SharedTestingModule.forRoot(),
-    SharedModule.forRoot(),
-    RouterTestingModule,
-    StoreModule.forRoot(forApplication.reducers),
-    EffectsModule.forRoot([IssueEffects, RepoEffects])
+        SharedTestingModuleWithProviders
   ],
   declarations: [IssueCollectionComponent],
   providers: [

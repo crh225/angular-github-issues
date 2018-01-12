@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Repo } from '@app/components/shared/models';
 import { ActionsSubject, Store } from '@ngrx/store';
 import * as repoActions from '@app/components/store/actions';
@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'repo-search-collection',
   templateUrl: './search-collection.component.html',
-  styleUrls: ['./search-collection.component.css']
+  styleUrls: ['./search-collection.component.css'],
+   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchCollectionComponent {
   @Input() repoCollection: Repo[];

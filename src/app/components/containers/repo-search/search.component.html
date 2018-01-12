@@ -1,8 +1,11 @@
 <form (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <input type="search" class="form-control" placeholder="Search Github's Repositories..." [formControl]="searchControl" [value]="searchName">
+            <div class="input-group input-group-lg bt">
+                    <span class="input-group-addon" id="basic-addon1" (click)="onSubmit()">Search</span>
+                    <input type="search" class="form-control" placeholder="Search Github's Repositories..." [formControl]="searchControl" [value]="searchName">
+            </div>
     </div>
-    <button type="submit" class="btn btn-primary">Search</button>
+    
   </form>
   
 <repo-search-collection [repoCollection]="repoCollection"></repo-search-collection>

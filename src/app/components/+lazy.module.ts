@@ -6,6 +6,8 @@ import { LazyComponent } from './+lazy.component';
 import { RepoIssuesComponent, RepoSearchComponent } from './containers';
 import { IssueCollectionComponent } from './issue-collection';
 import { SearchCollectionComponent } from './search-collection';
+import { ChartComponent } from './chart';
+import { ChartsModule } from 'ng2-charts';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -36,8 +38,14 @@ import {
     LazyRoutingModule,
     MatCardModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule
   ],
-  declarations: [LazyComponent, RepoIssuesComponent, RepoSearchComponent, SearchCollectionComponent, IssueCollectionComponent]
+  declarations: [LazyComponent, 
+    RepoIssuesComponent, 
+    RepoSearchComponent, 
+    SearchCollectionComponent, 
+    ChartComponent,
+    IssueCollectionComponent]
 })
 export class LazyModule { }

@@ -10,7 +10,7 @@ import * as forApplication from '@app/components/store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
 import { IssueEffects, RepoEffects } from '@app/components/store/effects';
 import { StoreModule } from '@ngrx/store';
-import {RouterTestingModule} from "@angular/router/testing";
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('IssueCollectionComponent', () => {
   beforeEach(async(() => {

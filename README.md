@@ -1,8 +1,8 @@
 Demo: http://chrishouse.us
 
-<a href="https://codeclimate.com/github/crh225/angular-github-issues/maintainability"><img src="https://api.codeclimate.com/v1/badges/e17d5ad267ef6f6503c1/maintainability" /></a><br/>
-CI Tests [![CircleCI](https://circleci.com/gh/crh225/angular-github-issues/tree/master.svg?style=svg)](https://circleci.com/gh/crh225/angular-github-issues/tree/master)<br/>
-[![Dependency Status](https://david-dm.org/crh225/angular-github-issues.svg)](https://david-dm.org/crh225/angular-github-issues)<br/>
+<a href="https://codeclimate.com/github/crh225/angular-github-issues/maintainability"><img src="https://api.codeclimate.com/v1/badges/e17d5ad267ef6f6503c1/maintainability" /></a>
+[![CircleCI](https://circleci.com/gh/crh225/angular-github-issues/tree/master.svg?style=shield)](https://circleci.com/gh/crh225/angular-github-issues/tree/master)
+[![Dependency Status](https://david-dm.org/crh225/angular-github-issues.svg)](https://david-dm.org/crh225/angular-github-issues)
 [![devDependencies Status](https://david-dm.org/crh225/angular-github-issues/dev-status.svg)](https://david-dm.org/crh225/angular-github-issues?type=dev)
 # About
 

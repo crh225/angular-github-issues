@@ -1,8 +1,14 @@
 <a href="https://codeclimate.com/github/crh225/angular-github-issues/maintainability"><img src="https://api.codeclimate.com/v1/badges/e17d5ad267ef6f6503c1/maintainability" /></a><br/>
 CI Tests [![CircleCI](https://circleci.com/gh/crh225/angular-github-issues/tree/master.svg?style=svg)](https://circleci.com/gh/crh225/angular-github-issues/tree/master)
-# angular-github-issues
+# About
 
-This repository displays Angular's github issues for the past seven days.
+This repository searches's github for repositories. You can then drill down into each repository and see a list of issues for the past seven days.
+
+# ngrx/redux version with multiple entities
+New features in this version:
+Ability to search by any repository, and then drill into the repositories issues. This example show how to use multiple entity's in ngxr.
+For a live demo: http://chrishouse.us
+The code for this demo is the current master branch
 
 # ngrx/redux version with lazy loading and shared modules
 To see a live version: 

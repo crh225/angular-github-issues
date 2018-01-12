@@ -2,7 +2,7 @@ export interface Repo {
     id: number;
     name: string;
     full_name: string;
-    owner: string;
+    owner: any;
     private: boolean;
     html_url: string;
     description: string;

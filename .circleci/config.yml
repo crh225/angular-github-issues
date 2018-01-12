@@ -34,7 +34,6 @@ jobs:
       # run tests!
       - run: yarn test 
   frontend-tests:
-    <<: *defaults
     steps:
       - checkout 
       - attach_workspace:

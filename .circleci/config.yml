@@ -6,18 +6,13 @@ version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:7.10-browsers
-      environment: 
-        - CC_TEST_REPORTER_ID: 907125ec647f80b5548d90e8f2cef6b51f63cd18200ff7b9cd35fbed7010a1f6
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
+        environment: 
+          CC_TEST_REPORTER_ID: 907125ec647f80b5548d90e8f2cef6b51f63cd18200ff7b9cd35fbed7010a1f6
     steps:
       - checkout
-
+      - attach_workspace:
+          at: ~/repo/tmp
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -34,10 +29,6 @@ jobs:
         
       # run tests!
       - run: yarn test 
-      - checkout 
-      - attach_workspace:
-          at: ~/repo/tmp
-      - run: npm install
       - run: 
           name: Run frontend tests
           command: |

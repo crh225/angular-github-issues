@@ -49,7 +49,6 @@ jobs:
           paths: 
             - codeclimate.frontend.json
   upload-coverage:
-    <<: *defaults
     environment: 
       - CC_TEST_REPORTER_ID: 907125ec647f80b5548d90e8f2cef6b51f63cd18200ff7b9cd35fbed7010a1f6
     steps:

@@ -18,7 +18,7 @@ export class LoadAllIssuesSuccess implements Action {
 
 export class IssueFailure implements Action {
     readonly type = ISSUE_FAILURE;
-    constructor(public payload: { concern: 'CREATE' | 'PATCH', error: any }) { }
+    constructor(public payload: { error: any }) { }
 }
 
 export type IssueActions =

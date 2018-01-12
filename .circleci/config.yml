@@ -37,7 +37,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
      
-      # - run: yarn lint
+      - run: yarn lint
       - run: 
           name: Run frontend tests
           command: |

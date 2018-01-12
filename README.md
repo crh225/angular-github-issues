@@ -4,7 +4,7 @@ CI Tests [![CircleCI](https://circleci.com/gh/crh225/angular-github-issues/tree/
 
 This repository searches's github for repositories. You can then drill down into each repository and see a list of issues for the past seven days.
 
-#ngrx/redux version with multiple entities
+# ngrx/redux version with multiple entities
 New features in this version:
 Ability to search by any repository, and then drill into the repositories issues. This example show how to use multiple entity's in ngxr.
 For a live demo: http://chrishouse.us

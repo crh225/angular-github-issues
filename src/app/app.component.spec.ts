@@ -21,7 +21,7 @@ describe('AppComponent', () => {
     AppRoutes,
     SharedModule.forRoot()
   ],
-  declarations: [AppComponent, RepoSearchComponent, SearchCollectionComponent],
+  declarations: [AppComponent],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }]
     }).compileComponents();
   }));

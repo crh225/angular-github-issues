@@ -7,6 +7,8 @@ Demo: http://chrishouse.us
 [![devDependencies Status](https://david-dm.org/crh225/angular-github-issues/dev-status.svg)](https://david-dm.org/crh225/angular-github-issues?type=dev)
 # About
 
+[![Join the chat at https://gitter.im/angular-github-issues/Lobby](https://badges.gitter.im/angular-github-issues/Lobby.svg)](https://gitter.im/angular-github-issues/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This repository searches's github for repositories. You can then drill down into each repository and see a list of issues for the past seven days.
 
 # ngrx/redux version with multiple entities

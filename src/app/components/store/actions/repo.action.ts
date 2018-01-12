@@ -19,7 +19,7 @@ export class LoadAllReposSuccess implements Action {
 
 export class RepoFailure implements Action {
     readonly type = REPO_FAILURE;
-    constructor(public payload: { concern: 'CREATE' | 'PATCH', error: any }) { }
+    constructor(public payload: { error: any }) { }
 }
 
 export class SetCurrentRepoId implements Action {

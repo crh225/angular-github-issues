@@ -1,6 +1,4 @@
 import { TestBed, async } from '@angular/core/testing';
-import {APP_BASE_HREF} from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '@app/components/shared';
 import { ChartComponent } from '@app/components/chart';
 import { ChartsModule } from 'ng2-charts';
@@ -17,7 +15,6 @@ describe('ChartComponent', () => {
     imports: [
     SharedTestingModule.forRoot(),
     SharedModule.forRoot(),
-    RouterTestingModule,
     ChartsModule,
     StoreModule.forRoot(forApplication.reducers),
     EffectsModule.forRoot([IssueEffects, RepoEffects])

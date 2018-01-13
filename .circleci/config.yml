@@ -7,9 +7,6 @@ jobs:
   build:
     docker:
       - image: circleci/node:7.10-browsers
-        environment: 
-          CC_TEST_REPORTER_ID: 907125ec647f80b5548d90e8f2cef6b51f63cd18200ff7b9cd35fbed7010a1f6
-          FIREBASE_DEPLOY_TOKEN: 1/9LYcry71S2Zc32Tv03N7RDUpioGdon4lj-faQ20T8ng
     steps:
       - checkout
       - attach_workspace:

@@ -17,10 +17,10 @@ export class GithubService {
   }
 
   private _generateRepoIssuesUrl(owner: string, repo: string, days: string): string {
-    return `https://api.github.com/repos/${owner}/${repo}/issues?&since=${days}`;
+    return `https://api.github.com/repos/${owner}/${repo}/issues?&since=${days}?&per_page=100`;
   }
   private _generateSearchInRepoUrl(name: string): string {
-    return `https://api.github.com/search/repositories?q=${name}&per_page=100`;
+    return `https://api.github.com/search/repositories?q=${name}&per_page=40`;
   }
 
 }

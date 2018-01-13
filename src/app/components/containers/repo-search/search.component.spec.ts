@@ -1,4 +1,4 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, tick, fakeAsync } from '@angular/core/testing';
 import {APP_BASE_HREF} from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { RepoSearchComponent } from './search.component';
@@ -14,7 +14,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { SharedTestingModule } from '@app/components/shared';
 
 describe('RepoSearchComponent', () => {
-  beforeEach(async(() => {
+  beforeEach((() => {
     TestBed.configureTestingModule({
     imports: [
     SharedTestingModule.forRoot(),
@@ -34,6 +34,33 @@ describe('RepoSearchComponent', () => {
   it('should create the search component', async(() => {
     const fixture = TestBed.createComponent(RepoSearchComponent);
     const app = fixture.debugElement.componentInstance;
+    fixture.detectChanges();
     expect(app).toBeTruthy();
+  }));
+
+  it('should call the submit button', ((done: any) => {
+    const fixture = TestBed.createComponent(RepoSearchComponent);
+    const comp = fixture.debugElement.componentInstance;
+    comp.searchControl.value = 'angular';
+    fixture.detectChanges();
+
+    comp.onSubmit();
+    fixture.detectChanges();
+    comp.actionsSubject
+    .asObservable()
+    .subscribe((data: any) => {
+        switch (data.type) {
+            case '[Repo] LOAD ALL SUCCESS':
+                fixture.detectChanges();
+                fixture.whenStable().then(() => {
+                    fixture.detectChanges();
+                    expect(Object.keys(comp.repoCollection).length).toBeGreaterThan(0);
+                    done();
+                  });
+                break;
+            default: console.log(data);
+        }
+    });
+
   }));
 });

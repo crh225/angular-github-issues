@@ -9,6 +9,7 @@ jobs:
       - image: circleci/node:7.10-browsers
         environment: 
           CC_TEST_REPORTER_ID: 907125ec647f80b5548d90e8f2cef6b51f63cd18200ff7b9cd35fbed7010a1f6
+          FIREBASE_DEPLOY_TOKEN: 1/9LYcry71S2Zc32Tv03N7RDUpioGdon4lj-faQ20T8ng
     steps:
       - checkout
       - attach_workspace:
@@ -47,3 +48,11 @@ jobs:
           name: Upload coverage results to Code Climate
           command: |
             ./tmp/cc-test-reporter upload-coverage -i tmp/codeclimate.frontend.json
+      - run:
+          name: Build app in production mode
+          command: |
+            yarn build:prod
+      - run:
+          name: Deploy app to firebase
+          command: |
+            ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN

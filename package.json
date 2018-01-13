@@ -35,7 +35,9 @@
     "test": "ng test --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "build:prod": "ng build --prod --output-path public",
+    "deploy": "firebase deploy"
   },
   "private": true,
   "devDependencies": {
@@ -58,6 +60,7 @@
     "protractor": "5.1.2",
     "ts-node": "3.0.4",
     "tslint": "5.3.2",
-    "typescript": "2.4.2"
+    "typescript": "2.4.2",
+    "firebase-tools":"3.16.0"
   }
 }

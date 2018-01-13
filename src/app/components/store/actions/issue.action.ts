@@ -1,7 +1,6 @@
 import { ActionReducer, Action, ActionReducerMap, MetaReducer } from '@ngrx/store';
 import { Issue } from '@app/components/shared/models';
 
-export const ISSUE_FAILURE = '[Issue] FAILURE';
 export const LOAD_ALL_ISSUES = '[Issue] LOAD ALL';
 export const LOAD_ALL_ISSUES_SUCCESS = '[Issue] LOAD ALL SUCCESS';
 
@@ -16,12 +15,6 @@ export class LoadAllIssuesSuccess implements Action {
 }
 
 
-export class IssueFailure implements Action {
-    readonly type = ISSUE_FAILURE;
-    constructor(public payload: { error: any }) { }
-}
-
 export type IssueActions =
     LoadAllIssues
-    | LoadAllIssuesSuccess
-    | IssueFailure;
+    | LoadAllIssuesSuccess;

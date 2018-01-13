@@ -1,7 +1,6 @@
 import { ActionReducer, Action, ActionReducerMap, MetaReducer } from '@ngrx/store';
 import { Repo } from '@app/components/shared/models';
 
-export const REPO_FAILURE = '[Repo] FAILURE';
 export const LOAD_ALL_REPOS = '[Repo] LOAD ALL';
 export const LOAD_ALL_REPOS_SUCCESS = '[Repo] LOAD ALL SUCCESS';
 export const SET_CURRENT_REPO_ID = '[Repo] SET CURRENT REPO ID';
@@ -17,11 +16,6 @@ export class LoadAllReposSuccess implements Action {
 }
 
 
-export class RepoFailure implements Action {
-    readonly type = REPO_FAILURE;
-    constructor(public payload: { error: any }) { }
-}
-
 export class SetCurrentRepoId implements Action {
     readonly type = SET_CURRENT_REPO_ID;
     constructor(public payload: number) { }
@@ -30,5 +24,4 @@ export class SetCurrentRepoId implements Action {
 export type RepoActions =
     LoadAllRepos
     | LoadAllReposSuccess
-    | RepoFailure
     | SetCurrentRepoId;

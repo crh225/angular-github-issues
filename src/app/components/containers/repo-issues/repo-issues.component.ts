@@ -32,7 +32,7 @@ export class RepoIssuesComponent implements OnInit {
                     case '[Issue] LOAD ALL SUCCESS':
                         this.repoIssueCollection = data.payload;
                         break;
-                    default: console.log(data);
+                    default:
                 }
             });
 

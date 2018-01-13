@@ -31,7 +31,7 @@ export class RepoSearchComponent implements OnInit {
                 case '[Repo] LOAD ALL SUCCESS':
                     this.repoCollection = data.payload;
                     break;
-                default: console.log(data);
+                default:
             }
         });
 
@@ -42,9 +42,7 @@ export class RepoSearchComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (!this.searchControl.value || this.searchControl.value.trim() === '') {
-      return;
-    } else {
+    if (this.searchControl.value && this.searchControl.value.trim() !== '') {
       this.searchName = this.searchControl.value;
       this._search();
     }

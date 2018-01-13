@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
@@ -13,7 +13,7 @@ import { RepoSearchResult, Repo } from '@app/components/shared/models';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class RepoSearchComponent implements OnInit, OnDestroy {
+export class RepoSearchComponent implements OnInit {
 
   public searchControl: FormControl = new FormControl();
   public repoCollection: RepoSearchResult[] = [];
@@ -41,16 +41,13 @@ export class RepoSearchComponent implements OnInit, OnDestroy {
     this.store.dispatch(new repoActions.SetCurrentRepoId(undefined));
   }
 
-  ngOnDestroy() {
-  }
-
   onSubmit(): void {
     if (!this.searchControl.value || this.searchControl.value.trim() === '') {
       return;
+    } else {
+      this.searchName = this.searchControl.value;
+      this._search();
     }
-
-    this.searchName = this.searchControl.value;
-    this._search();
   }
 
   private _search(): void {

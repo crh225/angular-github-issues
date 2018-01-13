@@ -12,6 +12,8 @@ Chat: https://gitter.im/angular-github-issues/Lobby
 
 This repository searches's github for repositories. You can then drill down into each repository and see a list of issues for the past seven days.
 
+CI is set up to run lint,testing, build in aot mode for production, and to deploy to firebase.
+
 
 # Current: ngrx/redux version with multiple entities
 New features in this version include Search and Dashboard!

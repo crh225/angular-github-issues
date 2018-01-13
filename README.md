@@ -1,4 +1,4 @@
-Demo: http://chrishouse.us <br>
+Demo: https://chris-house.firebaseapp.com/lazy/search <br>
 Chat: https://gitter.im/angular-github-issues/Lobby
 
 <a href="https://codeclimate.com/github/crh225/angular-github-issues/maintainability"><img src="https://api.codeclimate.com/v1/badges/e17d5ad267ef6f6503c1/maintainability" /></a>

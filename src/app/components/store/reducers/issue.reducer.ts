@@ -47,13 +47,3 @@ export function issueReducer(state: State = initialState, action: issueActions.I
 
     }
 }
-
-/**
- * Every reducer module exports selector functions, however child reducers
- * have no knowledge of the overall state tree. To make them useable, we
- * need to make new selectors that wrap them.
- **/
-
-export const getEntities = (state: State) => state.entities;
-
-export const getIds = (state: State) => state.ids;

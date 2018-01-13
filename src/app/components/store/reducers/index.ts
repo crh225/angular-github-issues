@@ -16,7 +16,6 @@ export const reducers = {
 };
 
 
-export const getIssueState = (state: AppState) => state.issue;
 export const getRepoState = (state: AppState) => state.repo;
 
 /**
@@ -29,8 +28,6 @@ export const getRepoState = (state: AppState) => state.repo;
  * The created selectors can also be composed together to select different
  * pieces of state.
  */
-export const getIssueEntities = createSelector(getIssueState, fromIssue.getEntities);
-export const getIssueIds = createSelector(getIssueState, fromIssue.getIds);
 export const getRepoEntities = createSelector(getRepoState, fromRepo.getEntities);
 export const getRepoIds = createSelector(getRepoState, fromRepo.getIds);
 export const getSelectedRepoId = createSelector(getRepoState, fromRepo.getCurrentRepoId);

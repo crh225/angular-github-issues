@@ -8,6 +8,7 @@ import { IssueCollectionComponent } from './issue-collection';
 import { SearchCollectionComponent } from './search-collection';
 import { ChartComponent } from './chart';
 import { ChartsModule } from 'ng2-charts';
+import { NotFoundComponent } from './not-found';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -46,6 +47,7 @@ import {
     RepoSearchComponent,
     SearchCollectionComponent,
     ChartComponent,
-    IssueCollectionComponent]
+    IssueCollectionComponent,
+    NotFoundComponent]
 })
 export class LazyModule { }

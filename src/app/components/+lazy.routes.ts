@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LazyComponent } from './+lazy.component';
 import { RepoSearchComponent, RepoIssuesComponent } from './containers';
+import { NotFoundComponent } from './not-found';
 
 const routes: Routes = [
   {
@@ -12,7 +13,11 @@ const routes: Routes = [
       { path: 'search', component: RepoSearchComponent },
       { path: 'issues', component: RepoIssuesComponent }
     ]
-  }
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
+  },
 ];
 
 @NgModule({

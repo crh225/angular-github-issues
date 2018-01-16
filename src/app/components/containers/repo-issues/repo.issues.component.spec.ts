@@ -1,4 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RepoIssuesComponent } from './repo-issues.component';
 import { SharedModule } from '@app/components/shared';
 import { IssueCollectionComponent } from '@app/components/issue-collection';
@@ -12,7 +13,8 @@ describe('RepoIssuesComponent', () => {
   beforeEach((() => {
     TestBed.configureTestingModule({
     imports: [
-        SharedTestingModuleWithProviders
+        SharedTestingModuleWithProviders,
+        BrowserAnimationsModule
   ],
   declarations: [RepoIssuesComponent, IssueCollectionComponent],
   providers: [

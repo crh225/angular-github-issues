@@ -9,35 +9,13 @@ import { SearchCollectionComponent } from './search-collection';
 import { ChartComponent } from './chart';
 import { ChartsModule } from 'ng2-charts';
 import { NotFoundComponent } from './not-found';
-import {
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatDialogModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatTableModule,
-  MatToolbarModule
-} from '@angular/material';
+import { SharedModule } from '@app/components';
 
 @NgModule({
   imports: [
     CommonModule,
     LazyRoutingModule,
-    MatCardModule,
+    SharedModule,
     FormsModule,
     ReactiveFormsModule,
     ChartsModule

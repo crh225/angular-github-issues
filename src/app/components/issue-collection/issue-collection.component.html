@@ -1,16 +1,38 @@
+<div class="page-title"><h3>Issue List</h3></div>
 <div *ngIf="repoIssueCollection.length > 0">
-	<div *ngFor="let repoIssue of repoIssueCollection" class="card-wrapper">
-		<mat-card class="card">
-			<mat-card-header>
-				<mat-card-title><strong>{{ repoIssue.title }}</strong></mat-card-title>
-				<mat-card-subtitle>opened by {{ repoIssue.user?.login }} at {{repoIssue.created_at | date: 'MM/dd/yyyy'}}</mat-card-subtitle>
-        <mat-card-subtitle>assigneed to {{ repoIssue.assignee?.login ? repoIssue.assignee?.login : 'nobody yet' }}</mat-card-subtitle>
-			</mat-card-header>
-			<mat-card-content>
-				<p class="card-body">{{ repoIssue.body }}</p>
-			</mat-card-content>
-      <mat-card-footer>updated at {{repoIssue.updated_at | date: 'MM/dd/yyyy'}}</mat-card-footer>
-		</mat-card>
+	<div>
+		<mat-accordion>
+			<mat-expansion-panel *ngFor="let repoIssue of repoIssueCollection" class="card-wrapper">
+				<mat-expansion-panel-header>
+					<mat-panel-title>
+						<b>{{ repoIssue.title }}</b>
+					</mat-panel-title>
+				</mat-expansion-panel-header>
+				<mat-list>
+						<mat-list-item> 	opened by {{ repoIssue.user?.login }} at {{repoIssue.created_at | date: 'MM/dd/yyyy'}} </mat-list-item>
+						<mat-list-item> assigned to {{repoIssue.assignee?.login}} </mat-list-item>
+						<mat-list-item> Details </mat-list-item>
+						<mat-list-item> {{ repoIssue.body }} </mat-list-item>
+				</mat-list>
+				<!--		<p class="card-body">{{ repoIssue.body }}</p>
+				<br/>
+		<mat-action-row>
+					opened by {{ repoIssue.user?.login }} at {{repoIssue.created_at | date: 'MM/dd/yyyy'}}
+				</mat-action-row>
+			-->
+				<mat-action-row>
+						updated at {{repoIssue.updated_at | date: 'MM/dd/yyyy'}}
+				</mat-action-row>
+			</mat-expansion-panel>
+		</mat-accordion>
+
+
 	</div>
 </div>
-<div *ngIf="repoIssueCollection.length < 1" class="spinner"></div>
+<div *ngIf="repoIssueCollection.length < 1" class="spinner">
+		<div class="rect1"></div>
+		<div class="rect2"></div>
+		<div class="rect3"></div>
+		<div class="rect4"></div>
+		<div class="rect5"></div>
+</div>

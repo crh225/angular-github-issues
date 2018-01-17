@@ -14,12 +14,6 @@
 						<mat-list-item> Details </mat-list-item>
 						<mat-list-item> {{ repoIssue.body }} </mat-list-item>
 				</mat-list>
-				<!--		<p class="card-body">{{ repoIssue.body }}</p>
-				<br/>
-		<mat-action-row>
-					opened by {{ repoIssue.user?.login }} at {{repoIssue.created_at | date: 'MM/dd/yyyy'}}
-				</mat-action-row>
-			-->
 				<mat-action-row>
 						updated at {{repoIssue.updated_at | date: 'MM/dd/yyyy'}}
 				</mat-action-row>
@@ -29,10 +23,6 @@
 
 	</div>
 </div>
-<div *ngIf="repoIssueCollection.length < 1" class="spinner">
-		<div class="rect1"></div>
-		<div class="rect2"></div>
-		<div class="rect3"></div>
-		<div class="rect4"></div>
-		<div class="rect5"></div>
+<div *ngIf="repoIssueCollection.length < 1">
+		<app-spinner-component></app-spinner-component>
 </div>

@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LazyRoutingModule } from './+lazy.routes';
 import { LazyComponent } from './+lazy.component';
-import { RepoIssuesComponent, RepoSearchComponent } from './containers';
-import { IssueCollectionComponent } from './issue-collection';
-import { SearchCollectionComponent } from './search-collection';
-import { ChartComponent } from './chart';
+import { RepoIssuesComponent, RepoSearchComponent } from '@app/containers';
 import { ChartsModule } from 'ng2-charts';
 import { NotFoundComponent } from './not-found';
-import { SharedModule } from '@app/components';
+import { SharedModule,
+  ChartComponent,
+  IssueCollectionComponent,
+  SearchCollectionComponent,
+  SpinnerComponent } from '@app/components';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { SharedModule } from '@app/components';
     SearchCollectionComponent,
     ChartComponent,
     IssueCollectionComponent,
-    NotFoundComponent]
+    NotFoundComponent,
+    SpinnerComponent]
 })
 export class LazyModule { }

@@ -1,6 +1,6 @@
 import { NgModule, ModuleWithProviders  } from '@angular/core';
 import { GithubService } from './services';
-
+import { SpinnerModule } from './components';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -25,52 +25,37 @@ import {
   MatToolbarModule
 } from '@angular/material';
 
+const ModulesArray = [
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatTableModule,
+  MatToolbarModule,
+  SpinnerModule
+];
+
 @NgModule({
   imports: [
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatDialogModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatTableModule,
-  MatToolbarModule
+    ModulesArray
   ],
   exports: [
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatDialogModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatTableModule,
-  MatToolbarModule
+    ModulesArray
   ]
 })
 export class SharedModule {

@@ -5,8 +5,8 @@ import { GithubRoutingModule } from './+github.routes';
 import { GithubComponent } from './+github.component';
 import { RepoIssuesComponent, RepoSearchComponent } from '@app/github/containers';
 import { ChartsModule } from 'ng2-charts';
-import { NotFoundComponent } from './not-found';
-import * as core from '@core/shared';
+import { NotFoundComponent } from '@core/components/not-found';
+import { CoreModule } from '@core/';
 import { SharedModule,
   ChartComponent,
   IssueCollectionComponent,
@@ -20,15 +20,14 @@ import { SharedModule,
     FormsModule,
     ReactiveFormsModule,
     ChartsModule,
-    core.SharedModule
+    CoreModule
   ],
   declarations: [GithubComponent,
     RepoIssuesComponent,
     RepoSearchComponent,
     SearchCollectionComponent,
     ChartComponent,
-    IssueCollectionComponent,
-    NotFoundComponent,
+    IssueCollectionComponent
     ]
 })
 export class GithubModule { }

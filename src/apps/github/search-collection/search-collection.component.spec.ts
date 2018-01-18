@@ -11,7 +11,7 @@ import { IssueEffects, RepoEffects } from '@app/github/store/effects';
 import { StoreModule } from '@ngrx/store';
 import {RouterTestingModule} from '@angular/router/testing';
 import { SharedTestingModule } from '@app/github/shared';
-import * as core from '@core/shared';
+import { CoreModule } from '@core/';
 
 describe('RepoSearchComponent', () => {
   beforeEach(async(() => {
@@ -19,7 +19,7 @@ describe('RepoSearchComponent', () => {
     imports: [
     SharedTestingModule.forRoot(),
     SharedModule.forRoot(),
-    core.SharedModule,
+    CoreModule,
     RouterTestingModule,
     ChartsModule,
     StoreModule.forRoot(forApplication.reducers),

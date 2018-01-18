@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutes } from './app.routes';
 import { AppComponent } from './app.component';
 import * as github from '@app/github';
-import * as core from '@core/shared';
+import { CoreModule } from '@core/';
 import { StoreModule } from '@ngrx/store';
 import * as forApplication from '@app/github/store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
@@ -21,7 +21,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     HttpClientModule,
     BrowserAnimationsModule,
     github.SharedModule.forRoot(),
-    core.SharedModule.forRoot(),
+    CoreModule,
     StoreModule.forRoot(forApplication.reducers),
     EffectsModule.forRoot([IssueEffects, RepoEffects]),
     StoreDevtoolsModule.instrument({

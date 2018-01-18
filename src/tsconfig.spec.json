@@ -15,6 +15,9 @@
       ],
       "@core/*": [
         "apps/core/*"
+      ],
+      "@core/": [
+        "apps/core/"
       ]
     }
   },

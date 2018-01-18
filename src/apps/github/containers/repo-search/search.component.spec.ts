@@ -12,7 +12,7 @@ import { IssueEffects, RepoEffects } from '@app/github/store/effects';
 import { StoreModule } from '@ngrx/store';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SharedTestingModule } from '@app/github/shared';
-import * as core from '@core/shared';
+import { CoreModule } from '@core/';
 
 describe('RepoSearchComponent', () => {
   beforeEach((() => {
@@ -22,7 +22,7 @@ describe('RepoSearchComponent', () => {
     SharedModule.forRoot(),
     RouterTestingModule,
     ChartsModule,
-    core.SharedModule,
+    CoreModule,
     StoreModule.forRoot(forApplication.reducers),
     EffectsModule.forRoot([IssueEffects, RepoEffects])
   ],

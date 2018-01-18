@@ -1,5 +1,5 @@
 import { NgModule, ModuleWithProviders  } from '@angular/core';
-import { SpinnerModule } from './components';
+import { NotFoundModule, SpinnerModule } from '@core/components';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -46,7 +46,8 @@ const ModulesArray = [
   MatSidenavModule,
   MatTableModule,
   MatToolbarModule,
-  SpinnerModule
+  SpinnerModule,
+  NotFoundModule
 ];
 
 @NgModule({
@@ -57,10 +58,10 @@ const ModulesArray = [
     ModulesArray
   ]
 })
-export class SharedModule {
+export class CoreModule {
     static forRoot(): ModuleWithProviders {
     return {
-      ngModule: SharedModule,
+      ngModule: CoreModule,
       providers: [ ]
     };
   }

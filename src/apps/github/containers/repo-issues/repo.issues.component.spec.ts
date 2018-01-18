@@ -8,7 +8,7 @@ import { IssueEffects, RepoEffects } from '@app/github/store/effects';
 import {RouterTestingModule} from '@angular/router/testing';
 import { SharedTestingModule, SharedTestingModuleWithProviders } from '@app/github/shared';
 import * as repoActions from '@app/github/store/actions';
-import * as core from '@core/shared';
+import { CoreModule } from '@core/';
 
 describe('RepoIssuesComponent', () => {
   beforeEach((() => {
@@ -16,7 +16,7 @@ describe('RepoIssuesComponent', () => {
     imports: [
         SharedTestingModuleWithProviders,
         BrowserAnimationsModule,
-        core.SharedModule
+        CoreModule
   ],
   declarations: [RepoIssuesComponent, IssueCollectionComponent],
   providers: [

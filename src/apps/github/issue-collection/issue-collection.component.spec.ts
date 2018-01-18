@@ -6,14 +6,14 @@ import { IssueCollectionComponent } from '@app/github/issue-collection';
 import { EffectsModule, Actions } from '@ngrx/effects';
 import { IssueEffects, RepoEffects } from '@app/github/store/effects';
 import { SharedTestingModuleWithProviders } from '@app/github/shared';
-import * as core from '@core/shared';
+import { CoreModule } from '@core/';
 
 describe('IssueCollectionComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
     imports: [
         SharedTestingModuleWithProviders,
-        core.SharedModule
+        CoreModule
   ],
   declarations: [IssueCollectionComponent],
   providers: [

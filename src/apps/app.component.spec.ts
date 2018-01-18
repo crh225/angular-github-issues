@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutes } from './app.routes';
 import { SharedModule, RepoSearchComponent, SearchCollectionComponent } from './github';
-import * as core from '@core/shared';
+import { CoreModule } from '@core/';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -21,7 +21,7 @@ describe('AppComponent', () => {
     HttpClientModule,
     AppRoutes,
     SharedModule.forRoot(),
-    core.SharedModule
+    CoreModule
   ],
   declarations: [AppComponent],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }]

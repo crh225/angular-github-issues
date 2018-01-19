@@ -18,7 +18,7 @@ export class RepoSearchComponent implements OnInit {
   public searchControl: FormControl = new FormControl();
   public repoCollection: RepoSearchResult[] = [];
   public query = '';
-  private searching = false;
+  public searching = false;
   constructor(
     private store: Store<fromRoot.AppState>,
     private actionsSubject: ActionsSubject) {

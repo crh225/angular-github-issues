@@ -2,7 +2,7 @@
         <mat-card-title>Find a Repository</mat-card-title>
         <mat-card-content>
                 <mat-input-container>
-                        <input matInput placeholder="Search for a repository" [(ngModel)]="query" (keyup)="search(query)">
+                        <input matInput placeholder="Search for a repository" [(ngModel)]="query" (keyup)="search()">
                 </mat-input-container>
                 <mat-spinner [class.show]="searching" [diameter]="30" [strokeWidth]="3"></mat-spinner>
         </mat-card-content>

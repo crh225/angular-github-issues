@@ -8,7 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutes } from './app.routes';
-import { SharedModule, RepoSearchComponent, SearchCollectionComponent } from './github';
+import { SharedModule } from './github';
 import { CoreModule } from '@core/';
 
 describe('AppComponent', () => {

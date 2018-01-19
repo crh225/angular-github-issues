@@ -2,7 +2,7 @@ import { TestBed, async } from '@angular/core/testing';
 import {APP_BASE_HREF} from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '@app/github/shared';
-import { IssueCollectionComponent } from '@app/github/issue-collection';
+import { IssueCollectionComponent } from '@app/github/containers/repo-issues';
 import { EffectsModule, Actions } from '@ngrx/effects';
 import { IssueEffects, RepoEffects } from '@app/github/store/effects';
 import { SharedTestingModuleWithProviders } from '@app/github/shared';

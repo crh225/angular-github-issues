@@ -1,12 +1,13 @@
-<form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-            <div class="input-group input-group-lg bt">
-                    <span class="input-group-addon" id="basic-addon1" (click)="onSubmit()">Search</span>
-                    <input type="search" class="form-control" placeholder="Search Github's Repositories..." [formControl]="searchControl" [value]="searchName">
-            </div>
-    </div>
-    
-  </form>
-  
+<mat-card>
+        <mat-card-title>Find a Repository</mat-card-title>
+        <mat-card-content>
+                <mat-input-container>
+                        <input matInput placeholder="Search for a repository" [(ngModel)]="query" (keyup)="search()">
+                </mat-input-container>
+                <mat-spinner [class.show]="searching" [diameter]="30" [strokeWidth]="3"></mat-spinner>
+        </mat-card-content>
+        <mat-card-footer>
+                <!--<span *ngIf="error">{{error}}</span>-->
+        </mat-card-footer>
+</mat-card>
 <app-search-collection [repoCollection]="repoCollection"></app-search-collection>
-  

@@ -1,5 +1,6 @@
 import { TestBed, async, tick, fakeAsync } from '@angular/core/testing';
 import {APP_BASE_HREF} from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { RepoSearchComponent } from './search.component';
 import { SharedModule } from '@app/github/shared';
@@ -17,6 +18,7 @@ describe('RepoSearchComponent', () => {
   beforeEach((() => {
     TestBed.configureTestingModule({
     imports: [
+    BrowserAnimationsModule,
     SharedTestingModule.forRoot(),
     SharedModule.forRoot(),
     RouterTestingModule,
@@ -42,10 +44,10 @@ describe('RepoSearchComponent', () => {
   it('should call the submit button', ((done: any) => {
     const fixture = TestBed.createComponent(RepoSearchComponent);
     const comp = fixture.debugElement.componentInstance;
-    comp.searchControl.value = 'angular';
+    comp.query = 'angular';
     fixture.detectChanges();
 
-    comp.onSubmit();
+    comp.search();
     fixture.detectChanges();
     comp.actionsSubject
     .asObservable()

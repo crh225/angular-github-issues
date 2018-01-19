@@ -17,8 +17,8 @@ export class RepoSearchComponent implements OnInit {
 
   public searchControl: FormControl = new FormControl();
   public repoCollection: RepoSearchResult[] = [];
-  public searchName = '';
-
+  public query = '';
+  private searching = false;
   constructor(
     private store: Store<fromRoot.AppState>,
     private actionsSubject: ActionsSubject) {
@@ -30,6 +30,7 @@ export class RepoSearchComponent implements OnInit {
             switch (data.type) {
                 case '[Repo] LOAD ALL SUCCESS':
                     this.repoCollection = data.payload;
+                    this.searching = false;
                     break;
                 default:
             }
@@ -41,14 +42,10 @@ export class RepoSearchComponent implements OnInit {
     this.store.dispatch(new repoActions.SetCurrentRepoId(undefined));
   }
 
-  onSubmit(): void {
-    if (this.searchControl.value && this.searchControl.value.trim() !== '') {
-      this.searchName = this.searchControl.value;
-      this._search();
+  search(): void {
+    if (this.query.trim() !== '') {
+      this.searching = true;
+      this.store.dispatch(new repoActions.LoadAllRepos({ searchName: this.query }));
     }
-  }
-
-  private _search(): void {
-    this.store.dispatch(new repoActions.LoadAllRepos({ searchName: this.searchName }));
   }
 }

@@ -11,7 +11,7 @@ import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/switchMap';
-
+import 'rxjs/add/operator/debounceTime';
 
 @Injectable()
 export class RepoEffects {
@@ -19,6 +19,7 @@ export class RepoEffects {
     @Effect()
     load$: Observable<Action> = this.actions$
         .ofType(repoActions.LOAD_ALL_REPOS)
+        .debounceTime(1000)
         .map((action: repoActions.LoadAllRepos) => action.payload)
         .switchMap((data) =>
         this._githubService.searchRepoByName(data.searchName)

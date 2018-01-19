@@ -550,7 +550,7 @@ archiver-utils@^1.3.0:
     normalize-path "^2.0.0"
     readable-stream "^2.0.0"
 
-archiver@^2.1.0:
+archiver@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/archiver/-/archiver-2.1.1.tgz#ff662b4a78201494a3ee544d3a33fe7496509ebc"
   dependencies:
@@ -2714,12 +2714,12 @@ find-up@^2.0.0, find-up@^2.1.0:
   dependencies:
     locate-path "^2.0.0"
 
-firebase-tools@3.16.0:
-  version "3.16.0"
-  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-3.16.0.tgz#1389fc160215ec241145441c76a848cfce9b7941"
+firebase-tools@3.17.2:
+  version "3.17.2"
+  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-3.17.2.tgz#8a0056697bfc3b2d4ae718113b46d3cf558ffac9"
   dependencies:
     JSONStream "^1.2.1"
-    archiver "^2.1.0"
+    archiver "^2.1.1"
     chalk "^1.1.0"
     cjson "^0.3.1"
     cli-table "^0.3.1"

@@ -8,19 +8,17 @@ Chat: https://gitter.im/angular-github-issues/Lobby
 [![devDependencies Status](https://david-dm.org/crh225/angular-github-issues/dev-status.svg)](https://david-dm.org/crh225/angular-github-issues?type=dev)
 ![Angular_Version 5](https://img.shields.io/badge/Angular_Version-5-brightgreen.svg)
 
-# About
+# About - Current Version
 
 This repository searches's github for repositories. You can then drill down into each repository and see a list of issues for the past seven days.
 
 CI is set up to run lint,testing, build in aot mode for production, and to deploy to firebase.
 
-
-# Current: ngrx/redux version with multiple entities
 New features in this version include Search and Dashboard!
 
 Ability to search by any repository, and then drill into the repositories issues. This example show how to use multiple entity's in ngxr. The main search page is now a dashboard of barcharts for each repository
 
-For a live demo: http://chrishouse.us
+For a live demo: https://chris-house.firebaseapp.com/
 
 The code for this demo is the current master branch
 

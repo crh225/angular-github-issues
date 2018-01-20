@@ -13,7 +13,7 @@ describe('IssueCollectionComponent', () => {
     TestBed.configureTestingModule({
     imports: [
         SharedTestingModuleWithProviders,
-        CoreModule
+        CoreModule.forRoot(),
   ],
   declarations: [IssueCollectionComponent],
   providers: [

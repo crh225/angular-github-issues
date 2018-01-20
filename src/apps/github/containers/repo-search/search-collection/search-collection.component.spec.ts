@@ -18,7 +18,7 @@ describe('RepoSearchComponent', () => {
     imports: [
     SharedTestingModule.forRoot(),
     SharedModule.forRoot(),
-    CoreModule,
+    CoreModule.forRoot(),
     RouterTestingModule,
     ChartsModule,
     StoreModule.forRoot(forApplication.reducers),

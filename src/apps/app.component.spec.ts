@@ -21,7 +21,7 @@ describe('AppComponent', () => {
     HttpClientModule,
     AppRoutes,
     SharedModule.forRoot(),
-    CoreModule
+    CoreModule.forRoot(),
   ],
   declarations: [AppComponent],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }]

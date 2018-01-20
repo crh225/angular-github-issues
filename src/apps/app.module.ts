@@ -21,7 +21,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     HttpClientModule,
     BrowserAnimationsModule,
     github.SharedModule.forRoot(),
-    CoreModule,
+    CoreModule.forRoot(),
     StoreModule.forRoot(forApplication.reducers),
     EffectsModule.forRoot([IssueEffects, RepoEffects]),
     StoreDevtoolsModule.instrument({

@@ -23,7 +23,7 @@ describe('RepoSearchComponent', () => {
     SharedModule.forRoot(),
     RouterTestingModule,
     ChartsModule,
-    CoreModule,
+    CoreModule.forRoot(),
     StoreModule.forRoot(forApplication.reducers),
     EffectsModule.forRoot([IssueEffects, RepoEffects])
   ],

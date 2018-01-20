@@ -10,7 +10,6 @@ Chat: https://gitter.im/angular-github-issues/Lobby
 
 # About - Current Version
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/crh225/angular-github-issues.svg)](https://greenkeeper.io/)
 
 This repository searches's github for repositories. You can then drill down into each repository and see a list of issues for the past seven days.
 

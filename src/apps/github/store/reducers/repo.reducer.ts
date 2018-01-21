@@ -60,8 +60,6 @@ export function repoReducer(state: State = initialState, action: repoActions.Rep
 
 export const getEntities = (state: State) => state.entities;
 
-export const getIds = (state: State) => state.ids;
-
 export const getCurrentRepoId = (state: State) => state.id;
 
 export const getSelected = createSelector(getEntities, getCurrentRepoId, (entities, selectedId) => {

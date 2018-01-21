@@ -8,9 +8,9 @@
 			<mat-card-content>
                     <app-chart-bar [repo]="repo"></app-chart-bar>
 			</mat-card-content>
-      <mat-card-footer>
+      <mat-card-footer (mouseover)="setRepoInStore(repo)">
         <strong>Open issues:</strong> {{ repo.open_issues_count }}
-				<small *ngIf="repo.open_issues_count > 0" (mousedown)="setRepoInStore(repo)"> <a>View</a></small>
+				<small *ngIf="repo.open_issues_count > 0" > <a routerLink="/github/issues">View</a></small>
       </mat-card-footer>
 		</mat-card>
 	</div>

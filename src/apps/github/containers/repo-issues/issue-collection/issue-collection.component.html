@@ -8,12 +8,12 @@
 						<b>{{ repoIssue.title }}</b>
 					</mat-panel-title>
 				</mat-expansion-panel-header>
-				<mat-list>
-						<mat-list-item> 	opened by {{ repoIssue.user?.login }} at {{repoIssue.created_at | date: 'MM/dd/yyyy'}} </mat-list-item>
-						<mat-list-item> assigned to {{repoIssue.assignee?.login}} </mat-list-item>
-						<mat-list-item> Details </mat-list-item>
-						<mat-list-item> {{ repoIssue.body }} </mat-list-item>
-				</mat-list>
+				<ng-template matExpansionPanelContent>					
+					<div> 	opened by {{ repoIssue.user?.login }} at {{repoIssue.created_at | date: 'MM/dd/yyyy'}} </div>
+					<div> assigned to {{repoIssue.assignee?.login}} </div>
+					<div> Details </div>
+					<div> {{ repoIssue.body }} </div>
+				</ng-template>
 				<mat-action-row>
 						updated at {{repoIssue.updated_at | date: 'MM/dd/yyyy'}}
 				</mat-action-row>

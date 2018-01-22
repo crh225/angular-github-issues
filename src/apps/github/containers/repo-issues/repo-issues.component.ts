@@ -15,11 +15,11 @@ import 'rxjs/add/operator/filter';
 export class RepoIssuesComponent implements OnInit {
 
     public repoIssueCollection: Issue[] = [];
-
+    public showErrorMessage = false;
     private _storeSubject: ActionsSubject;
     private _owner: string;
     private _repo: string;
-    private _showErrorMessage = false;
+
 
     constructor(
         private store: Store<fromRoot.AppState>,
@@ -32,7 +32,7 @@ export class RepoIssuesComponent implements OnInit {
                 switch (data.type) {
                     case '[Issue] LOAD ALL SUCCESS':
                         if (data.payload.length === 0) {
-                            this._showErrorMessage = true;
+                            this.showErrorMessage = true;
                         } else {
                             this.repoIssueCollection = data.payload;
                         }

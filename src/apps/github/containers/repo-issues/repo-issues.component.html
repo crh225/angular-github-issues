@@ -1,1 +1,8 @@
-<app-issue-collection [repoIssueCollection]="repoIssueCollection"></app-issue-collection>
+<div *ngIf="showErrorMessage; else showCollection" class="centered-content">
+    The list of Issues is zero. This means no issues were opened in the past seven days.
+    Please go <a routerLink="/">back</a> and try again.
+</div>
+<ng-template #showCollection>
+        <app-issue-collection #showCollection [repoIssueCollection]="repoIssueCollection"></app-issue-collection>
+</ng-template>
+

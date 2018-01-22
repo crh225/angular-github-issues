@@ -24,7 +24,7 @@
     "@ngrx/effects": "5.0.0",
     "@ngrx/entity": "4.1.1",
     "@ngrx/store": "4.1.1",
-    "@ngrx/store-devtools": "4.1.1",
+    "@ngrx/store-devtools": "5.0.0",
     "snyk": "^1.69.1"
   },
   "version": "0.0.0",

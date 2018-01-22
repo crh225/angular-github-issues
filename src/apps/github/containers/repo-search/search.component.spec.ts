@@ -45,6 +45,7 @@ describe('RepoSearchComponent', () => {
     const fixture = TestBed.createComponent(RepoSearchComponent);
     const comp = fixture.debugElement.componentInstance;
     comp.query = 'angular';
+    comp.repoCollection = [];
     fixture.detectChanges();
 
     comp.search();
@@ -61,7 +62,6 @@ describe('RepoSearchComponent', () => {
                     done();
                   });
                 break;
-            default: console.log(data);
         }
     });
 

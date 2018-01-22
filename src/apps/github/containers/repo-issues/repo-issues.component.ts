@@ -19,6 +19,7 @@ export class RepoIssuesComponent implements OnInit {
     private _storeSubject: ActionsSubject;
     private _owner: string;
     private _repo: string;
+    private _showErrorMessage = false;
 
     constructor(
         private store: Store<fromRoot.AppState>,
@@ -30,7 +31,11 @@ export class RepoIssuesComponent implements OnInit {
             .subscribe((data: any) => {
                 switch (data.type) {
                     case '[Issue] LOAD ALL SUCCESS':
-                        this.repoIssueCollection = data.payload;
+                        if (data.payload.length === 0) {
+                            this._showErrorMessage = true;
+                        } else {
+                            this.repoIssueCollection = data.payload;
+                        }
                         break;
                     default:
                 }

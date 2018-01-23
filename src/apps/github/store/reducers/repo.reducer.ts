@@ -45,6 +45,10 @@ export function repoReducer(state: State = initialState, action: repoActions.Rep
         case repoActions.LOAD_ALL_REPOS_SUCCESS: {
             return {...state, ...repoAdapter.addAll(action.payload as Repo[], state) };
         }
+
+        case repoActions.LOAD_REPO_FAILURE: {
+            return {...state, error: action.payload };
+        }
         default: {
             return state;
         }

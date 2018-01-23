@@ -21,7 +21,8 @@ import {
   MatSelectModule,
   MatSidenavModule,
   MatTableModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatSnackBarModule
 } from '@angular/material';
 
 const ModulesArray = [
@@ -47,7 +48,8 @@ const ModulesArray = [
   MatTableModule,
   MatToolbarModule,
   SpinnerModule,
-  NotFoundModule
+  NotFoundModule,
+  MatSnackBarModule
 ];
 
 @NgModule({

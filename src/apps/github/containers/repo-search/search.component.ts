@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-
+import { MatSnackBar } from '@angular/material';
 import { ActionsSubject, Store } from '@ngrx/store';
 import * as repoActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
@@ -21,16 +21,22 @@ export class RepoSearchComponent implements OnInit {
   public searching = false;
   constructor(
     private store: Store<fromRoot.AppState>,
-    private actionsSubject: ActionsSubject) {
+    private actionsSubject: ActionsSubject,
+    public snackBar: MatSnackBar) {
 
     this.actionsSubject
         .asObservable()
-        .filter(action => action.type === repoActions.LOAD_ALL_REPOS_SUCCESS)
         .subscribe((data: any) => {
             switch (data.type) {
                 case '[Repo] LOAD ALL SUCCESS':
                     this.repoCollection = data.payload;
                     this.searching = false;
+                    break;
+                case '[Repo] LOAD FAILURE':
+                    this.searching = false;
+                    this.snackBar.open(data.payload.error.message, 'Ok', {
+                      duration: 2000,
+                    });
                     break;
                 default:
             }

@@ -9,9 +9,10 @@
 					</mat-panel-title>
 				</mat-expansion-panel-header>
 				<ng-template matExpansionPanelContent>					
-					<div> 	opened by {{ repoIssue.user?.login }} at {{repoIssue.created_at | date: 'MM/dd/yyyy'}} </div>
-					<div> assigned to {{repoIssue.assignee?.login}} </div>
-					<div> Details </div>
+					<mat-list role="list">
+							<mat-list-item role="listitem">opened by {{ repoIssue.user?.login }} at {{repoIssue.created_at | date: 'MM/dd/yyyy'}}</mat-list-item>
+							<mat-list-item role="listitem">assigned to {{repoIssue.assignee?.login}}</mat-list-item>
+						  </mat-list>
 					<div> {{ repoIssue.body }} </div>
 				</ng-template>
 				<mat-action-row>

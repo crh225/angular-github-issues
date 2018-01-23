@@ -19,17 +19,21 @@ export class RepoSearchComponent implements OnInit {
   public repoCollection: RepoSearchResult[] = [];
   public query = '';
   public searching = false;
+  public error: any;
   constructor(
     private store: Store<fromRoot.AppState>,
     private actionsSubject: ActionsSubject) {
 
     this.actionsSubject
         .asObservable()
-        .filter(action => action.type === repoActions.LOAD_ALL_REPOS_SUCCESS)
         .subscribe((data: any) => {
             switch (data.type) {
                 case '[Repo] LOAD ALL SUCCESS':
                     this.repoCollection = data.payload;
+                    this.searching = false;
+                    break;
+                case '[Repo] LOAD FAILURE':
+                    this.error = data.payload;
                     this.searching = false;
                     break;
                 default:
@@ -45,6 +49,7 @@ export class RepoSearchComponent implements OnInit {
   search(): void {
     if (this.query.trim() !== '') {
       this.searching = true;
+      this.error = undefined;
       this.store.dispatch(new repoActions.LoadAllRepos({ searchName: this.query }));
     }
   }

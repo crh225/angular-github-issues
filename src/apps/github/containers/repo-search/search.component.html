@@ -7,7 +7,8 @@
                 <mat-spinner [class.show]="searching" [diameter]="30" [strokeWidth]="3"></mat-spinner>
         </mat-card-content>
         <mat-card-footer>
-                <!--<span *ngIf="error">{{error}}</span>-->
+
+                <span *ngIf="error">{{error.error.message}}</span>
         </mat-card-footer>
 </mat-card>
 <app-search-collection [repoCollection]="repoCollection"></app-search-collection>

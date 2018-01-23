@@ -27,6 +27,10 @@ export class RepoEffects {
                     return [
                         new repoActions.LoadAllReposSuccess( repos.items )
                     ];
+                }).catch((error) => {
+                    return [
+                      new repoActions.LoadRepoFailure({ error: error })
+                    ];
                 })
         );
 

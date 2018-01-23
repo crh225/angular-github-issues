@@ -1,6 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { RepoIssuesComponent, RepoSearchComponent } from '@app/github';
+import { NotFoundComponent } from '@core/components/not-found';
 
 const routes: Routes = [
   {
@@ -12,7 +13,7 @@ const routes: Routes = [
     path: 'github',
     loadChildren: '@app/github/+github.module#GithubModule'
   },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '**', redirectTo: 'NotFoundComponent' }
 ];
 
 @NgModule({

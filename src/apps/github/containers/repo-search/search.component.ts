@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-
+import { MatSnackBar } from '@angular/material';
 import { ActionsSubject, Store } from '@ngrx/store';
 import * as repoActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
@@ -19,10 +19,10 @@ export class RepoSearchComponent implements OnInit {
   public repoCollection: RepoSearchResult[] = [];
   public query = '';
   public searching = false;
-  public error: any;
   constructor(
     private store: Store<fromRoot.AppState>,
-    private actionsSubject: ActionsSubject) {
+    private actionsSubject: ActionsSubject,
+    public snackBar: MatSnackBar) {
 
     this.actionsSubject
         .asObservable()
@@ -33,8 +33,10 @@ export class RepoSearchComponent implements OnInit {
                     this.searching = false;
                     break;
                 case '[Repo] LOAD FAILURE':
-                    this.error = data.payload;
                     this.searching = false;
+                    this.snackBar.open(data.payload.error.message, 'Ok', {
+                      duration: 2000,
+                    });
                     break;
                 default:
             }
@@ -49,7 +51,6 @@ export class RepoSearchComponent implements OnInit {
   search(): void {
     if (this.query.trim() !== '') {
       this.searching = true;
-      this.error = undefined;
       this.store.dispatch(new repoActions.LoadAllRepos({ searchName: this.query }));
     }
   }

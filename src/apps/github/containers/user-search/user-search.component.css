@@ -1,0 +1,27 @@
+mat-card-title,
+mat-card-content,
+mat-card-footer {
+  display: flex;
+  justify-content: center;
+}
+mat-card-footer {
+  color: #FF0000;
+  padding: 5px 0;
+}
+.mat-form-field {
+  min-width: 300px;
+}
+.mat-spinner {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  opacity: 0.0;
+  padding-left: 60px;
+}
+.mat-spinner.show {
+  opacity: 1.0;
+}
+
+.mat-progress-spinner.mat-progress-spinner-indeterminate-animation[mode=indeterminate] {
+    animation: unset;
+}

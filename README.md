@@ -11,13 +11,13 @@ Chat: https://gitter.im/angular-github-issues/Lobby
 # About - Current Version
 
 
-This repository searches's github for repositories. You can then drill down into each repository and see a list of issues for the past seven days.
+This repository searches's github for repositories, issues for that repository, and a github user search for angular developers. Once you search for a repository, you can then drill down into each repository and see a list of issues for the past seven days.
 
 CI is set up to run lint,testing, build in aot mode for production, and to deploy to firebase.
 
 New features in this version include Search and Dashboard!
 
-Ability to search by any repository, and then drill into the repositories issues. This example show how to use multiple entity's in ngxr. The main search page is now a dashboard of barcharts for each repository
+This example show how to use multiple entity's in ngxr. The main search page is now a dashboard of barcharts for each repository. In the works is lazy loaded feature ngrx/stores.
 
 For a live demo: https://chris-house.firebaseapp.com/
 

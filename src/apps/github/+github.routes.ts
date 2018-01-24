@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GithubComponent } from './+github.component';
-import { RepoSearchComponent, RepoIssuesComponent } from './containers';
+import { RepoSearchComponent, RepoIssuesComponent, UserSearchComponent } from './containers';
 import { NotFoundComponent } from '@core/components/not-found';
 
 const routes: Routes = [
@@ -11,7 +11,8 @@ const routes: Routes = [
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'search' },
       { path: 'search', component: RepoSearchComponent },
-      { path: 'issues', component: RepoIssuesComponent }
+      { path: 'issues', component: RepoIssuesComponent },
+      { path: 'user', component: UserSearchComponent }
     ]
   },
   {

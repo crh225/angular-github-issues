@@ -1,1 +1,16 @@
-User route works!
+<mat-card>
+        <mat-card-title>Find an Angular GitHub User</mat-card-title>
+        <mat-card-content>
+                <mat-input-container>
+                        <input matInput placeholder="Search for a user" [(ngModel)]="query" (keyup)="search()">
+                </mat-input-container>
+                <mat-spinner [class.show]="searching" [diameter]="30" [strokeWidth]="3"></mat-spinner>
+        </mat-card-content>
+        <mat-card-footer>
+        </mat-card-footer>
+</mat-card>
+
+<pre>
+    {{ userCollection | json }}
+</pre>
+<!--<app-user-collection [userCollection]="userCollection"></app-user-collection>-->

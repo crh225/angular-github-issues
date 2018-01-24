@@ -16,11 +16,21 @@ export class GithubService {
     return this._http.get(url);
   }
 
+  public searchUserByName(name: string): Observable<Object> {
+    const url = this._generateSearchInUserUrl(name);
+    return this._http.get(url);
+  }
+
   private _generateRepoIssuesUrl(owner: string, repo: string, days: string): string {
-    return `https://api.github.com/repos/${owner}/${repo}/issues?&since=${days}?&per_page=100`;
+    return `https://api.github.com/repos/${owner}/${repo}/issues?&per_page=100`;
   }
   private _generateSearchInRepoUrl(name: string): string {
     return `https://api.github.com/search/repositories?q=${name}&per_page=40`;
   }
+
+  private _generateSearchInUserUrl(name: string): string {
+    return `https://api.github.com/search/users?q=${name}+language:angular+&sort=stars`;
+  }
+
 
 }

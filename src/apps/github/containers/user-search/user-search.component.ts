@@ -16,7 +16,7 @@ import { User } from '@app/github/shared/models';
 export class UserSearchComponent implements OnInit {
 
     public searchControl: FormControl = new FormControl();
-    public userCollection: any; // UserSearchResult[] = [];
+    public userCollection: User[] = [];
     public query = '';
     public searching = false;
     constructor(
@@ -29,7 +29,7 @@ export class UserSearchComponent implements OnInit {
           .subscribe((data: any) => {
               switch (data.type) {
                   case '[User] LOAD ALL SUCCESS':
-                      this.userCollection = data.payload;
+                      this.userCollection = data.payload.items;
                       this.searching = false;
                       break;
                   default:

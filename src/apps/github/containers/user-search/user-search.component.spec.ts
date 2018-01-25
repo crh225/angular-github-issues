@@ -3,6 +3,7 @@ import {APP_BASE_HREF} from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { UserSearchComponent } from './user-search.component';
+import { UserSearchCollectionComponent } from './search-collection';
 import { SharedModule } from '@app/github/shared';
 import * as forApplication from '@app/github/store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
@@ -24,7 +25,7 @@ describe('UserSearchComponent', () => {
     StoreModule.forRoot(forApplication.reducers),
     EffectsModule.forRoot([UserEffects])
   ],
-  declarations: [UserSearchComponent],
+  declarations: [UserSearchComponent, UserSearchCollectionComponent],
   providers: [
     Actions,
     UserEffects]
@@ -42,6 +43,7 @@ describe('UserSearchComponent', () => {
     const fixture = TestBed.createComponent(UserSearchComponent);
     const comp = fixture.debugElement.componentInstance;
     comp.query = 'crh225';
+    comp.searching = false;
     comp.userCollection = [];
     fixture.detectChanges();
 

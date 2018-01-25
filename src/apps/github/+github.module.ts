@@ -11,7 +11,8 @@ import { SharedModule,
   ChartComponent,
   IssueCollectionComponent,
   SearchCollectionComponent,
-  UserSearchComponent } from '@app/github';
+  UserSearchComponent,
+  UserSearchCollectionComponent } from '@app/github';
 
 @NgModule({
   imports: [
@@ -29,7 +30,8 @@ import { SharedModule,
     SearchCollectionComponent,
     ChartComponent,
     IssueCollectionComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    UserSearchCollectionComponent
     ]
 })
 export class GithubModule { }

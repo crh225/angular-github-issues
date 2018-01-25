@@ -1,0 +1,21 @@
+.card-wrapper{
+    padding: 5px;
+   }
+   .card-body{
+     margin:0px 8px 0px 8px;
+   }
+   .mat-card-footer {
+       display: block;
+       margin: 0 -8px 0px 0px;
+       font-size: 10px;
+       float: right;
+   }
+   .mat-card-header .mat-card-subtitle:not(:first-child) {
+     margin-top: -8px;
+     height: 20px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+ }
+ .card-image{
+     text-align: center;
+ }

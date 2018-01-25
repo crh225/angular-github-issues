@@ -136,9 +136,9 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/http@5.2.1":
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/@angular/http/-/http-5.2.1.tgz#dd847fb8aa0972b1906df5376307354b818ef4be"
+"@angular/http@5.2.2":
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/@angular/http/-/http-5.2.2.tgz#d33c128d5737f8d701bbac3e7e23d831deec3457"
   dependencies:
     tslib "^1.7.1"
 
@@ -172,9 +172,9 @@
     tslib "^1.7.1"
     xhr2 "^0.1.4"
 
-"@angular/router@5.2.1":
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/@angular/router/-/router-5.2.1.tgz#fbb3a2d644e854bca25d075e506d25f3c670f8d2"
+"@angular/router@5.2.2":
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/@angular/router/-/router-5.2.2.tgz#b0ffd7121290e8c01f20862b4a2638ebcebc61cf"
   dependencies:
     tslib "^1.7.1"
 
@@ -253,17 +253,17 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ngrx/core/-/core-1.2.0.tgz#882b46abafa2e0e6d887cb71a1b2c2fa3e6d0dc6"
 
-"@ngrx/effects@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-5.0.0.tgz#8c815e26dcfdd87e3da03ad90f13b97f5df88b73"
+"@ngrx/effects@5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-5.0.1.tgz#cf970a6b8e2f3d3647e795e7040e09a2e7d157ed"
 
 "@ngrx/entity@5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-5.0.0.tgz#3c3e567a123089506db529745db3eb46fbd81cbf"
 
-"@ngrx/store-devtools@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-5.0.0.tgz#df30d79f524c2b7c73077c084732d1b7ebefab95"
+"@ngrx/store-devtools@5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-5.0.1.tgz#f1bf5c54d4b2a512afd970e8114057b44e0d3c16"
 
 "@ngrx/store@5.0.0":
   version "5.0.0"

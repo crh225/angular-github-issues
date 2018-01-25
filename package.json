@@ -23,7 +23,7 @@
     "@ngrx/core": "^1.2.0",
     "@ngrx/effects": "5.0.0",
     "@ngrx/entity": "5.0.0",
-    "@ngrx/store-devtools": "5.0.0",
+    "@ngrx/store-devtools": "5.0.1",
     "@ngrx/store": "5.0.0",
     "snyk": "^1.69.1"
   },

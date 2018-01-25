@@ -15,6 +15,7 @@ import { CoreModule } from '@core/';
 
 describe('SearchCollectionComponent', () => {
   beforeEach((() => {
+    jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
     TestBed.configureTestingModule({
     imports: [
     SharedTestingModule.forRoot(),

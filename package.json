@@ -21,7 +21,7 @@
     "@angular/cdk": "5.1.0",
     "@angular/material": "5.1.0",
     "@ngrx/core": "^1.2.0",
-    "@ngrx/effects": "5.0.0",
+    "@ngrx/effects": "5.0.1",
     "@ngrx/entity": "5.0.0",
     "@ngrx/store-devtools": "5.0.0",
     "@ngrx/store": "5.0.0",

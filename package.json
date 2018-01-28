@@ -3,7 +3,7 @@
   "description": "",
   "homepage": "https://stackblitz.com/edit/angular-tg2nma",
   "dependencies": {
-    "@angular/animations": "5.2.1",
+    "@angular/animations": "5.2.2",
     "@angular/common": "5.2.2",
     "@angular/compiler": "5.2.2",
     "@angular/compiler-cli": "5.2.2",

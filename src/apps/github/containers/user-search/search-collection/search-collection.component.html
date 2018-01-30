@@ -3,7 +3,7 @@
 		<mat-card class="card">
 			<mat-card-header>
 				<mat-card-title><strong>{{ user.login }}</strong></mat-card-title>
-				<mat-card-subtitle> {{ user.html_url }} </mat-card-subtitle>
+				<mat-card-subtitle><a [href]="user.html_url">{{ user.html_url }}</a></mat-card-subtitle>
 			</mat-card-header>
 			<mat-card-content class="card-image">
                 <img [src]="user.avatar_url" alt="Not Found" height="230px" width="230px">

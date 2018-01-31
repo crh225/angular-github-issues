@@ -7,8 +7,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-search-collection',
-  templateUrl: './search-collection.component.html',
-  styleUrls: ['./search-collection.component.css'],
+  templateUrl: './user-collection.component.html',
+  styleUrls: ['./user-collection.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserSearchCollectionComponent {

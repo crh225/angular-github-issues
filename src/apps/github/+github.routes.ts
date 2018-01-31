@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GithubComponent } from './+github.component';
-import { RepoSearchComponent, RepoIssuesComponent, UserSearchComponent, UserFollowerComponent } from './containers';
+import { RepoSearchComponent, RepoIssuesComponent, UserSearchComponent, UserFollowerComponent } from '@app/github';
 import { NotFoundComponent } from '@core/components/not-found';
 
 const routes: Routes = [

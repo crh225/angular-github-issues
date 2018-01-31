@@ -30,6 +30,20 @@ export class UserEffects {
                 })
         );
 
+    @Effect()
+    loadFollowers$: Observable<Action> = this.actions$
+        .ofType(userActions.LOAD_ALL_FOLLOWERS)
+        .debounceTime(1000)
+        .map((action: userActions.LoadAllFollowers) => action.payload)
+        .switchMap((data) =>
+        this._githubService.returnFollowers(data)
+                .mergeMap((user: any) => {
+                    return [
+                        new userActions.LoadAllFollowersSuccess( user )
+                    ];
+                })
+        );
+
     constructor(
         private actions$: Actions, private _githubService: GithubService
     ) { }

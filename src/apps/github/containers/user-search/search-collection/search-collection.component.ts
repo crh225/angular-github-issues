@@ -15,4 +15,8 @@ export class UserSearchCollectionComponent {
   @Input() userCollection: User[];
 
   constructor(private store: Store<fromRoot.AppState>) {}
+
+  setFollowers(user: User) {
+    this.store.dispatch(new userActions.LoadAllFollowers(user.followers_url));
+  }
 }

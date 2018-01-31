@@ -41,14 +41,14 @@ describe('UserFollowerComponent', () => {
     expect(app).toBeTruthy();
   }));
 
-  /*it('should call the search button', ((done: any) => {
+  it('should call the search button', ((done: any) => {
     const fixture = TestBed.createComponent(UserFollowerComponent);
     const comp = fixture.debugElement.componentInstance;
     comp.userCollection = [];
-    comp.store.dispatch(new userActions.LoadAllFollowers('https://api.github.com/users/davestaab/followers'))
+    comp.store.dispatch(new userActions.LoadAllFollowers('https://api.github.com/users/davestaab/followers'));
     fixture.detectChanges();
 
-    this.store.select(fromRoot.getFollowers).subscribe( data => {
+    comp.store.select(fromRoot.getFollowers).subscribe( data => {
         if (data) {
             comp.userCollection = data;
             fixture.detectChanges();
@@ -59,5 +59,5 @@ describe('UserFollowerComponent', () => {
             });
         }
     });
-  }));*/
+  }));
 });

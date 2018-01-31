@@ -21,6 +21,11 @@ export class GithubService {
     return this._http.get(url);
   }
 
+  public returnFollowers(searchString: string): Observable<Object> {
+    console.log(searchString);
+    return this._http.get(searchString);
+  }
+
   private _generateRepoIssuesUrl(owner: string, repo: string, days: string): string {
     return `https://api.github.com/repos/${owner}/${repo}/issues?&per_page=100`;
   }

@@ -9,6 +9,7 @@
                 <img [src]="user.avatar_url" alt="Not Found" height="230px" width="230px">
 			</mat-card-content>
       <mat-card-footer>
+					<small (mouseover)="setFollowers(user)" routerLink="/github/followers">Followers</small>
         <!-- Todo: create a new sub component that will display number of followers -->
         <!-- Todo: create a new sub component that will display number of stars -->
         <!-- Todo: create a new sub component that will display number of gists. this means they probably are a blogger -->

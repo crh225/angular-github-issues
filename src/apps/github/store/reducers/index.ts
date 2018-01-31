@@ -40,4 +40,5 @@ export const getSelectedRepo = createSelector(getRepoState, fromRepo.getSelected
 /* User Entities */
 export const getUserEntities = createSelector(getUserState, fromUser.getEntities);
 export const getSelectedUserId = createSelector(getUserState, fromUser.getCurrentUserId);
+export const getFollowers = createSelector(getUserState, fromUser.getFollowers);
 export const getSelectedUser = createSelector(getUserState, fromUser.getSelected);

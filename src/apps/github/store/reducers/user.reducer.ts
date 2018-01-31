@@ -22,10 +22,12 @@ export const userAdapter = createEntityAdapter<User>({
 // -> entities map allows us to access the data quickly without iterating/filtering though an array of objects
 export interface State extends EntityState<User> {
     id?: string;
+    followers?: User[];
 }
 
 export const initialState: State = userAdapter.getInitialState({
-    id: undefined
+    id: undefined,
+    followers: undefined
 });
 
 
@@ -45,6 +47,12 @@ export function userReducer(state: State = initialState, action: userActions.Use
         case userActions.LOAD_ALL_USERS_SUCCESS: {
             return {...state, ...userAdapter.addAll(action.payload as User[], state) };
         }
+
+
+        case userActions.LOAD_ALL_FOLLOWERS_SUCCESS: {
+            return {...state, followers: action.payload };
+        }
+
         default: {
             return state;
         }
@@ -61,6 +69,8 @@ export function userReducer(state: State = initialState, action: userActions.Use
 export const getEntities = (state: State) => state.entities;
 
 export const getCurrentUserId = (state: State) => state.id;
+
+export const getFollowers = (state: State) => state.followers;
 
 export const getSelected = createSelector(getEntities, getCurrentUserId, (entities, selectedId) => {
     return entities[selectedId];

@@ -3,7 +3,7 @@ import {APP_BASE_HREF} from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { UserSearchComponent } from './user-search.component';
-import { UserSearchCollectionComponent } from './search-collection';
+import { UserSearchCollectionComponent } from '@app/github';
 import { SharedModule } from '@app/github/shared';
 import * as forApplication from '@app/github/store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';

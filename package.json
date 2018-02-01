@@ -45,7 +45,7 @@
   "private": true,
   "devDependencies": {
     "@angular/cli": "1.6.7",
-    "@angular/language-service": "^5.0.0",
+    "@angular/language-service": "^5.2.3",
     "@types/jasmine": "2.8.4",
     "@types/jasminewd2": "2.0.3",
     "@types/node": "9.4.0",

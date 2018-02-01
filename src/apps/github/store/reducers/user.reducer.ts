@@ -23,11 +23,13 @@ export const userAdapter = createEntityAdapter<User>({
 export interface State extends EntityState<User> {
     id?: string;
     followers?: User[];
+    following?: User[];
 }
 
 export const initialState: State = userAdapter.getInitialState({
     id: undefined,
-    followers: undefined
+    followers: undefined,
+    following: undefined
 });
 
 
@@ -48,9 +50,12 @@ export function userReducer(state: State = initialState, action: userActions.Use
             return {...state, ...userAdapter.addAll(action.payload as User[], state) };
         }
 
-
         case userActions.LOAD_ALL_FOLLOWERS_SUCCESS: {
             return {...state, followers: action.payload };
+        }
+
+        case userActions.LOAD_ALL_FOLLOWING_SUCCESS: {
+            return {...state, following: action.payload };
         }
 
         default: {
@@ -71,6 +76,8 @@ export const getEntities = (state: State) => state.entities;
 export const getCurrentUserId = (state: State) => state.id;
 
 export const getFollowers = (state: State) => state.followers;
+
+export const getFollowing = (state: State) => state.following;
 
 export const getSelected = createSelector(getEntities, getCurrentUserId, (entities, selectedId) => {
     return entities[selectedId];

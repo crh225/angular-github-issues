@@ -6,6 +6,8 @@ import {
   MatButtonToggleModule,
   MatCardModule,
   MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
   MatDialogModule,
   MatExpansionModule,
   MatGridListModule,
@@ -17,12 +19,19 @@ import {
   MatPaginatorModule,
   MatProgressBarModule,
   MatProgressSpinnerModule,
+  MatRadioModule,
   MatRippleModule,
   MatSelectModule,
   MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
   MatTableModule,
+  MatTabsModule,
   MatToolbarModule,
-  MatSnackBarModule
+  MatTooltipModule,
+  MatStepperModule
 } from '@angular/material';
 
 const ModulesArray = [
@@ -31,6 +40,8 @@ const ModulesArray = [
   MatButtonToggleModule,
   MatCardModule,
   MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
   MatDialogModule,
   MatExpansionModule,
   MatGridListModule,
@@ -42,14 +53,21 @@ const ModulesArray = [
   MatPaginatorModule,
   MatProgressBarModule,
   MatProgressSpinnerModule,
+  MatRadioModule,
   MatRippleModule,
   MatSelectModule,
   MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
   MatTableModule,
+  MatTabsModule,
   MatToolbarModule,
+  MatTooltipModule,
+  MatStepperModule,
   SpinnerModule,
-  NotFoundModule,
-  MatSnackBarModule
+  NotFoundModule
 ];
 
 @NgModule({

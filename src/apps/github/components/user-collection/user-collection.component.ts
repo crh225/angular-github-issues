@@ -14,9 +14,14 @@ import { Router } from '@angular/router';
 export class UserSearchCollectionComponent {
   @Input() userCollection: User[];
 
-  constructor(private store: Store<fromRoot.AppState>) {}
+  constructor(private store: Store<fromRoot.AppState>) {
+    this.userCollection = new Array();
+  }
 
   setFollowers(user: User) {
     this.store.dispatch(new userActions.LoadAllFollowers(user.followers_url));
+  }
+  setFollowing(user: User) {
+    this.store.dispatch(new userActions.LoadAllFollowing(user.login));
   }
 }

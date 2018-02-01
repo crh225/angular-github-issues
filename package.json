@@ -3,7 +3,7 @@
   "description": "",
   "homepage": "https://chris-house.firebaseapp.com/",
   "dependencies": {
-    "@angular/animations": "5.2.2",
+    "@angular/animations": "5.2.3",
     "@angular/common": "5.2.2",
     "@angular/compiler": "5.2.2",
     "@angular/compiler-cli": "5.2.2",

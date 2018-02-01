@@ -12,7 +12,7 @@
     "@angular/http": "5.2.2",
     "@angular/platform-browser": "5.2.2",
     "@angular/platform-browser-dynamic": "5.2.2",
-    "@angular/router": "5.2.2",
+    "@angular/router": "5.2.3",
     "@angular/platform-server": "5.2.3",
     "core-js": "2.5.3",
     "ng2-charts": "1.6.0",

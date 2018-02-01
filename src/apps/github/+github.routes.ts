@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GithubComponent } from './+github.component';
-import { RepoSearchComponent, RepoIssuesComponent, UserSearchComponent, UserFollowerComponent } from '@app/github';
+import { RepoSearchComponent,
+  RepoIssuesComponent,
+  UserSearchComponent,
+  UserFollowerComponent,
+  UserFollowingComponent
+} from '@app/github';
 import { NotFoundComponent } from '@core/components/not-found';
 
 const routes: Routes = [
@@ -13,7 +18,8 @@ const routes: Routes = [
       { path: 'search', component: RepoSearchComponent },
       { path: 'issues', component: RepoIssuesComponent },
       { path: 'user', component: UserSearchComponent },
-      { path: 'followers', component: UserFollowerComponent}
+      { path: 'followers', component: UserFollowerComponent},
+      { path: 'following', component: UserFollowingComponent}
     ]
   },
   {

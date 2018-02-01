@@ -2,22 +2,39 @@
 	<div *ngFor="let user of userCollection" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 card-wrapper">
 		<mat-card class="card">
 			<mat-card-header>
-				<mat-card-title><strong>{{ user.login }}</strong></mat-card-title>
-				<mat-card-subtitle><a [href]="user.html_url">{{ user.html_url }}</a></mat-card-subtitle>
+				<mat-card-title>
+					<strong>{{ user.login }}</strong>
+				</mat-card-title>
+				<mat-card-subtitle>
+					<a [href]="user.html_url">{{ user.html_url }}</a>
+
+				</mat-card-subtitle>
 			</mat-card-header>
 			<mat-card-content class="card-image">
-                <img [src]="user.avatar_url" alt="Not Found" height="230px" width="230px">
+				<img [src]="user.avatar_url" alt="Not Found" height="230px" width="230px">
 			</mat-card-content>
-      <mat-card-footer>
-					<small (mouseover)="setFollowers(user)" routerLink="/github/followers">Followers</small>
-        <!-- Todo: create a new sub component that will display number of followers -->
-        <!-- Todo: create a new sub component that will display number of stars -->
-        <!-- Todo: create a new sub component that will display number of gists. this means they probably are a blogger -->
-      </mat-card-footer>
+			<mat-card-footer>
+				<ul class="nav nav-pills">
+					<li class="nav-item">
+						<a class="nav-link"  (mouseover)="setFollowers(user)" routerLink="/github/followers">Followers</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" (mouseover)="setFollowing(user)" routerLink="/github/following" >Following</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" disabled >Gists</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" disabled>Repos</a>
+					</li>
+				</ul>
+				<br>
+			</mat-card-footer>
 		</mat-card>
 	</div>
 </div>
-
-<!--<pre>
+<!--
+<pre>
     {{ userCollection | json }}
-</pre>-->
+</pre>
+-->

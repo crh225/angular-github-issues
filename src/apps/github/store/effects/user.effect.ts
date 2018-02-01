@@ -22,10 +22,10 @@ export class UserEffects {
         .debounceTime(1000)
         .map((action: userActions.LoadAllUsers) => action.payload)
         .switchMap((data) =>
-        this._githubService.searchUserByName(data.searchName)
+            this._githubService.searchUserByName(data.searchName)
                 .mergeMap((user: any) => {
                     return [
-                        new userActions.LoadAllUsersSuccess( user )
+                        new userActions.LoadAllUsersSuccess(user)
                     ];
                 })
         );
@@ -36,10 +36,23 @@ export class UserEffects {
         .debounceTime(1000)
         .map((action: userActions.LoadAllFollowers) => action.payload)
         .switchMap((data) =>
-        this._githubService.returnFollowers(data)
+            this._githubService.returnFollowers(data)
                 .mergeMap((user: any) => {
                     return [
-                        new userActions.LoadAllFollowersSuccess( user )
+                        new userActions.LoadAllFollowersSuccess(user)
+                    ];
+                })
+        );
+    @Effect()
+    loadFollowing$: Observable<Action> = this.actions$
+        .ofType(userActions.LOAD_ALL_FOLLOWING)
+        .debounceTime(1000)
+        .map((action: userActions.LoadAllFollowing) => action.payload)
+        .switchMap((data) =>
+            this._githubService.returnFollowing(data)
+                .mergeMap((user: any) => {
+                    return [
+                        new userActions.LoadAllFollowingSuccess(user)
                     ];
                 })
         );

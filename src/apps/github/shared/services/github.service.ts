@@ -22,8 +22,12 @@ export class GithubService {
   }
 
   public returnFollowers(searchString: string): Observable<Object> {
-    console.log(searchString);
     return this._http.get(searchString);
+  }
+  public returnFollowing(login: string): Observable<Object> {
+    const url = this._generateFollowingUrl(login);
+    console.log(url);
+    return this._http.get(url);
   }
 
   private _generateRepoIssuesUrl(owner: string, repo: string, days: string): string {
@@ -35,6 +39,10 @@ export class GithubService {
 
   private _generateSearchInUserUrl(name: string): string {
     return `https://api.github.com/search/users?q=${name}+language:angular+&sort=stars`;
+  }
+
+  private _generateFollowingUrl(login: string): string {
+    return `https://api.github.com/users/${login}/following`;
   }
 
 

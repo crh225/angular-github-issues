@@ -25,7 +25,7 @@
     "@ngrx/entity": "5.0.1",
     "@ngrx/store-devtools": "5.0.1",
     "@ngrx/store": "5.0.0",
-    "snyk": "^1.69.5"
+    "snyk": "^1.69.6"
   },
   "version": "0.0.0",
   "license": "MIT",

@@ -23,7 +23,7 @@ export class UserEffects {
         .map((action: userActions.LoadAllUsers) => action.payload)
         .switchMap((data) =>
             this._githubService.searchUserByName(data.searchName)
-                .mergeMap((user: any) => {
+                .mergeMap((user: User[]) => {
                     return [
                         new userActions.LoadAllUsersSuccess(user)
                     ];
@@ -56,6 +56,19 @@ export class UserEffects {
                     ];
                 })
         );
+
+        @Effect()
+        loadUser$: Observable<Action> = this.actions$
+            .ofType(userActions.SET_CURRENT_USER_ID)
+            .debounceTime(500)
+            .map((action: userActions.SetCurrentUserId) => action.payload)
+            .mergeMap((data) => {
+                        return [
+                            new userActions.SetCurrentUserIdSuccess(data),
+                            new userActions.LoadAllFollowing(data),
+                            new userActions.LoadAllFollowers(data)
+                        ];
+            });
 
     constructor(
         private actions$: Actions, private _githubService: GithubService

@@ -14,7 +14,8 @@ import { SharedModule,
   UserSearchComponent,
   UserSearchCollectionComponent,
   UserFollowerComponent,
-  UserFollowingComponent } from '@app/github';
+  UserFollowingComponent,
+  SubNavigationComponent } from '@app/github';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { SharedModule,
     UserSearchComponent,
     UserSearchCollectionComponent,
     UserFollowerComponent,
-    UserFollowingComponent
+    UserFollowingComponent,
+    SubNavigationComponent
     ]
 })
 export class GithubModule { }

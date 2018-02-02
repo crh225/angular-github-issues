@@ -21,12 +21,12 @@ export class GithubService {
     return this._http.get(url);
   }
 
-  public returnFollowers(searchString: string): Observable<Object> {
-    return this._http.get(searchString);
+  public returnFollowers(login: string): Observable<Object> {
+    const url = this._generateFollowersUrl(login);
+    return this._http.get(url);
   }
   public returnFollowing(login: string): Observable<Object> {
     const url = this._generateFollowingUrl(login);
-    console.log(url);
     return this._http.get(url);
   }
 
@@ -41,6 +41,9 @@ export class GithubService {
     return `https://api.github.com/search/users?q=${name}+language:angular+&sort=stars`;
   }
 
+  private _generateFollowersUrl(login: string): string {
+    return `https://api.github.com/users/${login}/followers`;
+  }
   private _generateFollowingUrl(login: string): string {
     return `https://api.github.com/users/${login}/following`;
   }

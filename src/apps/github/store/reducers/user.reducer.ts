@@ -42,7 +42,7 @@ export function userReducer(state: State = initialState, action: userActions.Use
 
     switch (action.type) {
 
-        case userActions.SET_CURRENT_USER_ID: {
+        case userActions.SET_CURRENT_USER_ID_SUCCESS: {
             return { ...state, id: action.payload };
         }
 

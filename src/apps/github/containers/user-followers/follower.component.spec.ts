@@ -2,7 +2,7 @@ import { TestBed, async, tick, fakeAsync } from '@angular/core/testing';
 import {APP_BASE_HREF} from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
-import { UserFollowerComponent, UserSearchCollectionComponent } from '@app/github';
+import { UserFollowerComponent, UserSearchCollectionComponent, SubNavigationComponent } from '@app/github';
 import { SharedModule } from '@app/github/shared';
 import * as forApplication from '@app/github/store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
@@ -26,7 +26,7 @@ describe('UserFollowerComponent', () => {
     StoreModule.forRoot(forApplication.reducers),
     EffectsModule.forRoot([UserEffects])
   ],
-  declarations: [UserSearchCollectionComponent, UserFollowerComponent],
+  declarations: [UserSearchCollectionComponent, UserFollowerComponent, SubNavigationComponent],
   providers: [
     Actions,
     UserEffects]
@@ -45,7 +45,7 @@ describe('UserFollowerComponent', () => {
     const fixture = TestBed.createComponent(UserFollowerComponent);
     const comp = fixture.debugElement.componentInstance;
     comp.userCollection = [];
-    comp.store.dispatch(new userActions.LoadAllFollowers('https://api.github.com/users/davestaab/followers'));
+    comp.store.dispatch(new userActions.LoadAllFollowers('davestaab'));
     fixture.detectChanges();
 
     comp.store.select(fromRoot.getFollowers).subscribe( data => {

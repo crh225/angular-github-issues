@@ -10,11 +10,12 @@ import { Router } from '@angular/router';
     template: `
         <mat-toolbar>
             <span>User Detail
-                <button mat-button color="warn" routerLink="/github/followers">Followers</button>
-                <button mat-button color="warn" routerLink="/github/following">Following</button>
+                <button mat-button color="warn" routerLink="/github/followers" routerLinkActive="active-link">Followers</button>
+                <button mat-button color="warn" routerLink="/github/following" routerLinkActive="active-link">Following</button>
             </span>
         </mat-toolbar>
   `,
+    styles: ['.active-link { background-color: #cbcccb; }'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SubNavigationComponent {

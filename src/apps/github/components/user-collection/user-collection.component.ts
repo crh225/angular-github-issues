@@ -24,4 +24,7 @@ export class UserSearchCollectionComponent {
   setFollowing(user: User) {
     this.store.dispatch(new userActions.LoadAllFollowing(user.login));
   }
+  setUser(user: User) {
+    this.store.dispatch(new userActions.SetCurrentUserId(user.login));
+  }
 }

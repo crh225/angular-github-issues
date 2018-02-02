@@ -2,7 +2,7 @@ import { TestBed, async, tick, fakeAsync } from '@angular/core/testing';
 import {APP_BASE_HREF} from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
-import { UserFollowingComponent, UserSearchCollectionComponent } from '@app/github';
+import { UserFollowingComponent, UserSearchCollectionComponent, SubNavigationComponent } from '@app/github';
 import { SharedModule } from '@app/github/shared';
 import * as forApplication from '@app/github/store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
@@ -26,7 +26,7 @@ describe('UserFollowingComponent', () => {
     StoreModule.forRoot(forApplication.reducers),
     EffectsModule.forRoot([UserEffects])
   ],
-  declarations: [UserSearchCollectionComponent, UserFollowingComponent],
+  declarations: [UserSearchCollectionComponent, UserFollowingComponent, SubNavigationComponent],
   providers: [
     Actions,
     UserEffects]

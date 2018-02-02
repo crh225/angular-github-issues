@@ -4,6 +4,7 @@ import { User } from '@app/github/shared/models';
 export const LOAD_ALL_USERS = '[User] LOAD ALL';
 export const LOAD_ALL_USERS_SUCCESS = '[User] LOAD ALL SUCCESS';
 export const SET_CURRENT_USER_ID = '[User] SET CURRENT USER ID';
+export const SET_CURRENT_USER_ID_SUCCESS = '[User] SET CURRENT USER ID SUCCESS';
 export const LOAD_ALL_FOLLOWERS = '[User] Load All Followers';
 export const LOAD_ALL_FOLLOWERS_SUCCESS = '[User] Load All Followers Success';
 export const LOAD_ALL_FOLLOWING = '[User] Load All Following';
@@ -41,6 +42,11 @@ export class LoadAllFollowingSuccess implements Action {
 
 export class SetCurrentUserId implements Action {
     readonly type = SET_CURRENT_USER_ID;
+    constructor(public payload: any) { }
+}
+
+export class SetCurrentUserIdSuccess implements Action {
+    readonly type = SET_CURRENT_USER_ID_SUCCESS;
     constructor(public payload: number) { }
 }
 
@@ -51,4 +57,5 @@ export type UserActions =
     | LoadAllFollowers
     | LoadAllFollowersSuccess
     | LoadAllFollowing
-    | LoadAllFollowingSuccess;
+    | LoadAllFollowingSuccess
+    | SetCurrentUserIdSuccess;

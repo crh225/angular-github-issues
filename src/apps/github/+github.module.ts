@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GithubRoutingModule } from './+github.routes';
 import { GithubComponent } from './+github.component';
 import { RepoIssuesComponent, RepoSearchComponent } from '@app/github/containers';
+import { UserExistsGuard } from './guards';
 import { ChartsModule } from 'ng2-charts';
 import { NotFoundComponent } from '@core/components/not-found';
 import { CoreModule } from '@core/';
@@ -38,6 +39,9 @@ import { SharedModule,
     UserFollowerComponent,
     UserFollowingComponent,
     SubNavigationComponent
+    ],
+    providers: [
+      UserExistsGuard
     ]
 })
 export class GithubModule { }

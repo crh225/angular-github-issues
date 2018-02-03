@@ -1,2 +1,8 @@
 <app-gsub-navigation></app-gsub-navigation>
-<app-user-search-collection  [userCollection]="userCollection"></app-user-search-collection>
+<div *ngIf="searching">
+    <app-spinner-component></app-spinner-component>
+</div>
+<div *ngIf="!searching">
+    <app-user-search-collection  [userCollection]="userCollection"></app-user-search-collection>
+</div>
+<div class="center-page" *ngIf="userCollection?.length < 1 && !searching">The user has no followers.</div>

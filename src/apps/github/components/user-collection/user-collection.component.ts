@@ -8,21 +8,13 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-user-search-collection',
   templateUrl: './user-collection.component.html',
-  styleUrls: ['./user-collection.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./user-collection.component.css']
 })
 export class UserSearchCollectionComponent {
   @Input() userCollection: User[];
 
   constructor(private store: Store<fromRoot.AppState>) {
     this.userCollection = new Array();
-  }
-
-  setFollowers(user: User) {
-    this.store.dispatch(new userActions.LoadAllFollowers(user.followers_url));
-  }
-  setFollowing(user: User) {
-    this.store.dispatch(new userActions.LoadAllFollowing(user.login));
   }
   setUser(user: User) {
     this.store.dispatch(new userActions.SetCurrentUserId(user.login));

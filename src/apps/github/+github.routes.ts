@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GithubComponent } from './+github.component';
+import { UserExistsGuard } from './guards';
 import { RepoSearchComponent,
   RepoIssuesComponent,
   UserSearchComponent,
@@ -18,8 +19,8 @@ const routes: Routes = [
       { path: 'search', component: RepoSearchComponent },
       { path: 'issues', component: RepoIssuesComponent },
       { path: 'user', component: UserSearchComponent },
-      { path: 'followers', component: UserFollowerComponent},
-      { path: 'following', component: UserFollowingComponent}
+      { path: 'followers/:id', canActivate: [ UserExistsGuard ], component: UserFollowerComponent},
+      { path: 'following/:id', canActivate: [ UserExistsGuard ], component: UserFollowingComponent}
     ]
   },
   {

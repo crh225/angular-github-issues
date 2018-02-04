@@ -7,6 +7,7 @@ import { EffectsModule, Actions } from '@ngrx/effects';
 import { IssueEffects, RepoEffects } from '@app/github/store/effects';
 import { SharedTestingModuleWithProviders } from '@app/github/shared';
 import { CoreModule } from '@core/';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('IssueCollectionComponent', () => {
   beforeEach(async(() => {
@@ -14,6 +15,7 @@ describe('IssueCollectionComponent', () => {
     imports: [
         SharedTestingModuleWithProviders,
         CoreModule.forRoot(),
+        RouterTestingModule
   ],
   declarations: [IssueCollectionComponent],
   providers: [

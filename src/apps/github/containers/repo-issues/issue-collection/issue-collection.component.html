@@ -1,4 +1,6 @@
-<div class="page-title"><h3>Issue List</h3></div>
+<div class="page-title">
+	<h3>Issue List</h3>
+</div>
 <div *ngIf="repoIssueCollection.length > 0">
 	<div>
 		<mat-accordion>
@@ -8,15 +10,25 @@
 						<b>{{ repoIssue.title }}</b>
 					</mat-panel-title>
 				</mat-expansion-panel-header>
-				<ng-template matExpansionPanelContent>					
+				<ng-template matExpansionPanelContent>
 					<mat-list role="list">
-							<mat-list-item role="listitem">opened by {{ repoIssue.user?.login }} at {{repoIssue.created_at | date: 'MM/dd/yyyy'}}</mat-list-item>
-							<mat-list-item role="listitem">assigned to {{repoIssue.assignee?.login}}</mat-list-item>
-						  </mat-list>
+						<mat-list-item role="listitem">
+							opened by &nbsp;
+							<button mat-button color="accent" (mouseover)="setUser(repoIssue.user)" routerLink="/github/followers/{{repoIssue.user?.login}}">
+								{{ repoIssue.user?.login }}
+							</button> &nbsp; at {{repoIssue.created_at | date: 'MM/dd/yyyy'}}
+						</mat-list-item>
+						<mat-list-item role="listitem">
+							assigned to  &nbsp;
+							<button mat-button color="accent" (mouseover)="setUser(repoIssue.assignee)" routerLink="/github/followers/{{repoIssue.assignee?.login}}">
+								{{repoIssue.assignee?.login}}
+							</button>
+						</mat-list-item>
+					</mat-list>
 					<div> {{ repoIssue.body }} </div>
 				</ng-template>
 				<mat-action-row>
-						updated at {{repoIssue.updated_at | date: 'MM/dd/yyyy'}}
+					updated at {{repoIssue.updated_at | date: 'MM/dd/yyyy'}}
 				</mat-action-row>
 			</mat-expansion-panel>
 		</mat-accordion>
@@ -25,5 +37,5 @@
 	</div>
 </div>
 <div *ngIf="repoIssueCollection.length < 1">
-		<app-spinner-component></app-spinner-component>
+	<app-spinner-component></app-spinner-component>
 </div>

@@ -16,7 +16,8 @@ describe('RepoIssuesComponent', () => {
     imports: [
         SharedTestingModuleWithProviders,
         BrowserAnimationsModule,
-        CoreModule
+        CoreModule,
+        RouterTestingModule
   ],
   declarations: [RepoIssuesComponent, IssueCollectionComponent],
   providers: [

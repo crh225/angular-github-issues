@@ -16,8 +16,7 @@ export class IssueCollectionComponent {
 
   constructor(
     private store: Store<fromRoot.AppState>,
-    private actionsSubject: ActionsSubject){
-    
+    private actionsSubject: ActionsSubject) {
   }
 
   setUser(user: User) {

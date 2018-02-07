@@ -31,9 +31,23 @@ export class UserEffects {
         );
 
     @Effect()
+    loadFullUser$: Observable<Action> = this.actions$
+            .ofType(userActions.LOAD_FULL_USER)
+            .debounceTime(0)
+            .map((action: userActions.LoadFullUser) => action.payload)
+            .switchMap((data) =>
+                this._githubService.returnFullUserObject(data.login)
+                    .mergeMap((user: User) => {
+                        return [
+                            new userActions.LoadFullUserSuccess(user)
+                        ];
+                    })
+            );
+
+    @Effect()
     loadFollowers$: Observable<Action> = this.actions$
         .ofType(userActions.LOAD_ALL_FOLLOWERS)
-        .debounceTime(1000)
+        .debounceTime(100)
         .map((action: userActions.LoadAllFollowers) => action.payload)
         .switchMap((data) =>
             this._githubService.returnFollowers(data)
@@ -46,7 +60,7 @@ export class UserEffects {
     @Effect()
     loadFollowing$: Observable<Action> = this.actions$
         .ofType(userActions.LOAD_ALL_FOLLOWING)
-        .debounceTime(1000)
+        .debounceTime(100)
         .map((action: userActions.LoadAllFollowing) => action.payload)
         .switchMap((data) =>
             this._githubService.returnFollowing(data)

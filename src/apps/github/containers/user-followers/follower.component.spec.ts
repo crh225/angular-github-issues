@@ -33,12 +33,13 @@ describe('UserFollowerComponent', () => {
     }).compileComponents();
   }));
 
-  it('should create the user follower component', async(() => {
+  it('should create the user follower component', ((done: any) => {
     const fixture = TestBed.createComponent(UserFollowerComponent);
     const app = fixture.debugElement.componentInstance;
     app.userCollection = [];
     fixture.detectChanges();
     expect(app).toBeTruthy();
+    done();
   }));
 
   it('should call the search button', ((done: any) => {

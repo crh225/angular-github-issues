@@ -9,8 +9,8 @@
         <button mat-button color="accent" routerLink="/github/repos/{{login}}" routerLinkActive="active-link">Repositories
             <span class="badge">{{user?.public_repos}}</span>
         </button>
-        <button mat-button color="accent" >Gists
-            <span class="badge">soon!</span>
+        <button mat-button color="accent" routerLink="/github/gists/{{login}}" routerLinkActive="active-link">Gists
+            <span class="badge">{{user?.public_gists}}</span>
         </button>
     </span>
 </mat-toolbar>

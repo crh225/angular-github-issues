@@ -25,6 +25,13 @@ export class GithubService {
     const url = this._generateFollowersUrl(login);
     return this._http.get(url);
   }
+
+  public returnFullUserObject(login: string): Observable<Object> {
+    const url = this._generateFullUserObjectUrl(login);
+    console.log(url);
+    return this._http.get(url);
+  }
+
   public returnFollowing(login: string): Observable<Object> {
     const url = this._generateFollowingUrl(login);
     return this._http.get(url);
@@ -38,9 +45,11 @@ export class GithubService {
   }
 
   private _generateSearchInUserUrl(name: string): string {
-    return `https://api.github.com/search/users?q=${name}+language:angular+&sort=stars`;
+    return `https://api.github.com/search/users?q=${name}+location:TN`;
   }
-
+  private _generateFullUserObjectUrl(login: string): string {
+    return `https://api.github.com/users/${login}`;
+  }
   private _generateFollowersUrl(login: string): string {
     return `https://api.github.com/users/${login}/followers`;
   }

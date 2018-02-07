@@ -25,6 +25,6 @@ export interface User {
     bio: string;
     public_repos: number;
     public_gists: number;
-    follower: number;
+    followers: number;
     following: number;
   }

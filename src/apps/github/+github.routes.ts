@@ -6,7 +6,8 @@ import { RepoSearchComponent,
   RepoIssuesComponent,
   UserSearchComponent,
   UserFollowerComponent,
-  UserFollowingComponent
+  UserFollowingComponent,
+  UserReposComponent
 } from '@app/github';
 import { NotFoundComponent } from '@core/components/not-found';
 
@@ -20,7 +21,8 @@ const routes: Routes = [
       { path: 'issues', component: RepoIssuesComponent },
       { path: 'user', component: UserSearchComponent },
       { path: 'followers/:id', canActivate: [ UserExistsGuard ], component: UserFollowerComponent},
-      { path: 'following/:id', canActivate: [ UserExistsGuard ], component: UserFollowingComponent}
+      { path: 'following/:id', canActivate: [ UserExistsGuard ], component: UserFollowingComponent},
+      { path: 'repos/:id', canActivate: [ UserExistsGuard ], component: UserReposComponent}
     ]
   },
   {

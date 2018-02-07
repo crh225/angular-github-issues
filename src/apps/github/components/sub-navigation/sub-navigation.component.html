@@ -6,12 +6,12 @@
         <button mat-button color="accent" routerLink="/github/following/{{login}}" routerLinkActive="active-link">Following
             <span class="badge">{{user?.following}}</span>
         </button>
-        <button mat-button color="accent" >Repositories
-            <span class="badge">soon!</span>
+        <button mat-button color="accent" routerLink="/github/repos/{{login}}" routerLinkActive="active-link">Repositories
+            <span class="badge">{{user?.public_repos}}</span>
         </button>
         <button mat-button color="accent" >Gists
             <span class="badge">soon!</span>
         </button>
     </span>
 </mat-toolbar>
-<!--<pre>{{user | json}}</pre>-->
+<pre>{{user | json}}</pre>

@@ -51,7 +51,6 @@ export class UserEffects {
         .switchMap((data) =>
             this._githubService.returnUserRepoObject(data)
                 .mergeMap((repo: Repo[]) => {
-                    console.log(repo);
                     return [
                         new userActions.LoadUserRepoSuccess(repo)
                     ];

@@ -38,7 +38,7 @@ export class LoadFullUserSuccess implements Action {
 
 export class LoadUserRepo implements Action {
     readonly type = LOAD_USER_REPO;
-    constructor(public payload: { login } ) { }
+    constructor(public payload: string ) { }
 }
 
 export class LoadUserRepoSuccess implements Action {

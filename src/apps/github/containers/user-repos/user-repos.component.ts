@@ -15,7 +15,7 @@ import { User, Repo } from '@app/github/shared/models';
 })
 export class UserReposComponent implements OnInit {
 
-    public repoCollection: any;
+    public repoCollection: Repo[];
 
     constructor(
         private store: Store<fromRoot.AppState>,
@@ -34,12 +34,11 @@ export class UserReposComponent implements OnInit {
     }
 
     ngOnInit() {
-        /*this.store.select(fromRoot.getRepos).subscribe(data => {
+        this.store.select(fromRoot.getUserRepo).subscribe(data => {
             if (data) {
                 this.repoCollection = data;
             }
         });
-        */
     }
 
 }

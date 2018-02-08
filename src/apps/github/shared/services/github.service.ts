@@ -28,10 +28,13 @@ export class GithubService {
 
   public returnFullUserObject(login: string): Observable<Object> {
     const url = this._generateFullUserObjectUrl(login);
+    return this._http.get(url);
+  }
+  public returnUserRepoObject(login: string): Observable<Object> {
+    const url = this._generateUserRepoObjectUrl(login);
     console.log(url);
     return this._http.get(url);
   }
-
   public returnFollowing(login: string): Observable<Object> {
     const url = this._generateFollowingUrl(login);
     return this._http.get(url);
@@ -49,6 +52,9 @@ export class GithubService {
   }
   private _generateFullUserObjectUrl(login: string): string {
     return `https://api.github.com/users/${login}`;
+  }
+  private _generateUserRepoObjectUrl(login: string): string {
+    return `https://api.github.com/users/${login}/repos`;
   }
   private _generateFollowersUrl(login: string): string {
     return `https://api.github.com/users/${login}/followers`;

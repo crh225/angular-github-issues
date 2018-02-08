@@ -1,2 +1,20 @@
 <app-gsub-navigation></app-gsub-navigation>
-repo component works!
+<!--<pre>{{repoCollection | json}}</pre>-->
+<div class="container" class="unset_width">            
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Full Name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let repo of repoCollection">
+          <td>{{repo.name}}</td>
+          <td>{{repo.full_name}}</td>
+          <td>{{repo.description}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

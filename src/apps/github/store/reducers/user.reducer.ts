@@ -1,7 +1,7 @@
 import { ActionReducer, Action, ActionReducerMap, MetaReducer, createFeatureSelector, createSelector } from '@ngrx/store';
 import { EntityState, createEntityAdapter, EntityAdapter } from '@ngrx/entity';
 import * as userActions from '@app/github/store/actions/user.action';
-import { User, Repo } from '@app/github/shared/models';
+import { User, Repo, Gist } from '@app/github/shared/models';
 
 
 // This adapter will allow is to manipulate contacts (mostly CRUD operations)
@@ -26,6 +26,7 @@ export interface State extends EntityState<User> {
     following?: User[];
     user?: User;
     repo?: Repo[];
+    gist?: Gist[];
 }
 
 export const initialState: State = userAdapter.getInitialState({
@@ -33,7 +34,8 @@ export const initialState: State = userAdapter.getInitialState({
     followers: undefined,
     following: undefined,
     user: undefined,
-    repo: undefined
+    repo: undefined,
+    gist: undefined
 });
 
 
@@ -51,23 +53,27 @@ export function userReducer(state: State = initialState, action: userActions.Use
         }
 
         case userActions.LOAD_ALL_USERS_SUCCESS: {
-            return {...state, ...userAdapter.addAll(action.payload as User[], state) };
+            return { ...state, ...userAdapter.addAll(action.payload as User[], state) };
         }
 
         case userActions.LOAD_FULL_USER_SUCCESS: {
-            return {...state, user: action.payload };
+            return { ...state, user: action.payload };
         }
 
         case userActions.LOAD_USER_REPO_SUCCESS: {
-            return {...state, repo: action.payload };
+            return { ...state, repo: action.payload };
+        }
+
+        case userActions.LOAD_USER_GIST_SUCCESS: {
+            return { ...state, gist: action.payload };
         }
 
         case userActions.LOAD_ALL_FOLLOWERS_SUCCESS: {
-            return {...state, followers: action.payload };
+            return { ...state, followers: action.payload };
         }
 
         case userActions.LOAD_ALL_FOLLOWING_SUCCESS: {
-            return {...state, following: action.payload };
+            return { ...state, following: action.payload };
         }
 
         default: {
@@ -94,6 +100,8 @@ export const getFollowing = (state: State) => state.following;
 export const getUser = (state: State) => state.user;
 
 export const getUserRepo = (state: State) => state.repo;
+
+export const getUserGist = (state: State) => state.gist;
 
 export const getSelected = createSelector(getEntities, getCurrentUserId, (entities, selectedId) => {
     return entities[selectedId];

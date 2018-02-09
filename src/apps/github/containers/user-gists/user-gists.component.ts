@@ -6,7 +6,7 @@ import { MatSnackBar } from '@angular/material';
 import { ActionsSubject, Store } from '@ngrx/store';
 import * as userActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
-import { User, Repo } from '@app/github/shared/models';
+import { User, Repo, Gist } from '@app/github/shared/models';
 
 @Component({
     selector: 'app-user-gists',
@@ -15,7 +15,7 @@ import { User, Repo } from '@app/github/shared/models';
 })
 export class UserGistsComponent implements OnInit {
 
-    public repoCollection: any;
+    public gistCollection: Gist[];
 
     constructor(
         private store: Store<fromRoot.AppState>,
@@ -34,12 +34,12 @@ export class UserGistsComponent implements OnInit {
     }
 
     ngOnInit() {
-        /*this.store.select(fromRoot.getRepos).subscribe(data => {
+        this.store.select(fromRoot.getUserGist).subscribe(data => {
             if (data) {
-                this.repoCollection = data;
+                this.gistCollection = data;
             }
         });
-        */
+
     }
 
 }

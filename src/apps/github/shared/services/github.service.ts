@@ -32,6 +32,10 @@ export class GithubService {
   }
   public returnUserRepoObject(login: string): Observable<Object> {
     const url = this._generateUserRepoObjectUrl(login);
+    return this._http.get(url);
+  }
+  public returnUserGistObject(login: string): Observable<Object> {
+    const url = this._generateUserGistObjectUrl(login);
     console.log(url);
     return this._http.get(url);
   }
@@ -55,6 +59,9 @@ export class GithubService {
   }
   private _generateUserRepoObjectUrl(login: string): string {
     return `https://api.github.com/users/${login}/repos`;
+  }
+  private _generateUserGistObjectUrl(login: string): string {
+    return `https://api.github.com/users/${login}/gists`;
   }
   private _generateFollowersUrl(login: string): string {
     return `https://api.github.com/users/${login}/followers`;

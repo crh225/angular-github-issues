@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { Action } from '@ngrx/store';
 import { Actions, Effect } from '@ngrx/effects';
 import * as userActions from '@app/github/store/actions';
-import { User, Repo } from '@app/github/shared/models';
+import { User, Repo, Gist } from '@app/github/shared/models';
 import { GithubService } from '@app/github/shared/services';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/empty';
@@ -56,6 +56,19 @@ export class UserEffects {
                     ];
                 })
         );
+    @Effect()
+    loadUserGist$: Observable<Action> = this.actions$
+        .ofType(userActions.LOAD_USER_GIST)
+        .debounceTime(0)
+        .map((action: userActions.LoadUserGist) => action.payload)
+        .switchMap((data) =>
+            this._githubService.returnUserGistObject(data)
+                .mergeMap((gist: Gist[]) => {
+                    return [
+                        new userActions.LoadUserGistSuccess(gist)
+                    ];
+                })
+        );
 
     @Effect()
     loadFollowers$: Observable<Action> = this.actions$
@@ -94,7 +107,8 @@ export class UserEffects {
                 new userActions.SetCurrentUserIdSuccess(data),
                 new userActions.LoadAllFollowing(data),
                 new userActions.LoadAllFollowers(data),
-                new userActions.LoadUserRepo(data)
+                new userActions.LoadUserRepo(data),
+                new userActions.LoadUserGist(data)
             ];
         });
 

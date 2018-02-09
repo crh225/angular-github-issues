@@ -1,5 +1,5 @@
 import { ActionReducer, Action, ActionReducerMap, MetaReducer } from '@ngrx/store';
-import { User, Repo } from '@app/github/shared/models';
+import { User, Repo, Gist } from '@app/github/shared/models';
 
 export const LOAD_ALL_USERS = '[User] LOAD ALL';
 export const LOAD_ALL_USERS_SUCCESS = '[User] LOAD ALL SUCCESS';
@@ -7,6 +7,8 @@ export const LOAD_FULL_USER = '[User] LOAD FULL USER';
 export const LOAD_FULL_USER_SUCCESS = '[User] LOAD FULL USER SUCCESS';
 export const LOAD_USER_REPO = '[User] LOAD USER REPO';
 export const LOAD_USER_REPO_SUCCESS = '[User] LOAD USER REPO SUCCESS';
+export const LOAD_USER_GIST = '[User] LOAD USER GIST';
+export const LOAD_USER_GIST_SUCCESS = '[User] LOAD USER GIST SUCCESS';
 export const SET_CURRENT_USER_ID = '[User] SET CURRENT USER ID';
 export const SET_CURRENT_USER_ID_SUCCESS = '[User] SET CURRENT USER ID SUCCESS';
 export const LOAD_ALL_FOLLOWERS = '[User] Load All Followers';
@@ -44,6 +46,16 @@ export class LoadUserRepo implements Action {
 export class LoadUserRepoSuccess implements Action {
     readonly type = LOAD_USER_REPO_SUCCESS;
     constructor(public payload: Repo[]) { }
+}
+
+export class LoadUserGist implements Action {
+    readonly type = LOAD_USER_GIST;
+    constructor(public payload: string ) { }
+}
+
+export class LoadUserGistSuccess implements Action {
+    readonly type = LOAD_USER_GIST_SUCCESS;
+    constructor(public payload: Gist[]) { }
 }
 
 export class LoadAllFollowers implements Action {
@@ -87,4 +99,6 @@ export type UserActions =
     | LoadFullUser
     | LoadFullUserSuccess
     | LoadUserRepo
-    | LoadUserRepoSuccess;
+    | LoadUserRepoSuccess
+    | LoadUserGist
+    | LoadUserGistSuccess;

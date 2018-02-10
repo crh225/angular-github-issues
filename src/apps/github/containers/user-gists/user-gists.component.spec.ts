@@ -2,7 +2,7 @@ import { TestBed, async, tick, fakeAsync } from '@angular/core/testing';
 import {APP_BASE_HREF} from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
-import { UserReposComponent, SubNavigationComponent } from '@app/github';
+import { UserGistsComponent, SubNavigationComponent } from '@app/github';
 import { SharedModule } from '@app/github/shared';
 import * as forApplication from '@app/github/store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
@@ -14,7 +14,7 @@ import { CoreModule } from '@core/';
 import * as userActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
 
-describe('UserReposComponent', () => {
+describe('UserGistsComponent', () => {
   beforeEach((() => {
     TestBed.configureTestingModule({
     imports: [
@@ -26,36 +26,36 @@ describe('UserReposComponent', () => {
     StoreModule.forRoot(forApplication.reducers),
     EffectsModule.forRoot([UserEffects])
   ],
-  declarations: [UserReposComponent, SubNavigationComponent],
+  declarations: [UserGistsComponent, SubNavigationComponent],
   providers: [
     Actions,
     UserEffects]
     }).compileComponents();
   }));
 
-  it('should create the user repos component', ((done: any) => {
-    const fixture = TestBed.createComponent(UserReposComponent);
+  it('should create the user gists component', ((done: any) => {
+    const fixture = TestBed.createComponent(UserGistsComponent);
     const app = fixture.debugElement.componentInstance;
-    app.repoCollection = [];
+    app.gistCollection = [];
     fixture.detectChanges();
     expect(app).toBeTruthy();
     done();
   }));
 
-  it('should display the user repos', ((done: any) => {
-    const fixture = TestBed.createComponent(UserReposComponent);
+  it('should display the user gists', ((done: any) => {
+    const fixture = TestBed.createComponent(UserGistsComponent);
     const comp = fixture.debugElement.componentInstance;
-    comp.repoCollection = [];
-    comp.store.dispatch(new userActions.LoadUserRepo('crh225'));
+    comp.gistCollection = [];
+    comp.store.dispatch(new userActions.LoadUserGist('crh225'));
     fixture.detectChanges();
 
-    comp.store.select(fromRoot.getUserRepo).subscribe( data => {
+    comp.store.select(fromRoot.getUserGist).subscribe( data => {
         if (data) {
-            comp.repoCollection = data;
+            comp.gistCollection = data;
             fixture.detectChanges();
             fixture.whenStable().then(() => {
                 fixture.detectChanges();
-                expect(Object.keys(comp.repoCollection).length).toBeGreaterThan(0);
+                expect(Object.keys(comp.gistCollection).length).toBeGreaterThan(0);
                 done();
             });
         }

@@ -8,36 +8,19 @@ Chat: https://gitter.im/angular-github-issues/Lobby
 [![devDependencies Status](https://david-dm.org/crh225/angular-github-issues/dev-status.svg)](https://david-dm.org/crh225/angular-github-issues?type=dev)
 ![Angular_Version 5](https://img.shields.io/badge/Angular_Version-5-brightgreen.svg)
 
-# About - Current Version
+# About
 
 
 This repository searches's github for repositories, issues for that repository, and a github user search for angular developers. Once you search for a repository, you can then drill down into each repository and see a list of issues for the past seven days.
 
+The other main feature is the ability to search for a github user in a particular Location in America. Right now it is defaulted to TN.
+
 CI is set up to run lint,testing, build in aot mode for production, and to deploy to firebase.
 
-New features in this version include Search and Dashboard!
-
-This example show how to use multiple entity's in ngxr. The main search page is now a dashboard of barcharts for each repository. In the works is lazy loaded feature ngrx/stores.
+This example show how to use multiple entity's in ngrx. The main search page is now a dashboard of barcharts for each repository. In the works is lazy loaded feature ngrx/stores.
 
 For a live demo: https://chris-house.firebaseapp.com/
 
-The code for this demo is the current master branch
-
-# V3: ngrx/redux version with lazy loading and shared modules
-To see a live version: 
-https://angular-tfkaqt.stackblitz.io
-
-To see the stackblitz interactive code: https://stackblitz.com/edit/angular-tfkaqt
-
-# V2: ngrx/redux version
-To see a live version: https://angular-duas8p.stackblitz.io/repo/issues
-
-To see the stackblitz interactive code: https://stackblitz.com/edit/angular-duas8p
-
-# V1: version without redux
-To see a live version: https://angular-tg2nma.stackblitz.io/repo/issues
-
-To see the stackblitz interactive code: https://stackblitz.com/edit/angular-tg2nma
 
 ## Development server
 
@@ -56,7 +39,3 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

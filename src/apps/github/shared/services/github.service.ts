@@ -44,6 +44,13 @@ export class GithubService {
     return this._http.get(url);
   }
 
+  public getApiToken(code: string) {
+    return this._http.get(`https://github.com/login/oauth/access_token?client_id=b78e13b91d0a38ae8316&client_secret=d1bc750e8ef37fc94171a2e9d8482e6b74ecdc71&code=${code}`
+    , {
+      responseType: 'text'
+    });
+  }
+
   private _generateRepoIssuesUrl(owner: string, repo: string, days: string): string {
     return `https://api.github.com/repos/${owner}/${repo}/issues?&per_page=100`;
   }

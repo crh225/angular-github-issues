@@ -1,8 +1,16 @@
-<a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=b78e13b91d0a38ae8316">Click here</a> to login!
-
 
 <br>
-code {{code | json}}
-<br>
+<div style="text-align:center;">
+        <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png"><br>
+        <button *ngIf="!user" mat-raised-button color="accent" (click)="signIn(user)" >Login with 
+                <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" width="80px"> 
+        </button>	
+        <button *ngIf="user" mat-raised-button color="accent" (click)="signOut()" >Logout
+        </button>			
+</div>
 
-{{ token | json}}
+<div>
+Githup Api Token:{{ token | json}}
+</div>
+
+<pre>{{user | json}}</pre>

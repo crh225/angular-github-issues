@@ -6,10 +6,6 @@
     "arrow-return-shorthand": true,
     "callable-types": true,
     "class-name": true,
-    "comment-format": [
-      true,
-      "check-space"
-    ],
     "curly": true,
     "eofline": true,
     "forin": true,
@@ -26,7 +22,7 @@
     "label-position": true,
     "max-line-length": [
       true,
-      140
+      500
     ],
     "member-access": false,
     "member-ordering": [

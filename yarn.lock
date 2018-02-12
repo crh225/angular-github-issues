@@ -145,9 +145,9 @@
   version "5.2.4"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-5.2.4.tgz#281631793671844ae8f6f9c0ec80b91d064db2d8"
 
-"@angular/material@5.1.1":
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-5.1.1.tgz#fafbd6bd98f2521ac5e3e2b2f720214386e3f31d"
+"@angular/material@5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-5.2.0.tgz#8599e3149d48487e3e92e941fa9dc55176e3a0cf"
   dependencies:
     tslib "^1.7.1"
 

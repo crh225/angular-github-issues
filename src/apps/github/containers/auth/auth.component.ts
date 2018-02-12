@@ -13,7 +13,8 @@ import { User } from '@app/github/shared/models';
 
 @Component({
     selector: 'app-user-auth',
-    templateUrl: './auth.component.html'
+    templateUrl: './auth.component.html',
+    changeDetection: ChangeDetectionStrategy.Default
 })
 export class UserAuthComponent implements OnInit {
 
@@ -35,6 +36,7 @@ export class UserAuthComponent implements OnInit {
                 }
                 // The signed-in user info.
                 this.user = result.user;
+                alert('logged in success!');
               }).catch((error) => {
                 console.log(error);
               });

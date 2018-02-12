@@ -18,7 +18,8 @@ import { SharedModule,
   UserFollowingComponent,
   SubNavigationComponent,
   UserReposComponent,
-  UserGistsComponent } from '@app/github';
+  UserGistsComponent,
+  UserAuthComponent } from '@app/github';
 
 @NgModule({
   imports: [
@@ -42,7 +43,8 @@ import { SharedModule,
     UserFollowingComponent,
     SubNavigationComponent,
     UserReposComponent,
-    UserGistsComponent
+    UserGistsComponent,
+    UserAuthComponent
     ],
     providers: [
       UserExistsGuard

@@ -1,11 +1,12 @@
 	<header>
 		<mat-toolbar color="primary">
 			<mat-toolbar-row>
-					<div routerLink="/">GitHub Research Tool</div>
+					<div routerLink="/">Dev Hunt</div>
 					<button mat-button  class="menu" [matMenuTriggerFor]="menu">Navigation</button>
 					<mat-menu #menu="matMenu">
 					  <button mat-menu-item routerLink="/github/user">User Serch</button>
-					  <button mat-menu-item routerLink="/github/search">Repo Search</button>
+						<button mat-menu-item routerLink="/github/search">Repo Search</button>
+						<button mat-menu-item routerLink="/github/auth">Login (New!)</button>
 					</mat-menu>
 			</mat-toolbar-row>
 		</mat-toolbar>

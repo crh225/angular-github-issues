@@ -1,10 +1,6 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
-  build:
+  test-job:
     docker:
       - image: circleci/node:7.10-browsers
     steps:
@@ -34,8 +30,6 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-     
-      - run: yarn lint
       - run: 
           name: Run frontend tests
           command: |
@@ -45,6 +39,49 @@ jobs:
           name: Upload coverage results to Code Climate
           command: |
             ./tmp/cc-test-reporter upload-coverage -i tmp/codeclimate.frontend.json
+  lint-job:
+    docker:
+      - image: circleci/node:7.10-browsers
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/repo/tmp
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+     
+      - run: yarn lint
+            
+  deploy-job:
+    docker:
+      - image: circleci/node:7.10-browsers
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/repo/tmp
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Build app in production mode
           command: |
@@ -53,3 +90,17 @@ jobs:
           name: Deploy app to firebase
           command: |
             ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - test-job
+      - lint-job
+      - deploy-job:
+          requires:
+            - test-job
+          filters:
+            branches:
+              only: master
+            

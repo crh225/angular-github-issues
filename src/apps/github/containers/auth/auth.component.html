@@ -1,16 +1,16 @@
-
 <br>
 <div style="text-align:center;">
-        <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png"><br>
-        <button *ngIf="!user" mat-raised-button color="accent" (click)="signIn(user)" >Login with 
-                <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" width="80px"> 
-        </button>	
-        <button *ngIf="user" mat-raised-button color="accent" (click)="signOut()" >Logout
-        </button>			
+        <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="200px">
+        <br>
+        <button *ngIf="!user" mat-raised-button color="accent" (click)="signIn(user)">Login with
+                <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" width="80px">
+        </button>
+        <button *ngIf="user" mat-raised-button color="accent" (click)="signOut()">Logout
+        </button>
 </div>
 
 <div>
-Githup Api Token:{{ token | json}}
+        Githup Api Token:{{ token | json}}
 </div>
 
 <pre>{{user | json}}</pre>

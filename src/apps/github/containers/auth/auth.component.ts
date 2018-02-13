@@ -29,18 +29,18 @@ export class UserAuthComponent implements OnInit {
         private actionsSubject: ActionsSubject,
         private _http: HttpClient) {
 
-            firebase.auth().getRedirectResult().then((result) => {
-                if (result.credential) {
-                  // This gives you a GitHub Access Token. You can use it to access the GitHub API.
-                  this.token = result.credential.accessToken;
-                  this.store.dispatch(new userActions.SetApiToken(result.credential.accessToken));
-                  // ...
-                }
-                // The signed-in user info.
-                this.user = result.user;
-              }).catch((error) => {
-                console.log(error);
-              });
+        firebase.auth().getRedirectResult().then((result) => {
+            if (result.credential) {
+                // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+                this.token = result.credential.accessToken;
+                this.store.dispatch(new userActions.SetApiToken(result.credential.accessToken));
+                // ...
+            }
+            // The signed-in user info.
+            this.user = result.user;
+        }).catch((error) => {
+            console.log(error);
+        });
     }
 
     ngOnInit() {
@@ -58,9 +58,9 @@ export class UserAuthComponent implements OnInit {
             this.user = undefined;
             this.token = '';
             this.store.dispatch(new userActions.SetApiToken(undefined));
-          }).catch((error) => {
+        }).catch((error) => {
             console.log(error);
-          });
+        });
     }
 
 }

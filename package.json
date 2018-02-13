@@ -20,7 +20,7 @@
     "@firebase/app-types": "^0.1.1",
     "@ngrx/core": "1.2.0",
     "@ngrx/effects": "5.0.1",
-    "@ngrx/entity": "5.0.1",
+    "@ngrx/entity": "5.1.0",
     "@ngrx/store": "5.0.0",
     "@ngrx/store-devtools": "5.0.1",
     "angularfire2": "^5.0.0-rc.6",

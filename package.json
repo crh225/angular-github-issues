@@ -22,7 +22,7 @@
     "@ngrx/effects": "5.0.1",
     "@ngrx/entity": "5.0.1",
     "@ngrx/store": "5.0.0",
-    "@ngrx/store-devtools": "5.0.1",
+    "@ngrx/store-devtools": "5.1.0",
     "angularfire2": "^5.0.0-rc.6",
     "core-js": "2.5.3",
     "firebase": "^4.9.1",

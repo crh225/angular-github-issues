@@ -49,7 +49,9 @@ jobs:
           name: Build app in production mode
           command: |
             yarn build:prod
-      - run:
-          name: Deploy app to firebase
+    deployment:
+        production:
+          branch: master
           command: |
             ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+         

@@ -21,17 +21,19 @@ export class UserAuthComponent implements OnInit {
     public code: any;
     public token = '';
     public user: any = null;
+    private provider = new firebase.auth.GithubAuthProvider();
+
     constructor(
         public afAuth: AngularFireAuth,
-        private route: ActivatedRoute,
-        private router: Router,
-        private githubService: GithubService,
+        private store: Store<fromRoot.AppState>,
+        private actionsSubject: ActionsSubject,
         private _http: HttpClient) {
 
             firebase.auth().getRedirectResult().then((result) => {
                 if (result.credential) {
                   // This gives you a GitHub Access Token. You can use it to access the GitHub API.
                   this.token = result.credential.accessToken;
+                  this.store.dispatch(new userActions.SetApiToken(result.credential.accessToken));
                   // ...
                 }
                 // The signed-in user info.
@@ -45,16 +47,17 @@ export class UserAuthComponent implements OnInit {
     }
 
     signIn() {
-        const provider = new firebase.auth.GithubAuthProvider();
-        firebase.auth().signInWithRedirect(provider);
+        firebase.auth().signInWithRedirect(this.provider);
     }
 
     signOut() {
         firebase.auth().signOut().then(() => {
             // Sign-out successful.
             // todo: put this in the redux store
+            localStorage.clear();
             this.user = undefined;
             this.token = '';
+            this.store.dispatch(new userActions.SetApiToken(undefined));
           }).catch((error) => {
             console.log(error);
           });

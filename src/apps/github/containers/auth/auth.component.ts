@@ -36,7 +36,6 @@ export class UserAuthComponent implements OnInit {
                 }
                 // The signed-in user info.
                 this.user = result.user;
-                alert('logged in success!');
               }).catch((error) => {
                 console.log(error);
               });

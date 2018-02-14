@@ -20,7 +20,7 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-{{ checksum "yarn.lock" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
@@ -29,7 +29,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
       - run: 
           name: Run frontend tests
           command: |
@@ -49,7 +49,7 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-{{ checksum "yarn.lock" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
@@ -58,32 +58,10 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
      
       - run: yarn lint
-  Build-AOT-job:
-    docker:
-      - image: circleci/node:7.10-browsers
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/repo/tmp
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
-      - run: yarn --offline
-      - run:
-          name: Build app in production mode
-          command: |
-            yarn build:prod
-      - save_cache:
-          paths:
-            - dist
-          key: dist-{{ .Branch }}        
+            
   deploy-job:
     docker:
       - image: circleci/node:7.10-browsers
@@ -94,9 +72,20 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - dist-{{ .Branch }}
+          - v1-dependencies-{{ checksum "yarn.lock" }}
           # fallback to using the latest cache if no exact match is found
-          - dist
+          - v1-dependencies-
+
+      - run: yarn --offline
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - run:
+          name: Build app in production mode
+          command: |
+            yarn build:prod
       - run:
           name: Deploy app to firebase
           command: |
@@ -108,11 +97,9 @@ workflows:
     jobs:
       - test-job
       - lint-job
-      - Build-AOT-job
       - deploy-job:
           requires:
             - test-job
-            - Build-AOT-job
           filters:
             branches:
               only: master

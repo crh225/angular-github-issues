@@ -61,8 +61,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
      
       - run: yarn lint
-            
-  deploy-job:
+  Build-AOT-job:
     docker:
       - image: circleci/node:7.10-browsers
     steps:
@@ -77,15 +76,27 @@ jobs:
           - v1-dependencies-
 
       - run: yarn --offline
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Build app in production mode
           command: |
             yarn build:prod
+      - save_cache:
+          paths:
+            - dist
+          key: dist-{{ .Branch }}        
+  deploy-job:
+    docker:
+      - image: circleci/node:7.10-browsers
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/repo/tmp
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - dist-{{ .Branch }}
+          # fallback to using the latest cache if no exact match is found
+          - dist
       - run:
           name: Deploy app to firebase
           command: |
@@ -97,9 +108,11 @@ workflows:
     jobs:
       - test-job
       - lint-job
+      - Build-AOT-job
       - deploy-job:
           requires:
             - test-job
+            - Build-AOT-job
           filters:
             branches:
               only: master

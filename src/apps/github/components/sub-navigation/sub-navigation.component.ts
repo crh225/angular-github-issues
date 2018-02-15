@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { User } from '@app/github/shared/models';
 import { ActionsSubject, Store } from '@ngrx/store';
 import * as userActions from '@app/github/store/actions';
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
     templateUrl: './sub-navigation.component.html',
     styleUrls: ['./sub-navigation.component.css']
 })
-export class SubNavigationComponent implements OnInit {
+export class SubNavigationComponent {
 
     public login = '';
     public user: User;
@@ -34,9 +34,5 @@ export class SubNavigationComponent implements OnInit {
                 default:
             }
         });
-    }
-
-    ngOnInit() {
-
     }
 }

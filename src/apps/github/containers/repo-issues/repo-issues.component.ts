@@ -1,6 +1,4 @@
 import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
-import { HttpErrorResponse } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
 import { ActionsSubject, Store } from '@ngrx/store';
 import * as issueActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';

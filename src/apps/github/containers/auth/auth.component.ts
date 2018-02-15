@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { HttpErrorResponse, HttpClient } from '@angular/common/http';
 import { FormControl } from '@angular/forms';
@@ -15,7 +15,7 @@ import { User } from '@app/github/shared/models';
     selector: 'app-user-auth',
     templateUrl: './auth.component.html'
 })
-export class UserAuthComponent implements OnInit {
+export class UserAuthComponent {
 
     public code: any;
     public token = '';
@@ -37,9 +37,6 @@ export class UserAuthComponent implements OnInit {
         }).catch((error) => {
             console.log(error);
         });
-    }
-
-    ngOnInit() {
     }
 
     signIn() {

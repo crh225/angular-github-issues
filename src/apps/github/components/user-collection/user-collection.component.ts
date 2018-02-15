@@ -1,6 +1,6 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { User } from '@app/github/shared/models';
-import { ActionsSubject, Store } from '@ngrx/store';
+import { Store } from '@ngrx/store';
 import * as userActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
 import { Router } from '@angular/router';

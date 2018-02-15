@@ -11,6 +11,7 @@ export const LOAD_USER_GIST = '[User] LOAD USER GIST';
 export const LOAD_USER_GIST_SUCCESS = '[User] LOAD USER GIST SUCCESS';
 export const SET_CURRENT_USER_ID = '[User] SET CURRENT USER ID';
 export const SET_CURRENT_USER_ID_SUCCESS = '[User] SET CURRENT USER ID SUCCESS';
+export const SET_API_TOKEN = '[User] SET API TOKEN';
 export const LOAD_ALL_FOLLOWERS = '[User] Load All Followers';
 export const LOAD_ALL_FOLLOWERS_SUCCESS = '[User] Load All Followers Success';
 export const LOAD_ALL_FOLLOWING = '[User] Load All Following';
@@ -87,6 +88,11 @@ export class SetCurrentUserIdSuccess implements Action {
     constructor(public payload: number) { }
 }
 
+export class SetApiToken implements Action {
+    readonly type = SET_API_TOKEN;
+    constructor(public payload: string) { }
+}
+
 export type UserActions =
     LoadAllUsers
     | LoadAllUsersSuccess
@@ -101,4 +107,5 @@ export type UserActions =
     | LoadUserRepo
     | LoadUserRepoSuccess
     | LoadUserGist
-    | LoadUserGistSuccess;
+    | LoadUserGistSuccess
+    | SetApiToken;

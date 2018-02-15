@@ -27,6 +27,7 @@ export interface State extends EntityState<User> {
     user?: User;
     repo?: Repo[];
     gist?: Gist[];
+    apiToken?: string;
 }
 
 export const initialState: State = userAdapter.getInitialState({
@@ -35,7 +36,8 @@ export const initialState: State = userAdapter.getInitialState({
     following: undefined,
     user: undefined,
     repo: undefined,
-    gist: undefined
+    gist: undefined,
+    apiToken: undefined
 });
 
 
@@ -50,6 +52,10 @@ export function userReducer(state: State = initialState, action: userActions.Use
 
         case userActions.SET_CURRENT_USER_ID_SUCCESS: {
             return { ...state, id: action.payload };
+        }
+
+        case userActions.SET_API_TOKEN: {
+            return { ...state, apiToken: action.payload };
         }
 
         case userActions.LOAD_ALL_USERS_SUCCESS: {
@@ -102,6 +108,8 @@ export const getUser = (state: State) => state.user;
 export const getUserRepo = (state: State) => state.repo;
 
 export const getUserGist = (state: State) => state.gist;
+
+export const getApiToken = (state: State) => state.apiToken;
 
 export const getSelected = createSelector(getEntities, getCurrentUserId, (entities, selectedId) => {
     return entities[selectedId];

@@ -46,3 +46,4 @@ export const getUserGist = createSelector(getUserState, fromUser.getUserGist);
 export const getFollowers = createSelector(getUserState, fromUser.getFollowers);
 export const getFollowing = createSelector(getUserState, fromUser.getFollowing);
 export const getSelectedUser = createSelector(getUserState, fromUser.getSelected);
+export const getApiToken = createSelector(getUserState, fromUser.getApiToken);

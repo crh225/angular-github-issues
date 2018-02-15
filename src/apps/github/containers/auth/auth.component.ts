@@ -13,8 +13,7 @@ import { User } from '@app/github/shared/models';
 
 @Component({
     selector: 'app-user-auth',
-    templateUrl: './auth.component.html',
-    changeDetection: ChangeDetectionStrategy.Default
+    templateUrl: './auth.component.html'
 })
 export class UserAuthComponent implements OnInit {
 
@@ -34,7 +33,6 @@ export class UserAuthComponent implements OnInit {
                 // This gives you a GitHub Access Token. You can use it to access the GitHub API.
                 this.token = result.credential.accessToken;
                 this.store.dispatch(new userActions.SetApiToken(result.credential.accessToken));
-                // ...
             }
             // The signed-in user info.
             this.user = result.user;

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import { Repo } from '@app/github/shared/models';
 
 @Component({

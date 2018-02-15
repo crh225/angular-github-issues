@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpErrorResponse } from '@angular/common/http';
 import { FormControl } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material';
 import { ActionsSubject, Store } from '@ngrx/store';
 import * as userActions from '@app/github/store/actions';

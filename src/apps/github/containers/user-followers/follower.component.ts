@@ -1,8 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { HttpErrorResponse } from '@angular/common/http';
-import { FormControl } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
-import { MatSnackBar } from '@angular/material';
+import { Component, OnInit } from '@angular/core';
 import { ActionsSubject, Store } from '@ngrx/store';
 import * as userActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
@@ -20,8 +16,7 @@ export class UserFollowerComponent implements OnInit {
 
     constructor(
       private store: Store<fromRoot.AppState>,
-      private actionsSubject: ActionsSubject,
-      public snackBar: MatSnackBar) {
+      private actionsSubject: ActionsSubject) {
         this.actionsSubject
             .asObservable()
             .subscribe((data: any) => {

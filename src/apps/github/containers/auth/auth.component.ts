@@ -13,13 +13,15 @@ import { User } from '@app/github/shared/models';
 
 @Component({
     selector: 'app-user-auth',
-    templateUrl: './auth.component.html'
+    templateUrl: './auth.component.html',
+    styleUrls: ['./auth.component.css']
 })
 export class UserAuthComponent {
 
     public code: any;
     public token = '';
     public user: any = null;
+    public imageUrl = 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png';
     private provider = new firebase.auth.GithubAuthProvider();
 
     constructor(
@@ -34,8 +36,12 @@ export class UserAuthComponent {
                 this.token = result.credential.accessToken;
                 this.store.dispatch(new userActions.SetApiToken(result.credential.accessToken));
             }
-            // The signed-in user info.
-            this.user = result.user;
+            if (result.user !== null) {
+                // The signed-in user info.
+                this.user = result.user;
+                console.log(this.user);
+                this.imageUrl = this.user.photoURL;
+            }
         }).catch((error) => {
             console.log(error);
         });

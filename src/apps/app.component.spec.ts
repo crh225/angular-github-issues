@@ -1,8 +1,8 @@
 import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
-
-import {APP_BASE_HREF} from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { APP_BASE_HREF } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,17 +14,18 @@ import { CoreModule } from '@core/';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-    imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    AppRoutes,
-    SharedModule.forRoot(),
-    CoreModule.forRoot(),
-  ],
-  declarations: [AppComponent],
-  providers: [{provide: APP_BASE_HREF, useValue : '/' }]
+      imports: [
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        AppRoutes,
+        SharedModule.forRoot(),
+        CoreModule.forRoot(),
+        BrowserAnimationsModule
+      ],
+      declarations: [AppComponent],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
     }).compileComponents();
   }));
 

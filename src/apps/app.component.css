@@ -4,3 +4,63 @@ p {
 .menu{
   margin-left: 15px;
 }
+
+.-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.wrapper-is-mobile .wrapper-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.wrapper-app-name {
+  margin-left: 8px;
+}
+
+.wrapper-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+  height: calc( 100vh - 65px );
+}
+
+.wrapper-is-mobile .wrapper-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+.router-span{
+  padding: 50px;
+  background-color: red;
+}
+
+.wrapper-sidenav {
+background-color: #262f3d;
+}
+
+.sidenav-btn{
+  color:white;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.icon-white {
+  color:white !important;
+}
+
+.wrapper-toolbar{
+  padding-left: 41px;
+}
+
+.pl-15{
+  padding-left:15px;
+}

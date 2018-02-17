@@ -5,7 +5,7 @@ p {
   margin-left: 15px;
 }
 
-.-container {
+.wrapper-container {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -38,11 +38,6 @@ h1.wrapper-app-name {
   flex: 1 0 auto;
 }
 
-.router-span{
-  padding: 50px;
-  background-color: red;
-}
-
 .wrapper-sidenav {
 background-color: #262f3d;
 }
@@ -64,3 +59,4 @@ background-color: #262f3d;
 .pl-15{
   padding-left:15px;
 }
+

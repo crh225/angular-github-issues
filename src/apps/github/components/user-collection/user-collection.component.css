@@ -1,5 +1,7 @@
 .card-wrapper{
-    padding: 5px;
+      padding: 0px;
+    padding-right: 15px;
+    padding-top: 15px;
    }
    .card-body{
      margin:0px 8px 0px 8px;
@@ -22,3 +24,10 @@
  .card{
      padding-bottom: 50px;
  }
+ .pl-15{
+padding-left:15px;
+}
+
+.pr-15{
+  padding-right:15px;
+}

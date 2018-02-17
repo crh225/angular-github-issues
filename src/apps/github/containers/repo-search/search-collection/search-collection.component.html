@@ -1,17 +1,21 @@
-  <div *ngIf="repoCollection?.length > 0">
+<div *ngIf="repoCollection?.length > 0" class="pl-15">
 	<div *ngFor="let repo of repoCollection" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 card-wrapper">
 		<mat-card class="card">
 			<mat-card-header>
-				<mat-card-title><strong>{{ repo.name }}</strong></mat-card-title>
+				<mat-card-title>
+					<strong>{{ repo.name }}</strong>
+				</mat-card-title>
 				<mat-card-subtitle> {{ repo.description }} </mat-card-subtitle>
 			</mat-card-header>
 			<mat-card-content>
-                    <app-chart-bar [repo]="repo"></app-chart-bar>
+				<app-chart-bar [repo]="repo"></app-chart-bar>
 			</mat-card-content>
-      <mat-card-footer (mouseover)="setRepoInStore(repo)">
-        <strong>Open issues:</strong> {{ repo.open_issues_count }}
-				<small *ngIf="repo.open_issues_count > 0" > <a routerLink="/github/issues">View</a></small>
-      </mat-card-footer>
+			<mat-card-footer (mouseover)="setRepoInStore(repo)">
+				<strong>Open issues:</strong> {{ repo.open_issues_count }}
+				<small *ngIf="repo.open_issues_count > 0">
+					<a routerLink="/github/issues">View</a>
+				</small>
+			</mat-card-footer>
 		</mat-card>
 	</div>
 </div>

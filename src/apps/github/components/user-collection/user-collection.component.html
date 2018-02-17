@@ -1,4 +1,4 @@
-<div *ngIf="userCollection.length > 0">
+<div *ngIf="userCollection.length > 0" class="pl-15">
 	<div *ngFor="let user of userCollection" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 card-wrapper">
 		<mat-card class="card" >
 			<mat-card-header>
@@ -11,9 +11,6 @@
 			</mat-card-header>
 			<mat-card-content class="card-image">
 				<img [src]="user.avatar_url" alt="Not Found" height="230px" width="230px">
-				<p>
-					This app is in active development. In progress is a user detail page. For now, click view user, then follower or following.
-				</p>
 			</mat-card-content>
 			<mat-card-actions>
 				<button mat-raised-button color="accent" (click)="setUser(user)" routerLink="/github/followers/{{user.login}}">View User</button>			

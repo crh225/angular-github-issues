@@ -25,3 +25,9 @@ mat-card-footer {
 .mat-progress-spinner.mat-progress-spinner-indeterminate-animation[mode=indeterminate] {
     animation: unset;
 }
+.m-15{
+  margin:15px;
+}
+.mb-0{
+  margin-bottom:0px;
+}

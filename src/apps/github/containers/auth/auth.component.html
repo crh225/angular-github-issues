@@ -1,16 +1,44 @@
 <br>
 <div style="text-align:center;">
-        <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="200px">
+        <mat-card class="login-card">
+                <mat-card-header>
+                        <mat-card-title>
+
+                        </mat-card-title>
+                </mat-card-header>
+                <mat-card-content *ngIf="!user">
+                        <img [src]="imageUrl" width="200px">
+                        <br>
+                        <strong>Oath 2 Authentication</strong>
+                        <br>
+                        <br>
+                        <p>
+                                This will redirect you to Github where you will login. The only premission it requests is your email address. Then you are
+                                added as a user to this Firebase application, so you can make authenticated Github api calls.
+                        </p>
+                </mat-card-content>
+                <mat-card-content *ngIf="user">
+                        <img [src]="imageUrl" width="200px">
+                        <br>
+                        <strong>{{user.providerData[0].displayName}}</strong>
+                        <br>
+                        <br>
+                        <p>
+                                You are now authenticated.
+                        </p>
+                </mat-card-content>
+                <mat-card-actions>
+                        <button *ngIf="!user" mat-raised-button color="accent" (click)="signIn(user)">Login with
+                                <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" width="80px">
+                        </button>
+                        <button *ngIf="user" mat-raised-button color="accent" (click)="signOut()">
+                                Logout
+                                <mat-icon class="white-icon">exit_to_app</mat-icon>
+                        </button>
+                </mat-card-actions>
+        </mat-card>
+
         <br>
-        <button *ngIf="!user" mat-raised-button color="accent" (click)="signIn(user)">Login with
-                <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" width="80px">
-        </button>
-        <button *ngIf="user" mat-raised-button color="accent" (click)="signOut()">Logout
-        </button>
-</div>
 
-<div>
-        Githup Api Token:{{ token | json}}
 </div>
-
-<pre>{{user | json}}</pre>
+<!--<pre>{{user | json}}</pre>-->

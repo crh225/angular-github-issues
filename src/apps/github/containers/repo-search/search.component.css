@@ -20,6 +20,12 @@ mat-card-footer {
 }
 .mat-spinner.show {
   opacity: 1.0;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    left: 0px;
+    padding-left: 0px;
+    margin-bottom: 20px;
 }
 
 .mat-progress-spinner.mat-progress-spinner-indeterminate-animation[mode=indeterminate] {
@@ -30,4 +36,8 @@ mat-card-footer {
 }
 .mb-0{
   margin-bottom:0px;
+}
+
+.card-content{
+  margin-bottom: 0px;
 }

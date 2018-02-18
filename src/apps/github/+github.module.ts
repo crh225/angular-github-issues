@@ -19,7 +19,11 @@ import { SharedModule,
   SubNavigationComponent,
   UserReposComponent,
   UserGistsComponent,
-  UserAuthComponent } from '@app/github';
+  UserAuthComponent,
+  UserAuthSuccessComponent,
+  UserAuthGoogleComponent,
+  UserAuthGithubComponent,
+  UserAuthFacebookComponent} from '@app/github';
 
 @NgModule({
   imports: [
@@ -44,7 +48,11 @@ import { SharedModule,
     SubNavigationComponent,
     UserReposComponent,
     UserGistsComponent,
-    UserAuthComponent
+    UserAuthComponent,
+    UserAuthSuccessComponent,
+    UserAuthGoogleComponent,
+    UserAuthGithubComponent,
+    UserAuthFacebookComponent
     ],
     providers: [
       UserExistsGuard

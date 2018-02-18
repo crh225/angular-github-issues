@@ -1,0 +1,23 @@
+<mat-card class="login-card">
+    <mat-card-header>
+        <mat-card-title>
+
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content *ngIf="user">
+        <img [src]="user.photoURL" width="200px">
+        <br>
+        <strong>{{user.providerData[0].displayName}}</strong>
+        <br>
+        <br>
+        <p>
+            You are now authenticated.
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button *ngIf="user" mat-raised-button color="accent" (click)="signOut()">
+            Logout
+            <mat-icon class="white-icon">exit_to_app</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>

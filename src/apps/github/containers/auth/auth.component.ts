@@ -22,7 +22,7 @@ export class UserAuthComponent {
     public token = '';
     public user: any = null;
     public imageUrl = 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png';
-    private provider = new firebase.auth.GithubAuthProvider();
+    private provider = new firebase.auth.GoogleAuthProvider();
 
     constructor(
         public afAuth: AngularFireAuth,
@@ -47,22 +47,6 @@ export class UserAuthComponent {
         });
     }
 
-    signIn() {
-        firebase.auth().signInWithRedirect(this.provider);
-    }
 
-    signOut() {
-        firebase.auth().signOut().then(() => {
-            // Sign-out successful.
-            // todo: put this in the redux store
-            localStorage.clear();
-            this.user = undefined;
-            this.token = '';
-            this.store.dispatch(new userActions.SetApiToken(undefined));
-            this.imageUrl = 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png';
-        }).catch((error) => {
-            console.log(error);
-        });
-    }
 
 }

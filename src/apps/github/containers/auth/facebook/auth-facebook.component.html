@@ -1,0 +1,23 @@
+<mat-card class="login-card">
+    <mat-card-header>
+        <mat-card-title>
+
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content *ngIf="!user">
+        <img [src]="imageUrl" width="200px">
+        <br>
+        <strong>OAuth 2 Authentication</strong>
+        <br>
+        <br>
+        <p>
+            This will redirect you to FB where you will login. The only premission it requests is your email address. Then you are
+            added as a user to this Firebase application, so you can make authenticated Github api calls.
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button *ngIf="!user" mat-raised-button color="accent" (click)="signIn(user)">Login with
+            <img src="https://evertsdal.com/wp-content/uploads/2015/07/facebook-logo-grey.png" width="80px" style="vertical-align:sub">
+        </button>
+    </mat-card-actions>
+</mat-card>

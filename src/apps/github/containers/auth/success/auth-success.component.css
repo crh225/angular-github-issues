@@ -1,0 +1,21 @@
+.login-card{
+    width: 400px;
+    display: inline-block;
+}
+.centered{
+    text-align: center;
+}
+.mat-card>.mat-card-actions:last-child {
+    margin-bottom: 0px;
+    padding-bottom: 0;
+}
+
+.mat-card-header-text {
+    margin: 0 8px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.white-icon{
+    color: white;
+    margin-left: 10px;
+}

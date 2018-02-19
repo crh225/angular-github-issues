@@ -63,3 +63,9 @@ background-color: #262f3d;
 .sidenav-outlet{
   background-color:#e2e8ef;
 }
+
+.active-link { border-right: 5px solid #1e88e5; }
+
+.mat-nav-list {
+    padding-top: 15px;
+}

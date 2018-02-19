@@ -30,6 +30,7 @@ export class SubNavigationComponent {
             switch (data.type) {
                 case '[User] LOAD FULL USER SUCCESS':
                     this.user = data.payload;
+                    console.log(this.user);
                     break;
                 default:
             }

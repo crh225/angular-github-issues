@@ -8,8 +8,6 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import * as userActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
-import { GithubService } from '@app/github/shared/services';
-import { User } from '@app/github/shared/models';
 
 @Component({
     selector: 'app-auth-success',
@@ -17,7 +15,7 @@ import { User } from '@app/github/shared/models';
     styleUrls: ['../auth.component.scss']
 })
 export class UserAuthSuccessComponent {
-    // todo: clean up imports and variables
+
     @Input() user: any;
     public imageUrl = '';
     constructor(public afAuth: AngularFireAuth,

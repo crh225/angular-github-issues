@@ -14,7 +14,7 @@ import { User } from '@app/github/shared/models';
 @Component({
     selector: 'app-auth-success',
     templateUrl: './auth-success.component.html',
-    styleUrls: ['./auth-success.component.css']
+    styleUrls: ['../auth.component.scss']
 })
 export class UserAuthSuccessComponent {
     // todo: clean up imports and variables

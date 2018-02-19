@@ -14,7 +14,7 @@ import { User } from '@app/github/shared/models';
 @Component({
     selector: 'app-auth-facebook',
     templateUrl: './auth-facebook.component.html',
-    styleUrls: ['./auth-facebook.component.css']
+    styleUrls: ['../auth.component.scss']
 })
 export class UserAuthFacebookComponent {
     // todo: clean up imports and variables

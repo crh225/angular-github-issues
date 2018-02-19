@@ -14,7 +14,7 @@ import { User } from '@app/github/shared/models';
 @Component({
     selector: 'app-auth-google',
     templateUrl: './auth-google.component.html',
-    styleUrls: ['./auth-google.component.css']
+    styleUrls: ['../auth.component.scss']
 })
 export class UserAuthGoogleComponent {
     // todo: clean up imports and variables

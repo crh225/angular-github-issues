@@ -31,3 +31,9 @@ padding-left:15px;
 .pr-15{
   padding-right:15px;
 }
+
+.mat-card>.mat-card-actions:last-child {
+    margin-bottom: -16px;
+    padding-bottom: 0;
+    margin-left: 15px;
+}

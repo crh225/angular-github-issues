@@ -14,7 +14,7 @@ import { User } from '@app/github/shared/models';
 @Component({
     selector: 'app-user-auth',
     templateUrl: './auth.component.html',
-    styleUrls: ['./auth.component.css']
+    styleUrls: ['./auth.component.scss']
 })
 export class UserAuthComponent {
 

@@ -1,20 +1,35 @@
 <app-gsub-navigation></app-gsub-navigation>
-<!--<pre>{{repoCollection | json}}</pre>-->
-<div class="container" class="unset_width">            
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Full Name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let repo of repoCollection">
-          <td>{{repo.name}}</td>
-          <td>{{repo.full_name}}</td>
-          <td>{{repo.description}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<mat-table [dataSource]=dataSource class="m-15" matSort>
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> 
+       <a [href]="element.html_url">{{element.name}} </a>
+      </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="description">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="language">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Language </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.language}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="created_at">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Date Created </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.created_at | date:'mediumDate'}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="has_issues">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Issues </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.has_issues}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="forks_count">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Forks </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.forks_count}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="archived">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Archived </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.archived}} </mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table> 

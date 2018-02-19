@@ -18,17 +18,14 @@ import { User } from '@app/github/shared/models';
 })
 export class UserAuthComponent {
 
-    public code: any;
     public token = '';
     public user: any = null;
     public imageUrl = 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png';
-    private provider = new firebase.auth.GoogleAuthProvider();
 
     constructor(
         public afAuth: AngularFireAuth,
         private store: Store<fromRoot.AppState>,
-        private actionsSubject: ActionsSubject,
-        private _http: HttpClient) {
+        private actionsSubject: ActionsSubject) {
 
         firebase.auth().getRedirectResult().then((result) => {
             if (result.credential) {

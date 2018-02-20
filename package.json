@@ -23,10 +23,12 @@
     "@ngrx/entity": "5.1.0",
     "@ngrx/store": "5.1.0",
     "@ngrx/store-devtools": "5.0.1",
+    "@sgbj/angular-gist": "^0.3.0",
     "angularfire2": "5.0.0-rc.6",
     "core-js": "2.5.3",
     "firebase": "^4.9.1",
     "ng2-charts": "1.6.0",
+    "postscribe": "^2.0.8",
     "rxjs": "5.5.6",
     "zone.js": "0.8.20"
   },

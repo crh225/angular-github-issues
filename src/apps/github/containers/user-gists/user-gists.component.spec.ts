@@ -1,5 +1,5 @@
 import { TestBed, async, tick, fakeAsync } from '@angular/core/testing';
-import {APP_BASE_HREF} from '@angular/common';
+import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { UserGistsComponent, SubNavigationComponent } from '@app/github';
@@ -13,23 +13,25 @@ import { SharedTestingModule } from '@app/github/shared';
 import { CoreModule } from '@core/';
 import * as userActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
+import { GistModule } from '@sgbj/angular-gist';
 
 describe('UserGistsComponent', () => {
   beforeEach((() => {
     TestBed.configureTestingModule({
-    imports: [
-    BrowserAnimationsModule,
-    SharedTestingModule.forRoot(),
-    SharedModule.forRoot(),
-    RouterTestingModule,
-    CoreModule.forRoot(),
-    StoreModule.forRoot(forApplication.reducers),
-    EffectsModule.forRoot([UserEffects])
-  ],
-  declarations: [UserGistsComponent, SubNavigationComponent],
-  providers: [
-    Actions,
-    UserEffects]
+      imports: [
+        BrowserAnimationsModule,
+        SharedTestingModule.forRoot(),
+        SharedModule.forRoot(),
+        RouterTestingModule,
+        CoreModule.forRoot(),
+        StoreModule.forRoot(forApplication.reducers),
+        EffectsModule.forRoot([UserEffects]),
+        GistModule
+      ],
+      declarations: [UserGistsComponent, SubNavigationComponent],
+      providers: [
+        Actions,
+        UserEffects]
     }).compileComponents();
   }));
 
@@ -49,16 +51,16 @@ describe('UserGistsComponent', () => {
     comp.store.dispatch(new userActions.LoadUserGist('crh225'));
     fixture.detectChanges();
 
-    comp.store.select(fromRoot.getUserGist).subscribe( data => {
-        if (data) {
-            comp.gistCollection = data;
-            fixture.detectChanges();
-            fixture.whenStable().then(() => {
-                fixture.detectChanges();
-                expect(Object.keys(comp.gistCollection).length).toBeGreaterThan(0);
-                done();
-            });
-        }
+    comp.store.select(fromRoot.getUserGist).subscribe(data => {
+      if (data) {
+        comp.gistCollection = data;
+        fixture.detectChanges();
+        fixture.whenStable().then(() => {
+          fixture.detectChanges();
+          expect(Object.keys(comp.gistCollection).length).toBeGreaterThan(0);
+          done();
+        });
+      }
     });
   }));
 });

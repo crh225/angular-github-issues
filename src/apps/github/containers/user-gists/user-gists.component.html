@@ -1,2 +1,8 @@
 <app-gsub-navigation></app-gsub-navigation>
-<pre>{{gistCollection | json}}</pre>
+<div *ngFor="let item of gistCollection" class="m-15">
+    <gh-gist src="{{item.html_url}}.js"></gh-gist>
+</div>
+<!--<pre>{{gistCollection | json}}</pre>-->
+
+
+ 

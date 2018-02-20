@@ -13,7 +13,7 @@ import { SharedTestingModule } from '@app/github/shared';
 import { CoreModule } from '@core/';
 import * as userActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
-import { GistModule } from '@sgbj/angular-gist';
+import { NgxGistModule } from 'ngx-gist/dist/ngx-gist.module';
 
 describe('UserGistsComponent', () => {
   beforeEach((() => {
@@ -26,7 +26,7 @@ describe('UserGistsComponent', () => {
         CoreModule.forRoot(),
         StoreModule.forRoot(forApplication.reducers),
         EffectsModule.forRoot([UserEffects]),
-        GistModule
+        NgxGistModule
       ],
       declarations: [UserGistsComponent, SubNavigationComponent],
       providers: [

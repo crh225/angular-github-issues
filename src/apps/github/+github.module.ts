@@ -8,7 +8,7 @@ import { UserExistsGuard } from './guards';
 import { ChartsModule } from 'ng2-charts';
 import { NotFoundComponent } from '@core/components/not-found';
 import { CoreModule } from '@core/';
-import { GistModule } from '@sgbj/angular-gist';
+import { NgxGistModule } from 'ngx-gist/dist/ngx-gist.module';
 import { SharedModule,
   ChartComponent,
   IssueCollectionComponent,
@@ -24,7 +24,7 @@ import { SharedModule,
   UserAuthSuccessComponent,
   UserAuthGoogleComponent,
   UserAuthGithubComponent,
-  UserAuthFacebookComponent } from '@app/github';
+  UserAuthFacebookComponent} from '@app/github';
 
 @NgModule({
   imports: [
@@ -35,7 +35,7 @@ import { SharedModule,
     ReactiveFormsModule,
     ChartsModule,
     CoreModule,
-    GistModule
+    NgxGistModule
   ],
   declarations: [GithubComponent,
     RepoIssuesComponent,

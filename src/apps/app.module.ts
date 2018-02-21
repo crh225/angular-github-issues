@@ -16,6 +16,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 // todo: put this in a config file
 export const firebaseConfig = {
@@ -44,12 +46,14 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
   providers: [
       Actions,
-      IssueEffects]
+    IssueEffects]
 })
-export class AppModule { }
+export class AppModule {
+ }

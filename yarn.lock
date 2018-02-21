@@ -178,6 +178,12 @@
   dependencies:
     tslib "^1.7.1"
 
+"@angular/service-worker@^5.2.5":
+  version "5.2.5"
+  resolved "https://registry.yarnpkg.com/@angular/service-worker/-/service-worker-5.2.5.tgz#5843c4dd50e8408d18bc50ea274527bb831f6f52"
+  dependencies:
+    tslib "^1.7.1"
+
 "@firebase/app-types@0.1.1", "@firebase/app-types@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.1.1.tgz#1b794e101c779310763b1bfce8c24e7728fb9a91"

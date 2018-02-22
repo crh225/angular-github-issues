@@ -1,9 +1,13 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { ActionsSubject, Store } from '@ngrx/store';
+import * as userActions from '@app/github/store/actions';
+import * as fromRoot from '@app/github/store/reducers';
 
 @Injectable()
 export class GithubService {
+
   constructor(private _http: HttpClient) { }
 
   public getRepoIssues(owner: string, repo: string, days: string): Observable<Object> {

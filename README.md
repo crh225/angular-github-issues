@@ -19,6 +19,8 @@ CI is set up to run lint,testing, build in aot mode for production, and to deplo
 
 This example show how to use multiple entity's in ngrx. The main search page is now a dashboard of barcharts for each repository. In the works is lazy loaded feature ngrx/stores.
 
+Secure Github API login via Oath 2
+
 For a live demo: https://christopher.house
 
 

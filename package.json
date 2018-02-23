@@ -42,7 +42,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "precommit": "npm run lint",
-    "build:prod": "ng build --prod --output-path public",
+    "build:prod": "ng build --prod --aot --output-path public",
     "deploy": "firebase deploy"
   },
   "private": true,

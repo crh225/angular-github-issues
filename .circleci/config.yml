@@ -85,7 +85,7 @@ jobs:
       - run:
           name: Build app in production mode
           command: |
-            npm build:prod
+            npm run build:prod
       - run:
           name: Deploy app to firebase
           command: |

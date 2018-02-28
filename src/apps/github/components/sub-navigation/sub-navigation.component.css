@@ -1,1 +1,5 @@
 .active-link { border-bottom: 2px solid #1e88e5; }
+.img-circle{
+    border-radius: 50%;
+    width:40px;
+}

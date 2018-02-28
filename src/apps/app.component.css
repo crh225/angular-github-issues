@@ -69,3 +69,6 @@ background-color: #262f3d;
 .mat-nav-list {
     padding-top: 15px;
 }
+.spacer {
+  flex: 1 1 auto;
+}

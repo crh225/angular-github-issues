@@ -1,5 +1,5 @@
 <mat-toolbar>
-    <span>User: {{login}}
+    <span>User: <img class="img-circle" src="{{user?.avatar_url}}"> {{login}}
         <button mat-button color="accent" routerLink="/github/followers/{{login}}" routerLinkActive="active-link">Followers
             <span class="badge">{{user?.followers}}</span>
         </button>

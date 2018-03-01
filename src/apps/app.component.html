@@ -5,8 +5,14 @@
 		</button>
 		<div routerLink="/" class="pl-15">Dev Hunt</div>
 		<span class="spacer"></span>
-		<a routerLink="/github/auth">
-			<mat-icon class="icon-white">fingerprint</mat-icon>
+		<a routerLink="/github/auth" class="auth_icon">
+			<ng-container *ngIf="imageUrl.length > 0;else show_icon">
+				<img class="img-circle" src="{{imageUrl}}">
+			</ng-container>
+			<ng-template #show_icon>
+				<mat-icon class="icon-white vert-align-mid">fingerprint</mat-icon>
+			</ng-template>
+			
 		</a>
 
 	</mat-toolbar>

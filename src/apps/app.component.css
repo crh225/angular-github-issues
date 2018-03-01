@@ -72,3 +72,16 @@ background-color: #262f3d;
 .spacer {
   flex: 1 1 auto;
 }
+
+.img-circle{
+    border-radius: 50%;
+    width:40px;
+}
+
+.auth_icon{
+  padding-right: 30px;
+}
+
+.vert-align-mid{
+  vertical-align: middle;
+}

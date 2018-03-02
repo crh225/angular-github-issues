@@ -26,6 +26,7 @@ export const firebaseConfig = {
 
 describe('AppComponent', () => {
   beforeEach((() => {
+    jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
     TestBed.configureTestingModule({
       imports: [
         BrowserModule,

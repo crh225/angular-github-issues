@@ -66,5 +66,4 @@ describe('UserAuthComponent', () => {
         expect(app).toBeTruthy();
         done();
     }));
-
 });

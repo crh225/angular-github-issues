@@ -1,19 +1,25 @@
 import { MediaMatcher } from '@angular/cdk/layout';
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
+import { Router } from '@angular/router';
+import {
+  MatSidenav
+} from '@angular/material';
 @Component({
   selector: 'app-house',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @ViewChild('snav') public sidenav: MatSidenav;
   mobileQuery: MediaQueryList;
   imageUrl = '';
   private _mobileQueryListener: () => void;
 
   constructor(changeDetectorRef: ChangeDetectorRef,
     public afAuth: AngularFireAuth,
+    private router: Router,
     media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -34,5 +40,12 @@ export class AppComponent {
     }).catch((error) => {
       console.log(error);
     });
+  }
+
+  sendToRoute(sRoute: string, isMobile: boolean) {
+    if (isMobile) {
+      this.sidenav.close();
+      this.router.navigate([sRoute]);
+    }
   }
 }

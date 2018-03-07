@@ -1,17 +1,24 @@
-<mat-toolbar>
-    <span>User: <img class="img-circle" src="{{user?.avatar_url}}"> {{login}}
-        <button mat-button color="accent" routerLink="/github/followers/{{login}}" routerLinkActive="active-link">Followers
+<div class="nav_wrapper">
+    <nav mat-tab-nav-bar>
+        <!--<span mat-tab-link>
+            <img class="img-circle" src="{{user?.avatar_url}}"> {{login}}
+        </span>-->
+        <a mat-tab-link routerLink="/github/followers/{{login}}" routerLinkActive="active-link">
+            Followers
             <span class="badge">{{user?.followers}}</span>
-        </button>
-        <button mat-button color="accent" routerLink="/github/following/{{login}}" routerLinkActive="active-link">Following
+        </a>
+        <a mat-tab-link routerLink="/github/following/{{login}}" routerLinkActive="active-link">
+            Following
             <span class="badge">{{user?.following}}</span>
-        </button>
-        <button mat-button color="accent" routerLink="/github/repos/{{login}}" routerLinkActive="active-link">Repositories
+        </a>
+        <a mat-tab-link routerLink="/github/repos/{{login}}" routerLinkActive="active-link">
+            Repositories
             <span class="badge">{{user?.public_repos}}</span>
-        </button>
-        <button mat-button color="accent" routerLink="/github/gists/{{login}}" routerLinkActive="active-link">Gists
+        </a>
+        <a mat-tab-link routerLink="/github/gists/{{login}}" routerLinkActive="active-link">
+            Gists
             <span class="badge">{{user?.public_gists}}</span>
-        </button>
-    </span>
-</mat-toolbar>
+        </a>
+    </nav>
+</div>
 <!--<pre>{{user | json}}</pre>-->

@@ -2,4 +2,18 @@
 .img-circle{
     border-radius: 50%;
     width:40px;
+    margin-right:10px;
+}
+.nav_wrapper{
+    background-color:white;
+}
+.badge{
+    margin-left:15px;
+    background-color: #ffa000;
+}
+
+.mat-tab-label, .mat-tab-link {
+    color: #262f3d;
+    opacity: 1;
+    text-decoration: none;
 }

@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Action } from '@ngrx/store';
 import { Actions, Effect } from '@ngrx/effects';
 import * as issueActions from '@app/github/store/actions';
 import { Issue } from '@app/github/shared/models';
 import { GithubService } from '@app/github/shared/services';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/empty';
-import 'rxjs/add/operator/mergeMap';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/startWith';
-import 'rxjs/add/operator/switchMap';
+
+
+
+
+
+
 
 
 

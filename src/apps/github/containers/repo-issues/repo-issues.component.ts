@@ -3,7 +3,7 @@ import { ActionsSubject, Store } from '@ngrx/store';
 import * as issueActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
 import { Issue } from '@app/github/shared/models';
-import 'rxjs/add/operator/filter';
+
 
 @Component({
     selector: 'app-repo-issues',

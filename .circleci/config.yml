@@ -95,11 +95,11 @@ workflows:
   version: 2
   build-deploy:
     jobs:
-      - test-job
+      #- test-job
       - lint-job
       - deploy-job:
           requires:
-            - test-job
+            #- test-job
           filters:
             branches:
               only: master

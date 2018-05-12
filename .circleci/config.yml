@@ -3,7 +3,7 @@ jobs:
   test-job:
     docker:
       #- image: circleci/node:8.11-browsers
-      - image: circleci/node:8.11
+      - image: circleci/node:8.11-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -96,11 +96,11 @@ workflows:
   version: 2
   build-deploy:
     jobs:
-      #- test-job
+      - test-job
       - lint-job
       - deploy-job:
           requires:
-            #- test-job
+            - test-job
           filters:
             branches:
               only: master

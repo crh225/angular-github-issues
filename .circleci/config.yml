@@ -37,7 +37,7 @@ jobs:
             yarn test
             pwd
             ls
-            ./tmp/cc-test-reporter format-coverage -t lcov -o tmp/codeclimate.frontend.json coverage/lcov.info
+            ./tmp/cc-test-reporter format-coverage -t lcov -o tmp/codeclimate.frontend.json src/coverage/lcov.info
       - run:
           name: Upload coverage results to Code Climate
           command: |

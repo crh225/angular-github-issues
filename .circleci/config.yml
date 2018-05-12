@@ -62,6 +62,8 @@ jobs:
           key: v1-dependencies-{{ checksum "yarn.lock" }}
      
       - run: yarn lint
+
+      
             
   deploy-job:
     docker:

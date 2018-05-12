@@ -35,7 +35,7 @@ jobs:
           name: Run frontend tests
           command: |
             npm test --code-coverage         
-            pwd
+            cd tmp
             ls
             ./tmp/cc-test-reporter format-coverage -t lcov -o tmp/codeclimate.frontend.json coverage/lcov.info
       - run:

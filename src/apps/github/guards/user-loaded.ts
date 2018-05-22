@@ -12,6 +12,7 @@ import { ActionsSubject, Store } from '@ngrx/store';
 import * as userActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
 import { User } from '@app/github/shared/models';
+import 'rxjs/add/operator/take';
 
 @Injectable()
 export class UserExistsGuard implements CanActivate {

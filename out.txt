@@ -1,6 +1,0 @@
-[32m05 05 2018 18:48:24.929:INFO [karma]: [39mKarma v1.7.1 server started at http://0.0.0.0:9876/
-[32m05 05 2018 18:48:24.931:INFO [launcher]: [39mLaunching browser Chrome with unlimited concurrency
-[32m05 05 2018 18:48:24.940:INFO [launcher]: [39mStarting browser Chrome
-[32m05 05 2018 18:48:34.649:INFO [Chrome 66.0.3359 (Windows 10.0.0)]: [39mConnected on socket xUwCzPMkahaMfJVlAAAA with id 23000195
-Chrome 66.0.3359 (Windows 10.0.0): Executed 0 of 0 SUCCESS (0 secs / 0 secs)
-[1A[2KChrome 66.0.3359 (Windows 10.0.0): Executed 0 of 0 ERROR (0.013 secs / 0 secs)

@@ -1,0 +1,47 @@
+mat-card-title,
+mat-card-content,
+mat-card-footer {
+  display: flex;
+  justify-content: center;
+}
+mat-card-footer {
+  color: #FF0000;
+  padding: 5px 0;
+}
+.mat-form-field {
+  min-width: 300px;
+}
+.mat-spinner {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  opacity: 0.0;
+  padding-left: 60px;
+}
+.mat-spinner.show {
+  opacity: 1.0;
+      width: 30px;
+    height: 30px;
+    top: 0px;
+    left: 0px;
+    padding-left: 0px;
+    margin-bottom: 20px;
+}
+
+.mat-progress-spinner.mat-progress-spinner-indeterminate-animation[mode=indeterminate] {
+    animation: unset;
+}
+.m-15{
+  margin:15px;
+}
+.mb-0{
+  margin-bottom:0px;
+}
+
+.card-content{
+  margin-bottom: 0px;
+}
+
+.wip{
+    color:#FF0000;
+}

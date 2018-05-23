@@ -1,0 +1,11 @@
+<mat-card class="m-15 mb-0">
+    <mat-card-title>Find a programming job in TN</mat-card-title>
+    <mat-card-content class="card-content">
+        <mat-form-field>
+            <input matInput placeholder="Search for a job">
+        </mat-form-field>
+    </mat-card-content>
+    <mat-card-footer>
+        <mat-spinner [class.show]="searching" [diameter]="30" [strokeWidth]="3"></mat-spinner>
+    </mat-card-footer>
+</mat-card>

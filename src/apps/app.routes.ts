@@ -13,6 +13,10 @@ const routes: Routes = [
     path: 'github',
     loadChildren: '@app/github/+github.module#GithubModule'
   },
+  {
+    path: 'jobs',
+    loadChildren: '@app/jobs/+jobs.module#JobModule'
+  },
   { path: '**', redirectTo: 'NotFoundComponent' }
 ];
 

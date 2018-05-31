@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+
+  angular-github-issues:
+    container_name: angular-github-issues
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '4200:4200'

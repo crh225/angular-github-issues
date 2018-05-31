@@ -44,7 +44,8 @@
     "e2e": "ng e2e",
     "precommit": "npm run lint",
     "build:prod": "ng build --prod --aot --output-path public",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "dock": "docker-compose up -d --build"
   },
   "private": true,
   "devDependencies": {

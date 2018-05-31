@@ -1,0 +1,15 @@
+version: '2.1'
+
+services:
+  angular-github-issues:
+    image: angular-github-issues
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 80:80
+      - 443:443
+      - 9229:9229
+      - 4200:4200
+    ## set your startup file here
+    command: [nginx-debug, '-g', 'daemon off;']

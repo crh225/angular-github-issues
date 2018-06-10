@@ -1,3 +1,5 @@
+
+import {filter} from 'rxjs/operators';
 import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { ActionsSubject, Store } from '@ngrx/store';
 import * as issueActions from '@app/github/store/actions';
@@ -24,8 +26,8 @@ export class RepoIssuesComponent implements OnInit {
         private actionsSubject: ActionsSubject) {
 
         this.actionsSubject
-            .asObservable()
-            .filter(action => action.type === issueActions.LOAD_ALL_ISSUES_SUCCESS)
+            .asObservable().pipe(
+            filter(action => action.type === issueActions.LOAD_ALL_ISSUES_SUCCESS))
             .subscribe((data: any) => {
                 switch (data.type) {
                     case '[Issue] LOAD ALL SUCCESS':

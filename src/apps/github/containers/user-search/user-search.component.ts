@@ -37,7 +37,7 @@ export class UserSearchComponent implements OnInit {
   }
 
     ngOnInit() {
-      this.store.dispatch(new userActions.SetCurrentUserId(undefined));
+      this.store.dispatch(new userActions.SetCurrentUserId('crh225'));
     }
 
     search(): void {

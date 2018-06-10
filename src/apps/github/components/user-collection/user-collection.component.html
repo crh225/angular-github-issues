@@ -1,11 +1,11 @@
-<div *ngIf="userCollection.length > 0" class="pl-15">
+<div *ngIf="userCollection?.length > 0" class="pl-15">
 	<div *ngFor="let user of userCollection" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 card-wrapper">
-		<mat-card class="card" >
+		<mat-card class="card">
 			<mat-card-header>
 				<mat-card-title>
 					<strong>{{ user.login }}</strong>
 				</mat-card-title>
-				<mat-card-subtitle>					
+				<mat-card-subtitle>
 					<a [href]="user.html_url">{{ user.html_url }}</a>
 				</mat-card-subtitle>
 			</mat-card-header>
@@ -13,8 +13,8 @@
 				<img [src]="user.avatar_url" alt="Not Found" height="230px" width="230px">
 			</mat-card-content>
 			<mat-card-actions>
-				<button mat-raised-button color="accent" (click)="setUser(user)" routerLink="/github/followers/{{user.login}}">View User</button>			
-			  </mat-card-actions>
+				<button mat-raised-button color="accent" (click)="setUser(user)" routerLink="/github/followers/{{user.login}}">View User</button>
+			</mat-card-actions>
 		</mat-card>
 	</div>
 </div>
@@ -22,4 +22,3 @@
 <pre>
     {{ userCollection | json }}
 </pre>-->
-

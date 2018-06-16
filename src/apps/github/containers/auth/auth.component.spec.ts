@@ -30,6 +30,7 @@ export const firebaseConfig = {
 
 describe('UserAuthComponent', () => {
     beforeEach((() => {
+        jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
         TestBed.configureTestingModule({
             imports: [
                 BrowserAnimationsModule,

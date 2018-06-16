@@ -1,6 +1,27 @@
-List of jobs:
-<ul>
-    <li *ngFor="let j of jobs | async">
-        {{ j.title }} {{ j.company }} {{j.description}}
-    </li>
-</ul>
+<div class="pl-15">
+    <div *ngFor="let j of jobs | async" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 card-wrapper">
+        <mat-card class="card">
+            <mat-card-header>
+                <mat-card-title>
+                    <strong>{{ j.title }}</strong>
+                </mat-card-title>
+                <mat-card-subtitle>
+                    {{ j.company }}
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                 {{j.description}}
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="accent">Apply</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+
+<!--
+<br>
+<pre>
+{{ jobs | async | json}}
+</pre>
+-->

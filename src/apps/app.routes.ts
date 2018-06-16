@@ -1,7 +1,5 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { RepoIssuesComponent, RepoSearchComponent } from '@app/github';
-import { NotFoundComponent } from '@core/components/not-found';
 
 const routes: Routes = [
   {

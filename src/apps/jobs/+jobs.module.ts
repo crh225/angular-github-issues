@@ -5,7 +5,7 @@ import { JobRoutingModule } from './+jobs.routes';
 import { JobComponent } from './+jobs.component';
 import { CoreModule } from '@core/';
 import {
-  SearchComponent
+  SearchComponent, JobListingComponent
 } from '@app/jobs';
 
 @NgModule({
@@ -17,6 +17,7 @@ import {
     CoreModule
   ],
   declarations: [JobComponent,
+    JobListingComponent,
     SearchComponent
   ]
 })

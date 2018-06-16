@@ -1,0 +1,6 @@
+List of jobs:
+<ul>
+    <li *ngFor="let j of jobs | async">
+        {{ j.title }} {{ j.company }} {{j.description}}
+    </li>
+</ul>

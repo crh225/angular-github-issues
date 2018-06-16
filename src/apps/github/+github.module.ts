@@ -6,7 +6,6 @@ import { GithubComponent } from './+github.component';
 import { RepoIssuesComponent, RepoSearchComponent } from '@app/github/containers';
 import { UserExistsGuard } from './guards';
 import { ChartsModule } from 'ng2-charts';
-import { NotFoundComponent } from '@core/components/not-found';
 import { CoreModule } from '@core/';
 import { NgxGistModule } from 'ngx-gist/dist/ngx-gist.module';
 import { SharedModule,

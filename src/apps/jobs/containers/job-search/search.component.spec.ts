@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchComponent } from './search.component';
+import { JobListingComponent } from '@app/jobs';
 import { UserSearchCollectionComponent } from '@app/github';
 import { SharedModule } from '@app/github/shared';
 import * as forApplication from '@app/github/store/reducers';
@@ -38,7 +39,7 @@ describe('JobSearchComponent', () => {
                 AngularFirestoreModule, // imports firebase/firestore, only needed for database features
                 AngularFireAuthModule, // imports firebase/auth, only needed for auth features
             ],
-            declarations: [SearchComponent],
+            declarations: [SearchComponent, JobListingComponent],
             providers: [
             ]
         }).compileComponents();

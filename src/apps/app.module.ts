@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutes } from './app.routes';
 import { AppComponent } from './app.component';
 import * as github from '@app/github';
-import * as jobs from '@app/jobs';
 import { CoreModule } from '@core/';
 import { StoreModule } from '@ngrx/store';
 import * as forApplication from '@app/github/store/reducers';

@@ -1,4 +1,4 @@
-import { ActionReducer, Action, ActionReducerMap, MetaReducer } from '@ngrx/store';
+import { Action } from '@ngrx/store';
 import { Issue } from '@app/github/shared/models';
 
 export const LOAD_ALL_ISSUES = '[Issue] LOAD ALL';

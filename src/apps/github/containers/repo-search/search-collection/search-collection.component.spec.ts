@@ -1,6 +1,4 @@
 import { TestBed, async } from '@angular/core/testing';
-import {APP_BASE_HREF} from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '@app/github/shared';
 import { ChartComponent, SearchCollectionComponent } from '@app/github/containers/repo-search';
 import { ChartsModule } from 'ng2-charts';

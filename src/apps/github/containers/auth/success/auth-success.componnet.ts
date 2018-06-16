@@ -1,8 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute, Router, Params } from '@angular/router';
-import { HttpErrorResponse, HttpClient } from '@angular/common/http';
-import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs/Rx';
 import { ActionsSubject, Store } from '@ngrx/store';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';

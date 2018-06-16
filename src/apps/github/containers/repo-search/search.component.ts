@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material';
 import { ActionsSubject, Store } from '@ngrx/store';
 import * as repoActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
-import { RepoSearchResult, Repo } from '@app/github/shared/models';
+import { RepoSearchResult } from '@app/github/shared/models';
 
 @Component({
   selector: 'app-repo-search',

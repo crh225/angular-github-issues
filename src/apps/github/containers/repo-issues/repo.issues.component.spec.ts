@@ -1,12 +1,11 @@
 import { TestBed, async } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RepoIssuesComponent } from './repo-issues.component';
-import { SharedModule } from '@app/github/shared';
 import { IssueCollectionComponent } from '@app/github/containers/repo-issues';
-import { EffectsModule, Actions } from '@ngrx/effects';
+import {  Actions } from '@ngrx/effects';
 import { IssueEffects, RepoEffects } from '@app/github/store/effects';
 import {RouterTestingModule} from '@angular/router/testing';
-import { SharedTestingModule, SharedTestingModuleWithProviders } from '@app/github/shared';
+import { SharedTestingModuleWithProviders } from '@app/github/shared';
 import * as repoActions from '@app/github/store/actions';
 import { CoreModule } from '@core/';
 

@@ -3,7 +3,6 @@ import { Repo } from '@app/github/shared/models';
 import { Store } from '@ngrx/store';
 import * as repoActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-collection',

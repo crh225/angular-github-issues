@@ -10,6 +10,7 @@ import { CoreModule } from '@core/';
 import { RouterTestingModule } from '@angular/router/testing';
 
 describe('IssueCollectionComponent', () => {
+  jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
     imports: [

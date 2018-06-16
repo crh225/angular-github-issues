@@ -10,6 +10,7 @@ import * as repoActions from '@app/github/store/actions';
 import { CoreModule } from '@core/';
 
 describe('RepoIssuesComponent', () => {
+  jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
   beforeEach((() => {
     TestBed.configureTestingModule({
     imports: [

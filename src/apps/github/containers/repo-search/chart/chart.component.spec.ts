@@ -6,7 +6,6 @@ import * as forApplication from '@app/github/store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
 import { IssueEffects, RepoEffects } from '@app/github/store/effects';
 import { StoreModule } from '@ngrx/store';
-import {RouterTestingModule} from '@angular/router/testing';
 import { SharedTestingModule } from '@app/github/shared';
 
 describe('ChartComponent', () => {

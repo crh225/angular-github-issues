@@ -1,7 +1,5 @@
-import { TestBed, async, tick, fakeAsync } from '@angular/core/testing';
-import {APP_BASE_HREF} from '@angular/common';
+import { TestBed, async } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule, Routes } from '@angular/router';
 import { RepoSearchComponent } from './search.component';
 import { SharedModule } from '@app/github/shared';
 import { ChartComponent, SearchCollectionComponent } from '@app/github/containers/repo-search';

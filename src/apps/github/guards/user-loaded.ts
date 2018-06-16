@@ -1,19 +1,10 @@
 
 import { map, switchMap, take } from 'rxjs/operators';
-
-
-
-
-
-
-
 import { Injectable } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { ActionsSubject, Store } from '@ngrx/store';
-import * as userActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
-import { User } from '@app/github/shared/models';
 
 
 @Injectable()

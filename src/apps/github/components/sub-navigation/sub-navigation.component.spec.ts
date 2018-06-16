@@ -1,7 +1,5 @@
-import { TestBed, async, tick, fakeAsync } from '@angular/core/testing';
-import {APP_BASE_HREF} from '@angular/common';
+import { TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule, Routes } from '@angular/router';
 import { SubNavigationComponent } from '@app/github';
 import { SharedModule } from '@app/github/shared';
 import * as forApplication from '@app/github/store/reducers';
@@ -11,8 +9,6 @@ import { StoreModule } from '@ngrx/store';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SharedTestingModule } from '@app/github/shared';
 import { CoreModule } from '@core/';
-import * as userActions from '@app/github/store/actions';
-import * as fromRoot from '@app/github/store/reducers';
 
 describe('SubNavigationComponent', () => {
   beforeEach((() => {

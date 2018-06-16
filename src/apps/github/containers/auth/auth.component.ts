@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActionsSubject, Store } from '@ngrx/store';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';

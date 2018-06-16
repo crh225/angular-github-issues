@@ -5,11 +5,11 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
-    selector: 'app-job-search',
-    templateUrl: './search.component.html',
-    styleUrls: ['./search.component.css']
+    selector: 'app-job-listing',
+    templateUrl: './job-listing.component.html',
+    styleUrls: ['./job-listing.component.css']
 })
-export class SearchComponent implements OnInit {
+export class JobListingComponent implements OnInit {
     _db: AngularFirestore;
     jobs: Observable<any>;
 
@@ -17,7 +17,7 @@ export class SearchComponent implements OnInit {
         //this.afAuth.auth.signInAnonymously();
         this.jobs = db.collection('jobs').valueChanges();
         this._db = db;
-     }
+    }
 
     ngOnInit() {
         //this.snackBar.open('Jobs is a work in progress.', 'Ok');

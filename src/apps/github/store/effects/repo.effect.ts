@@ -5,7 +5,6 @@ import { Observable } from 'rxjs';
 import { Action } from '@ngrx/store';
 import { Actions, Effect } from '@ngrx/effects';
 import * as repoActions from '@app/github/store/actions';
-import { Repo } from '@app/github/shared/models';
 import { GithubService } from '@app/github/shared/services';
 
 @Injectable()

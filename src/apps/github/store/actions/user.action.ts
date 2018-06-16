@@ -1,4 +1,4 @@
-import { ActionReducer, Action, ActionReducerMap, MetaReducer } from '@ngrx/store';
+import {  Action } from '@ngrx/store';
 import { User, Repo, Gist } from '@app/github/shared/models';
 
 export const LOAD_ALL_USERS = '[User] LOAD ALL';

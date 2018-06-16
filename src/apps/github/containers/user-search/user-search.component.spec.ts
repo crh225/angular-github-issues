@@ -1,7 +1,5 @@
 import { TestBed, async, tick, fakeAsync } from '@angular/core/testing';
-import {APP_BASE_HREF} from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule, Routes } from '@angular/router';
 import { UserSearchComponent } from './user-search.component';
 import { UserSearchCollectionComponent } from '@app/github';
 import { SharedModule } from '@app/github/shared';

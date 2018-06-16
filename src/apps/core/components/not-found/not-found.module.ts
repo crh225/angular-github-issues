@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NotFoundComponent } from './not-found.component';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 @NgModule({
  declarations: [ NotFoundComponent ],
  imports: [RouterModule],

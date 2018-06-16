@@ -16,6 +16,7 @@ import * as fromRoot from '@app/github/store/reducers';
 import { NgxGistModule } from 'ngx-gist/dist/ngx-gist.module';
 
 describe('UserGistsComponent', () => {
+  jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
   beforeEach((() => {
     TestBed.configureTestingModule({
       imports: [

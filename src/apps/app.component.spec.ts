@@ -1,12 +1,10 @@
-import { TestBed, async } from '@angular/core/testing';
-
+import { TestBed,  } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule, Routes } from '@angular/router';
 import { AppRoutes } from './app.routes';
 import { SharedModule } from './github';
 import { CoreModule } from '@core/';

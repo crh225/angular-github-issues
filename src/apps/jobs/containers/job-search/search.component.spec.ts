@@ -1,5 +1,7 @@
-import { TestBed} from '@angular/core/testing';
+import { TestBed, async } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchComponent } from './search.component';
+import { UserSearchCollectionComponent } from '@app/github';
 import { SharedModule } from '@app/github/shared';
 import * as forApplication from '@app/github/store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
@@ -8,16 +10,14 @@ import { StoreModule } from '@ngrx/store';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SharedTestingModule } from '@app/github/shared';
 import { CoreModule } from '@core/';
+import { MatSnackBar } from '@angular/material';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Observable } from 'rxjs/Observable';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import {
-    UserAuthComponent,
-    UserAuthSuccessComponent,
-    UserAuthGoogleComponent,
-    UserAuthGithubComponent,
-    UserAuthFacebookComponent
-} from '@app/github';
+
 // todo: put this in a config file
 export const firebaseConfig = {
     apiKey: 'AIzaSyB_oLOM5CglXXkH3A1a3oauOUxysPcjmzY',
@@ -28,39 +28,27 @@ export const firebaseConfig = {
     messagingSenderId: '524971702368'
 };
 
-describe('UserAuthComponent', () => {
+describe('JobSearchComponent', () => {
     beforeEach((() => {
         jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
         TestBed.configureTestingModule({
-            imports: [
-                BrowserAnimationsModule,
-                SharedTestingModule.forRoot(),
-                SharedModule.forRoot(),
-                RouterTestingModule,
+            imports: [BrowserAnimationsModule,
                 CoreModule.forRoot(),
-                StoreModule.forRoot(forApplication.reducers),
-                EffectsModule.forRoot([UserEffects]),
                 AngularFireModule.initializeApp(firebaseConfig),
                 AngularFirestoreModule, // imports firebase/firestore, only needed for database features
-                AngularFireAuthModule // imports firebase/auth, only needed for auth features
+                AngularFireAuthModule, // imports firebase/auth, only needed for auth features
             ],
-            declarations: [UserAuthComponent,
-                UserAuthSuccessComponent,
-                UserAuthGoogleComponent,
-                UserAuthGithubComponent,
-                UserAuthFacebookComponent],
+            declarations: [SearchComponent],
             providers: [
-                Actions,
-                UserEffects]
+            ]
         }).compileComponents();
     }));
 
-    it('should create the user UserAuthComponent', ((done: any) => {
-        const fixture = TestBed.createComponent(UserAuthComponent);
+    it('should create the job search component', ((done: any) => {
+        const fixture = TestBed.createComponent(SearchComponent);
         const app = fixture.debugElement.componentInstance;
-        app.user = null;
-        fixture.detectChanges();
         expect(app).toBeTruthy();
         done();
     }));
+
 });

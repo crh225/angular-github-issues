@@ -14,6 +14,7 @@ import { SharedTestingModule } from '@app/github/shared';
 import { CoreModule } from '@core/';
 
 describe('UserSearchComponent', () => {
+  jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
   beforeEach((() => {
     TestBed.configureTestingModule({
     imports: [

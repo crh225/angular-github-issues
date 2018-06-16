@@ -9,6 +9,7 @@ import { StoreModule } from '@ngrx/store';
 import { SharedTestingModule } from '@app/github/shared';
 
 describe('ChartComponent', () => {
+  jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
     imports: [

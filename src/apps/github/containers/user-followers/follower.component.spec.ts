@@ -15,6 +15,7 @@ import * as userActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
 
 describe('UserFollowerComponent', () => {
+  jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
   beforeEach((() => {
     TestBed.configureTestingModule({
     imports: [

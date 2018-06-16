@@ -13,6 +13,7 @@ import { SharedTestingModule } from '@app/github/shared';
 import { CoreModule } from '@core/';
 
 describe('RepoSearchComponent', () => {
+  jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
   beforeEach((() => {
     TestBed.configureTestingModule({
     imports: [

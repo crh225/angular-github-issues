@@ -13,7 +13,7 @@ import { CoreModule } from '@core/';
 
 describe('SearchCollectionComponent', () => {
   beforeEach((() => {
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+    jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
     TestBed.configureTestingModule({
     imports: [
     SharedTestingModule.forRoot(),

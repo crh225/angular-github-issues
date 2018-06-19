@@ -2,7 +2,7 @@ import * as jobActions from '@app/jobs/store/actions';
 import { Jobs } from '@app/jobs/shared/models';
 
 
-export interface State extends Jobs {
+export interface State {
     company?: string;
     description?: string;
     title?: string;

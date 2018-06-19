@@ -1,5 +1,3 @@
-import { ActionReducer, Action, ActionReducerMap, MetaReducer, createFeatureSelector, createSelector } from '@ngrx/store';
-import { EntityState, createEntityAdapter, EntityAdapter } from '@ngrx/entity';
 import * as userActions from '@app/github/store/actions/user.action';
 import { User, Repo, Gist } from '@app/github/shared/models';
 

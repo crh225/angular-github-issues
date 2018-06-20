@@ -9,5 +9,5 @@ export class LoadAllJobs implements Action {
     constructor(public payload: Jobs[]) { }
 }
 
-export type JobsActions =
+export type JobActions =
     LoadAllJobs;

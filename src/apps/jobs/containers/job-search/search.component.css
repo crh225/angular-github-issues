@@ -8,10 +8,6 @@ mat-card-footer {
   color: #FF0000;
   padding: 5px 0;
 }
-.mat-form-field {
-  min-width: 300px;
-}
-
 
 .m-15{
   margin:15px;
@@ -21,7 +17,3 @@ mat-card-footer {
 }
 
 
-
-.wip{
-    color:#FF0000;
-}

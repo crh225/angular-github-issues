@@ -6,7 +6,7 @@ Chat: https://gitter.im/angular-github-issues/Lobby
 [![CircleCI](https://circleci.com/gh/crh225/angular-github-issues/tree/master.svg?style=shield)](https://circleci.com/gh/crh225/angular-github-issues/tree/master)
 [![Dependency Status](https://david-dm.org/crh225/angular-github-issues.svg)](https://david-dm.org/crh225/angular-github-issues)
 [![devDependencies Status](https://david-dm.org/crh225/angular-github-issues/dev-status.svg)](https://david-dm.org/crh225/angular-github-issues?type=dev)
-![Angular_Version 6](https://img.shields.io/badge/Angular_Version-6-brightgreen.svg)
+![Angular_Version 6](https://img.shields.io/badge/Angular_Version-7-brightgreen.svg)
 [![CodeFactor](https://www.codefactor.io/repository/github/crh225/angular-github-issues/badge)](https://www.codefactor.io/repository/github/crh225/angular-github-issues)
 [![forthebadge](https://forthebadge.com/images/badges/designed-in-etch-a-sketch.svg)](https://forthebadge.com)
 # About

@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/apps/github/store/effects/user.effect.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\..\index.html">All files</a> / <a href="index.html">src/apps/github/store/effects</a> user.effect.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">93.33% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>56/60</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">79.31% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>23/29</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.5% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>21/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.83% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>46/48</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+import { mergeMap, switchMap, map, debounceTime } from 'rxjs/operators';
+import { Injectable } from '@angular/core';<span class="branch-0 cbranch-no" title="branch not covered" ></span>
+impo<span class="missing-if-branch" title="if path not taken" >I</span>rt { Observable } from 'rxjs';<span class="cstat-no" title="statement not covered" ></span>
+import { Action } from '@ngrx/store';<span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="else path not taken" >E</span></span>
+import { Actions, Effect,<span class="branch-2 cbranch-no" title="branch not covered" > ofType } from '@ngrx/effects';</span>
+import * as userActions from '@app/github/store/actions';
+import { User, Repo, Gist } from '@app/github/shared/models';
+impo<span class="missing-if-branch" title="else path not taken" >E</span>rt { GithubService } from '@app/github/shared/services';
+&nbsp;
+@Injectable()
+export class UserEffects {
+&nbsp;
+    @Effect()
+    load$: Observable&lt;{}&gt; = this.actions$.pipe(
+        ofType(userActions.LOAD_ALL_USERS),
+        debounceTime(1000),
+        map((action: userActions.LoadAllUsers) =&gt; action.payload),
+        switchMap((data) =&gt;
+            this._githubService.searchUserByName(data.searchName).pipe(
+                mergeMap((user: User[]) =&gt; {
+                    return [
+                        new userActions.LoadAllUsersSuccess(user)
+                    ];
+                }))
+        ), );
+&nbsp;
+    @Effect()
+    loadFullUser$: Observable&lt;{}&gt; = this.actions$.pipe(
+        ofType(userActions.LOAD_FULL_USER),<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span>
+        debo<span class="cstat-no" title="statement not covered" >unceTime(0),<span class="fstat-no" title="function not covered" ></span></span>
+        map((act<span class="cstat-no" title="statement not covered" >ion: userActions.LoadFullUser) =&gt; action.payload),</span>
+        switchMap((data) =&gt;
+            this._githubService.returnFullUserObject(data.login).pipe(
+                mergeMap((user: User) =&gt; {
+                    return [
+                        new userActions.LoadFullUserSuccess(user)
+                    ];
+                }))
+        ), );
+    @Effect()
+    loadUserRepo$: Observable&lt;{}&gt; = this.actions$.pipe(
+        ofType(userActions.LOAD_USER_REPO),
+        debounceTime(0),
+        map((action: userActions.LoadUserRepo) =&gt; action.payload),
+        switchMap((data) =&gt;
+            this._githubService.returnUserRepoObject(data).pipe(
+                mergeMap((repo: Repo[]) =&gt; {
+                    return [
+                        new userActions.LoadUserRepoSuccess(repo)
+                    ];
+                }))
+        ), );
+    @Effect()
+    loadUserGist$: Observable&lt;{}&gt; = this.actions$.pipe(
+        ofType(userActions.LOAD_USER_GIST),
+        debounceTime(0),
+        map((action: userActions.LoadUserGist) =&gt; action.payload),
+        switchMap((data) =&gt;
+            this._githubService.returnUserGistObject(data).pipe(
+                mergeMap((gist: Gist[]) =&gt; {
+                    return [
+                        new userActions.LoadUserGistSuccess(gist)
+                    ];
+                }))
+        ), );
+&nbsp;
+    @Effect()
+    loadFollowers$: Observable&lt;{}&gt; = this.actions$.pipe(
+        ofType(userActions.LOAD_ALL_FOLLOWERS),
+        debounceTime(100),
+        map((action: userActions.LoadAllFollowers) =&gt; action.payload),
+        switchMap((data) =&gt;
+            this._githubService.returnFollowers(data).pipe(
+                mergeMap((user: any) =&gt; {
+                    return [
+                        new userActions.LoadAllFollowersSuccess(user)
+                    ];
+                }))
+        ), );
+    @Effect()
+    loadFollowing$: Observable&lt;{}&gt; = this.actions$.pipe(
+        ofType(userActions.LOAD_ALL_FOLLOWING),
+        debounceTime(100),
+        map((action: userActions.LoadAllFollowing) =&gt; action.payload),
+        switchMap((data) =&gt;
+            this._githubService.returnFollowing(data).pipe(
+                mergeMap((user: any) =&gt; {
+                    return [
+                        new userActions.LoadAllFollowingSuccess(user)
+                    ];
+                }))
+        ), );
+&nbsp;
+    @Effect()
+    loadUser$: Observable&lt;{}&gt; = this.actions$.pipe(
+        ofType(userActions.SET_CURRENT_USER_ID),
+        debounceTime(500),
+        map((action: userActions.SetCurrentUserId) =&gt; action.payload),
+        mergeMap((data) =&gt; {
+            return [
+                new userActions.SetCurrentUserIdSuccess(data),
+                new userActions.LoadAllFollowing(data),
+                new userActions.LoadAllFollowers(data),
+                new userActions.LoadUserRepo(data),
+                new userActions.LoadUserGist(data)
+            ];
+        }), );
+&nbsp;
+    constructor(
+        private actions$: Actions, private _githubService: GithubService
+    ) { }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Mar 05 2019 19:34:21 GMT-0600 (Central Standard Time)
+</div>
+</div>
+<script src="..\..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\..\sorter.js"></script>
+</body>
+</html>

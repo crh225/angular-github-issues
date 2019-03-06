@@ -1,9 +1,9 @@
 
 import { catchError, mergeMap, debounceTime, map, switchMap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Action } from '@ngrx/store';
-import { Actions, Effect } from '@ngrx/effects';
+import { Actions, Effect, ofType } from '@ngrx/effects';
 import * as repoActions from '@app/github/store/actions';
 import { GithubService } from '@app/github/shared/services';
 
@@ -11,8 +11,8 @@ import { GithubService } from '@app/github/shared/services';
 export class RepoEffects {
 
     @Effect()
-    load$: Observable<Action> = this.actions$
-        .ofType(repoActions.LOAD_ALL_REPOS).pipe(
+    load$: Observable<{}> = this.actions$.pipe(
+            ofType(repoActions.LOAD_ALL_REPOS),
             debounceTime(1000),
             map((action: repoActions.LoadAllRepos) => action.payload),
             switchMap((data) =>
@@ -25,7 +25,7 @@ export class RepoEffects {
                         return [
                             new repoActions.LoadRepoFailure({ error: error })
                         ];
-                    }), )
+                    }))
             ), );
 
     constructor(

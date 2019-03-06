@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActionsSubject, Store } from '@ngrx/store';
-import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import * as userActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
@@ -24,7 +24,9 @@ export class UserAuthComponent {
         firebase.auth().getRedirectResult().then((result) => {
             if (result.credential) {
                 // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+                // @ts-ignore:
                 this.token = result.credential.accessToken;
+                // @ts-ignore:
                 this.store.dispatch(new userActions.SetApiToken(result.credential.accessToken));
             }
             if (result.user !== null) {

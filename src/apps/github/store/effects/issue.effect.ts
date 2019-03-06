@@ -3,7 +3,7 @@ import { map, mergeMap, switchMap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Action } from '@ngrx/store';
-import { Actions, Effect } from '@ngrx/effects';
+import { Actions, Effect, ofType  } from '@ngrx/effects';
 import * as issueActions from '@app/github/store/actions';
 import { Issue } from '@app/github/shared/models';
 import { GithubService } from '@app/github/shared/services';
@@ -13,8 +13,9 @@ import { GithubService } from '@app/github/shared/services';
 export class IssueEffects {
 
     @Effect()
-    load$: Observable<Action> = this.actions$
-        .ofType(issueActions.LOAD_ALL_ISSUES).pipe(
+    load$: Observable<{}> = this.actions$
+            .pipe(
+            ofType(issueActions.LOAD_ALL_ISSUES),
             map((action: issueActions.LoadAllIssues) => action.payload),
             switchMap((data) =>
                 this._githubService.getRepoIssues(data.owner, data.repo, this.subtractDays(7)).pipe(

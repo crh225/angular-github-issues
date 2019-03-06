@@ -8,9 +8,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutes } from './app.routes';
 import { SharedModule } from './github';
 import { CoreModule } from '@core/';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 // todo: put this in a config file
 export const firebaseConfig = {

@@ -12,10 +12,10 @@ import * as forApplication from '@app/github/store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
 import { IssueEffects, RepoEffects, UserEffects } from '@app/github/store/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 

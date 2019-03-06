@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/apps/app.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/apps</a> app.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.72% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>36/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.43% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>25/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">86.49% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>32/37</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import { MediaMatcher } from '@angular/cdk/layout';
+import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';<span class="branch-0 cbranch-no" title="branch not covered" ></span>
+impo<span class="missing-if-branch" title="if path not taken" >I</span>rt * as firebase from 'firebase/app';<span class="cstat-no" title="statement not covered" ></span>
+import { Router } from '@angular/router';<span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="else path not taken" >E</span></span>
+import {<span class="branch-2 cbranch-no" title="branch not covered" ></span>
+  MatSidenav
+} from '@angular/material';
+@Com<span class="missing-if-branch" title="else path not taken" >E</span>ponent({
+  selector: 'app-house',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  @ViewChild('snav') public sidenav: MatSidenav;
+  mobileQuery: MediaQueryList;
+  imageUrl = '';
+  private _mobileQueryListener: () =&gt; void;
+&nbsp;
+  constructor(changeDetectorRef: ChangeDetectorRef,
+    public afAuth: AngularFireAuth,
+    private router: Router,
+    media: MediaMatcher) {
+    this.mobileQuery = media.matchMe<span class="fstat-no" title="function not covered" >di</span>a('(max-widt<span class="cstat-no" title="statement not covered" >h: 600px)');</span>
+    this._mobileQueryListener = () =&gt; changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
+&nbsp;
+    this.loginCallback();
+  }
+&nbsp;
+  loginCallb<span class="missing-if-branch" title="if path not taken" >I</span>ack() {
+    firebase.auth().getRedirectResult().then((result) =&gt; {
+      if (result.credential) {
+        // T<span class="missing-if-branch" title="if path not taken" >I</span>his gives you a GitHub Access Token. You can use it to access the GitHub API.
+      }
+      if (result<span class="cstat-no" title="statement not covered" >.user !== null) {</span>
+        // The signed-in user info.
+        this.imag<span class="fstat-no" title="function not covered" >eU</span>rl = result.user.photoURL;
+      }<span class="cstat-no" title="statement not covered" ></span>
+    }).catch((error) =&gt; {
+      console.log(error);
+    });<span class="fstat-no" title="function not covered" ></span>
+  }<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+  sendToRout<span class="cstat-no" title="statement not covered" >e(sRoute: string, isMobile: bool</span>ean) {
+    if (isMobile) {
+      this.sidenav.close();
+      this.router.navigate([sRoute]);
+    }
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Mar 05 2019 20:04:54 GMT-0600 (Central Standard Time)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

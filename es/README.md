@@ -31,7 +31,7 @@ Ejecutar `ng serve` para un servidor de desarrollo. Vaya a `http://localhost:420
 
 Ejecute `npm install` .
 
-## Build
+## Compilar
 
 Ejecute `ng build --aot` para compilar el proyecto en modo AoT en lugar de JiT. Esto permitirá una representación más rápida de su aplicación, menos solicitudes asíncronas, tamaño de descarga del marco angular más pequeño y detectar errores de la plantilla antes.
 
@@ -39,6 +39,6 @@ Ejecuta `ng build` para construir el proyecto. Los artefactos de compilación se
 
 ## Docker: puedes hacerlo en modo dev ejecutando hilado dock o docker-componer -d --build
 
-## Running unit tests
+## Corriendo las pruebas
 
 Ejecute `ng test` para ejecutar las pruebas unitarias a través de [Karma](https://karma-runner.github.io) .

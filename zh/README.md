@@ -1,5 +1,4 @@
-Demo: https://christopher.house <br>
-Chat: https://gitter.im/angular-github-issues/Lobby
+演示：https：//christopher.house <br>聊天：https：//gitter.im/angular-github-issues/Lobby
 
 <a href="https://codeclimate.com/github/crh225/angular-github-issues/maintainability"><img src="https://api.codeclimate.com/v1/badges/e17d5ad267ef6f6503c1/maintainability"></a>
 <a href="https://codeclimate.com/github/crh225/angular-github-issues/test_coverage"><img src="https://api.codeclimate.com/v1/badges/e17d5ad267ef6f6503c1/test_coverage"></a>
@@ -12,34 +11,34 @@ Chat: https://gitter.im/angular-github-issues/Lobby
 
 # 关于
 
-This repository searches's github for repositories, issues for that repository, and a github user search for angular developers. Once you search for a repository, you can then drill down into each repository and see a list of issues for the past seven days.
+该存储库搜索github的存储库，该存储库的问题以及github用户搜索角度开发人员。搜索存储库后，您可以深入查看每个存储库并查看过去七天的问题列表。
 
-The other main feature is the ability to search for a github user in a particular Location in America. Right now it is defaulted to TN.
+另一个主要功能是能够在美国的特定位置搜索github用户。现在它被默认为TN。
 
-CI is set up to run lint,testing, build in aot mode for production, and to deploy to firebase.
+CI设置为运行lint，测试，构建aot模式以进行生产，以及部署到firebase。
 
-This example show how to use multiple entity's in ngrx. The main search page is now a dashboard of barcharts for each repository. In the works is lazy loaded feature ngrx/stores.
+此示例显示如何在ngrx中使用多个实体。主搜索页面现在是每个存储库的条形图仪表板。在作品中是懒惰加载功能ngrx /商店。
 
-Secure Github API login via Oath 2
+通过Oath 2登录安全Github API
 
-For a live demo: https://christopher.house
+对于现场演示：https：//christopher.house
 
-## Development server
+## 开发服务器
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+运行`ng serve`的开发服务器。导航到`http://localhost:4200/` 。如果您更改任何源文件，应用程序将自动重新加载。
 
-## Installation of npm packages
+## 安装npm包
 
-Run `npm install`.
+运行`npm install` 。
 
 ## 版本号
 
-Run `ng build --aot` to build the project in AoT mode instead of JiT. This will allow for faster rendering of your application, Fewer asynchronous requests, Smaller Angular framework download size and to Detect template errors earlier.
+运行`ng build --aot`以AoT模式而不是JiT构建项目。这将允许更快地呈现应用程序，更少的异步请求，更小的Angular框架下载大小以及更早地检测模板错误。
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+运行`ng build`来构建项目。构建工件将存储在`dist/`目录中。使用`-prod`标志进行生产构建。
 
-## Docker: you can this in dev mode by running yarn dock or docker-compose up -d --build
+## Docker：你可以通过运行yarn dock或docker-compose up -d --build来开发模式
 
 ## 运行单元测试
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+运行`ng test`以通过[Karma](https://karma-runner.github.io)执行单元测试。

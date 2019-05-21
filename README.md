@@ -10,7 +10,7 @@ Chat: https://gitter.im/angular-github-issues/Lobby
 [![CodeFactor](https://www.codefactor.io/repository/github/crh225/angular-github-issues/badge)](https://www.codefactor.io/repository/github/crh225/angular-github-issues)
 [![forthebadge](https://forthebadge.com/images/badges/designed-in-etch-a-sketch.svg)](https://forthebadge.com)
 # About
-
+Spanish Docs: https://github.com/crh225/angular-github-issues/tree/master/es
 
 This repository searches's github for repositories, issues for that repository, and a github user search for angular developers. Once you search for a repository, you can then drill down into each repository and see a list of issues for the past seven days.
 

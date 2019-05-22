@@ -8,7 +8,7 @@ Chat: https://gitter.im/angular-github-issues/Lobby
 [![devDependencies Status](https://david-dm.org/crh225/angular-github-issues/dev-status.svg)](https://david-dm.org/crh225/angular-github-issues?type=dev)
 ![Angular_Version 6](https://img.shields.io/badge/Angular_Version-7-brightgreen.svg)
 [![CodeFactor](https://www.codefactor.io/repository/github/crh225/angular-github-issues/badge)](https://www.codefactor.io/repository/github/crh225/angular-github-issues)
-[![BCH compliance](https://bettercodehub.com/edge/badge/crh225/angular-github-issues?branch=master)](https://bettercodehub.com/)
+[![BCH compliance](https://bettercodehub.com/edge/badge/crh225/angular-github-issues?branch=master)](https://bettercodehub.com/) [![Greenkeeper badge](https://badges.greenkeeper.io/crh225/angular-github-issues.svg)](https://greenkeeper.io/)
 # About
 Spanish Docs: https://github.com/crh225/angular-github-issues/tree/master/es
 

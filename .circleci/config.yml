@@ -3,7 +3,7 @@ jobs:
   test-job:
     docker:
       #- image: circleci/node:8.11-browsers
-      - image: circleci/node:8.11-browsers
+      - image: circleci/node:8.16-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -42,7 +42,7 @@ jobs:
             ./tmp/cc-test-reporter upload-coverage -i tmp/codeclimate.frontend.json
   lint-job:
     docker:
-      - image: circleci/node:8.11
+      - image: circleci/node:8.16
     steps:
       - checkout
       - attach_workspace:
@@ -65,7 +65,7 @@ jobs:
 
   deploy-job:
     docker:
-      - image: circleci/node:8.11
+      - image: circleci/node:8.16
     steps:
       - checkout
       - attach_workspace:

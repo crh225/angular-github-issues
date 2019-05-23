@@ -7,7 +7,7 @@ import { AppRoutes } from './app.routes';
 import { AppComponent } from './app.component';
 import * as github from '@app/github';
 import { CoreModule } from '@core/';
-import { StoreModule } from '@ngrx/store';
+import { StoreModule, META_REDUCERS, MetaReducer } from '@ngrx/store';
 import * as forApplication from '@app/github/store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
 import { IssueEffects, RepoEffects, UserEffects } from '@app/github/store/effects';
@@ -19,10 +19,12 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import * as LogRocket from 'logrocket';
-import { createNgrxMiddleware } from 'logrocket-ngrx';
+import createNgrxMiddleware from 'logrocket-ngrx';
 
 const logrocketMiddleware = createNgrxMiddleware(LogRocket);
-const metaReducers = [logrocketMiddleware];
+export function getMetaReducers(): MetaReducer<any>[] {
+    return [logrocketMiddleware];
+}
 
 // todo: put this in a config file
 export const firebaseConfig = {
@@ -43,7 +45,7 @@ export const firebaseConfig = {
     BrowserAnimationsModule,
     github.SharedModule.forRoot(),
     CoreModule.forRoot(),
-    StoreModule.forRoot(forApplication.reducers, { metaReducers }),
+    StoreModule.forRoot(forApplication.reducers),
     EffectsModule.forRoot([IssueEffects, RepoEffects, UserEffects]),
     StoreDevtoolsModule.instrument({
          maxAge: 25 //  Retains last 25 states
@@ -58,7 +60,11 @@ export const firebaseConfig = {
   bootstrap: [AppComponent],
   providers: [
       Actions,
-    IssueEffects]
+    IssueEffects,
+    {
+      provide: META_REDUCERS,
+      useFactory: getMetaReducers,
+    }]
 })
 export class AppModule {
  }

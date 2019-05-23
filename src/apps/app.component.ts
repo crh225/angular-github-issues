@@ -3,6 +3,7 @@ import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
+import LogRocket from 'logrocket';
 import {
   MatSidenav
 } from '@angular/material';
@@ -24,7 +25,7 @@ export class AppComponent {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
-
+    LogRocket.init('rwovrh/prod');
     this.loginCallback();
   }
 

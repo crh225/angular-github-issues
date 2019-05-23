@@ -11,7 +11,7 @@ import { CoreModule } from '@core/';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-
+import * as LogRocket from 'logrocket';
 // todo: put this in a config file
 export const firebaseConfig = {
   apiKey: 'AIzaSyB_oLOM5CglXXkH3A1a3oauOUxysPcjmzY',
@@ -46,6 +46,11 @@ describe('AppComponent', () => {
   }));
 
   it('should create the app', ((done: any) => {
+    
+    LogRocket.identify('TEST_USER', {
+      name: 'Unit Test',
+    });
+    
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();

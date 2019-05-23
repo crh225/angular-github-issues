@@ -65,6 +65,7 @@
     "karma-coverage-istanbul-reporter": "1.4.3",
     "karma-jasmine": "1.1.2",
     "karma-jasmine-html-reporter": "0.2.2",
+    "logrocket-ngrx": "0.1.1",
     "protractor": "5.3.2",
     "ts-node": "4.1.0",
     "tslint": "5.16.0",

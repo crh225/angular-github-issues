@@ -178,7 +178,7 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/fire@^5.1.1":
+"@angular/fire@5.1.1":
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/@angular/fire/-/fire-5.1.1.tgz#7ac02813a9b41be027c454f32c55bc50b572f0c7"
 
@@ -240,7 +240,7 @@
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.3.2.tgz#a92dc544290e2893bd8c02a81e684dae3d8e7c85"
 
-"@firebase/app-types@0.3.5", "@firebase/app-types@^0.3.2":
+"@firebase/app-types@0.3.5":
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.3.5.tgz#b1d4c7ee0e6655bdcafb0ed3d560aea72f6b239d"
 
@@ -3197,7 +3197,7 @@ firebase@2.x.x:
   dependencies:
     faye-websocket ">=0.6.0"
 
-firebase@^5.0.4:
+firebase@5.8.5:
   version "5.8.5"
   resolved "https://registry.yarnpkg.com/firebase/-/firebase-5.8.5.tgz#2f8cf0b022bf646e6c3c870c7f6549652c25ac8b"
   dependencies:
@@ -3979,7 +3979,7 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
-husky@^0.14.3:
+husky@0.14.3:
   version "0.14.3"
   resolved "https://registry.yarnpkg.com/husky/-/husky-0.14.3.tgz#c69ed74e2d2779769a17ba8399b54ce0b63c12c3"
   dependencies:
@@ -4585,7 +4585,7 @@ jasmine-core@~2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-2.8.0.tgz#bcc979ae1f9fd05701e45e52e65d3a5d63f1a24e"
 
-jasmine-spec-reporter@~4.2.1:
+jasmine-spec-reporter@4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/jasmine-spec-reporter/-/jasmine-spec-reporter-4.2.1.tgz#1d632aec0341670ad324f92ba84b4b32b35e9e22"
   dependencies:
@@ -4752,7 +4752,7 @@ jws@^3.0.0, jws@^3.1.4, jws@^3.1.5, jws@^3.2.1:
     jwa "^1.2.0"
     safe-buffer "^5.0.1"
 
-karma-chrome-launcher@~2.2.0:
+karma-chrome-launcher@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/karma-chrome-launcher/-/karma-chrome-launcher-2.2.0.tgz#cf1b9d07136cc18fe239327d24654c3dbc368acf"
   dependencies:
@@ -4772,7 +4772,7 @@ karma-jasmine-html-reporter@0.2.2:
   dependencies:
     karma-jasmine "^1.0.2"
 
-karma-jasmine@^1.0.2, karma-jasmine@~1.1.1:
+karma-jasmine@1.1.2, karma-jasmine@^1.0.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/karma-jasmine/-/karma-jasmine-1.1.2.tgz#394f2b25ffb4a644b9ada6f22d443e2fd08886c3"
 
@@ -4782,7 +4782,7 @@ karma-source-map-support@^1.2.0:
   dependencies:
     source-map-support "^0.5.5"
 
-karma@~1.7.1:
+karma@1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/karma/-/karma-1.7.1.tgz#85cc08e9e0a22d7ce9cca37c4a1be824f6a2b1ae"
   dependencies:
@@ -6501,7 +6501,7 @@ protoduck@^5.0.1:
   dependencies:
     genfun "^5.0.0"
 
-protractor@~5.3.0:
+protractor@5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/protractor/-/protractor-5.3.2.tgz#b8278f3131d9d52fa1172ed0f7fec03085fbe0ce"
   dependencies:

@@ -3,7 +3,7 @@ import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
-import LogRocket from 'logrocket';
+import * as LogRocket from 'logrocket';
 import {
   MatSidenav
 } from '@angular/material';

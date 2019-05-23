@@ -18,6 +18,11 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import * as LogRocket from 'logrocket';
+import { createNgrxMiddleware } from 'logrocket-ngrx';
+
+const logrocketMiddleware = createNgrxMiddleware(LogRocket);
+const metaReducers = [logrocketMiddleware];
 
 // todo: put this in a config file
 export const firebaseConfig = {
@@ -38,7 +43,7 @@ export const firebaseConfig = {
     BrowserAnimationsModule,
     github.SharedModule.forRoot(),
     CoreModule.forRoot(),
-    StoreModule.forRoot(forApplication.reducers),
+    StoreModule.forRoot(forApplication.reducers, { metaReducers }),
     EffectsModule.forRoot([IssueEffects, RepoEffects, UserEffects]),
     StoreDevtoolsModule.instrument({
          maxAge: 25 //  Retains last 25 states

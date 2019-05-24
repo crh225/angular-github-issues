@@ -30,7 +30,7 @@
     "logrocket": "1.0.0",
     "ng2-charts": "1.6.0",
     "ngx-gist": "1.0.4",
-    "rxjs": "6.4.0",
+    "rxjs": "6.5.2",
     "zone.js": "0.8.29"
   },
   "version": "0.0.0",

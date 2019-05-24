@@ -5142,7 +5142,7 @@ logrocket-ngrx@0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/logrocket-ngrx/-/logrocket-ngrx-0.1.1.tgz#3c3795163eade4c7c284e039316b0c1f25dd44bd"
 
-logrocket@^1.0.0:
+logrocket@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-1.0.0.tgz#978238fa621702e963c86644006c9b4580eaf4f2"
 

@@ -458,21 +458,21 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ngrx/core/-/core-1.2.0.tgz#882b46abafa2e0e6d887cb71a1b2c2fa3e6d0dc6"
 
-"@ngrx/effects@7.3.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-7.3.0.tgz#9bc3d58c7e6c810083870b3cd84bfe339847c5c0"
+"@ngrx/effects@7.4.0":
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-7.4.0.tgz#7d1977538cf85e42ab48fd648acdfbc8b52f93d3"
 
-"@ngrx/entity@7.3.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-7.3.0.tgz#733f91d53c25244d23d2518a13e8b41cdbb3c5b5"
+"@ngrx/entity@7.4.0":
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-7.4.0.tgz#634cdff1db9629ca0e64c1d6b1e43dc15f4e2ca6"
 
-"@ngrx/store-devtools@7.3.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-7.3.0.tgz#a178e66083343d81e554cfc092101f5bf8311908"
+"@ngrx/store-devtools@7.4.0":
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-7.4.0.tgz#5a73469c70322351c4224f4529c5123f587a5997"
 
-"@ngrx/store@7.3.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-7.3.0.tgz#12684cef59765f161d0152b12a6caad63dbb832a"
+"@ngrx/store@7.4.0":
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-7.4.0.tgz#525a343aa45d7f6ca60f3301a23a27669c14bbce"
 
 "@ngtools/webpack@6.1.1":
   version "6.1.1"
@@ -5138,6 +5138,14 @@ loglevel@^1.4.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.1.tgz#e0fc95133b6ef276cdc8887cdaf24aa6f156f8fa"
 
+logrocket-ngrx@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/logrocket-ngrx/-/logrocket-ngrx-0.1.1.tgz#3c3795163eade4c7c284e039316b0c1f25dd44bd"
+
+logrocket@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-1.0.0.tgz#978238fa621702e963c86644006c9b4580eaf4f2"
+
 long@^3.2.0, long@~3:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/long/-/long-3.2.0.tgz#d821b7138ca1cb581c172990ef14db200b5c474b"
@@ -8164,10 +8172,6 @@ typedarray@^0.0.6:
 typescript@3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.2.4.tgz#c585cb952912263d915b462726ce244ba510ef3d"
-
-typescript@3.4.5:
-  version "3.4.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.5.tgz#2d2618d10bb566572b8d7aad5180d84257d70a99"
 
 typescript@~2.9.1:
   version "2.9.2"

@@ -25,7 +25,7 @@
     "@ngrx/entity": "7.4.0",
     "@ngrx/store": "7.4.0",
     "@ngrx/store-devtools": "7.4.0",
-    "core-js": "2.5.7",
+    "core-js": "3.1.2",
     "firebase": "6.0.4",
     "logrocket": "1.0.0",
     "ng2-charts": "1.6.0",

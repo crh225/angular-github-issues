@@ -54,7 +54,7 @@
     "@angular/language-service": "7.2.15",
     "@types/jasmine": "2.8.8",
     "@types/jasminewd2": "2.0.3",
-    "@types/node": "10.3.6",
+    "@types/node": "10.14.7",
     "codelyzer": "4.5.0",
     "firebase-tools": "4.2.1",
     "husky": "0.14.3",

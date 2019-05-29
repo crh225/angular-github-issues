@@ -7,7 +7,7 @@ import { UserEffects } from '@app/github/store/effects';
 import { StoreModule } from '@ngrx/store';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SharedTestingModule } from '@app/github/shared';
-import { CoreModule } from '@core/';
+import { CoreModule } from '../../../core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';

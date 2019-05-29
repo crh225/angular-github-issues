@@ -2,7 +2,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchComponent } from './search.component';
 import { JobListingComponent } from '@app/jobs';
-import { CoreModule } from '@core/';
+import { CoreModule } from '../../../core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';

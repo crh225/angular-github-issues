@@ -16,7 +16,7 @@
       "dom"
     ]
   },
-    "include": [
+  "include": [
     "src/**/*"
   ]
 }

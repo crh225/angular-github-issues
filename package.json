@@ -29,7 +29,6 @@
     "firebase": "6.1.0",
     "logrocket": "1.0.0",
     "ng2-charts": "1.6.0",
-    "ngx-gist": "1.0.4",
     "rxjs": "6.5.2",
     "zone.js": "0.9.1",
     "snyk": "1.169.1"

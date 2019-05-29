@@ -7,7 +7,6 @@ import { RepoIssuesComponent, RepoSearchComponent } from './containers';
 import { UserExistsGuard } from './guards';
 import { ChartsModule } from 'ng2-charts';
 import { CoreModule } from '../core';
-import { NgxGistModule } from 'ngx-gist/dist/ngx-gist.module';
 import { SharedModule,
   ChartComponent,
   IssueCollectionComponent,
@@ -18,7 +17,6 @@ import { SharedModule,
   UserFollowingComponent,
   SubNavigationComponent,
   UserReposComponent,
-  UserGistsComponent,
   UserAuthComponent,
   UserAuthSuccessComponent,
   UserAuthGoogleComponent,
@@ -33,8 +31,7 @@ import { SharedModule,
     FormsModule,
     ReactiveFormsModule,
     ChartsModule,
-    CoreModule,
-    NgxGistModule
+    CoreModule
   ],
   declarations: [GithubComponent,
     RepoIssuesComponent,
@@ -48,7 +45,6 @@ import { SharedModule,
     UserFollowingComponent,
     SubNavigationComponent,
     UserReposComponent,
-    UserGistsComponent,
     UserAuthComponent,
     UserAuthSuccessComponent,
     UserAuthGoogleComponent,

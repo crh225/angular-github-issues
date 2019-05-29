@@ -9,7 +9,7 @@ import * as repoActions from '@app/github/store/actions';
 import { StoreModule } from '@ngrx/store';
 import {RouterTestingModule} from '@angular/router/testing';
 import { SharedTestingModule } from '@app/github/shared';
-import { CoreModule } from '@core/';
+import { CoreModule } from '../../../../core';
 
 describe('SearchCollectionComponent', () => {
   beforeEach((() => {

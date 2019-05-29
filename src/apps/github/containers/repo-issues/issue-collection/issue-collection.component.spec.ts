@@ -3,7 +3,7 @@ import { IssueCollectionComponent } from '@app/github/containers/repo-issues';
 import {  Actions } from '@ngrx/effects';
 import { IssueEffects, RepoEffects } from '@app/github/store/effects';
 import { SharedTestingModuleWithProviders } from '@app/github/shared';
-import { CoreModule } from '@core/';
+import { CoreModule } from '../../../../core';
 import { RouterTestingModule } from '@angular/router/testing';
 
 describe('IssueCollectionComponent', () => {

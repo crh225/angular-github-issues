@@ -10,7 +10,7 @@ import { MatTableDataSource, MatSort } from '@angular/material';
     styleUrls: ['./user-repos.component.css']
 })
 export class UserReposComponent implements OnInit, AfterViewInit {
-    @ViewChild(MatSort) sort: MatSort;
+    @ViewChild(MatSort, { static: false }) sort: MatSort;
     public repoCollection: Repo[];
     dataSource = new MatTableDataSource(this.repoCollection);
     displayedColumns = ['name', 'description', 'language',

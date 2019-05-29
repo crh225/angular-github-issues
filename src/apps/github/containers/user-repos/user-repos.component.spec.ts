@@ -8,7 +8,7 @@ import { UserEffects } from '@app/github/store/effects';
 import { StoreModule } from '@ngrx/store';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SharedTestingModule } from '@app/github/shared';
-import { CoreModule } from '@core/';
+import { CoreModule } from '../../../core';
 import * as userActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';
 

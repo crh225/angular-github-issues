@@ -13,7 +13,7 @@ import {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild('snav') public sidenav: MatSidenav;
+  @ViewChild('snav', { static: false }) public sidenav: MatSidenav;
   mobileQuery: MediaQueryList;
   imageUrl = '';
   private _mobileQueryListener: () => void;

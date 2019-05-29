@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GithubRoutingModule } from './+github.routes';
 import { GithubComponent } from './+github.component';
-import { RepoIssuesComponent, RepoSearchComponent } from '@app/github/containers';
+import { RepoIssuesComponent, RepoSearchComponent } from './containers';
 import { UserExistsGuard } from './guards';
 import { ChartsModule } from 'ng2-charts';
-import { CoreModule } from '@core/';
+import { CoreModule } from '../core';
 import { NgxGistModule } from 'ngx-gist/dist/ngx-gist.module';
 import { SharedModule,
   ChartComponent,
@@ -23,7 +23,7 @@ import { SharedModule,
   UserAuthSuccessComponent,
   UserAuthGoogleComponent,
   UserAuthGithubComponent,
-  UserAuthFacebookComponent} from '@app/github';
+  UserAuthFacebookComponent} from '../github';
 
 @NgModule({
   imports: [

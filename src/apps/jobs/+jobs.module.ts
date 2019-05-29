@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JobRoutingModule } from './+jobs.routes';
 import { JobComponent } from './+jobs.component';
-import { CoreModule } from '@core/';
+import { CoreModule } from '../core';
 import {
   SearchComponent, JobListingComponent
-} from '@app/jobs';
+} from '../jobs';
 
 @NgModule({
   imports: [

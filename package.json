@@ -32,7 +32,7 @@
     "ngx-gist": "1.0.4",
     "rxjs": "6.5.2",
     "zone.js": "0.9.1",
-    "snyk": "1.169.0"
+    "snyk": "1.169.1"
   },
   "version": "0.0.0",
   "license": "MIT",

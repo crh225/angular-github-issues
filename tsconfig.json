@@ -11,6 +11,9 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "angularCompilerOptions": {
+      "enableIvy": true
+    },
     "lib": [
       "es2016",
       "dom"

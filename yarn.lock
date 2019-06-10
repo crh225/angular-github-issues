@@ -454,21 +454,21 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ngrx/core/-/core-1.2.0.tgz#882b46abafa2e0e6d887cb71a1b2c2fa3e6d0dc6"
 
-"@ngrx/effects@8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-8.0.0.tgz#56da399423c2d8c690d9f38971f5fd4234ee8bb2"
+"@ngrx/effects@8.0.1":
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-8.0.1.tgz#2420e264d96f9fde7fbe594703827f4e44a0b146"
 
-"@ngrx/entity@8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-8.0.0.tgz#b51a581110c4fcea30f6fa672d6728c731f09dbb"
+"@ngrx/entity@8.0.1":
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-8.0.1.tgz#dcf627c7a1807a50efe051226a759629345a7599"
 
-"@ngrx/store-devtools@8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-8.0.0.tgz#bb8e736e20183ea4d75acc588b14fb40ccf3e85c"
+"@ngrx/store-devtools@8.0.1":
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-8.0.1.tgz#4c4e5458994afe3eaa487375e13a9c60edc3a84e"
 
-"@ngrx/store@8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-8.0.0.tgz#f9b37a133c2cdf96e5f1da850f873ec62b642113"
+"@ngrx/store@8.0.1":
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-8.0.1.tgz#5391498d50978ff1bfdbf4e5b04cb647677a5168"
 
 "@ngtools/webpack@8.0.2":
   version "8.0.2"

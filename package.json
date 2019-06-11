@@ -28,7 +28,7 @@
     "core-js": "2.5.7",
     "firebase": "6.1.1",
     "logrocket": "1.0.0",
-    "ng2-charts": "1.6.0",
+    "ng2-charts": "2.3.0",
     "rxjs": "6.5.2",
     "zone.js": "0.9.1",
     "snyk": "1.175.1"

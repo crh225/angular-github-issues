@@ -543,6 +543,12 @@
     semver "6.0.0"
     semver-intersect "1.4.0"
 
+"@snyk/composer-lockfile-parser@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@snyk/composer-lockfile-parser/-/composer-lockfile-parser-1.0.2.tgz#d748e56076bc1c25b130c1f13ed705fa285a1994"
+  dependencies:
+    lodash "4.17.11"
+
 "@snyk/dep-graph@1.4.1":
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/@snyk/dep-graph/-/dep-graph-1.4.1.tgz#035e96224d12d260388d00abc46da02fb9d92d94"
@@ -555,6 +561,13 @@
 "@snyk/gemfile@1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@snyk/gemfile/-/gemfile-1.2.0.tgz#919857944973cce74c650e5428aaf11bcd5c0457"
+
+"@types/agent-base@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@types/agent-base/-/agent-base-4.2.0.tgz#00644e8b395b40e1bf50aaf1d22cabc1200d5051"
+  dependencies:
+    "@types/events" "*"
+    "@types/node" "*"
 
 "@types/debug@^4.1.4":
   version "4.1.4"
@@ -602,6 +615,10 @@
   version "10.14.7"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.7.tgz#1854f0a9aa8d2cd6818d607b3d091346c6730362"
 
+"@types/node@6.14.6":
+  version "6.14.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-6.14.6.tgz#31df045b4c7618ff74d84f542fc3d29445dd566b"
+
 "@types/node@^8.0.7":
   version "8.10.48"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.48.tgz#e385073561643a9ba6199a1985ffc03530f90781"
@@ -617,6 +634,10 @@
 "@types/selenium-webdriver@^3.0.0":
   version "3.0.16"
   resolved "https://registry.yarnpkg.com/@types/selenium-webdriver/-/selenium-webdriver-3.0.16.tgz#50a4755f8e33edacd9c406729e9b930d2451902a"
+
+"@types/sinon@7.0.11":
+  version "7.0.11"
+  resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-7.0.11.tgz#6f28f005a36e779b7db0f1359b9fb9eef72aae88"
 
 "@types/source-list-map@*":
   version "0.1.2"
@@ -6870,18 +6891,18 @@ snyk-go-parser@1.3.0:
     toml "^3.0.0"
     tslib "^1.9.3"
 
-snyk-go-plugin@1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/snyk-go-plugin/-/snyk-go-plugin-1.9.0.tgz#fc6b3ae897949fad60f65bfc3033dd3d50b4661e"
+snyk-go-plugin@1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/snyk-go-plugin/-/snyk-go-plugin-1.10.0.tgz#4764ffc5c87bd0f322a179f7718c6f04b2f45867"
   dependencies:
     debug "^4.1.1"
     graphlib "^2.1.1"
     snyk-go-parser "1.3.0"
     tmp "0.0.33"
 
-snyk-gradle-plugin@2.12.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/snyk-gradle-plugin/-/snyk-gradle-plugin-2.12.0.tgz#d4dae0b2f9df9a59d5c865c5d841e2e8a2c26ecd"
+snyk-gradle-plugin@2.12.4:
+  version "2.12.4"
+  resolved "https://registry.yarnpkg.com/snyk-gradle-plugin/-/snyk-gradle-plugin-2.12.4.tgz#646c787af92985035c25c2bb7f2609ef64acece7"
   dependencies:
     "@types/debug" "^4.1.4"
     chalk "^2.4.2"
@@ -6931,12 +6952,11 @@ snyk-paket-parser@1.4.3:
   dependencies:
     tslib "^1.9.3"
 
-snyk-php-plugin@1.5.3:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/snyk-php-plugin/-/snyk-php-plugin-1.5.3.tgz#a4de181ee0f186f75095cba7931c7b7e603b2d89"
+snyk-php-plugin@1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/snyk-php-plugin/-/snyk-php-plugin-1.6.2.tgz#f5ad6f081d2afc6dfc496cbce68165bdcd2e87ed"
   dependencies:
-    debug "^3.1.0"
-    lodash "^4.17.5"
+    "@snyk/composer-lockfile-parser" "1.0.2"
 
 snyk-policy@1.13.5:
   version "1.13.5"
@@ -6952,9 +6972,9 @@ snyk-policy@1.13.5:
     snyk-try-require "^1.3.1"
     then-fs "^2.0.0"
 
-snyk-python-plugin@1.10.1:
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/snyk-python-plugin/-/snyk-python-plugin-1.10.1.tgz#db85448240857ba5f400efe4f856e16a38cad584"
+snyk-python-plugin@1.10.2:
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/snyk-python-plugin/-/snyk-python-plugin-1.10.2.tgz#e89548a47d4cfe98351604ed8a3372bfd9fbebbd"
   dependencies:
     tmp "0.0.33"
 
@@ -6985,9 +7005,12 @@ snyk-resolve@1.0.1, snyk-resolve@^1.0.0, snyk-resolve@^1.0.1:
     debug "^3.1.0"
     then-fs "^2.0.0"
 
-snyk-sbt-plugin@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/snyk-sbt-plugin/-/snyk-sbt-plugin-2.2.0.tgz#77c07e8d9ed041a55629dbea39c909db3faf11c2"
+snyk-sbt-plugin@2.3.4:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/snyk-sbt-plugin/-/snyk-sbt-plugin-2.3.4.tgz#7460b34322c03fae20d0cecbb75bf5ed00046f48"
+  dependencies:
+    "@types/node" "6.14.6"
+    "@types/sinon" "7.0.11"
 
 snyk-tree@^1.0.0:
   version "1.0.0"
@@ -7004,12 +7027,13 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@1.173.1:
-  version "1.173.1"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.173.1.tgz#de385211a77721bea626c68b46b90029ff903cff"
+snyk@1.178.1:
+  version "1.178.1"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.178.1.tgz#caf769c2da367115f78b5b5796d48b227aebb9d3"
   dependencies:
     "@snyk/dep-graph" "1.4.1"
     "@snyk/gemfile" "1.2.0"
+    "@types/agent-base" "^4.2.0"
     abbrev "^1.1.1"
     ansi-escapes "^4.1.0"
     chalk "^2.4.2"
@@ -7028,18 +7052,18 @@ snyk@1.173.1:
     semver "^6.0.0"
     snyk-config "^2.2.1"
     snyk-docker-plugin "1.25.1"
-    snyk-go-plugin "1.9.0"
-    snyk-gradle-plugin "2.12.0"
+    snyk-go-plugin "1.10.0"
+    snyk-gradle-plugin "2.12.4"
     snyk-module "1.9.1"
     snyk-mvn-plugin "2.3.0"
     snyk-nodejs-lockfile-parser "1.13.0"
     snyk-nuget-plugin "1.10.0"
-    snyk-php-plugin "1.5.3"
+    snyk-php-plugin "1.6.2"
     snyk-policy "1.13.5"
-    snyk-python-plugin "1.10.1"
+    snyk-python-plugin "1.10.2"
     snyk-resolve "1.0.1"
     snyk-resolve-deps "4.0.3"
-    snyk-sbt-plugin "2.2.0"
+    snyk-sbt-plugin "2.3.4"
     snyk-tree "^1.0.0"
     snyk-try-require "1.3.1"
     source-map-support "^0.5.11"

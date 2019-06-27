@@ -59,7 +59,7 @@
     "@types/node": "10.14.7",
     "codelyzer": "5.1.0",
     "firebase-tools": "6.11.0",
-    "husky": "2.6.0",
+    "husky": "2.7.0",
     "jasmine-core": "2.99.1",
     "jasmine-spec-reporter": "4.2.1",
     "karma": "4.1.0",

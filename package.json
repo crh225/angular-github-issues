@@ -31,7 +31,7 @@
     "ng2-charts": "1.6.0",
     "rxjs": "6.5.2",
     "zone.js": "0.9.1",
-    "snyk": "1.189.0"
+    "snyk": "^1.189.0"
   },
   "version": "0.0.0",
   "license": "MIT",
@@ -47,7 +47,8 @@
     "deploy": "firebase deploy",
     "dock": "docker-compose up -d --build",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "npm run snyk-protect",
+    "prepare": "npm run snyk-protect"
   },
   "private": true,
   "devDependencies": {
@@ -73,5 +74,6 @@
     "tslint": "5.18.0",
     "typescript": "3.4.5"
   },
-  "sync": true
+  "sync": true,
+  "snyk": true
 }

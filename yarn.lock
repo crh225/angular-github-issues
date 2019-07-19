@@ -617,9 +617,9 @@
   version "3.3.9"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.3.9.tgz#ee886a9113db567e722a8a0c37f0e6283f2cefa3"
 
-"@types/jasmine@3.3.13":
-  version "3.3.13"
-  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.3.13.tgz#d5daabb0af47bcddee40597acf6e804433bab439"
+"@types/jasmine@3.3.14":
+  version "3.3.14"
+  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.3.14.tgz#593440eef2793ed6c2beddf65850f4ed3028599c"
 
 "@types/jasminewd2@2.0.6":
   version "2.0.6"

@@ -307,6 +307,10 @@
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.4.1.tgz#7d2988351575278907d2c9f3f1d94b1b892644ff"
 
+"@firebase/app-types@0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.4.2.tgz#dd6b1106e6e406ba69a271a319569ab23f2cc691"
+
 "@firebase/app@0.4.11":
   version "0.4.11"
   resolved "https://registry.yarnpkg.com/@firebase/app/-/app-0.4.11.tgz#3b1cea8512f6e7c8913c4eb291f2d5f486c508c9"
@@ -314,6 +318,17 @@
     "@firebase/app-types" "0.4.1"
     "@firebase/logger" "0.1.19"
     "@firebase/util" "0.2.22"
+    dom-storage "2.1.0"
+    tslib "1.10.0"
+    xmlhttprequest "1.8.0"
+
+"@firebase/app@0.4.12":
+  version "0.4.12"
+  resolved "https://registry.yarnpkg.com/@firebase/app/-/app-0.4.12.tgz#6c6ac0786a71e61f047746f964fd43a1b994b22e"
+  dependencies:
+    "@firebase/app-types" "0.4.2"
+    "@firebase/logger" "0.1.20"
+    "@firebase/util" "0.2.23"
     dom-storage "2.1.0"
     tslib "1.10.0"
     xmlhttprequest "1.8.0"
@@ -388,6 +403,10 @@
   version "0.1.19"
   resolved "https://registry.yarnpkg.com/@firebase/logger/-/logger-0.1.19.tgz#edb7fbf7ed6f32fdfe1769c22b4b2232695a9391"
 
+"@firebase/logger@0.1.20":
+  version "0.1.20"
+  resolved "https://registry.yarnpkg.com/@firebase/logger/-/logger-0.1.20.tgz#b04cc13ddd4ec58e41efd335e98ad477f57202aa"
+
 "@firebase/messaging-types@0.3.1":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@firebase/messaging-types/-/messaging-types-0.3.1.tgz#d296ff1b08e235e009ad2b8d93ff67625d7d0d8b"
@@ -437,6 +456,12 @@
 "@firebase/util@0.2.22":
   version "0.2.22"
   resolved "https://registry.yarnpkg.com/@firebase/util/-/util-0.2.22.tgz#adf9773778b475e016048c7d5a527c2984e58474"
+  dependencies:
+    tslib "1.10.0"
+
+"@firebase/util@0.2.23":
+  version "0.2.23"
+  resolved "https://registry.yarnpkg.com/@firebase/util/-/util-0.2.23.tgz#3e4090be9e2b8e720d72730724f026ce83f71736"
   dependencies:
     tslib "1.10.0"
 

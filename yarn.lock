@@ -97,9 +97,9 @@
     "@angular-devkit/core" "8.2.1"
     rxjs "6.4.0"
 
-"@angular/animations@8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-8.2.0.tgz#406e9242153172c2ae0cc72c4e0bb37e14d3ec5b"
+"@angular/animations@8.2.1":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-8.2.1.tgz#85e989394d8ddeac2faa3357fac97836c6c2356f"
   dependencies:
     tslib "^1.9.0"
 
@@ -134,15 +134,15 @@
     universal-analytics "^0.4.20"
     uuid "^3.3.2"
 
-"@angular/common@8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/common/-/common-8.2.0.tgz#20b345edcaaa5437fa4e6b4e7aeadc9649fbaa63"
+"@angular/common@8.2.1":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/common/-/common-8.2.1.tgz#f34ee4db45693ce8f382a26800441988fe71316a"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/compiler-cli@8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-8.2.0.tgz#1d18113a3ec58208d428d290728bbda7225cf7a2"
+"@angular/compiler-cli@8.2.1":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-8.2.1.tgz#88688425eaf03cc2ea500f3fc885019f9c60136b"
   dependencies:
     canonical-path "1.0.0"
     chokidar "^2.1.1"
@@ -155,15 +155,15 @@
     tslib "^1.9.0"
     yargs "13.1.0"
 
-"@angular/compiler@8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-8.2.0.tgz#216cbebb9e9a59c2037746112dbf044a26670e36"
+"@angular/compiler@8.2.1":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-8.2.1.tgz#685d42545a0d3607b4958c92e121ee348e985f0f"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/core@8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-8.2.0.tgz#18e50f525d9cb9987a6a84e583a2becbc446919e"
+"@angular/core@8.2.1":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-8.2.1.tgz#38e504479856f0d063f26ce349cf432575f0185b"
   dependencies:
     tslib "^1.9.0"
 
@@ -171,9 +171,9 @@
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/@angular/fire/-/fire-5.2.1.tgz#4b966aaed10cda0b430c9d80769b39d08032004d"
 
-"@angular/forms@8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-8.2.0.tgz#00fbf9a00863b93084adecc0d99b73c3dd73198a"
+"@angular/forms@8.2.1":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-8.2.1.tgz#a77212dcf6d7f2cdd4279f5eda16383c99a06856"
   dependencies:
     tslib "^1.9.0"
 
@@ -183,9 +183,9 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/language-service@8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-8.2.0.tgz#98c3d01807a08750b85bcc8bcfface06e2f55b6e"
+"@angular/language-service@8.2.1":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-8.2.1.tgz#0f0dd32945db09d0742d20728ef8c689d2a11143"
 
 "@angular/material@8.1.2":
   version "8.1.2"
@@ -193,35 +193,35 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/platform-browser-dynamic@8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-8.2.0.tgz#c3457ab5314a17560c604685d9da24e2da59e61b"
+"@angular/platform-browser-dynamic@8.2.1":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-8.2.1.tgz#a3f378d28329f7507d019fe9348d2652ab9bff63"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/platform-browser@8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-8.2.0.tgz#aa38096470d6240ba037f543e3b356d0f378ee08"
+"@angular/platform-browser@8.2.1":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-8.2.1.tgz#cbe58d3f09d33a786a3c82f86b83784decfaa91e"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/platform-server@8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-8.2.0.tgz#10dad213337cfbe4c590d14d95facfbe9ddbe41c"
+"@angular/platform-server@8.2.1":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-8.2.1.tgz#7894a6c2867a8d3feba7bf4ea27cdfe784a78ba1"
   dependencies:
     domino "^2.1.2"
     tslib "^1.9.0"
     xhr2 "^0.1.4"
 
-"@angular/router@8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/router/-/router-8.2.0.tgz#4467eb5e152001c749a3d710989adfa9b48faabd"
+"@angular/router@8.2.1":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/router/-/router-8.2.1.tgz#c1920ebd4341507dcce9a38ffa1429775f7b8e77"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/service-worker@8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/service-worker/-/service-worker-8.2.0.tgz#4fb4d9e5f09e9e3ab9a0f0de7585ca316b27c1a1"
+"@angular/service-worker@8.2.1":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/service-worker/-/service-worker-8.2.1.tgz#d333aa2e97d40c7ad611445eb6de1bb4e55c6ced"
   dependencies:
     tslib "^1.9.0"
 

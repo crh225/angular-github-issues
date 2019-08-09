@@ -7292,9 +7292,9 @@ snyk-config@^2.2.1:
     lodash "^4.17.11"
     nconf "^0.10.0"
 
-snyk-docker-plugin@1.25.1:
-  version "1.25.1"
-  resolved "https://registry.yarnpkg.com/snyk-docker-plugin/-/snyk-docker-plugin-1.25.1.tgz#3f97dda88adfac2e1938151372d07905767bc8a1"
+snyk-docker-plugin@1.29.1:
+  version "1.29.1"
+  resolved "https://registry.yarnpkg.com/snyk-docker-plugin/-/snyk-docker-plugin-1.29.1.tgz#4ae989e5084eef744b371f88b2890a8d971ab871"
   dependencies:
     debug "^4.1.1"
     dockerfile-ast "0.0.16"
@@ -7453,9 +7453,9 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@1.215.0:
-  version "1.215.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.215.0.tgz#041f6fc682c0523a6ecf0e8e5be53d71b11b9a3f"
+snyk@1.216.0:
+  version "1.216.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.216.0.tgz#ff4403d9a7027b3b9e1e3b342fbd5103b8d63aa0"
   dependencies:
     "@snyk/dep-graph" "1.12.0"
     "@snyk/gemfile" "1.2.0"
@@ -7477,7 +7477,7 @@ snyk@1.215.0:
     proxy-from-env "^1.0.0"
     semver "^6.0.0"
     snyk-config "^2.2.1"
-    snyk-docker-plugin "1.25.1"
+    snyk-docker-plugin "1.29.1"
     snyk-go-plugin "1.11.0"
     snyk-gradle-plugin "^3.0.2"
     snyk-module "1.9.1"

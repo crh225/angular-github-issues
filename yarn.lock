@@ -1100,16 +1100,34 @@
     semver "6.3.0"
     semver-intersect "1.4.0"
 
+"@snyk/cli-interface@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@snyk/cli-interface/-/cli-interface-1.5.0.tgz#b9dbe6ebfb86e67ffabf29d4e0d28a52670ac456"
+  dependencies:
+    tslib "^1.9.3"
+
 "@snyk/cli-interface@^2.0.2":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@snyk/cli-interface/-/cli-interface-2.0.3.tgz#79d84b6e9034292bbe63c305a1d576256f6b5b06"
   dependencies:
     tslib "^1.9.3"
 
-"@snyk/cli-interface@^2.1.0":
+"@snyk/cli-interface@^2.0.3", "@snyk/cli-interface@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@snyk/cli-interface/-/cli-interface-2.1.0.tgz#2e7ecd9457c91b78ce3e5b91451e823f218a25af"
   dependencies:
+    tslib "^1.9.3"
+
+"@snyk/cocoapods-lockfile-parser@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@snyk/cocoapods-lockfile-parser/-/cocoapods-lockfile-parser-2.0.2.tgz#6a3c236483d1c952f40a6d46f290e967235f7f19"
+  dependencies:
+    "@snyk/dep-graph" "^1.11.0"
+    "@snyk/ruby-semver" "^2.0.4"
+    "@types/js-yaml" "^3.12.1"
+    core-js "^3.2.0"
+    js-yaml "^3.13.1"
+    source-map-support "^0.5.7"
     tslib "^1.9.3"
 
 "@snyk/composer-lockfile-parser@1.0.3":
@@ -1129,9 +1147,36 @@
     source-map-support "^0.5.11"
     tslib "^1.9.3"
 
+"@snyk/dep-graph@1.13.0", "@snyk/dep-graph@^1.11.0":
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/@snyk/dep-graph/-/dep-graph-1.13.0.tgz#855f628da0b833dd16c02c2f977507bbf090b894"
+  dependencies:
+    graphlib "^2.1.5"
+    lodash "^4.7.14"
+    object-hash "^1.3.1"
+    semver "^6.0.0"
+    source-map-support "^0.5.11"
+    tslib "^1.9.3"
+
 "@snyk/gemfile@1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@snyk/gemfile/-/gemfile-1.2.0.tgz#919857944973cce74c650e5428aaf11bcd5c0457"
+
+"@snyk/ruby-semver@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@snyk/ruby-semver/-/ruby-semver-2.0.4.tgz#457686ea7a4d60b10efddde99587efb3a53ba884"
+  dependencies:
+    lodash "^4.17.14"
+
+"@snyk/snyk-cocoapods-plugin@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@snyk/snyk-cocoapods-plugin/-/snyk-cocoapods-plugin-1.0.2.tgz#2d9012fc2be35917f8225b50da83635330fbb59a"
+  dependencies:
+    "@snyk/cli-interface" "1.5.0"
+    "@snyk/cocoapods-lockfile-parser" "2.0.2"
+    "@snyk/dep-graph" "1.13.0"
+    source-map-support "^0.5.7"
+    tslib "^1.9.3"
 
 "@types/agent-base@^4.2.0":
   version "4.2.0"
@@ -1176,6 +1221,10 @@
 "@types/jasminewd2@2.0.7":
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/@types/jasminewd2/-/jasminewd2-2.0.7.tgz#71756ac7780add2dcd32384919ac903ad550f643"
+
+"@types/js-yaml@^3.12.1":
+  version "3.12.1"
+  resolved "https://registry.yarnpkg.com/@types/js-yaml/-/js-yaml-3.12.1.tgz#5c6f4a1eabca84792fbd916f0cb40847f123c656"
 
 "@types/long@*", "@types/long@^4.0.0":
   version "4.0.0"
@@ -2845,7 +2894,7 @@ core-js@2.5.7:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
 
-core-js@3.2.1:
+core-js@3.2.1, core-js@^3.2.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.2.1.tgz#cd41f38534da6cc59f7db050fe67307de9868b09"
 
@@ -8084,12 +8133,14 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@1.229.0:
-  version "1.229.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.229.0.tgz#2bf9e2a468b9ab7629376b01fd4f36bc7523221d"
+snyk@1.230.0:
+  version "1.230.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.230.0.tgz#e3ddb6a38359a7b58c828c1d3d466226c7d10e0c"
   dependencies:
+    "@snyk/cli-interface" "^2.0.3"
     "@snyk/dep-graph" "1.12.0"
     "@snyk/gemfile" "1.2.0"
+    "@snyk/snyk-cocoapods-plugin" "1.0.2"
     "@types/agent-base" "^4.2.0"
     "@types/restify" "^4.3.6"
     abbrev "^1.1.1"

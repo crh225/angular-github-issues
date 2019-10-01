@@ -1214,13 +1214,15 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/jasmine@3.4.2":
+"@types/jasmine@*", "@types/jasmine@3.4.2":
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.4.2.tgz#49f672de24043b3c1fb919901fd3cd36f027bc93"
 
-"@types/jasminewd2@2.0.7":
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/@types/jasminewd2/-/jasminewd2-2.0.7.tgz#71756ac7780add2dcd32384919ac903ad550f643"
+"@types/jasminewd2@2.0.8":
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/@types/jasminewd2/-/jasminewd2-2.0.8.tgz#67afe5098d5ef2386073a7b7384b69a840dfe93b"
+  dependencies:
+    "@types/jasmine" "*"
 
 "@types/js-yaml@^3.12.1":
   version "3.12.1"

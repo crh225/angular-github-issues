@@ -2,24 +2,24 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/architect@0.803.6":
-  version "0.803.6"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.803.6.tgz#d933ac8c6599d589ba22172223b4c2309ca53cbb"
+"@angular-devkit/architect@0.803.7":
+  version "0.803.7"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.803.7.tgz#c71c7a425a15f990436a1725de72678332e81258"
   dependencies:
-    "@angular-devkit/core" "8.3.6"
+    "@angular-devkit/core" "8.3.7"
     rxjs "6.4.0"
 
-"@angular-devkit/build-angular@0.803.6":
-  version "0.803.6"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-0.803.6.tgz#0fd1471cb65d28b166cc1cf262ad80848479921b"
+"@angular-devkit/build-angular@0.803.7":
+  version "0.803.7"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-0.803.7.tgz#b5d120fe9af253b5614528d2574920680801c4ae"
   dependencies:
-    "@angular-devkit/architect" "0.803.6"
-    "@angular-devkit/build-optimizer" "0.803.6"
-    "@angular-devkit/build-webpack" "0.803.6"
-    "@angular-devkit/core" "8.3.6"
+    "@angular-devkit/architect" "0.803.7"
+    "@angular-devkit/build-optimizer" "0.803.7"
+    "@angular-devkit/build-webpack" "0.803.7"
+    "@angular-devkit/core" "8.3.7"
     "@babel/core" "7.5.5"
     "@babel/preset-env" "7.5.5"
-    "@ngtools/webpack" "8.3.6"
+    "@ngtools/webpack" "8.3.7"
     ajv "6.10.2"
     autoprefixer "9.6.1"
     browserslist "4.6.6"
@@ -33,6 +33,7 @@
     find-cache-dir "3.0.0"
     glob "7.1.4"
     istanbul-instrumenter-loader "3.0.1"
+    jest-worker "24.9.0"
     karma-source-map-support "1.4.0"
     less "3.9.0"
     less-loader "5.0.0"
@@ -67,12 +68,11 @@
     webpack-merge "4.2.1"
     webpack-sources "1.4.3"
     webpack-subresource-integrity "1.1.0-rc.6"
-    worker-farm "1.7.0"
     worker-plugin "3.2.0"
 
-"@angular-devkit/build-optimizer@0.803.6":
-  version "0.803.6"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-optimizer/-/build-optimizer-0.803.6.tgz#ecf3d0ebd059e9350c3bfebc472ebf3d85ef57a7"
+"@angular-devkit/build-optimizer@0.803.7":
+  version "0.803.7"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-optimizer/-/build-optimizer-0.803.7.tgz#8770e5e5479270319c090f48063a00c74a94ebc2"
   dependencies:
     loader-utils "1.2.3"
     source-map "0.7.3"
@@ -80,18 +80,18 @@
     typescript "3.5.3"
     webpack-sources "1.4.3"
 
-"@angular-devkit/build-webpack@0.803.6":
-  version "0.803.6"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-webpack/-/build-webpack-0.803.6.tgz#1a539f8f1162ec98df215a5cf3488316c1b8d11b"
+"@angular-devkit/build-webpack@0.803.7":
+  version "0.803.7"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-webpack/-/build-webpack-0.803.7.tgz#deaeae50f561a5bc6ca1f4a9e951ae3360e9ef30"
   dependencies:
-    "@angular-devkit/architect" "0.803.6"
-    "@angular-devkit/core" "8.3.6"
+    "@angular-devkit/architect" "0.803.7"
+    "@angular-devkit/core" "8.3.7"
     rxjs "6.4.0"
     webpack-merge "4.2.1"
 
-"@angular-devkit/core@8.3.6":
-  version "8.3.6"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.6.tgz#6ad4787e3cb8b03234a194dd53e12cf054a4169c"
+"@angular-devkit/core@8.3.7":
+  version "8.3.7"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.7.tgz#b1de380922a301bc2b5960a2ce470c0938bac775"
   dependencies:
     ajv "6.10.2"
     fast-json-stable-stringify "2.0.0"
@@ -99,11 +99,11 @@
     rxjs "6.4.0"
     source-map "0.7.3"
 
-"@angular-devkit/schematics@8.3.6":
-  version "8.3.6"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.3.6.tgz#9a21a090208398a70e87d24a66e8d147f14713e0"
+"@angular-devkit/schematics@8.3.7":
+  version "8.3.7"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.3.7.tgz#401ad9457483569ccb51fc61d1694c276271ddd6"
   dependencies:
-    "@angular-devkit/core" "8.3.6"
+    "@angular-devkit/core" "8.3.7"
     rxjs "6.4.0"
 
 "@angular/animations@8.2.9":
@@ -120,15 +120,15 @@
   optionalDependencies:
     parse5 "^5.0.0"
 
-"@angular/cli@8.3.6":
-  version "8.3.6"
-  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-8.3.6.tgz#dbbfef581b10bdc9a255c71d304676743b947cd4"
+"@angular/cli@8.3.7":
+  version "8.3.7"
+  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-8.3.7.tgz#e55c17663c89c53a7eecbc22cda08c8d51eb6f89"
   dependencies:
-    "@angular-devkit/architect" "0.803.6"
-    "@angular-devkit/core" "8.3.6"
-    "@angular-devkit/schematics" "8.3.6"
-    "@schematics/angular" "8.3.6"
-    "@schematics/update" "0.803.6"
+    "@angular-devkit/architect" "0.803.7"
+    "@angular-devkit/core" "8.3.7"
+    "@angular-devkit/schematics" "8.3.7"
+    "@schematics/angular" "8.3.7"
+    "@schematics/update" "0.803.7"
     "@yarnpkg/lockfile" "1.1.0"
     ansi-colors "4.1.1"
     debug "^4.1.1"
@@ -1027,11 +1027,11 @@
   version "7.4.0"
   resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-7.4.0.tgz#525a343aa45d7f6ca60f3301a23a27669c14bbce"
 
-"@ngtools/webpack@8.3.6":
-  version "8.3.6"
-  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.3.6.tgz#780819b08088d665af937041de57c90e917a0da6"
+"@ngtools/webpack@8.3.7":
+  version "8.3.7"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.3.7.tgz#73ca8767937932c7ab7db9c18ed6bc9f622aa0e3"
   dependencies:
-    "@angular-devkit/core" "8.3.6"
+    "@angular-devkit/core" "8.3.7"
     enhanced-resolve "4.1.0"
     rxjs "6.4.0"
     tree-kill "1.2.1"
@@ -1080,19 +1080,19 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
 
-"@schematics/angular@8.3.6":
-  version "8.3.6"
-  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-8.3.6.tgz#409873ef29affac0a1851f88db312fedc7528e57"
+"@schematics/angular@8.3.7":
+  version "8.3.7"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-8.3.7.tgz#c7c21b5e5d27520d208f5bd626cc3e94ffd52461"
   dependencies:
-    "@angular-devkit/core" "8.3.6"
-    "@angular-devkit/schematics" "8.3.6"
+    "@angular-devkit/core" "8.3.7"
+    "@angular-devkit/schematics" "8.3.7"
 
-"@schematics/update@0.803.6":
-  version "0.803.6"
-  resolved "https://registry.yarnpkg.com/@schematics/update/-/update-0.803.6.tgz#8cb39b8a9385bedff9be6b651244accf7e603084"
+"@schematics/update@0.803.7":
+  version "0.803.7"
+  resolved "https://registry.yarnpkg.com/@schematics/update/-/update-0.803.7.tgz#03cede17fb549174467457c96de33db3112d04a1"
   dependencies:
-    "@angular-devkit/core" "8.3.6"
-    "@angular-devkit/schematics" "8.3.6"
+    "@angular-devkit/core" "8.3.7"
+    "@angular-devkit/schematics" "8.3.7"
     "@yarnpkg/lockfile" "1.1.0"
     ini "1.3.5"
     pacote "9.5.5"
@@ -5265,6 +5265,13 @@ jasminewd2@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/jasminewd2/-/jasminewd2-2.2.0.tgz#e37cf0b17f199cce23bea71b2039395246b4ec4e"
 
+jest-worker@24.9.0:
+  version "24.9.0"
+  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-24.9.0.tgz#5dbfdb5b2d322e98567898238a9697bcce67b3e5"
+  dependencies:
+    merge-stream "^2.0.0"
+    supports-color "^6.1.0"
+
 jju@^1.1.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/jju/-/jju-1.4.0.tgz#a3abe2718af241a2b2904f84a625970f389ae32a"
@@ -5919,6 +5926,10 @@ memory-fs@^0.4.0, memory-fs@^0.4.1:
 merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/merge-descriptors/-/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
+
+merge-stream@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/merge-stream/-/merge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"
 
 methods@~1.1.2:
   version "1.1.2"
@@ -9438,7 +9449,7 @@ wordwrap@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
 
-worker-farm@1.7.0, worker-farm@^1.7.0:
+worker-farm@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/worker-farm/-/worker-farm-1.7.0.tgz#26a94c5391bbca926152002f69b84a4bf772e5a8"
   dependencies:

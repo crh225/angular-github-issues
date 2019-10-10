@@ -19,7 +19,7 @@
     "@angular/router": "8.2.10",
     "@angular/service-worker": "8.2.10",
     "@firebase/app": "0.4.19",
-    "@firebase/app-types": "0.4.4",
+    "@firebase/app-types": "0.4.5",
     "@ngrx/core": "1.2.0",
     "@ngrx/effects": "7.4.0",
     "@ngrx/entity": "7.4.0",

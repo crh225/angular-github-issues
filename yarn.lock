@@ -2,24 +2,24 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/architect@0.803.9":
-  version "0.803.9"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.803.9.tgz#23467be9d844f0c730f9eba6edce40fbdee44287"
+"@angular-devkit/architect@0.803.10":
+  version "0.803.10"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.803.10.tgz#227ffd2dd4845c71b9be7225d67827f84bbbc012"
   dependencies:
-    "@angular-devkit/core" "8.3.9"
+    "@angular-devkit/core" "8.3.10"
     rxjs "6.4.0"
 
-"@angular-devkit/build-angular@0.803.9":
-  version "0.803.9"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-0.803.9.tgz#4ca1b074bb8020367ab239d2ae8ebdf797378410"
+"@angular-devkit/build-angular@0.803.10":
+  version "0.803.10"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-0.803.10.tgz#30a964570b105e293a41eeb866177b13ee4e0a97"
   dependencies:
-    "@angular-devkit/architect" "0.803.9"
-    "@angular-devkit/build-optimizer" "0.803.9"
-    "@angular-devkit/build-webpack" "0.803.9"
-    "@angular-devkit/core" "8.3.9"
+    "@angular-devkit/architect" "0.803.10"
+    "@angular-devkit/build-optimizer" "0.803.10"
+    "@angular-devkit/build-webpack" "0.803.10"
+    "@angular-devkit/core" "8.3.10"
     "@babel/core" "7.5.5"
     "@babel/preset-env" "7.5.5"
-    "@ngtools/webpack" "8.3.9"
+    "@ngtools/webpack" "8.3.10"
     ajv "6.10.2"
     autoprefixer "9.6.1"
     browserslist "4.6.6"
@@ -70,9 +70,9 @@
     webpack-subresource-integrity "1.1.0-rc.6"
     worker-plugin "3.2.0"
 
-"@angular-devkit/build-optimizer@0.803.9":
-  version "0.803.9"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-optimizer/-/build-optimizer-0.803.9.tgz#1ce676edf1717bacbb2b5f86da50435c2686aa59"
+"@angular-devkit/build-optimizer@0.803.10":
+  version "0.803.10"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-optimizer/-/build-optimizer-0.803.10.tgz#11b6e0219582e36611f48612a1eab6f53ff7b82d"
   dependencies:
     loader-utils "1.2.3"
     source-map "0.7.3"
@@ -80,18 +80,17 @@
     typescript "3.5.3"
     webpack-sources "1.4.3"
 
-"@angular-devkit/build-webpack@0.803.9":
-  version "0.803.9"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-webpack/-/build-webpack-0.803.9.tgz#bcb4f82426e22be388e2dfec935a0d6f65ec58cf"
+"@angular-devkit/build-webpack@0.803.10":
+  version "0.803.10"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-webpack/-/build-webpack-0.803.10.tgz#553dc6e1fde5c32bd833c919c5ff928b29dfd1d5"
   dependencies:
-    "@angular-devkit/architect" "0.803.9"
-    "@angular-devkit/core" "8.3.9"
+    "@angular-devkit/architect" "0.803.10"
+    "@angular-devkit/core" "8.3.10"
     rxjs "6.4.0"
-    webpack-merge "4.2.1"
 
-"@angular-devkit/core@8.3.9":
-  version "8.3.9"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.9.tgz#72093bdbef278077f15f66423e2abc6bd2104d0a"
+"@angular-devkit/core@8.3.10":
+  version "8.3.10"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.10.tgz#c7aa228e31f10c0cdf8ae4b8cbb391a6a63860a2"
   dependencies:
     ajv "6.10.2"
     fast-json-stable-stringify "2.0.0"
@@ -99,11 +98,11 @@
     rxjs "6.4.0"
     source-map "0.7.3"
 
-"@angular-devkit/schematics@8.3.9":
-  version "8.3.9"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.3.9.tgz#4a81be819e4cf6338956245c7eea0741def937f6"
+"@angular-devkit/schematics@8.3.10":
+  version "8.3.10"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.3.10.tgz#9a124b55468a8ba6c4faa52e8e5713615dd6d8cc"
   dependencies:
-    "@angular-devkit/core" "8.3.9"
+    "@angular-devkit/core" "8.3.10"
     rxjs "6.4.0"
 
 "@angular/animations@8.2.10":
@@ -120,15 +119,15 @@
   optionalDependencies:
     parse5 "^5.0.0"
 
-"@angular/cli@8.3.9":
-  version "8.3.9"
-  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-8.3.9.tgz#a6fe1e9c3c8710f9629ee3564e51c1053e006be7"
+"@angular/cli@8.3.10":
+  version "8.3.10"
+  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-8.3.10.tgz#9fc164cde03714b1bc6c7d4e0bc29f28f181e151"
   dependencies:
-    "@angular-devkit/architect" "0.803.9"
-    "@angular-devkit/core" "8.3.9"
-    "@angular-devkit/schematics" "8.3.9"
-    "@schematics/angular" "8.3.9"
-    "@schematics/update" "0.803.9"
+    "@angular-devkit/architect" "0.803.10"
+    "@angular-devkit/core" "8.3.10"
+    "@angular-devkit/schematics" "8.3.10"
+    "@schematics/angular" "8.3.10"
+    "@schematics/update" "0.803.10"
     "@yarnpkg/lockfile" "1.1.0"
     ansi-colors "4.1.1"
     debug "^4.1.1"
@@ -1040,11 +1039,11 @@
   version "7.4.0"
   resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-7.4.0.tgz#525a343aa45d7f6ca60f3301a23a27669c14bbce"
 
-"@ngtools/webpack@8.3.9":
-  version "8.3.9"
-  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.3.9.tgz#6b87873c1eba2aebf7cc9ae3920bb77c0a0364bc"
+"@ngtools/webpack@8.3.10":
+  version "8.3.10"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.3.10.tgz#c5d970c76a8153cd46c73e4bad9622363b727b37"
   dependencies:
-    "@angular-devkit/core" "8.3.9"
+    "@angular-devkit/core" "8.3.10"
     enhanced-resolve "4.1.0"
     rxjs "6.4.0"
     tree-kill "1.2.1"
@@ -1093,19 +1092,19 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
 
-"@schematics/angular@8.3.9":
-  version "8.3.9"
-  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-8.3.9.tgz#e088ddabc0899543810c010e7b5ccf7849d13d77"
+"@schematics/angular@8.3.10":
+  version "8.3.10"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-8.3.10.tgz#64481f682c4912ca79c5b7223aec6f6f0cd106a8"
   dependencies:
-    "@angular-devkit/core" "8.3.9"
-    "@angular-devkit/schematics" "8.3.9"
+    "@angular-devkit/core" "8.3.10"
+    "@angular-devkit/schematics" "8.3.10"
 
-"@schematics/update@0.803.9":
-  version "0.803.9"
-  resolved "https://registry.yarnpkg.com/@schematics/update/-/update-0.803.9.tgz#980ec69f404e0ae8fa4ad9c4f660c039ac79c8aa"
+"@schematics/update@0.803.10":
+  version "0.803.10"
+  resolved "https://registry.yarnpkg.com/@schematics/update/-/update-0.803.10.tgz#5c465e3335bb8f89c7ff130050a9fe9f9965913b"
   dependencies:
-    "@angular-devkit/core" "8.3.9"
-    "@angular-devkit/schematics" "8.3.9"
+    "@angular-devkit/core" "8.3.10"
+    "@angular-devkit/schematics" "8.3.10"
     "@yarnpkg/lockfile" "1.1.0"
     ini "1.3.5"
     pacote "9.5.5"

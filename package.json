@@ -18,7 +18,7 @@
     "@angular/platform-server": "8.2.12",
     "@angular/router": "8.2.12",
     "@angular/service-worker": "8.2.12",
-    "@firebase/app": "0.4.20",
+    "@firebase/app": "0.4.21",
     "@firebase/app-types": "0.4.6",
     "@ngrx/core": "1.2.0",
     "@ngrx/effects": "7.4.0",

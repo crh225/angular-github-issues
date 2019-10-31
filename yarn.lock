@@ -859,11 +859,26 @@
   version "0.4.6"
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.4.6.tgz#8d7ab012f75421e8826e20047778290254abeb31"
 
+"@firebase/app-types@0.4.7":
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.4.7.tgz#792a0f117185e42ec5a247f6bedc94a921711110"
+
 "@firebase/app@0.4.21":
   version "0.4.21"
   resolved "https://registry.yarnpkg.com/@firebase/app/-/app-0.4.21.tgz#c7680d80b8426ae5b0f6caaa99868797ebdff644"
   dependencies:
     "@firebase/app-types" "0.4.6"
+    "@firebase/logger" "0.1.28"
+    "@firebase/util" "0.2.31"
+    dom-storage "2.1.0"
+    tslib "1.10.0"
+    xmlhttprequest "1.8.0"
+
+"@firebase/app@0.4.22":
+  version "0.4.22"
+  resolved "https://registry.yarnpkg.com/@firebase/app/-/app-0.4.22.tgz#0d5b73ffa279f0866b7e5c14bbd5078e68bcb593"
+  dependencies:
+    "@firebase/app-types" "0.4.7"
     "@firebase/logger" "0.1.28"
     "@firebase/util" "0.2.31"
     dom-storage "2.1.0"

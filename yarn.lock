@@ -8232,9 +8232,9 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@1.241.1:
-  version "1.241.1"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.241.1.tgz#7cdb2cbe514b5a132999a21424dfc7c86ad60d74"
+snyk@1.242.0:
+  version "1.242.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.242.0.tgz#8a362d1ca17223221d71a8615302e9951cb696e4"
   dependencies:
     "@snyk/cli-interface" "2.2.0"
     "@snyk/dep-graph" "1.13.1"

@@ -859,6 +859,10 @@
   version "0.4.7"
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.4.7.tgz#792a0f117185e42ec5a247f6bedc94a921711110"
 
+"@firebase/app-types@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.5.0.tgz#b9b51a37956ec166debc8784a2fb30b5ffc9e921"
+
 "@firebase/app@0.4.22":
   version "0.4.22"
   resolved "https://registry.yarnpkg.com/@firebase/app/-/app-0.4.22.tgz#0d5b73ffa279f0866b7e5c14bbd5078e68bcb593"
@@ -866,6 +870,18 @@
     "@firebase/app-types" "0.4.7"
     "@firebase/logger" "0.1.28"
     "@firebase/util" "0.2.31"
+    dom-storage "2.1.0"
+    tslib "1.10.0"
+    xmlhttprequest "1.8.0"
+
+"@firebase/app@0.5.3":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@firebase/app/-/app-0.5.3.tgz#62d3575c618c020d6bc9fc4f59e4988e9e7fe4b2"
+  dependencies:
+    "@firebase/app-types" "0.5.0"
+    "@firebase/component" "0.1.4"
+    "@firebase/logger" "0.1.34"
+    "@firebase/util" "0.2.39"
     dom-storage "2.1.0"
     tslib "1.10.0"
     xmlhttprequest "1.8.0"
@@ -879,6 +895,13 @@
   resolved "https://registry.yarnpkg.com/@firebase/auth/-/auth-0.12.3.tgz#c23573a997d3986784904833249de7e7c1eaa98c"
   dependencies:
     "@firebase/auth-types" "0.8.2"
+
+"@firebase/component@0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@firebase/component/-/component-0.1.4.tgz#ed348a3e2997918b1c4ea13103b7b3e216c12ab9"
+  dependencies:
+    "@firebase/util" "0.2.39"
+    tslib "1.10.0"
 
 "@firebase/database-types@0.4.7":
   version "0.4.7"
@@ -941,6 +964,10 @@
 "@firebase/logger@0.1.28":
   version "0.1.28"
   resolved "https://registry.yarnpkg.com/@firebase/logger/-/logger-0.1.28.tgz#3a17ba99100d5edf100dbb42a05146e4d1b27246"
+
+"@firebase/logger@0.1.34":
+  version "0.1.34"
+  resolved "https://registry.yarnpkg.com/@firebase/logger/-/logger-0.1.34.tgz#8fd52f73c9de02d2a96f3a88c692e3f9a25297f9"
 
 "@firebase/messaging-types@0.3.4":
   version "0.3.4"
@@ -1006,6 +1033,12 @@
 "@firebase/util@0.2.31":
   version "0.2.31"
   resolved "https://registry.yarnpkg.com/@firebase/util/-/util-0.2.31.tgz#f5e1b75e38a8f5696c84667b6e94f513c3476e0b"
+  dependencies:
+    tslib "1.10.0"
+
+"@firebase/util@0.2.39":
+  version "0.2.39"
+  resolved "https://registry.yarnpkg.com/@firebase/util/-/util-0.2.39.tgz#4387b12c315857081f595bba7229b0cabadb754f"
   dependencies:
     tslib "1.10.0"
 
@@ -9097,10 +9130,6 @@ typedarray@^0.0.6:
 typescript@3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.5.3.tgz#c830f657f93f1ea846819e929092f5fe5983e977"
-
-typescript@3.7.2:
-  version "3.7.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.2.tgz#27e489b95fa5909445e9fef5ee48d81697ad18fb"
 
 uglify-js@^3.1.4:
   version "3.4.9"

@@ -1,13 +1,23 @@
 <mat-card class="m-15 mb-0">
-        <mat-card-title>Find a Repository</mat-card-title>
-        <mat-card-content class="card-content">
-                <mat-form-field>
-                        <input matInput placeholder="Search for a repository" [(ngModel)]="query" (keyup)="search()">
-                </mat-form-field>
-               
-        </mat-card-content>
-        <mat-card-footer>
-                <mat-spinner [class.show]="searching" [diameter]="30" [strokeWidth]="3"></mat-spinner>
-        </mat-card-footer>
+  <mat-card-title>Find a Repository</mat-card-title>
+  <mat-card-content class="card-content">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Search for a repository"
+        [(ngModel)]="query"
+        (keyup)="search()"
+      />
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-spinner
+      [class.show]="searching"
+      [diameter]="30"
+      [strokeWidth]="3"
+    ></mat-spinner>
+  </mat-card-footer>
 </mat-card>
-<app-search-collection [repoCollection]="repoCollection"></app-search-collection>
+<app-search-collection
+  [repoCollection]="repoCollection"
+></app-search-collection>

@@ -7,7 +7,7 @@ import { AppRoutes } from './app.routes';
 import { AppComponent } from './app.component';
 import * as github from './github';
 import { CoreModule } from './core';
-import { StoreModule, META_REDUCERS, MetaReducer } from '@ngrx/store';
+import { StoreModule, USER_PROVIDED_META_REDUCERS, MetaReducer } from '@ngrx/store';
 import * as forApplication from './github/store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
 import { IssueEffects, RepoEffects, UserEffects } from './github/store/effects';
@@ -62,7 +62,7 @@ export const firebaseConfig = {
       Actions,
     IssueEffects,
     {
-      provide: META_REDUCERS,
+      provide: USER_PROVIDED_META_REDUCERS,
       useFactory: getMetaReducers,
     }]
 })

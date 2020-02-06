@@ -1,12 +1,23 @@
 <mat-card class="m-15 mb-0">
-        <mat-card-title>Find an GitHub User in TN</mat-card-title>
-        <mat-card-content class="card-content">
-                <mat-form-field>
-                        <input matInput placeholder="Search for a user" [(ngModel)]="query" (keyup)="search()">
-                </mat-form-field>            
-        </mat-card-content>
-        <mat-card-footer>
-                <mat-spinner [class.show]="searching" [diameter]="30" [strokeWidth]="3"></mat-spinner>
-        </mat-card-footer>
+  <mat-card-title>Find an GitHub User in TN</mat-card-title>
+  <mat-card-content class="card-content">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Search for a user"
+        [(ngModel)]="query"
+        (keyup)="search()"
+      />
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-spinner
+      [class.show]="searching"
+      [diameter]="30"
+      [strokeWidth]="3"
+    ></mat-spinner>
+  </mat-card-footer>
 </mat-card>
-<app-user-search-collection  [userCollection]="userCollection"></app-user-search-collection>
+<app-user-search-collection
+  [userCollection]="userCollection"
+></app-user-search-collection>

@@ -9,7 +9,7 @@
     "@angular/compiler": "9.0.0",
     "@angular/compiler-cli": "9.0.0",
     "@angular/core": "9.0.0",
-    "@angular/fire": "5.4.1",
+    "@angular/fire": "5.4.2",
     "@angular/forms": "9.0.0",
     "@angular/http": "7.2.16",
     "@angular/material": "9.0.0",

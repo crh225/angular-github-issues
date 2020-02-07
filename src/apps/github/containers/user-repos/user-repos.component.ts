@@ -2,7 +2,8 @@ import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { ActionsSubject, Store } from '@ngrx/store';
 import * as fromRoot from '@app/github/store/reducers';
 import { Repo } from '@app/github/shared/models';
-import { MatTableDataSource, MatSort } from '@angular/material';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
     selector: 'app-user-repos',
@@ -10,7 +11,7 @@ import { MatTableDataSource, MatSort } from '@angular/material';
     styleUrls: ['./user-repos.component.css']
 })
 export class UserReposComponent implements OnInit, AfterViewInit {
-    @ViewChild(MatSort, { static: false }) sort: MatSort;
+    @ViewChild(MatSort) sort: MatSort;
     public repoCollection: Repo[];
     dataSource = new MatTableDataSource(this.repoCollection);
     displayedColumns = ['name', 'description', 'language',

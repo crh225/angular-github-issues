@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActionsSubject, Store } from '@ngrx/store';
 import * as repoActions from '@app/github/store/actions';
 import * as fromRoot from '@app/github/store/reducers';

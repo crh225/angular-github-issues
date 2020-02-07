@@ -5,7 +5,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 @NgModule({
 })
 export class SharedModule {
-    static forRoot(): ModuleWithProviders {
+    static forRoot(): ModuleWithProviders<SharedModule> {
     return {
       ngModule: SharedModule,
       providers: [

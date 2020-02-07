@@ -4,16 +4,14 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
 import * as LogRocket from 'logrocket';
-import {
-  MatSidenav
-} from '@angular/material';
+import { MatSidenav } from '@angular/material/sidenav';
 @Component({
   selector: 'app-house',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild('snav', { static: false }) public sidenav: MatSidenav;
+  @ViewChild('snav') public sidenav: MatSidenav;
   mobileQuery: MediaQueryList;
   imageUrl = '';
   private _mobileQueryListener: () => void;

@@ -4,22 +4,13 @@
     "outDir": "../out-tsc/app",
     "baseUrl": "./",
     "target": "es5",
-    "module": "es2015",
     "types": [],
     "paths": {
-      "@app/*": [
-        "apps/*"
-      ],
-      "@core/*": [
-        "apps/core/*"
-      ],      
-      "@core/": [
-        "apps/core/"
-      ]
+      "@app/*": ["apps/*"],
+      "@core/*": ["apps/core/*"],
+      "@core/": ["apps/core/"]
     }
   },
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.d.ts"
-  ]
+  "files": ["main.ts", "polyfills.ts"],
+  "exclude": ["**/*.spec.ts", "**/*.d.ts"]
 }

@@ -9,11 +9,11 @@ const routes: Routes = [
   },
   {
     path: 'github',
-    loadChildren: '@app/github/+github.module#GithubModule'
+    loadChildren: () => import('@app/github/+github.module').then(m => m.GithubModule)
   },
   {
     path: 'jobs',
-    loadChildren: '@app/jobs/+jobs.module#JobModule'
+    loadChildren: () => import('@app/jobs/+jobs.module').then(m => m.JobModule)
   },
   { path: '**', redirectTo: 'NotFoundComponent' }
 ];

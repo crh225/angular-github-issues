@@ -32,8 +32,8 @@
     "ng2-charts": "2.3.0",
     "rxjs": "6.5.3",
     "snyk": "1.290.2",
-    "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "tslib": "1.10.0",
+    "zone.js": "0.10.2"
   },
   "version": "0.0.0",
   "license": "MIT",
@@ -54,13 +54,13 @@
   },
   "private": true,
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.900.1",
+    "@angular-devkit/build-angular": "0.900.1",
     "@angular/cli": "9.0.1",
     "@angular/language-service": "9.0.0",
     "@types/jasmine": "3.5.3",
     "@types/jasminewd2": "2.0.8",
-    "@types/node": "^12.11.1",
-    "codelyzer": "^5.1.2",
+    "@types/node": "12.12.26",
+    "codelyzer": "5.2.1",
     "firebase-tools": "6.11.0",
     "husky": "4.2.1",
     "jasmine-core": "2.99.1",

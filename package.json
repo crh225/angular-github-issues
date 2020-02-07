@@ -61,7 +61,7 @@
     "@types/jasminewd2": "2.0.8",
     "@types/node": "12.12.26",
     "codelyzer": "5.2.1",
-    "firebase-tools": "6.11.0",
+    "firebase-tools": "7.12.1",
     "husky": "4.2.1",
     "jasmine-core": "2.99.1",
     "jasmine-spec-reporter": "4.2.1",

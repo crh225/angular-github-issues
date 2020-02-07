@@ -5,11 +5,23 @@
     "baseUrl": ".",
     "target": "es5",
     "paths": {
-      "@app/*": ["apps/*"],
-      "@core/*": ["apps/core/*"],
-      "@core": ["apps/core/*"]
+      "@app/*": [
+        "apps/*"
+      ],
+      "@core/*": [
+        "apps/core/*"
+      ],
+      "@core": [
+        "apps/core/*"
+      ]
     }
   },
-  "files": ["test.ts", "polyfills.ts"],
-  "include": ["**/*.spec.ts", "**/*.d.ts"]
+  "files": [
+    "test.ts",
+    "polyfills.ts"
+  ],
+  "include": [
+    "**/*.spec.ts",
+    "**/*.d.ts"
+  ]
 }

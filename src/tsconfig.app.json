@@ -4,7 +4,6 @@
     "outDir": "../out-tsc/app",
     "baseUrl": "./",
     "target": "es5",
-    "module": "es2015",
     "types": [],
     "paths": {
       "@app/*": [
@@ -18,8 +17,8 @@
       ]
     }
   },
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.d.ts"
+  "files": [
+    "main.ts",
+    "polyfills.ts"
   ]
 }

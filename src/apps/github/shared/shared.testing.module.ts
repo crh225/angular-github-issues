@@ -19,7 +19,7 @@ import { BrowserModule } from '@angular/platform-browser';
   ]
 })
 export class SharedTestingModule {
-    static forRoot(): ModuleWithProviders {
+    static forRoot(): ModuleWithProviders<SharedTestingModule> {
     return {
       ngModule: SharedTestingModule,
       providers: [ ]

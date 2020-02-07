@@ -27,7 +27,7 @@
     "@ngrx/store-devtools": "9.0.0-beta.0",
     "chart.js": "2.9.3",
     "core-js": "2.5.7",
-    "firebase": "7.8.0",
+    "firebase": "7.8.1",
     "logrocket": "1.0.6",
     "ng2-charts": "2.3.0",
     "rxjs": "6.5.3",

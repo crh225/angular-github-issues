@@ -990,26 +990,10 @@
     "@firebase/util" "0.2.40"
     tslib "1.10.0"
 
-"@firebase/app-types@0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.5.0.tgz#b9b51a37956ec166debc8784a2fb30b5ffc9e921"
-
 "@firebase/app-types@0.5.1":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.5.1.tgz#8add41d10c533759a80a376d09d24af0a1009343"
   integrity sha512-fhe4KxEoRLD596tuIkvBXVHedVByI5ALzf5nMraOXsnBxLY0gKcMSXQGwwPxZyeUt/S1VM8DRVXOg9shegEO7g==
-
-"@firebase/app@0.5.3":
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/@firebase/app/-/app-0.5.3.tgz#62d3575c618c020d6bc9fc4f59e4988e9e7fe4b2"
-  dependencies:
-    "@firebase/app-types" "0.5.0"
-    "@firebase/component" "0.1.4"
-    "@firebase/logger" "0.1.34"
-    "@firebase/util" "0.2.39"
-    dom-storage "2.1.0"
-    tslib "1.10.0"
-    xmlhttprequest "1.8.0"
 
 "@firebase/app@0.5.4":
   version "0.5.4"
@@ -1040,13 +1024,6 @@
   integrity sha512-0s/ULeqstzQ/Xi0ZgJnasYXH4WtTRaa9LztPv9gXHjwmOt/GtFnRUeW0RqDCmF4A2uikanMFm5+wtm80BkfpTg==
   dependencies:
     "@firebase/auth-types" "0.9.5"
-
-"@firebase/component@0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@firebase/component/-/component-0.1.4.tgz#ed348a3e2997918b1c4ea13103b7b3e216c12ab9"
-  dependencies:
-    "@firebase/util" "0.2.39"
-    tslib "1.10.0"
 
 "@firebase/component@0.1.5":
   version "0.1.5"
@@ -1127,10 +1104,6 @@
     idb "3.0.2"
     tslib "1.10.0"
 
-"@firebase/logger@0.1.34":
-  version "0.1.34"
-  resolved "https://registry.yarnpkg.com/@firebase/logger/-/logger-0.1.34.tgz#8fd52f73c9de02d2a96f3a88c692e3f9a25297f9"
-
 "@firebase/logger@0.1.35":
   version "0.1.35"
   resolved "https://registry.yarnpkg.com/@firebase/logger/-/logger-0.1.35.tgz#e9938eca5d81b72b581b9a4c9031ffebdb31e56d"
@@ -1208,12 +1181,6 @@
     "@firebase/component" "0.1.5"
     "@firebase/storage-types" "0.3.9"
     "@firebase/util" "0.2.40"
-    tslib "1.10.0"
-
-"@firebase/util@0.2.39":
-  version "0.2.39"
-  resolved "https://registry.yarnpkg.com/@firebase/util/-/util-0.2.39.tgz#4387b12c315857081f595bba7229b0cabadb754f"
-  dependencies:
     tslib "1.10.0"
 
 "@firebase/util@0.2.40":

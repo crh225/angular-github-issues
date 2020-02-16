@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Jobs } from '@app/jobs/shared/models';
+import { Jobs } from '../../shared/models';
 
 export const LOAD_ALL_JOBS = '[Jobs] LOAD ALL';
 export const LOAD_ALL_JOBS_SUCCESS = '[Jobs] LOAD ALL SUCCESS';

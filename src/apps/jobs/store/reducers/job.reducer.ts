@@ -1,5 +1,5 @@
-import * as jobActions from '@app/jobs/store/actions';
-import { Jobs } from '@app/jobs/shared/models';
+import * as jobActions from '../../store/actions';
+import { Jobs } from '../../shared/models';
 
 
 export interface State {

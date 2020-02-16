@@ -1,10 +1,11 @@
 
-import {filter} from 'rxjs/operators';
+import { filter } from 'rxjs/operators';
 import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { ActionsSubject, Store } from '@ngrx/store';
-import * as issueActions from '@app/github/store/actions';
-import * as fromRoot from '@app/github/store/reducers';
-import { Issue } from '@app/github/shared/models';
+import * as issueActions from '../../store/actions';
+import * as fromRoot from '../../store/reducers';
+import { Issue } from '../../shared';
+
 
 
 @Component({
@@ -27,7 +28,7 @@ export class RepoIssuesComponent implements OnInit {
 
         this.actionsSubject
             .asObservable().pipe(
-            filter(action => action.type === issueActions.LOAD_ALL_ISSUES_SUCCESS))
+                filter(action => action.type === issueActions.LOAD_ALL_ISSUES_SUCCESS))
             .subscribe((data: any) => {
                 switch (data.type) {
                     case '[Issue] LOAD ALL SUCCESS':
@@ -44,10 +45,10 @@ export class RepoIssuesComponent implements OnInit {
     }
 
     ngOnInit() {
-      this.store.select(fromRoot.getSelectedRepo).subscribe( data => {
+        this.store.select(fromRoot.getSelectedRepo).subscribe(data => {
             if (data) {
-               this.store.dispatch(new issueActions.LoadAllIssues({ owner: data.owner.login, repo: data.name }));
+                this.store.dispatch(new issueActions.LoadAllIssues({ owner: data.owner.login, repo: data.name }));
             }
-      });
+        });
     }
 }

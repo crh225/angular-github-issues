@@ -1,5 +1,5 @@
-import {  Action } from '@ngrx/store';
-import { User, Repo, Gist } from '@app/github/shared/models';
+import { Action } from '@ngrx/store';
+import { User, Repo, Gist } from '../../shared/models';
 
 export const LOAD_ALL_USERS = '[User] LOAD ALL';
 export const LOAD_ALL_USERS_SUCCESS = '[User] LOAD ALL SUCCESS';
@@ -20,7 +20,7 @@ export const LOAD_USER_FAILURE = '[User] LOAD FAILURE';
 
 export class LoadAllUsers implements Action {
     readonly type = LOAD_ALL_USERS;
-    constructor(public payload: { searchName } ) { }
+    constructor(public payload: { searchName }) { }
 }
 
 export class LoadAllUsersSuccess implements Action {
@@ -30,7 +30,7 @@ export class LoadAllUsersSuccess implements Action {
 
 export class LoadFullUser implements Action {
     readonly type = LOAD_FULL_USER;
-    constructor(public payload: { login } ) { }
+    constructor(public payload: { login }) { }
 }
 
 export class LoadFullUserSuccess implements Action {
@@ -41,7 +41,7 @@ export class LoadFullUserSuccess implements Action {
 
 export class LoadUserRepo implements Action {
     readonly type = LOAD_USER_REPO;
-    constructor(public payload: string ) { }
+    constructor(public payload: string) { }
 }
 
 export class LoadUserRepoSuccess implements Action {
@@ -51,7 +51,7 @@ export class LoadUserRepoSuccess implements Action {
 
 export class LoadUserGist implements Action {
     readonly type = LOAD_USER_GIST;
-    constructor(public payload: string ) { }
+    constructor(public payload: string) { }
 }
 
 export class LoadUserGistSuccess implements Action {
@@ -61,7 +61,7 @@ export class LoadUserGistSuccess implements Action {
 
 export class LoadAllFollowers implements Action {
     readonly type = LOAD_ALL_FOLLOWERS;
-    constructor(public payload: string ) { }
+    constructor(public payload: string) { }
 }
 
 export class LoadAllFollowersSuccess implements Action {
@@ -70,7 +70,7 @@ export class LoadAllFollowersSuccess implements Action {
 }
 export class LoadAllFollowing implements Action {
     readonly type = LOAD_ALL_FOLLOWING;
-    constructor(public payload: string ) { }
+    constructor(public payload: string) { }
 }
 
 export class LoadAllFollowingSuccess implements Action {

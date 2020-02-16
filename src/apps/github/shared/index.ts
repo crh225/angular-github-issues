@@ -1,7 +1,7 @@
 
-import * as forApplication from '@app/github/store/reducers';
+import * as forApplication from '../store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
-import { IssueEffects, RepoEffects } from '@app/github/store/effects';
+import { IssueEffects, RepoEffects } from '../store/effects';
 import { StoreModule } from '@ngrx/store';
 import { SharedModule } from './shared.module';
 import { SharedTestingModule } from './shared.testing.module';

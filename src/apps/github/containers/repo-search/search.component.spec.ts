@@ -1,35 +1,35 @@
 import { TestBed, async } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RepoSearchComponent } from './search.component';
-import { SharedModule } from '@app/github/shared';
-import { ChartComponent, SearchCollectionComponent } from '@app/github/containers/repo-search';
+import { SharedModule } from '../../shared';
+import { ChartComponent, SearchCollectionComponent } from '../../containers/repo-search';
 import { ChartsModule } from 'ng2-charts';
-import * as forApplication from '@app/github/store/reducers';
+import * as forApplication from '../../store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
-import { IssueEffects, RepoEffects } from '@app/github/store/effects';
+import { IssueEffects, RepoEffects } from '../../store/effects';
 import { StoreModule } from '@ngrx/store';
 import { RouterTestingModule } from '@angular/router/testing';
-import { SharedTestingModule } from '@app/github/shared';
+import { SharedTestingModule } from '../../shared';
 import { CoreModule } from '../../../core';
 
 describe('RepoSearchComponent', () => {
   jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
   beforeEach((() => {
     TestBed.configureTestingModule({
-    imports: [
-    BrowserAnimationsModule,
-    SharedTestingModule.forRoot(),
-    SharedModule.forRoot(),
-    RouterTestingModule,
-    ChartsModule,
-    CoreModule.forRoot(),
-    StoreModule.forRoot(forApplication.reducers),
-    EffectsModule.forRoot([IssueEffects, RepoEffects])
-  ],
-  declarations: [RepoSearchComponent, SearchCollectionComponent, ChartComponent],
-  providers: [
-    Actions,
-    IssueEffects]
+      imports: [
+        BrowserAnimationsModule,
+        SharedTestingModule.forRoot(),
+        SharedModule.forRoot(),
+        RouterTestingModule,
+        ChartsModule,
+        CoreModule.forRoot(),
+        StoreModule.forRoot(forApplication.reducers),
+        EffectsModule.forRoot([IssueEffects, RepoEffects])
+      ],
+      declarations: [RepoSearchComponent, SearchCollectionComponent, ChartComponent],
+      providers: [
+        Actions,
+        IssueEffects]
     }).compileComponents();
   }));
 
@@ -50,19 +50,19 @@ describe('RepoSearchComponent', () => {
     comp.search();
     fixture.detectChanges();
     comp.actionsSubject
-    .asObservable()
-    .subscribe((data: any) => {
+      .asObservable()
+      .subscribe((data: any) => {
         switch (data.type) {
-            case '[Repo] LOAD ALL SUCCESS':
-                fixture.detectChanges();
-                fixture.whenStable().then(() => {
-                    fixture.detectChanges();
-                    expect(Object.keys(comp.repoCollection).length).toBeGreaterThan(0);
-                    done();
-                  });
-                break;
+          case '[Repo] LOAD ALL SUCCESS':
+            fixture.detectChanges();
+            fixture.whenStable().then(() => {
+              fixture.detectChanges();
+              expect(Object.keys(comp.repoCollection).length).toBeGreaterThan(0);
+              done();
+            });
+            break;
         }
-    });
+      });
 
   }));
 });

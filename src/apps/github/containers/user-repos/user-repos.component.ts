@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { ActionsSubject, Store } from '@ngrx/store';
-import * as fromRoot from '@app/github/store/reducers';
-import { Repo } from '@app/github/shared/models';
+import * as fromRoot from '../../store/reducers';
+import { Repo } from '../../shared/models';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 

@@ -4,9 +4,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Action } from '@ngrx/store';
 import { Actions, Effect, ofType } from '@ngrx/effects';
-import * as userActions from '@app/github/store/actions';
-import { User, Repo, Gist } from '@app/github/shared/models';
-import { GithubService } from '@app/github/shared/services';
+import * as userActions from '../../store/actions';
+import { User, Repo, Gist } from '../../shared/models';
+import { GithubService } from '../../shared/services';
 
 @Injectable()
 export class UserEffects {
@@ -23,7 +23,7 @@ export class UserEffects {
                         new userActions.LoadAllUsersSuccess(user)
                     ];
                 }))
-        ), );
+        ));
 
     @Effect()
     loadFullUser$: Observable<{}> = this.actions$.pipe(
@@ -37,7 +37,7 @@ export class UserEffects {
                         new userActions.LoadFullUserSuccess(user)
                     ];
                 }))
-        ), );
+        ));
     @Effect()
     loadUserRepo$: Observable<{}> = this.actions$.pipe(
         ofType(userActions.LOAD_USER_REPO),
@@ -50,7 +50,7 @@ export class UserEffects {
                         new userActions.LoadUserRepoSuccess(repo)
                     ];
                 }))
-        ), );
+        ));
     @Effect()
     loadUserGist$: Observable<{}> = this.actions$.pipe(
         ofType(userActions.LOAD_USER_GIST),
@@ -63,7 +63,7 @@ export class UserEffects {
                         new userActions.LoadUserGistSuccess(gist)
                     ];
                 }))
-        ), );
+        ));
 
     @Effect()
     loadFollowers$: Observable<{}> = this.actions$.pipe(
@@ -77,7 +77,7 @@ export class UserEffects {
                         new userActions.LoadAllFollowersSuccess(user)
                     ];
                 }))
-        ), );
+        ));
     @Effect()
     loadFollowing$: Observable<{}> = this.actions$.pipe(
         ofType(userActions.LOAD_ALL_FOLLOWING),
@@ -90,7 +90,7 @@ export class UserEffects {
                         new userActions.LoadAllFollowingSuccess(user)
                     ];
                 }))
-        ), );
+        ));
 
     @Effect()
     loadUser$: Observable<{}> = this.actions$.pipe(
@@ -105,7 +105,7 @@ export class UserEffects {
                 new userActions.LoadUserRepo(data),
                 new userActions.LoadUserGist(data)
             ];
-        }), );
+        }));
 
     constructor(
         private actions$: Actions, private _githubService: GithubService

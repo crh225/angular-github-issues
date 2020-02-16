@@ -2,15 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GithubComponent } from './+github.component';
 import { UserExistsGuard } from './guards';
-import { RepoSearchComponent,
-  RepoIssuesComponent,
-  UserSearchComponent,
-  UserFollowerComponent,
-  UserFollowingComponent,
-  UserReposComponent,
-  UserAuthComponent
-} from '@app/github';
-import { NotFoundComponent } from '@core/components/not-found';
+import {
+  RepoSearchComponent, RepoIssuesComponent, UserSearchComponent, UserFollowerComponent,
+  UserFollowingComponent, UserReposComponent, UserAuthComponent
+} from './containers';
+import { NotFoundComponent } from '../core';
+
 
 const routes: Routes = [
   {
@@ -21,9 +18,9 @@ const routes: Routes = [
       { path: 'search', component: RepoSearchComponent },
       { path: 'issues', component: RepoIssuesComponent },
       { path: 'user', component: UserSearchComponent },
-      { path: 'followers/:id', canActivate: [ UserExistsGuard ], component: UserFollowerComponent},
-      { path: 'following/:id', canActivate: [ UserExistsGuard ], component: UserFollowingComponent},
-      { path: 'repos/:id', canActivate: [ UserExistsGuard ], component: UserReposComponent},
+      { path: 'followers/:id', canActivate: [UserExistsGuard], component: UserFollowerComponent },
+      { path: 'following/:id', canActivate: [UserExistsGuard], component: UserFollowingComponent },
+      { path: 'repos/:id', canActivate: [UserExistsGuard], component: UserReposComponent },
       { path: 'auth_redirect', component: UserAuthComponent },
       { path: 'auth', component: UserAuthComponent }
     ]

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActionsSubject, Store } from '@ngrx/store';
-import * as fromRoot from '@app/github/store/reducers';
+import * as fromRoot from '../../store/reducers';
 
 @Component({
-  selector: 'app-user-follower',
-  templateUrl: './follower.component.html',
-  styleUrls: ['./follower.component.css']
+    selector: 'app-user-follower',
+    templateUrl: './follower.component.html',
+    styleUrls: ['./follower.component.css']
 })
 export class UserFollowerComponent implements OnInit {
 
@@ -13,8 +13,8 @@ export class UserFollowerComponent implements OnInit {
     public searching = false;
 
     constructor(
-      private store: Store<fromRoot.AppState>,
-      private actionsSubject: ActionsSubject) {
+        private store: Store<fromRoot.AppState>,
+        private actionsSubject: ActionsSubject) {
         this.actionsSubject
             .asObservable()
             .subscribe((data: any) => {
@@ -28,14 +28,14 @@ export class UserFollowerComponent implements OnInit {
                     default:
                 }
             });
-  }
+    }
 
     ngOnInit() {
-        this.store.select(fromRoot.getFollowers).subscribe( data => {
+        this.store.select(fromRoot.getFollowers).subscribe(data => {
             if (data) {
                 this.userCollection = data;
             }
-      });
+        });
     }
 
 }

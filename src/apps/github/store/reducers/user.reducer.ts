@@ -1,5 +1,5 @@
-import * as userActions from '@app/github/store/actions/user.action';
-import { User, Repo, Gist } from '@app/github/shared/models';
+import * as userActions from '../../store/actions/user.action';
+import { User, Repo, Gist } from '../../shared/models';
 
 export interface State {
     id?: string;

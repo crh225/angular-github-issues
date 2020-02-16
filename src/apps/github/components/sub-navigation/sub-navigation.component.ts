@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { User } from '@app/github/shared/models';
 import { ActionsSubject, Store } from '@ngrx/store';
-import * as userActions from '@app/github/store/actions';
-import * as fromRoot from '@app/github/store/reducers';
-import { Router } from '@angular/router';
+import * as userActions from '../../store/actions';
+import * as fromRoot from '../../store/reducers';
+import { User } from '../../shared';
 
 @Component({
     selector: 'app-gsub-navigation',
@@ -25,15 +24,15 @@ export class SubNavigationComponent {
         });
 
         this.actionsSubject
-        .asObservable()
-        .subscribe((data: any) => {
-            switch (data.type) {
-                case '[User] LOAD FULL USER SUCCESS':
-                    this.user = data.payload;
-                    console.log(this.user);
-                    break;
-                default:
-            }
-        });
+            .asObservable()
+            .subscribe((data: any) => {
+                switch (data.type) {
+                    case '[User] LOAD FULL USER SUCCESS':
+                        this.user = data.payload;
+                        console.log(this.user);
+                        break;
+                    default:
+                }
+            });
     }
 }

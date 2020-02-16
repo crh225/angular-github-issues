@@ -1,7 +1,7 @@
 import { ActionReducer, Action, ActionReducerMap, MetaReducer, createFeatureSelector, createSelector } from '@ngrx/store';
-import { EntityState, createEntityAdapter, EntityAdapter } from '@ngrx/entity';
-import * as issueActions from '@app/github/store/actions';
-import { Issue } from '@app/github/shared/models';
+import { EntityState, createEntityAdapter } from '@ngrx/entity';
+import * as issueActions from '../../store/actions';
+import { Issue } from '../../shared/models';
 
 
 // This adapter will allow is to manipulate contacts (mostly CRUD operations)
@@ -39,7 +39,7 @@ export function issueReducer(state: State = initialState, action: issueActions.I
     switch (action.type) {
 
         case issueActions.LOAD_ALL_ISSUES_SUCCESS: {
-            return {...state, ...issueAdapter.addAll(action.payload as Issue[], state) };
+            return { ...state, ...issueAdapter.addAll(action.payload as Issue[], state) };
         }
         default: {
             return state;

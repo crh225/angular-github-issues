@@ -16,6 +16,7 @@ import { UserAuthGithubComponent } from './github';
 import { UserAuthFacebookComponent } from './facebook';
 import { UserAuthGoogleComponent } from './google';
 import { environment } from '../../../../environments/environment';
+import { AuthTestingModule } from './auth-testing/auth-testing.module';
 
 
 describe('UserAuthComponent', () => {
@@ -23,10 +24,7 @@ describe('UserAuthComponent', () => {
         jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
         TestBed.configureTestingModule({
             imports: [
-                BrowserAnimationsModule,
-                SharedTestingModule.forRoot(),
-                SharedModule.forRoot(),
-                RouterTestingModule,
+                AuthTestingModule,
                 CoreModule.forRoot(),
                 StoreModule.forRoot(forApplication.reducers),
                 EffectsModule.forRoot([UserEffects]),

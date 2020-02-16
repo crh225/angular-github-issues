@@ -14,7 +14,7 @@ export class UserAuthComponent {
 
     public token = '';
     public user: any = null;
-    public imageUrl = 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png';
+    public imageUrl = 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';
 
     constructor(
         public afAuth: AngularFireAuth,

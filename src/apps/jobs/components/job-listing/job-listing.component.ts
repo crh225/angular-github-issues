@@ -14,7 +14,6 @@ export class JobListingComponent implements OnInit {
     jobs: Observable<any>;
 
     constructor(public snackBar: MatSnackBar, public afAuth: AngularFireAuth, db: AngularFirestore) {
-        //this.afAuth.auth.signInAnonymously();
         this.jobs = db.collection('jobs').valueChanges();
         this._db = db;
     }

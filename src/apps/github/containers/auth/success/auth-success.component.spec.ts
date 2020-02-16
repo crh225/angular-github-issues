@@ -13,16 +13,14 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../../../../../environments/environment';
+import { AuthTestingModule } from '../auth-testing/auth-testing.module';
 
 
 describe('UserAuthSuccessComponent', () => {
     beforeEach((() => {
         TestBed.configureTestingModule({
             imports: [
-                BrowserAnimationsModule,
-                SharedTestingModule.forRoot(),
-                SharedModule.forRoot(),
-                RouterTestingModule,
+                AuthTestingModule,
                 CoreModule.forRoot(),
                 StoreModule.forRoot(forApplication.reducers),
                 EffectsModule.forRoot([UserEffects]),

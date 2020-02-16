@@ -12,15 +12,13 @@ import { CoreModule } from '../../../../core';
 import { SharedTestingModule, SharedModule } from '../../../shared';
 import { UserEffects } from '../../../store';
 import { UserAuthFacebookComponent } from './auth-facebook.componnet';
+import { AuthTestingModule } from '../auth-testing/auth-testing.module';
 
 describe('UserAuthFacebookComponent', () => {
     beforeEach((() => {
         TestBed.configureTestingModule({
             imports: [
-                BrowserAnimationsModule,
-                SharedTestingModule.forRoot(),
-                SharedModule.forRoot(),
-                RouterTestingModule,
+                AuthTestingModule,
                 CoreModule.forRoot(),
                 StoreModule.forRoot(forApplication.reducers),
                 EffectsModule.forRoot([UserEffects])

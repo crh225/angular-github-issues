@@ -7,6 +7,8 @@ import { CoreModule } from '../core';
 import {
   SearchComponent, JobListingComponent
 } from '../jobs';
+import { StickyFooterComponent } from './components/sticky-footer/sticky-footer.component';
+import { AddJobComponent } from './containers/add-job/add-job.component';
 
 @NgModule({
   imports: [
@@ -18,7 +20,9 @@ import {
   ],
   declarations: [JobComponent,
     JobListingComponent,
-    SearchComponent
+    SearchComponent,
+    StickyFooterComponent,
+    AddJobComponent
   ]
 })
 export class JobModule { }

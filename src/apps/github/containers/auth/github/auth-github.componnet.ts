@@ -9,7 +9,7 @@ import * as firebase from 'firebase/app';
 export class UserAuthGithubComponent {
 
     public user: any = null;
-    public imageUrl = 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png';
+    public imageUrl = 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';
     private provider = new firebase.auth.GithubAuthProvider();
 
     constructor() {

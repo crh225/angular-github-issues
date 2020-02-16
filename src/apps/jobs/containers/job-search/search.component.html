@@ -9,3 +9,8 @@
     </mat-card-footer>
 </mat-card>
 <app-job-listing></app-job-listing>
+<app-sticky-footer>
+    <a [routerLink]="['/jobs/add']" preserveQueryParams preserveFragment>
+        <button mat-button color="primary">Add New Job</button>
+    </a>
+</app-sticky-footer>

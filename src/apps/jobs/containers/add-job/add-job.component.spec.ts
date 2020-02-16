@@ -1,25 +1,34 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed, async } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CoreModule } from '../../../core';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../../../../environments/environment';
 import { AddJobComponent } from './add-job.component';
 
-describe('AddJobComponent', () => {
-  let component: AddJobComponent;
-  let fixture: ComponentFixture<AddJobComponent>;
 
-  beforeEach(async(() => {
+describe('AddJobComponent', () => {
+  beforeEach((() => {
+    jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
     TestBed.configureTestingModule({
-      declarations: [ AddJobComponent ]
-    })
-    .compileComponents();
+      imports: [BrowserAnimationsModule,
+        CoreModule.forRoot(),
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+        AngularFireAuthModule, // imports firebase/auth, only needed for auth features
+      ],
+      declarations: [AddJobComponent],
+      providers: [
+      ]
+    }).compileComponents();
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(AddJobComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  it('should create the job search component', ((done: any) => {
+    const fixture = TestBed.createComponent(AddJobComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
+    done();
+  }));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });

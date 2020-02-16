@@ -25,7 +25,7 @@ export class UserAuthSuccessComponent {
             localStorage.clear();
             this.user = undefined;
             this.store.dispatch(new userActions.SetApiToken(undefined));
-            this.imageUrl = 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png';
+            this.imageUrl = 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';
         }).catch((error) => {
             console.log(error);
         });

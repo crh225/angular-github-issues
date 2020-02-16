@@ -26,18 +26,7 @@ export class AddJobComponent implements OnInit {
   jobCollectionRef: AngularFirestoreCollection<any>;
 
   constructor(public snackBar: MatSnackBar, public afAuth: AngularFireAuth, db: AngularFirestore) {
-    this.jobs = db.collection('jobs').valueChanges();
     this._db = db;
-    this.jobCollectionRef = db.collection<any>('jobs');
-    this.jobs = this.jobCollectionRef
-      .snapshotChanges()
-      .pipe(map(actions => {
-        return actions.map(a => {
-          const data = a.payload.doc.data();
-          const id = a.payload.doc.id;
-          return { id, ...data };
-        });
-      }));
   }
 
   ngOnInit(): void {

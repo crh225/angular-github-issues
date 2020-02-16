@@ -15,16 +15,8 @@ import { UserAuthComponent } from './auth.component';
 import { UserAuthGithubComponent } from './github';
 import { UserAuthFacebookComponent } from './facebook';
 import { UserAuthGoogleComponent } from './google';
+import { environment } from '../../../../environments/environment';
 
-// todo: put this in a config file
-export const firebaseConfig = {
-    apiKey: 'AIzaSyB_oLOM5CglXXkH3A1a3oauOUxysPcjmzY',
-    authDomain: 'chris-house.firebaseapp.com',
-    databaseURL: 'https://chris-house.firebaseio.com',
-    projectId: 'chris-house',
-    storageBucket: 'chris-house.appspot.com',
-    messagingSenderId: '524971702368'
-};
 
 describe('UserAuthComponent', () => {
     beforeEach((() => {
@@ -38,7 +30,7 @@ describe('UserAuthComponent', () => {
                 CoreModule.forRoot(),
                 StoreModule.forRoot(forApplication.reducers),
                 EffectsModule.forRoot([UserEffects]),
-                AngularFireModule.initializeApp(firebaseConfig),
+                AngularFireModule.initializeApp(environment.firebaseConfig),
                 AngularFirestoreModule, // imports firebase/firestore, only needed for database features
                 AngularFireAuthModule // imports firebase/auth, only needed for auth features
             ],

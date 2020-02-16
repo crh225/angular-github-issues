@@ -23,18 +23,8 @@ import createNgrxMiddleware from 'logrocket-ngrx';
 
 const logrocketMiddleware = createNgrxMiddleware(LogRocket);
 export function getMetaReducers(): MetaReducer<any>[] {
-    return [logrocketMiddleware];
+  return [logrocketMiddleware];
 }
-
-// todo: put this in a config file
-export const firebaseConfig = {
-  apiKey: 'AIzaSyB_oLOM5CglXXkH3A1a3oauOUxysPcjmzY',
-  authDomain: 'chris-house.firebaseapp.com',
-  databaseURL: 'https://chris-house.firebaseio.com',
-  projectId: 'chris-house',
-  storageBucket: 'chris-house.appspot.com',
-  messagingSenderId: '524971702368'
-};
 
 @NgModule({
   imports: [AppRoutes,
@@ -48,9 +38,9 @@ export const firebaseConfig = {
     StoreModule.forRoot(forApplication.reducers),
     EffectsModule.forRoot([IssueEffects, RepoEffects, UserEffects]),
     StoreDevtoolsModule.instrument({
-         maxAge: 25 //  Retains last 25 states
+      maxAge: 25 //  Retains last 25 states
     }),
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     AngularFireDatabaseModule,
@@ -59,7 +49,7 @@ export const firebaseConfig = {
   declarations: [AppComponent],
   bootstrap: [AppComponent],
   providers: [
-      Actions,
+    Actions,
     IssueEffects,
     {
       provide: USER_PROVIDED_META_REDUCERS,
@@ -67,4 +57,4 @@ export const firebaseConfig = {
     }]
 })
 export class AppModule {
- }
+}

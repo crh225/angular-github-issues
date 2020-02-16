@@ -7,6 +7,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { JobListingComponent } from '../../components';
+import { environment } from '../../../../environments/environment';
 
 // todo: put this in a config file
 export const firebaseConfig = {
@@ -24,7 +25,7 @@ describe('JobSearchComponent', () => {
         TestBed.configureTestingModule({
             imports: [BrowserAnimationsModule,
                 CoreModule.forRoot(),
-                AngularFireModule.initializeApp(firebaseConfig),
+                AngularFireModule.initializeApp(environment.firebaseConfig),
                 AngularFirestoreModule, // imports firebase/firestore, only needed for database features
                 AngularFireAuthModule, // imports firebase/auth, only needed for auth features
             ],

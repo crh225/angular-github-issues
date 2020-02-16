@@ -12,16 +12,8 @@ import { CoreModule } from '../../../../core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../../../../../environments/environment';
 
-// todo: put this in a config file
-export const firebaseConfig = {
-    apiKey: 'AIzaSyB_oLOM5CglXXkH3A1a3oauOUxysPcjmzY',
-    authDomain: 'chris-house.firebaseapp.com',
-    databaseURL: 'https://chris-house.firebaseio.com',
-    projectId: 'chris-house',
-    storageBucket: 'chris-house.appspot.com',
-    messagingSenderId: '524971702368'
-};
 
 describe('UserAuthSuccessComponent', () => {
     beforeEach((() => {
@@ -34,7 +26,7 @@ describe('UserAuthSuccessComponent', () => {
                 CoreModule.forRoot(),
                 StoreModule.forRoot(forApplication.reducers),
                 EffectsModule.forRoot([UserEffects]),
-                AngularFireModule.initializeApp(firebaseConfig),
+                AngularFireModule.initializeApp(environment.firebaseConfig),
                 AngularFirestoreModule, // imports firebase/firestore, only needed for database features
                 AngularFireAuthModule // imports firebase/auth, only needed for auth features
             ],

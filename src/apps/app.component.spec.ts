@@ -1,4 +1,4 @@
-import { TestBed,  } from '@angular/core/testing';
+import { TestBed, } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { APP_BASE_HREF } from '@angular/common';
@@ -12,15 +12,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import * as LogRocket from 'logrocket';
-// todo: put this in a config file
-export const firebaseConfig = {
-  apiKey: 'AIzaSyB_oLOM5CglXXkH3A1a3oauOUxysPcjmzY',
-  authDomain: 'chris-house.firebaseapp.com',
-  databaseURL: 'https://chris-house.firebaseio.com',
-  projectId: 'chris-house',
-  storageBucket: 'chris-house.appspot.com',
-  messagingSenderId: '524971702368'
-};
+import { environment } from '../environments/environment';
 
 describe('AppComponent', () => {
   beforeEach((() => {
@@ -35,7 +27,7 @@ describe('AppComponent', () => {
         SharedModule.forRoot(),
         CoreModule.forRoot(),
         BrowserAnimationsModule,
-        AngularFireModule.initializeApp(firebaseConfig),
+        AngularFireModule.initializeApp(environment.firebaseConfig),
         AngularFirestoreModule, // imports firebase/firestore, only needed for database features
         AngularFireAuthModule, // imports firebase/auth, only needed for auth features
       ],

@@ -8,27 +8,31 @@
             </mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-            <form class="job-form">
+            <form class="job-form" [formGroup]="jobForm">
                 <mat-form-field class="full-width">
                     <mat-label>Company</mat-label>
-                    <input matInput placeholder="Ex. Google">
+                    <input matInput placeholder="Ex. Google" formControlName="company" required>
+                    <mat-error *ngIf="!jobForm.get('company').valid">Required</mat-error>
                 </mat-form-field>
                 <mat-form-field class="full-width">
                     <mat-label>Job Title</mat-label>
-                    <input matInput placeholder="Ex. Sr. Software Engineer">
+                    <input matInput placeholder="Ex. Sr. Software Engineer" formControlName="title" required>
+                    <mat-error *ngIf="!jobForm.get('title').valid">Required</mat-error>
                 </mat-form-field>
                 <mat-form-field class="full-width">
                     <mat-label>Salary</mat-label>
-                    <input matInput placeholder="Ex. 60 per hour">
+                    <input matInput placeholder="Ex. 60 per hour" formControlName="salary">
                 </mat-form-field>
                 <mat-form-field class="full-width">
                     <mat-label>Job Description</mat-label>
-                    <textarea matInput placeholder="Ex. Looking for an Angular developer..."></textarea>
+                    <textarea matInput placeholder="Ex. Looking for an Angular developer..."
+                        formControlName="description" required></textarea>
+                    <mat-error *ngIf="!jobForm.get('description').valid">Required</mat-error>
                 </mat-form-field>
             </form>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button color="accent" (click)="addJob()">Add Job</button>
+            <button mat-raised-button color="accent" (click)="addJob()" [disabled]="!jobForm.valid">Add Job</button>
         </mat-card-actions>
     </mat-card>
 </div>

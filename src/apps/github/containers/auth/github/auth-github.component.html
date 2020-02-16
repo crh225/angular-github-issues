@@ -11,13 +11,14 @@
         <br>
         <br>
         <p>
-            This will redirect you to Github where you will login. The only premission it requests is your email address. Then you are
+            This will redirect you to Github where you will login. The only premission it requests is your email
+            address. Then you are
             added as a user to this Firebase application, so you can make authenticated Github api calls.
         </p>
     </mat-card-content>
     <mat-card-actions>
         <button *ngIf="!user" mat-raised-button color="accent" (click)="signIn(user)">Login with
-            <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" width="80px">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" width="80px">
         </button>
     </mat-card-actions>
 </mat-card>

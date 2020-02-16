@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActionsSubject, Store } from '@ngrx/store';
-import * as repoActions from '@app/github/store/actions';
-import * as fromRoot from '@app/github/store/reducers';
-import { RepoSearchResult } from '@app/github/shared/models';
+import * as repoActions from '../../store/actions';
+import * as fromRoot from '../../store/reducers';
+import { RepoSearchResult } from '../../shared/models';
 
 @Component({
   selector: 'app-repo-search',
@@ -23,24 +23,24 @@ export class RepoSearchComponent implements OnInit {
     public snackBar: MatSnackBar) {
 
     this.actionsSubject
-        .asObservable()
-        .subscribe((data: any) => {
-            switch (data.type) {
-                case '[Repo] LOAD ALL SUCCESS':
-                    this.repoCollection = data.payload;
-                    this.searching = false;
-                    break;
-                case '[Repo] LOAD FAILURE':
-                    this.searching = false;
-                    this.snackBar.open(data.payload.error.message, 'Ok', {
-                      duration: 2000,
-                    });
-                    break;
-                default:
-            }
-        });
+      .asObservable()
+      .subscribe((data: any) => {
+        switch (data.type) {
+          case '[Repo] LOAD ALL SUCCESS':
+            this.repoCollection = data.payload;
+            this.searching = false;
+            break;
+          case '[Repo] LOAD FAILURE':
+            this.searching = false;
+            this.snackBar.open(data.payload.error.message, 'Ok', {
+              duration: 2000,
+            });
+            break;
+          default:
+        }
+      });
 
-}
+  }
 
   ngOnInit() {
     this.store.dispatch(new repoActions.SetCurrentRepoId(undefined));

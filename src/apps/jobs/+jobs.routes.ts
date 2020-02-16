@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { JobComponent } from './+jobs.component';
-import { NotFoundComponent } from '@core/components/not-found';
-import {
-  SearchComponent
-} from '@app/jobs';
+import { NotFoundComponent } from '../core';
+import { SearchComponent } from './containers';
 
 const routes: Routes = [
   {

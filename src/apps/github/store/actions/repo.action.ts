@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Repo } from '@app/github/shared/models';
+import { Repo } from '../../shared/models';
 
 export const LOAD_ALL_REPOS = '[Repo] LOAD ALL';
 export const LOAD_ALL_REPOS_SUCCESS = '[Repo] LOAD ALL SUCCESS';
@@ -8,7 +8,7 @@ export const LOAD_REPO_FAILURE = '[Repo] LOAD FAILURE';
 
 export class LoadAllRepos implements Action {
     readonly type = LOAD_ALL_REPOS;
-    constructor(public payload: { searchName } ) { }
+    constructor(public payload: { searchName }) { }
 }
 
 export class LoadAllReposSuccess implements Action {

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { ActionsSubject, Store } from '@ngrx/store';
-import * as fromRoot from '@app/github/store/reducers';
+import * as fromRoot from '../store/reducers';
 
 
 @Injectable()
@@ -30,7 +30,7 @@ export class UserExistsGuard implements CanActivate {
                     return false;
                 }
             }),
-            take(1), );
+            take(1));
     }
 
     hasUser(id: string): Observable<boolean> {

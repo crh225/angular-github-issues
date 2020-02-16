@@ -1,7 +1,7 @@
 import { ActionReducer, Action, ActionReducerMap, MetaReducer, createFeatureSelector, createSelector } from '@ngrx/store';
 import { EntityState, createEntityAdapter, EntityAdapter } from '@ngrx/entity';
-import * as repoActions from '@app/github/store/actions/repo.action';
-import { Repo } from '@app/github/shared/models';
+import * as repoActions from '../../store/actions/repo.action';
+import { Repo } from '../../shared/models';
 
 
 // This adapter will allow is to manipulate contacts (mostly CRUD operations)
@@ -43,11 +43,11 @@ export function repoReducer(state: State = initialState, action: repoActions.Rep
         }
 
         case repoActions.LOAD_ALL_REPOS_SUCCESS: {
-            return {...state, ...repoAdapter.addAll(action.payload as Repo[], state) };
+            return { ...state, ...repoAdapter.addAll(action.payload as Repo[], state) };
         }
 
         case repoActions.LOAD_REPO_FAILURE: {
-            return {...state, error: action.payload };
+            return { ...state, error: action.payload };
         }
         default: {
             return state;

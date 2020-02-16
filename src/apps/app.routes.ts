@@ -9,11 +9,11 @@ const routes: Routes = [
   },
   {
     path: 'github',
-    loadChildren: () => import('@app/github/+github.module').then(m => m.GithubModule)
+    loadChildren: () => import('./github/+github.module').then(m => m.GithubModule)
   },
   {
     path: 'jobs',
-    loadChildren: () => import('@app/jobs/+jobs.module').then(m => m.JobModule)
+    loadChildren: () => import('./jobs/+jobs.module').then(m => m.JobModule)
   },
   { path: '**', redirectTo: 'NotFoundComponent' }
 ];
@@ -22,4 +22,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutes {}
+export class AppRoutes { }

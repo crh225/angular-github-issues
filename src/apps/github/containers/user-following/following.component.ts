@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {  ActionsSubject, Store } from '@ngrx/store';
-import * as fromRoot from '@app/github/store/reducers';
+import { ActionsSubject, Store } from '@ngrx/store';
+import * as fromRoot from '../../store/reducers';
 
 @Component({
     selector: 'app-user-following',

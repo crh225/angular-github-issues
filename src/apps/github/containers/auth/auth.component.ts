@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { ActionsSubject, Store } from '@ngrx/store';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
-import * as userActions from '@app/github/store/actions';
-import * as fromRoot from '@app/github/store/reducers';
+import * as userActions from '../../store/actions';
+import * as fromRoot from '../../store/reducers';
 
 @Component({
     selector: 'app-user-auth',

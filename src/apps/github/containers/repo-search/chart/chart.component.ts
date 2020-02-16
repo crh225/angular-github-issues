@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Repo } from '@app/github/shared/models';
+import { Repo } from '../../../shared/models';
 
 @Component({
   selector: 'app-chart-bar',

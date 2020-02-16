@@ -1,14 +1,17 @@
 import { TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { UserAuthFacebookComponent } from '@app/github';
-import { SharedModule } from '@app/github/shared';
-import * as forApplication from '@app/github/store/reducers';
+
+
+import * as forApplication from '../../../store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
-import { UserEffects } from '@app/github/store/effects';
+
 import { StoreModule } from '@ngrx/store';
 import { RouterTestingModule } from '@angular/router/testing';
-import { SharedTestingModule } from '@app/github/shared';
+
 import { CoreModule } from '../../../../core';
+import { SharedTestingModule, SharedModule } from '../../../shared';
+import { UserEffects } from '../../../store';
+import { UserAuthFacebookComponent } from './auth-facebook.componnet';
 
 describe('UserAuthFacebookComponent', () => {
     beforeEach((() => {

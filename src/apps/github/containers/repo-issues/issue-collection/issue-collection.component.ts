@@ -1,9 +1,9 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
-import { User } from '@app/github/shared/models';
-import { Issue } from '@app/github/shared/models';
-import { ActionsSubject, Store } from '@ngrx/store';
-import * as userActions from '@app/github/store/actions';
-import * as fromRoot from '@app/github/store/reducers';
+
+import { Store } from '@ngrx/store';
+import * as userActions from '../../../store/actions';
+import * as fromRoot from '../../../store/reducers';
+import { User, Issue } from '../../../shared';
 
 @Component({
   selector: 'app-issue-collection',
@@ -15,8 +15,7 @@ export class IssueCollectionComponent {
   @Input() repoIssueCollection: Issue[];
 
   constructor(
-    private store: Store<fromRoot.AppState>,
-    private actionsSubject: ActionsSubject) {
+    private store: Store<fromRoot.AppState>) {
   }
 
   setUser(user: User) {

@@ -1,14 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { UserAuthGoogleComponent } from '@app/github';
-import { SharedModule } from '@app/github/shared';
-import * as forApplication from '@app/github/store/reducers';
+import { SharedModule } from '../../../shared';
+import * as forApplication from '../../../store/reducers';
 import { EffectsModule, Actions } from '@ngrx/effects';
-import { UserEffects } from '@app/github/store/effects';
+import { UserEffects } from '../../../store/effects';
 import { StoreModule } from '@ngrx/store';
 import { RouterTestingModule } from '@angular/router/testing';
-import { SharedTestingModule } from '@app/github/shared';
+import { SharedTestingModule } from '../../../shared';
 import { CoreModule } from '../../../../core';
+import { UserAuthGoogleComponent } from './auth-google.componnet';
 
 describe('UserAuthGoogleComponent', () => {
     beforeEach((() => {

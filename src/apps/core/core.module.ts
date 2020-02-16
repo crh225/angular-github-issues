@@ -1,5 +1,5 @@
-import { NgModule, ModuleWithProviders  } from '@angular/core';
-import { NotFoundModule, SpinnerModule } from '@core/components';
+import { NgModule, ModuleWithProviders } from '@angular/core';
+
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
@@ -30,6 +30,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { SpinnerModule, NotFoundModule } from './components';
 
 const ModulesArray = [
   MatAutocompleteModule,
@@ -76,10 +77,10 @@ const ModulesArray = [
   ]
 })
 export class CoreModule {
-    static forRoot(): ModuleWithProviders<CoreModule> {
+  static forRoot(): ModuleWithProviders<CoreModule> {
     return {
       ngModule: CoreModule,
-      providers: [ ]
+      providers: []
     };
   }
 }

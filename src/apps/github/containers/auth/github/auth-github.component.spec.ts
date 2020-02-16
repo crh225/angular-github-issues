@@ -9,15 +9,13 @@ import { StoreModule } from '@ngrx/store';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SharedTestingModule } from '../../../shared';
 import { CoreModule } from '../../../../core';
+import { AuthTestingModule } from '../auth-testing/auth-testing.module';
 
 describe('UserAuthGithubComponent', () => {
     beforeEach((() => {
         TestBed.configureTestingModule({
             imports: [
-                BrowserAnimationsModule,
-                SharedTestingModule.forRoot(),
-                SharedModule.forRoot(),
-                RouterTestingModule,
+                AuthTestingModule,
                 CoreModule.forRoot(),
                 StoreModule.forRoot(forApplication.reducers),
                 EffectsModule.forRoot([UserEffects])

@@ -1,0 +1,39 @@
+<div class="p-15">
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title>
+                <strong>Add a new Job in Memphis</strong>
+            </mat-card-title>
+            <mat-card-subtitle>
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="job-form">
+                <mat-form-field class="full-width">
+                    <mat-label>Company</mat-label>
+                    <input matInput placeholder="Ex. Google">
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <mat-label>Job Title</mat-label>
+                    <input matInput placeholder="Ex. Sr. Software Engineer">
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <mat-label>Salary</mat-label>
+                    <input matInput placeholder="Ex. 60 per hour">
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <mat-label>Job Description</mat-label>
+                    <textarea matInput placeholder="Ex. Looking for an Angular developer..."></textarea>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="accent">Add Job</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+<app-sticky-footer>
+    <a href="javascript:history.back()">
+        <button mat-button color="primary">View All Jobs</button>
+    </a>
+</app-sticky-footer>

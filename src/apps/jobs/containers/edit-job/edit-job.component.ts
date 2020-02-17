@@ -34,24 +34,31 @@ export class EditJobComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.id = params.get('id');
-      this._db.collection<Jobs>('jobs').doc(params.get('id')).valueChanges().subscribe((item) => {
-        this.jobForm.patchValue(item);
-      });
+      this._db
+        .collection<Jobs>('jobs')
+        .doc(
+          params.get('id')
+        ).valueChanges()
+        .subscribe((item) => {
+          this.jobForm.patchValue(item);
+        });
     });
   }
 
   editJob() {
-    this._db.collection<any>('jobs').doc(this.id).update(
-      {
-        company: this.jobForm.get('company').value,
-        description: this.jobForm.get('description').value,
-        title: this.jobForm.get('title').value
-      }
-    ).then(() => {
-      this.snackBar.open('Job was updated successfully', 'Ok', {
-        duration: 2000,
+    this._db.collection<any>('jobs')
+      .doc(this.id)
+      .update(
+        {
+          company: this.jobForm.get('company').value,
+          description: this.jobForm.get('description').value,
+          title: this.jobForm.get('title').value
+        }
+      ).then(() => {
+        this.snackBar.open('Job was updated successfully', 'Ok', {
+          duration: 2000,
+        });
       });
-    });
   }
 
 }

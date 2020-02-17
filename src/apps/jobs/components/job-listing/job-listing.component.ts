@@ -11,6 +11,7 @@ import { map } from 'rxjs/operators';
     styleUrls: ['./job-listing.component.css']
 })
 export class JobListingComponent implements OnInit {
+
     _db: AngularFirestore;
     jobs: Observable<any>;
     jobCollectionRef: AngularFirestoreCollection<any>;
@@ -33,13 +34,14 @@ export class JobListingComponent implements OnInit {
     }
 
     delete(id: string): void {
-
-        this.jobCollectionRef.doc(id).delete().then(() => {
-            this.snackBar.open('Job was deleted successfully', 'Ok', {
-                duration: 2000,
+        this.jobCollectionRef
+            .doc(id)
+            .delete()
+            .then(() => {
+                this.snackBar.open('Job was deleted successfully', 'Ok', {
+                    duration: 2000,
+                });
             });
-        });
-
     }
 
 }

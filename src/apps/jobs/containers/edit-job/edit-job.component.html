@@ -2,7 +2,7 @@
     <mat-card class="card">
         <mat-card-header>
             <mat-card-title>
-                <strong>Add a new Job in Memphis</strong>
+                <strong>Edit Job</strong>
             </mat-card-title>
             <mat-card-subtitle>
             </mat-card-subtitle>
@@ -32,7 +32,8 @@
             </form>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button color="accent" (click)="addJob()" [disabled]="!jobForm.valid">Create Job</button>
+            <button mat-raised-button color="accent" (click)="editJob()" [disabled]="!jobForm.valid">Save
+                Changes</button>
         </mat-card-actions>
     </mat-card>
 </div>

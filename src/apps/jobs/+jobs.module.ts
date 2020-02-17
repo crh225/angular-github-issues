@@ -9,6 +9,7 @@ import {
 } from '../jobs';
 import { StickyFooterComponent } from './components/sticky-footer/sticky-footer.component';
 import { AddJobComponent } from './containers/add-job/add-job.component';
+import { EditJobComponent } from './containers/edit-job/edit-job.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { AddJobComponent } from './containers/add-job/add-job.component';
     JobListingComponent,
     SearchComponent,
     StickyFooterComponent,
-    AddJobComponent
+    AddJobComponent,
+    EditJobComponent
   ]
 })
 export class JobModule { }

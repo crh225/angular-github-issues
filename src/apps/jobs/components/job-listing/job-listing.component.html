@@ -13,8 +13,10 @@
                 {{j.description}}
             </mat-card-content>
             <mat-card-actions>
-                <button mat-raised-button color="accent">Apply</button>
-                <button mat-raised-button color="warn" (click)="delete(j.id)">Delete</button>
+                <a [routerLink]="['/jobs/edit', j.id]" preserveQueryParams preserveFragment>
+                    <button mat-button color="accent">Edit Job</button>
+                </a>
+                <button mat-button color="warn" (click)="delete(j.id)">Delete</button>
             </mat-card-actions>
         </mat-card>
     </div>

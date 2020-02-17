@@ -14,13 +14,11 @@ export class SearchComponent implements OnInit {
     jobs: Observable<any>;
 
     constructor(public snackBar: MatSnackBar, public afAuth: AngularFireAuth, db: AngularFirestore) {
-        //this.afAuth.auth.signInAnonymously();
         this.jobs = db.collection('jobs').valueChanges();
         this._db = db;
-     }
+    }
 
     ngOnInit() {
-        //this.snackBar.open('Jobs is a work in progress.', 'Ok');
     }
 
 }

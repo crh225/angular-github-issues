@@ -33,18 +33,19 @@ export class AddJobComponent implements OnInit {
   }
 
   addJob() {
-    const jobCollection = this._db.collection<Jobs>('jobs');
-    jobCollection.add(
-      {
-        company: this.jobForm.get('company').value,
-        description: this.jobForm.get('description').value,
-        title: this.jobForm.get('title').value
-      }
-    ).then(() => {
-      this.snackBar.open('Job was added successfully', 'Ok', {
-        duration: 2000,
+    this._db
+      .collection<Jobs>('jobs')
+      .add(
+        {
+          company: this.jobForm.get('company').value,
+          description: this.jobForm.get('description').value,
+          title: this.jobForm.get('title').value
+        }
+      ).then(() => {
+        this.snackBar.open('Job was added successfully', 'Ok', {
+          duration: 2000,
+        });
       });
-    });
   }
 
 }

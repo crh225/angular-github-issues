@@ -6,6 +6,7 @@ export const environment = {
     databaseURL: 'https://chris-house.firebaseio.com',
     projectId: 'chris-house',
     storageBucket: 'chris-house.appspot.com',
-    messagingSenderId: '524971702368'
+    messagingSenderId: '524971702368',
+    appId: '1:524971702368:web:4087daa10d90025776ab05'
   }
 };

@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Jobs } from '../../shared';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-add-job',
@@ -23,7 +22,6 @@ export class AddJobComponent implements OnInit {
     title: new FormControl('', Validators.required),
     salary: new FormControl('')
   });
-  jobCollectionRef: AngularFirestoreCollection<any>;
 
   constructor(public snackBar: MatSnackBar, public afAuth: AngularFireAuth, db: AngularFirestore) {
     this._db = db;
@@ -33,18 +31,24 @@ export class AddJobComponent implements OnInit {
   }
 
   addJob() {
-    const jobCollection = this._db.collection<Jobs>('jobs');
-    jobCollection.add(
-      {
-        company: this.jobForm.get('company').value,
-        description: this.jobForm.get('description').value,
-        title: this.jobForm.get('title').value
-      }
-    ).then(() => {
-      this.snackBar.open('Job was added successfully', 'Ok', {
-        duration: 2000,
+    this._db
+      .collection<Jobs>('jobs')
+      .add(
+        {
+          company: this.jobForm.get('company').value,
+          description: this.jobForm.get('description').value,
+          title: this.jobForm.get('title').value,
+          salary: this.jobForm.get('salary').value
+        }
+      ).then(() => {
+        this.snackBar.open('Job was added successfully', 'Ok', {
+          duration: 2000,
+        });
+      }).catch((error) => {
+        this.snackBar.open('An error has occured', 'Ok', {
+          duration: 2000,
+        });
       });
-    });
   }
 
 }

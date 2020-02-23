@@ -10,6 +10,7 @@ import {
 import { StickyFooterComponent } from './components/sticky-footer/sticky-footer.component';
 import { AddJobComponent } from './containers/add-job/add-job.component';
 import { EditJobComponent } from './containers/edit-job/edit-job.component';
+import { BadgeComponent } from './components/badge/badge.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { EditJobComponent } from './containers/edit-job/edit-job.component';
     SearchComponent,
     StickyFooterComponent,
     AddJobComponent,
-    EditJobComponent
+    EditJobComponent,
+    BadgeComponent
   ]
 })
 export class JobModule { }

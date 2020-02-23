@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Jobs } from '../../shared';
-import { ActivatedRoute, Router, ParamMap } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-edit-job',
@@ -52,10 +50,15 @@ export class EditJobComponent implements OnInit {
         {
           company: this.jobForm.get('company').value,
           description: this.jobForm.get('description').value,
-          title: this.jobForm.get('title').value
+          title: this.jobForm.get('title').value,
+          salary: this.jobForm.get('salary').value
         }
       ).then(() => {
         this.snackBar.open('Job was updated successfully', 'Ok', {
+          duration: 2000,
+        });
+      }).catch((error) => {
+        this.snackBar.open('An error has occured', 'Ok', {
           duration: 2000,
         });
       });

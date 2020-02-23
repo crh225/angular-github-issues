@@ -19,7 +19,7 @@ export class JobListingComponent implements OnInit {
     constructor(public snackBar: MatSnackBar, public afAuth: AngularFireAuth, db: AngularFirestore) {
         this._db = db;
         this.jobs = db
-            .collection<any>('jobs')
+            .collection<Jobs>('jobs')
             .snapshotChanges()
             .pipe(map(actions => {
                 return actions.map(a => {

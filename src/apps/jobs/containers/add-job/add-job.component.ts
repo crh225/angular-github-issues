@@ -5,7 +5,6 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Jobs } from '../../shared';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-add-job',

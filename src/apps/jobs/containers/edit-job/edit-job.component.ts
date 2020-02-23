@@ -45,7 +45,8 @@ export class EditJobComponent implements OnInit {
   }
 
   editJob() {
-    this._db.collection<any>('jobs')
+    this._db
+      .collection<Jobs>('jobs')
       .doc(this.id)
       .update(
         {

@@ -20,7 +20,7 @@ export class EditJobComponent implements OnInit {
     company: new FormControl('', Validators.required),
     description: new FormControl('', Validators.required),
     title: new FormControl('', Validators.required),
-    salary: new FormControl('')
+    salary: new FormControl('', [Validators.min(30000), Validators.max(200000)])
   });
   id = '';
   constructor(public snackBar: MatSnackBar,
@@ -53,7 +53,7 @@ export class EditJobComponent implements OnInit {
           company: this.filter.clean(this.jobForm.get('company').value),
           description: this.filter.clean(this.jobForm.get('description').value),
           title: this.filter.clean(this.jobForm.get('title').value),
-          salary: this.filter.clean(this.jobForm.get('salary').value)
+          salary: this.jobForm.get('salary').value
         }
       ).then(() => {
         this.snackBar.open('Job was updated successfully', 'Ok', {

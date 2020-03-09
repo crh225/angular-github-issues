@@ -1270,25 +1270,25 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ngrx/core/-/core-1.2.0.tgz#882b46abafa2e0e6d887cb71a1b2c2fa3e6d0dc6"
 
-"@ngrx/effects@9.0.0-beta.1":
-  version "9.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-9.0.0-beta.1.tgz#09b962a6d9a4e5304f939443a837edbce8829ebd"
-  integrity sha512-8V13gap7BIANwAL+sJnGyhB2JocNXtUl8rw9Kmjsrrcw+/9yQ/pwiHy2v+w4gHjhjkVCJN3Sigs+qCL+alr7nA==
+"@ngrx/effects@9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-9.0.0.tgz#fe9956911621183f7d1d75c606578cfa25750b73"
+  integrity sha512-6Rq7FsNZK26HqYlpOGCglKLenIkVOOKE0y6D/8KXjEJ1JlZWi00fdI7poclBGjm9pvMBGXfJA8a9MKuxb/t9cA==
 
-"@ngrx/entity@9.0.0-beta.1":
-  version "9.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-9.0.0-beta.1.tgz#790f5b5d5523ca784bb410e3f3d63f44c1015229"
-  integrity sha512-CSQzdDACsOVHX5bNL4kUxmSfWvBV9sbOnNCwFQrnYODy39mcvzKF2Hi+nZkOJVPHsWDmX6N9WmFYIMlMJtNsNw==
+"@ngrx/entity@9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-9.0.0.tgz#7a918601794c6adce3c9e7c471ecd7f923e50a33"
+  integrity sha512-0NQ+ppwiLuXtRZ2t79qdudbJhGlmuX2Qh6ORF9hplQoQn8Nl3BUp/TrH8SaAwISbg/B4EOhLWFmLVkXN8HZL8w==
 
-"@ngrx/store-devtools@9.0.0-beta.1":
-  version "9.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-9.0.0-beta.1.tgz#54f519793f6f34ca3f8352c02d05687e8c72d7c2"
-  integrity sha512-XMdAzUAPhptdr2SaOlB2nrzdnFnIIUrxPXHp14AluHHeEjucUC0LRZNRdfcZpKtqBtdj06KQ2XOglQ4BvUD05w==
+"@ngrx/store-devtools@9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-9.0.0.tgz#2eba2739f4a4c90f6cdd0036fb935162643ed435"
+  integrity sha512-Vj8sj8GclbSbnYCS8eqZXTOYDdip1nnjKhkYClUg2oFPh67haaCmvh7TXITnX8PpgDtj5akF84Xw9/1HRiG8mg==
 
-"@ngrx/store@9.0.0-beta.1":
-  version "9.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-9.0.0-beta.1.tgz#00c11dd05090a93334f42adce0513cc882137e16"
-  integrity sha512-awYIpLXDqRFiLYaYLXI/W3JsYSD5nlo/161cAoPu6+blRqIvLVFQvOj8iNOT25aeM1QL3oWFwe6xnhDdYX0E0Q==
+"@ngrx/store@9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-9.0.0.tgz#ef45e241ba9cf401d5280fa99b09f2fb3fc3278d"
+  integrity sha512-QnmfXJ4G2jp+vFaqT5Qfp6h0J9OHxfDKI2RbnMU93Tq1Xd/WVPzXnOQGjILBjwwWI6RFkSdIpUoQONr7VOW63g==
 
 "@ngtools/webpack@9.0.5":
   version "9.0.5"

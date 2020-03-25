@@ -60,7 +60,7 @@
     "@angular/language-service": "9.0.7",
     "@types/jasmine": "3.5.10",
     "@types/jasminewd2": "2.0.8",
-    "@types/node": "12.12.26",
+    "@types/node": "12.12.31",
     "codelyzer": "5.2.1",
     "firebase-tools": "7.15.1",
     "husky": "4.2.3",

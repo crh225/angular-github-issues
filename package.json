@@ -55,8 +55,8 @@
   },
   "private": true,
   "devDependencies": {
-    "@angular-devkit/build-angular": "0.901.0",
-    "@angular/cli": "9.1.0",
+    "@angular-devkit/build-angular": "0.901.1",
+    "@angular/cli": "9.1.1",
     "@angular/language-service": "9.0.7",
     "@types/jasmine": "3.5.10",
     "@types/jasminewd2": "2.0.8",

@@ -1,8 +1,59 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.10.1
+version: v1.14.1
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:moment:20170905':
     - ng2-charts > chart.js > moment:
         patched: '2018-01-19T23:23:08.321Z'
+  SNYK-JS-LODASH-567746:
+    - ng2-charts > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > @snyk/ruby-semver > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > inquirer > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > snyk-config > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/ruby-semver > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > snyk-docker-plugin > @snyk/rpm-parser > eslint > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > snyk-docker-plugin > @snyk/rpm-parser > eslint > table > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > graphlib > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > snyk-nodejs-lockfile-parser > snyk-config > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > graphlib > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > snyk-config > lodash:
+        patched: '2020-04-30T15:32:44.147Z'
+    - snyk > snyk-docker-plugin > @snyk/rpm-parser > eslint > inquirer > lodash:
+        patched: '2020-04-30T15:32:44.147Z'

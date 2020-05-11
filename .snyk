@@ -1,8 +1,11 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.10.1
+version: v1.14.1
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:moment:20170905':
     - ng2-charts > chart.js > moment:
         patched: '2018-01-19T23:23:08.321Z'
+  SNYK-JS-LODASH-567746:
+    - snyk > snyk-docker-plugin > snyk-nodejs-lockfile-parser > snyk-config > lodash:
+        patched: '2020-05-11T12:33:41.517Z'

@@ -74,7 +74,7 @@
     "logrocket-ngrx": "0.1.1",
     "protractor": "5.4.3",
     "ts-node": "8.10.0",
-    "tslint": "6.1.0",
+    "tslint": "6.1.2",
     "typescript": "3.7.5"
   },
   "sync": true

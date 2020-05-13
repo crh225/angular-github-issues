@@ -72,7 +72,7 @@
     "karma-jasmine": "1.1.2",
     "karma-jasmine-html-reporter": "0.2.2",
     "logrocket-ngrx": "0.1.1",
-    "protractor": "5.4.4",
+    "protractor": "7.0.0",
     "ts-node": "8.10.1",
     "tslint": "6.1.2",
     "typescript": "3.8.3"

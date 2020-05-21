@@ -18,7 +18,7 @@
     "@angular/platform-server": "9.1.9",
     "@angular/router": "9.1.9",
     "@angular/service-worker": "9.1.9",
-    "@firebase/app": "0.6.3",
+    "@firebase/app": "0.6.4",
     "@firebase/app-types": "0.6.0",
     "@ngrx/core": "1.2.0",
     "@ngrx/effects": "9.1.1",

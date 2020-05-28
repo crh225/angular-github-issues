@@ -1465,25 +1465,25 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ngrx/core/-/core-1.2.0.tgz#882b46abafa2e0e6d887cb71a1b2c2fa3e6d0dc6"
 
-"@ngrx/effects@9.1.1":
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-9.1.1.tgz#3d1db189c1c37dcbb4be0d48cbb35ff06fc26030"
-  integrity sha512-HWeAAxsQugwUDTJAwJaxFcznylFFGCtF3jEbIqh08BJp22y+eoyx+UxWm1I4/k0LSJKKay2MvGhm7+gdPXXjmg==
+"@ngrx/effects@9.2.0":
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-9.2.0.tgz#155bfcfd528aa993fd19f60f9536385984a80910"
+  integrity sha512-8V09zDIPehGpzgfcgyczelovsVYJvDQhN9wHt37K5A+YCG0CI8nj8FmKokHATwv/S62YqFrOVnr/TZacxpDhBw==
 
-"@ngrx/entity@9.1.1":
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-9.1.1.tgz#3816fad14d66e8d1e876b9d2d377eac3d88a9f97"
-  integrity sha512-h+QjS6wz8xjtz1/HXpJo6nsD0qUb2Xb2OjKyMlbHb/cuePxa6rQV0XFypGeJNR72E0UX5GecF2LSZPQ1OVxL4g==
+"@ngrx/entity@9.2.0":
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-9.2.0.tgz#4acdd74edf72f7ab061ca9295ee323d1978a4329"
+  integrity sha512-xSnS4EmksfvIobl2KMpljE1RMYuJGq7j5cCb9TnlsXkEc7cUa0TyGviSsxceSpk9WKtKARPR/AcVrVCESucF6Q==
 
-"@ngrx/store-devtools@9.1.1":
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-9.1.1.tgz#9d971c6492b25ae21a822b8a63ac948aca96dc58"
-  integrity sha512-qPFcba0SRBYdVytaokZpX9vdiH8sssMh6o+EWo9EI3DsiciaqFMrOqoVTssp/+4y7WBQG1fk/A2pIbdiBUDUxQ==
+"@ngrx/store-devtools@9.2.0":
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-9.2.0.tgz#298b86b0c4ea483313b67d64a68b2d3376a5a04f"
+  integrity sha512-/FvgcpjO4IvwNFnRVoHGikAvckr6fxKf4NgYoTQ9giI8xavolLvuQUHxzH20legi5dgZz34ii2m2g1Q7OxEV8w==
 
-"@ngrx/store@9.1.1":
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-9.1.1.tgz#05eaaaae6c01d7058fae7d87d423ae33e86543b9"
-  integrity sha512-QxoNx+bfHb/3jkIsp/K+EnLodkY9zxHZIgaCXdkLPUzN5BUsCOLT6PLX0p1NUaBfJT/haBv7dAx7jGbSnrnUKA==
+"@ngrx/store@9.2.0":
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-9.2.0.tgz#39f663f98b5332b33c8d197be3ab08bafd85bc88"
+  integrity sha512-V8AI3mxbMztVpbZpALkLZYlGkofKcu9GaOCY5e+sZ1VcJ90oxhFjBpnmd6MuVdmhep1XAHALb1B8ZbBFn+xsgQ==
 
 "@ngtools/webpack@9.1.7":
   version "9.1.7"

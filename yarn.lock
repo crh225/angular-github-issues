@@ -1165,19 +1165,6 @@
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.6.1.tgz#dcbd23030a71c0c74fc95d4a3f75ba81653850e9"
   integrity sha512-L/ZnJRAq7F++utfuoTKX4CLBG5YR7tFO3PLzG1/oXXKEezJ0kRL3CMRoueBEmTCzVb/6SIs2Qlaw++uDgi5Xyg==
 
-"@firebase/app@0.6.5":
-  version "0.6.5"
-  resolved "https://registry.yarnpkg.com/@firebase/app/-/app-0.6.5.tgz#8263c296b3e83e27444e2cc61407c51730f99553"
-  integrity sha512-rhId5P4egyaVp4HaLsqxV1dJYWbjAyyTnoW8r6t2uXyUGBKUiv+tdK97abkHCo4UQwq/GvUu0Drd96Cm7nEIeA==
-  dependencies:
-    "@firebase/app-types" "0.6.1"
-    "@firebase/component" "0.1.13"
-    "@firebase/logger" "0.2.5"
-    "@firebase/util" "0.2.48"
-    dom-storage "2.1.0"
-    tslib "1.11.1"
-    xmlhttprequest "1.8.0"
-
 "@firebase/app@0.6.6":
   version "0.6.6"
   resolved "https://registry.yarnpkg.com/@firebase/app/-/app-0.6.6.tgz#94dfe36f3089d97d7963c1b36fdf125cc249350b"
@@ -1207,14 +1194,6 @@
   integrity sha512-NTQY9luV70XUA6zGYOWloDSaOT+l0/R4u3W7ptqVCfZNc4DAt7euUkTbj7SDD14902sHF54j+tk5kmpEmMd0jA==
   dependencies:
     "@firebase/auth-types" "0.10.1"
-
-"@firebase/component@0.1.13":
-  version "0.1.13"
-  resolved "https://registry.yarnpkg.com/@firebase/component/-/component-0.1.13.tgz#b4aaaae3a8b7c2a591de21d2c713ca271a3723d5"
-  integrity sha512-DuSIM96NQkE3Yo77IOa5BWw8VBdvCR5cbMLNiFT4X3dTU15Dm0zHjncQHt/6rQpABGNYWAfOCJmSU1v6vc3DFA==
-  dependencies:
-    "@firebase/util" "0.2.48"
-    tslib "1.11.1"
 
 "@firebase/component@0.1.14":
   version "0.1.14"
@@ -1374,13 +1353,6 @@
     "@firebase/storage-types" "0.3.12"
     "@firebase/util" "0.2.49"
     tslib "^1.11.1"
-
-"@firebase/util@0.2.48":
-  version "0.2.48"
-  resolved "https://registry.yarnpkg.com/@firebase/util/-/util-0.2.48.tgz#5f1d7a399f3208c08ec9d47cfec7ae07d1eaa6d1"
-  integrity sha512-6Wzq6IBF//3mrMTmTQ+JmceM0PMQpxV2GVfXhZn/4sMMkkhB0MA908nPDnatoHwUKyWE3BMw+uTLkyBnkuTu5A==
-  dependencies:
-    tslib "1.11.1"
 
 "@firebase/util@0.2.49":
   version "0.2.49"
@@ -10819,10 +10791,10 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@1.345.1:
-  version "1.345.1"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.345.1.tgz#f2b4466ce2fc33080502c452fced418d6856a5a1"
-  integrity sha512-kxCDbAmQdHApQiAdqYfNNBGsfO3YyYa85QO8SC8B8WpsjCkVJGidyp/b3BSJWYywyBfqA8eDsPCNEXhwAFPz1w==
+snyk@1.346.0:
+  version "1.346.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.346.0.tgz#c94646a7ca109a329095419542df92d10df9709f"
+  integrity sha512-uwJDC0CRefppngm1J1M+Sja5CVfdmzLYkxGYp3ZYXrzvd912pgzrdYm8ciUL5a8x1/C+2L0iZ09W68daSuObhA==
   dependencies:
     "@snyk/cli-interface" "2.8.0"
     "@snyk/dep-graph" "1.18.3"

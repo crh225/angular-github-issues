@@ -5,7 +5,6 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Jobs } from '../../shared';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import * as Filter from 'bad-words';
 @Component({
   selector: 'app-add-job',
   templateUrl: './add-job.component.html',
@@ -13,7 +12,6 @@ import * as Filter from 'bad-words';
 })
 export class AddJobComponent implements OnInit {
 
-  filter = new Filter();
   _db: AngularFirestore;
   jobs: Observable<any>;
   jobForm = new FormGroup({
@@ -35,9 +33,9 @@ export class AddJobComponent implements OnInit {
       .collection<Jobs>('jobs')
       .add(
         {
-          company: this.filter.clean(this.jobForm.get('company').value),
-          description: this.filter.clean(this.jobForm.get('description').value),
-          title: this.filter.clean(this.jobForm.get('title').value),
+          company: (this.jobForm.get('company').value),
+          description: (this.jobForm.get('description').value),
+          title: (this.jobForm.get('title').value),
           salary: this.jobForm.get('salary').value
         }
       ).then(() => {

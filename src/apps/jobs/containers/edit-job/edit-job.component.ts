@@ -5,7 +5,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Jobs } from '../../shared';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import * as Filter from 'bad-words';
 
 @Component({
   selector: 'app-edit-job',
@@ -14,7 +13,6 @@ import * as Filter from 'bad-words';
 })
 export class EditJobComponent implements OnInit {
 
-  filter = new Filter();
   _db: AngularFirestore;
   jobForm = new FormGroup({
     company: new FormControl('', Validators.required),
@@ -50,9 +48,9 @@ export class EditJobComponent implements OnInit {
       .doc(this.id)
       .update(
         {
-          company: this.filter.clean(this.jobForm.get('company').value),
-          description: this.filter.clean(this.jobForm.get('description').value),
-          title: this.filter.clean(this.jobForm.get('title').value),
+          company: (this.jobForm.get('company').value),
+          description: (this.jobForm.get('description').value),
+          title: (this.jobForm.get('title').value),
           salary: this.jobForm.get('salary').value
         }
       ).then(() => {

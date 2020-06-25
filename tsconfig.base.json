@@ -1,0 +1,18 @@
+{
+  "compileOnSave": false,
+  "angularCompilerOptions": {
+    "enableIvy": true
+  },
+  "compilerOptions": {
+    "module": "esnext",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "lib": ["es2016", "dom"]
+  },
+  "include": ["src/**/*"]
+}

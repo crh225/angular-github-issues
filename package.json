@@ -31,7 +31,7 @@
     "firebase": "7.15.5",
     "logrocket": "1.0.9",
     "ng2-charts": "2.3.2",
-    "rxjs": "6.5.5",
+    "rxjs": "6.6.0",
     "tslib": "2.0.0",
     "zone.js": "0.10.3"
   },

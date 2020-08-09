@@ -30,7 +30,7 @@
     "core-js": "2.5.7",
     "firebase": "7.15.5",
     "logrocket": "1.0.9",
-    "ng2-charts": "2.3.2",
+    "ng2-charts": "2.3.3",
     "rxjs": "6.6.2",
     "tslib": "2.0.1",
     "zone.js": "0.10.3"

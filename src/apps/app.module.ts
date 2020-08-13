@@ -44,7 +44,6 @@ export function getMetaReducers(): MetaReducer<any>[] {
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     AngularFireDatabaseModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: false })
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],

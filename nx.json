@@ -1,0 +1,21 @@
+{
+  "npmScope": "angular-github-issues",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "angular-github-issues": {
+      "tags": []
+    },
+    "angular-github-issues-e2e": {
+      "tags": []
+    }
+  }
+}

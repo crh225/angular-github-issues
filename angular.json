@@ -1,29 +1,36 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "newProjectRoot": "",
   "projects": {
     "angular-github-issues": {
-      "root": "",
-      "sourceRoot": "src",
+      "root": "apps/angular-github-issues",
+      "sourceRoot": "apps/angular-github-issues/src",
       "projectType": "application",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "aot": true,
-            "outputPath": "dist",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "tsConfig": "src/tsconfig.app.json",
-            "polyfills": "src/polyfills.ts",
+            "outputPath": "dist/apps/angular-github-issues",
+            "index": "apps/angular-github-issues/src/index.html",
+            "main": "apps/angular-github-issues/src/main.ts",
+            "tsConfig": "apps/angular-github-issues/tsconfig.app.json",
+            "polyfills": "apps/angular-github-issues/src/polyfills.ts",
             "assets": [
-              "src/assets",
-              "src/favicon.ico"
+              "apps/angular-github-issues/src/assets",
+              "apps/angular-github-issues/src/favicon.ico"
+            ],
+            "allowedCommonJsDependencies": [
+              "@firebase/database",
+              "@firebase/app",
+              "chart.js",
+              "firebase/app",
+              "@firebase/firestore"
             ],
             "styles": [
-              "src/styles.css",
-              "src/unicorn-app-theme.scss"
+              "apps/angular-github-issues/src/styles.css",
+              "apps/angular-github-issues/src/unicorn-app-theme.scss"
             ],
             "scripts": []
           },
@@ -43,12 +50,11 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "serviceWorker": true,
-              "ngswConfigPath": "src/ngsw-config.json",
+              "serviceWorker": false,
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "apps/angular-github-issues/src/environments/environment.ts",
+                  "with": "apps/angular-github-issues/src/environments/environment.prod.ts"
                 }
               ]
             }
@@ -74,18 +80,18 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "karmaConfig": "src/karma.conf.js",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
+            "main": "apps/angular-github-issues/src/test.ts",
+            "karmaConfig": "apps/angular-github-issues/karma.conf.js",
+            "polyfills": "apps/angular-github-issues/src/polyfills.ts",
+            "tsConfig": "apps/angular-github-issues/tsconfig.spec.json",
             "scripts": [],
             "styles": [
-              "src/styles.css",
-              "src/unicorn-app-theme.scss"
+              "apps/angular-github-issues/src/styles.css",
+              "apps/angular-github-issues/src/unicorn-app-theme.scss"
             ],
             "assets": [
-              "src/assets",
-              "src/favicon.ico"
+              "apps/angular-github-issues/src/assets",
+              "apps/angular-github-issues/src/favicon.ico"
             ]
           }
         },
@@ -93,8 +99,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
+              "apps/angular-github-issues/tsconfig.app.json",
+              "apps/angular-github-issues/tsconfig.spec.json"
             ],
             "exclude": []
           }
@@ -116,9 +122,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "e2e/tsconfig.e2e.json"
-            ],
+            "tsConfig": ["e2e/tsconfig.e2e.json"],
             "exclude": []
           }
         }

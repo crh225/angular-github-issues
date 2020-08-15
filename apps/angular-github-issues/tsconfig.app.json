@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "baseUrl": "./",
+    "target": "es5",
+    "types": []
+  },
+  "files": ["src/main.ts", "src/polyfills.ts"],
+  "exclude": ["**/*.spec.ts", "**/*.d.ts"]
+}

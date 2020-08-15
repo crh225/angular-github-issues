@@ -9,7 +9,7 @@
     "@angular/compiler": "10.0.9",
     "@angular/compiler-cli": "10.0.9",
     "@angular/core": "10.0.9",
-    "@angular/fire": "6.0.2",
+    "@angular/fire": "5.4.2",
     "@angular/forms": "10.0.9",
     "@angular/http": "7.2.16",
     "@angular/material": "10.1.3",

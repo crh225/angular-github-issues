@@ -2,5 +2,11 @@
   "extends": [
     "config:base"
   ],
-  "automerge": true
+  "automerge": true,
+  "packageRules": [
+    {
+      "packageNames": ["@angular/fire"],
+      "enabled": false
+    }
+  ]
 }

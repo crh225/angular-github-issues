@@ -61,7 +61,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
 
-      - run: nx lint
+      - run: npm run nx lint
   build-job:
     docker:
       - image: circleci/node:12.13
@@ -83,7 +83,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
 
-      - run: nx build --prod
+      - run: npm run nx build --prod
 
   deploy-job:
     docker:
@@ -108,7 +108,7 @@ jobs:
       - run:
           name: Build app in production mode
           command: |
-            nx build --prod
+            npm run nx build --prod
       - run:
           name: Deploy app to firebase
           command: |

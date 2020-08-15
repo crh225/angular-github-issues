@@ -12,7 +12,15 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
-    "lib": ["es2016", "dom"]
+    "lib": [
+      "es2016",
+      "dom"
+    ],
+    "paths": {},
+    "baseUrl": ".",
+    "rootDir": "."
   },
-  "include": ["src/**/*"]
+  "include": [
+    "src/**/*"
+  ]
 }

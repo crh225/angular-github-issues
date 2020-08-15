@@ -33,22 +33,40 @@
     "ng2-charts": "2.3.3",
     "rxjs": "6.6.2",
     "tslib": "2.0.1",
-    "zone.js": "0.10.3"
+    "zone.js": "0.10.3",
+    "@nrwl/angular": "10.0.12"
   },
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ng": "ng",
+    "ng": "nx",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test --code-coverage",
-    "lint": "ng lint",
+    "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
     "precommit": "npm run lint",
     "build:prod": "ng build --prod --aot --output-path public",
     "deploy": "firebase deploy",
     "dock": "docker-compose up -d --build",
-    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points && node ./decorate-angular-cli.js",
+    "nx": "nx",
+    "affected:apps": "nx affected:apps",
+    "affected:libs": "nx affected:libs",
+    "affected:build": "nx affected:build",
+    "affected:e2e": "nx affected:e2e",
+    "affected:test": "nx affected:test",
+    "affected:lint": "nx affected:lint",
+    "affected:dep-graph": "nx affected:dep-graph",
+    "affected": "nx affected",
+    "format": "nx format:write",
+    "format:write": "nx format:write",
+    "format:check": "nx format:check",
+    "update": "ng update @nrwl/workspace",
+    "update:check": "ng update",
+    "dep-graph": "nx dep-graph",
+    "workspace-schematic": "nx workspace-schematic",
+    "help": "nx help"
   },
   "private": true,
   "devDependencies": {
@@ -72,7 +90,9 @@
     "protractor": "7.0.0",
     "ts-node": "8.10.2",
     "tslint": "6.1.2",
-    "typescript": "3.9.6"
+    "typescript": "3.9.6",
+    "@nrwl/workspace": "10.0.12",
+    "prettier": "2.0.4"
   },
   "sync": true
 }

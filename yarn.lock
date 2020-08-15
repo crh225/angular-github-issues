@@ -7343,10 +7343,10 @@ logrocket-ngrx@0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/logrocket-ngrx/-/logrocket-ngrx-0.1.1.tgz#3c3795163eade4c7c284e039316b0c1f25dd44bd"
 
-logrocket@1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-1.0.9.tgz#0b4cab2535e0dcdf3c802eb604b109662a403d38"
-  integrity sha512-dsZh4zPRtZlPqmI3n4Sgkh5DeWo+rRh4NZhRm6BH9F3Jfv1WFDutISr1a5bQJb9rITvBbRgw3zTVeWjU71qyBg==
+logrocket@1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-1.0.11.tgz#5a4df9887304e9239a5a9d09676ba4d42a88a65a"
+  integrity sha512-H0dTrM//LwngQ8cTicVhRF7JFm8h5AOvcPSAi+F0jmrxM9UHFZQgkOpDUbr6013tZbhet1NbiEBROXi74zpV3A==
 
 long@^4.0.0:
   version "4.0.0"

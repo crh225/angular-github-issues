@@ -1,8 +1,15 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.10.1
+version: v1.19.0
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:moment:20170905':
     - ng2-charts > chart.js > moment:
         patched: '2018-01-19T23:23:08.321Z'
+  SNYK-JS-LODASH-567746:
+    - '@nrwl/angular > jasmine-marbles > lodash':
+        patched: '2020-08-15T21:45:15.064Z'
+    - '@nrwl/angular > @nrwl/cypress > @cypress/webpack-preprocessor > @babel/core > lodash':
+        patched: '2020-08-15T21:45:15.064Z'
+    - '@nrwl/angular > @nrwl/cypress > @cypress/webpack-preprocessor > @babel/core > @babel/generator > lodash':
+        patched: '2020-08-15T21:45:15.064Z'

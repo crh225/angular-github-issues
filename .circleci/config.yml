@@ -83,7 +83,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
-      - run: yarn build:prod
+      - run: nx build --prod
 
   deploy-job:
     docker:
@@ -108,7 +108,7 @@ jobs:
       - run:
           name: Build app in production mode
           command: |
-            yarn build:prod
+            nx build --prod
       - run:
           name: Deploy app to firebase
           command: |

@@ -21,6 +21,13 @@
               "apps/angular-github-issues/src/assets",
               "apps/angular-github-issues/src/favicon.ico"
             ],
+            "allowedCommonJsDependencies": [
+              "@firebase/database",
+              "@firebase/app",
+              "chart.js",
+              "firebase/app",
+              "@firebase/firestore"
+            ],
             "styles": [
               "apps/angular-github-issues/src/styles.css",
               "apps/angular-github-issues/src/unicorn-app-theme.scss"
@@ -43,8 +50,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "serviceWorker": true,
-              "ngswConfigPath": "src/ngsw-config.json",
+              "serviceWorker": false,
               "fileReplacements": [
                 {
                   "replace": "apps/angular-github-issues/src/environments/environment.ts",
@@ -116,9 +122,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "e2e/tsconfig.e2e.json"
-            ],
+            "tsConfig": ["e2e/tsconfig.e2e.json"],
             "exclude": []
           }
         }

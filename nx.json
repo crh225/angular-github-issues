@@ -1,8 +1,5 @@
 {
   "npmScope": "angular-github-issues",
-  "affected": {
-    "defaultBase": "master"
-  },
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -16,6 +13,17 @@
     },
     "angular-github-issues-e2e": {
       "tags": []
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "accessToken": "ZWI1YmYzZmUtNzc3ZC00ZWI1LTgzNTAtZTljYzE1MWRiZjQ5fHJlYWQtd3JpdGU=",
+        "cacheableOperations": ["build", "test", "lint"],
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
     }
   }
 }

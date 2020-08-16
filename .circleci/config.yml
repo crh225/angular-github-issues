@@ -33,13 +33,13 @@ jobs:
           name: Run frontend tests
           command: |
             npm run test
-      #      pwd
-      #      ls
-      #      ./tmp/cc-test-reporter format-coverage -t lcov -o tmp/codeclimate.frontend.json apps/angular-github-issues/coverage/lcov.info
-      #- run:
-      #    name: Upload coverage results to Code Climate
-      #    command: |
-      #      ./tmp/cc-test-reporter upload-coverage -i tmp/codeclimate.frontend.json
+            pwd
+            ls
+            ./tmp/cc-test-reporter format-coverage -t lcov -o tmp/codeclimate.frontend.json apps/angular-github-issues/coverage/lcov.info
+      - run:
+          name: Upload coverage results to Code Climate
+          command: |
+            ./tmp/cc-test-reporter upload-coverage -i tmp/codeclimate.frontend.json
   lint-job:
     docker:
       - image: circleci/node:12.13

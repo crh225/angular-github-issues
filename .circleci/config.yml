@@ -61,7 +61,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
 
-      - run: npm run nx affected:lint
+      - run: npm run nx lint
   build-job:
     docker:
       - image: circleci/node:12.13

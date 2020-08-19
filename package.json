@@ -35,7 +35,7 @@
     "tslib": "2.0.1",
     "zone.js": "0.10.3",
     "@nrwl/angular": "10.0.12",
-    "snyk": "1.378.0"
+    "snyk": "1.379.0"
   },
   "version": "0.0.0",
   "license": "MIT",

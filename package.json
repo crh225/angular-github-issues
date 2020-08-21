@@ -70,8 +70,8 @@
   },
   "private": true,
   "devDependencies": {
-    "@angular-devkit/build-angular": "0.1000.6",
-    "@angular/cli": "10.0.6",
+    "@angular-devkit/build-angular": "0.1000.7",
+    "@angular/cli": "10.0.7",
     "@angular/language-service": "10.0.11",
     "@nrwl/nx-cloud": "10.0.0",
     "@nrwl/workspace": "10.0.12",

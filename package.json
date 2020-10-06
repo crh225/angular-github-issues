@@ -32,7 +32,7 @@
     "logrocket": "1.0.13",
     "ng2-charts": "2.4.2",
     "rxjs": "6.6.3",
-    "tslib": "2.0.1",
+    "tslib": "2.0.2",
     "zone.js": "0.11.1",
     "@nrwl/angular": "10.0.12",
     "snyk": "1.410.1"

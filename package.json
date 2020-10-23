@@ -75,7 +75,7 @@
     "@angular/language-service": "10.2.0",
     "@nrwl/nx-cloud": "10.1.7",
     "@nrwl/workspace": "10.0.12",
-    "@types/jasmine": "3.5.14",
+    "@types/jasmine": "3.6.0",
     "@types/jasminewd2": "2.0.8",
     "@types/node": "12.12.26",
     "codelyzer": "6.0.1",

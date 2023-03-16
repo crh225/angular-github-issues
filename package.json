@@ -71,7 +71,7 @@
   "private": true,
   "devDependencies": {
     "@angular-devkit/build-angular": "0.1002.0",
-    "@angular/cli": "10.2.0",
+    "@angular/cli": "10.2.1",
     "@angular/language-service": "10.2.3",
     "@nrwl/nx-cloud": "10.1.8",
     "@nrwl/workspace": "10.0.12",

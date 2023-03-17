@@ -78,7 +78,7 @@
     "@types/jasmine": "3.6.1",
     "@types/jasminewd2": "2.0.10",
     "@types/node": "12.12.26",
-    "codelyzer": "6.0.1",
+    "codelyzer": "6.0.2",
     "firebase-tools": "11.21.0",
     "jasmine-core": "3.6.0",
     "jasmine-spec-reporter": "6.0.0",

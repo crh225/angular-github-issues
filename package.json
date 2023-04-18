@@ -87,7 +87,7 @@
     "karma-coverage-istanbul-reporter": "3.0.3",
     "karma-jasmine": "4.0.2",
     "karma-jasmine-html-reporter": "1.7.0",
-    "logrocket-ngrx": "0.1.1",
+    "logrocket-ngrx": "0.2.1",
     "nx": "10.0.12",
     "prettier": "2.8.7",
     "protractor": "7.0.0",

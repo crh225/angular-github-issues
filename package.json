@@ -89,7 +89,7 @@
     "karma-jasmine-html-reporter": "1.7.0",
     "logrocket-ngrx": "0.2.1",
     "nx": "10.0.12",
-    "prettier": "2.8.7",
+    "prettier": "2.8.8",
     "protractor": "7.0.0",
     "ts-node": "9.1.1",
     "tslint": "6.1.3",

@@ -5,7 +5,7 @@
   "dependencies": {
     "@angular/animations": "10.2.5",
     "@angular/cdk": "22.2.3",
-    "@angular/common": "19.2.23",
+    "@angular/common": "19.2.25",
     "@angular/compiler": "10.2.5",
     "@angular/compiler-cli": "10.2.5",
     "@angular/core": "10.2.5",
@@ -33,7 +33,7 @@
     "ng2-charts": "2.4.3",
     "rxjs": "6.6.7",
     "tslib": "2.5.0",
-    "zone.js": "0.13.0",
+    "zone.js": "0.16.3",
     "@nrwl/angular": "10.0.12",
     "snyk": "1.1064.0"
   },

@@ -85,7 +85,7 @@
     "karma": "6.4.4",
     "karma-chrome-launcher": "3.2.0",
     "karma-coverage-istanbul-reporter": "3.0.3",
-    "karma-jasmine": "4.0.2",
+    "karma-jasmine": "5.1.0",
     "karma-jasmine-html-reporter": "1.7.0",
     "logrocket-ngrx": "0.2.1",
     "nx": "10.0.12",

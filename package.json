@@ -77,7 +77,7 @@
     "@nrwl/workspace": "12.3.4",
     "@types/jasmine": "7.0.0",
     "@types/jasminewd2": "2.0.13",
-    "@types/node": "26.6.5",
+    "@types/node": "26.6.6",
     "codelyzer": "6.0.2",
     "firebase-tools": "15.34.2",
     "jasmine-core": "7.0.2",

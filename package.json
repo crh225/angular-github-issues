@@ -18,7 +18,7 @@
     "@angular/platform-server": "22.2.6",
     "@angular/router": "22.2.6",
     "@angular/service-worker": "22.2.6",
-    "@firebase/app": "0.16.4",
+    "@firebase/app": "0.16.7",
     "@firebase/app-types": "0.9.6",
     "@ngrx/core": "1.2.0",
     "@ngrx/effects": "22.0.1",

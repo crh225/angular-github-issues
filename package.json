@@ -70,8 +70,8 @@
   },
   "private": true,
   "devDependencies": {
-    "@angular-devkit/build-angular": "22.2.7",
-    "@angular/cli": "22.2.7",
+    "@angular-devkit/build-angular": "22.3.0",
+    "@angular/cli": "22.3.0",
     "@angular/language-service": "22.2.6",
     "@nrwl/nx-cloud": "19.1.5",
     "@nrwl/workspace": "12.3.4",

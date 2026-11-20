@@ -79,7 +79,7 @@
     "@types/jasminewd2": "2.0.13",
     "@types/node": "26.6.6",
     "codelyzer": "6.0.2",
-    "firebase-tools": "15.36.0",
+    "firebase-tools": "15.37.0",
     "jasmine-core": "7.0.2",
     "jasmine-spec-reporter": "7.0.0",
     "karma": "6.4.4",
